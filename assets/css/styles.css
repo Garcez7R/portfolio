@@ -392,9 +392,10 @@ h3 {
 }
 
 h1 {
-  max-width: 8ch;
+  max-width: none;
   font-size: clamp(2.6rem, 8vw, 4.8rem);
   letter-spacing: -0.05em;
+  text-wrap: nowrap;
 }
 
 h2 {
