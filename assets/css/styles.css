@@ -459,6 +459,18 @@ h2 {
 .section--projects .section-shell {
   display: grid;
   gap: 1.6rem;
+  padding: 1.9rem 2rem 2rem;
+  border: 1px solid rgba(197, 206, 216, 0.12);
+  border-radius: 34px;
+  background:
+    var(--panel-overlay),
+    var(--panel-surface);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.section--projects .section-shell::before {
+  background: var(--panel-accent);
 }
 
 .section--projects .section-heading {
