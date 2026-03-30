@@ -733,8 +733,8 @@ h2 {
 
 .badge-card {
   position: relative;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto minmax(116px, 1fr) auto;
   gap: 1rem;
   padding: 1.2rem;
   border: 1px solid var(--line);
@@ -823,6 +823,27 @@ h2 {
   letter-spacing: 0.08em;
 }
 
+.badge-card__body {
+  display: grid;
+  align-content: start;
+  gap: 0.55rem;
+  min-height: 0;
+}
+
+.badge-card__body h3 {
+  margin: 0;
+  line-height: 1.28;
+}
+
+.badge-card__category {
+  margin: 0;
+  color: var(--muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .credentials__actions {
   margin-top: 1.4rem;
 }
@@ -875,11 +896,21 @@ h2 {
   align-items: center;
 }
 
+.badge-meta {
+  margin-top: auto;
+}
+
 .badge-meta a,
 .project-links a,
 .vault-item a,
 .contact-card a {
   color: var(--text-soft);
+}
+
+.badge-meta a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.5rem;
 }
 
 .vault-controls {

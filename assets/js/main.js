@@ -236,9 +236,9 @@ const renderBadges = () => {
                 : `<img src="${imageSrc}" alt="${badge.name} badge" loading="lazy" onerror="this.parentElement.classList.add('is-placeholder'); this.parentElement.innerHTML='<div class=&quot;badge-card__mark&quot; aria-hidden=&quot;true&quot;>${badgeMark}</div>';" />`
             }
           </div>
-          <div>
+          <div class="badge-card__body">
             <h3>${badge.name}</h3>
-            <p>${badge.category}</p>
+            <p class="badge-card__category">${badge.category}</p>
           </div>
           <div class="badge-meta">
             <a href="${badge.certificateUrl}" target="_blank" rel="noreferrer">${currentLocale.shared.verify}</a>
