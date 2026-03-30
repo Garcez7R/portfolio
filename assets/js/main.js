@@ -173,15 +173,15 @@ const renderHeroStats = () => {
   const securityCount = badgeRecords.filter((badge) => badge.category === "Security").length;
 
   ui.heroStats.innerHTML = `
-    <article class="hero-stat">
+    <article class="signal-card">
       <span>${currentLocale.hero.stats.total}</span>
       <strong>${badgeRecords.length}</strong>
     </article>
-    <article class="hero-stat">
+    <article class="signal-card">
       <span>${currentLocale.hero.stats.categories}</span>
       <strong>${categories.size}</strong>
     </article>
-    <article class="hero-stat">
+    <article class="signal-card">
       <span>${currentLocale.hero.stats.security}</span>
       <strong>${securityCount}</strong>
     </article>

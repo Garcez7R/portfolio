@@ -88,7 +88,7 @@ img {
 .vault-item a,
 .metric-label,
 .contact-card span,
-.hero__panel-head,
+.hero__signal,
 .hero__terminal,
 .hero__rail {
   font-family: "JetBrains Mono", monospace;
@@ -203,7 +203,7 @@ main {
 }
 
 .hero__content,
-.hero__panel {
+.hero__visual {
   position: relative;
   z-index: 1;
 }
@@ -212,25 +212,38 @@ main {
   padding: 1.4rem 1.2rem 1.2rem;
 }
 
-.hero__panel {
+.hero__visual {
   display: grid;
   gap: 1rem;
+  align-content: center;
+}
+
+.hero__profile-stage {
+  position: relative;
+  min-height: 360px;
   padding: 1.25rem;
   border: 1px solid var(--line);
-  border-radius: 28px;
+  border-radius: 30px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.01)),
-    rgba(8, 10, 14, 0.72);
+    radial-gradient(circle at 26% 20%, rgba(212, 175, 55, 0.14), transparent 24%),
+    linear-gradient(140deg, rgba(255, 255, 255, 0.04), transparent 42%),
+    rgba(8, 10, 14, 0.76);
+  overflow: hidden;
 }
 
 .hero__profile-frame {
-  width: 132px;
-  height: 132px;
-  margin-bottom: 0.25rem;
-  border: 1px solid rgba(212, 175, 55, 0.22);
-  border-radius: 24px;
-  background: linear-gradient(180deg, rgba(212, 175, 55, 0.08), rgba(255, 255, 255, 0.02));
+  position: absolute;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  width: min(100%, 250px);
+  aspect-ratio: 1 / 1.12;
+  border: 1px solid rgba(212, 175, 55, 0.24);
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(212, 175, 55, 0.08), rgba(255, 255, 255, 0.02)),
+    rgba(10, 12, 16, 0.8);
   overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
 }
 
 .hero__profile-frame img {
@@ -239,47 +252,21 @@ main {
   object-fit: cover;
 }
 
-.hero__panel-head {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  color: var(--muted);
-  font-size: 0.76rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.hero__stats {
+.hero__signal {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.8rem;
-}
-
-.hero-stat {
-  padding: 0.95rem;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.02);
-}
-
-.hero-stat span {
-  display: block;
+  gap: 0.35rem;
+  max-width: 12rem;
   color: var(--muted);
-  min-width: 0;
-  font-size: 0.7rem;
-  line-height: 1.35;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  overflow-wrap: anywhere;
-  word-break: break-word;
 }
 
-.hero-stat strong {
-  display: block;
-  margin-top: 0.35rem;
+.hero__signal strong {
   color: var(--silver-strong);
-  font-size: clamp(1.2rem, 3vw, 1.9rem);
-  line-height: 1;
+  font-size: clamp(1.35rem, 3vw, 2.2rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
 }
 
 .hero__terminal {
@@ -289,6 +276,8 @@ main {
   background: linear-gradient(180deg, rgba(7, 8, 11, 0.95), rgba(17, 20, 25, 0.86));
   color: var(--text-soft);
   font-size: 0.84rem;
+  width: min(100%, 420px);
+  justify-self: end;
 }
 
 .hero__terminal p {
@@ -314,6 +303,61 @@ main {
   color: var(--text-soft);
   font-size: 0.72rem;
   letter-spacing: 0.08em;
+}
+
+.signal-band {
+  padding-top: 2rem;
+}
+
+.signal-band__grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.signal-card {
+  position: relative;
+  padding: 1.15rem 1.25rem 1.25rem;
+  border: 1px solid rgba(197, 206, 216, 0.12);
+  border-radius: 28px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.035), transparent 38%),
+    rgba(9, 11, 15, 0.84);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.signal-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.09), transparent 28%);
+  pointer-events: none;
+}
+
+.signal-card span,
+.signal-card strong {
+  position: relative;
+  z-index: 1;
+}
+
+.signal-card span {
+  display: block;
+  max-width: 12ch;
+  color: var(--muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  line-height: 1.35;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.signal-card strong {
+  display: block;
+  margin-top: 0.55rem;
+  color: var(--silver-strong);
+  font-size: clamp(2.8rem, 10vw, 5.5rem);
+  line-height: 0.88;
+  letter-spacing: -0.08em;
 }
 
 .eyebrow {
@@ -1128,13 +1172,21 @@ h2 {
   }
 
   .hero__shell {
-    grid-template-columns: minmax(0, 1.6fr) minmax(340px, 0.84fr);
+    grid-template-columns: minmax(0, 1.35fr) minmax(360px, 0.95fr);
     align-items: stretch;
     padding: 1.9rem;
   }
 
   .hero__content {
-    padding: 1.7rem 1.5rem 1.4rem;
+    padding: 2rem 1.7rem 1.5rem;
+  }
+
+  .hero__visual {
+    padding-top: 1rem;
+  }
+
+  .signal-band__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .section--skills .section-shell {
@@ -1176,13 +1228,27 @@ h2 {
     border-radius: 22px;
   }
 
+  .hero__profile-stage {
+    min-height: 300px;
+  }
+
+  .hero__profile-frame {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    max-width: 240px;
+    margin-top: 2rem;
+  }
+
+  .hero__terminal {
+    width: 100%;
+    justify-self: stretch;
+  }
+
   .vault-item {
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  .hero__stats {
-    grid-template-columns: 1fr;
   }
 
   .badge-grid {
@@ -1211,5 +1277,9 @@ h2 {
 
   .section {
     padding-top: 4.5rem;
+  }
+
+  .signal-band {
+    padding-top: 1.4rem;
   }
 }
