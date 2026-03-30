@@ -6,6 +6,7 @@ const STORAGE_KEYS = {
 const DEFAULT_BADGE_IMAGE = "./assets/img/badges/placeholder-badge.svg";
 const BADGES_COLLAPSED_COUNT = 12;
 const VAULT_COLLAPSED_COUNT = 8;
+const VAULT_GROUP_COLLAPSED_COUNT = 3;
 
 let currentLocale = {};
 let currentLanguage = "en";
@@ -13,6 +14,7 @@ let badgeRecords = [];
 let selectedBadgeFilter = "All";
 let badgesExpanded = false;
 let vaultExpanded = false;
+let vaultSearchTerm = "";
 
 const ui = {
   splash: document.getElementById("splash"),
@@ -21,8 +23,10 @@ const ui = {
   badgeGrid: document.getElementById("badge-grid"),
   badgeFilters: document.getElementById("badge-filters"),
   badgeToggle: document.getElementById("badge-toggle"),
-  vaultList: document.getElementById("vault-list"),
+  vaultFeatured: document.getElementById("vault-featured"),
+  vaultGroups: document.getElementById("vault-groups"),
   vaultToggle: document.getElementById("vault-toggle"),
+  vaultSearch: document.getElementById("vault-search"),
   projectGrid: document.getElementById("project-grid"),
   certMetrics: document.getElementById("cert-metrics"),
   skillsMetrics: document.getElementById("skills-metrics"),
@@ -115,6 +119,7 @@ const applyI18n = () => {
   document.querySelector('meta[property="og:description"]').setAttribute("content", currentLocale.seo.description);
   document.querySelector('meta[name="twitter:title"]').setAttribute("content", currentLocale.seo.title);
   document.querySelector('meta[name="twitter:description"]').setAttribute("content", currentLocale.seo.description);
+  ui.vaultSearch.setAttribute("placeholder", currentLocale.vault.searchPlaceholder);
 };
 
 const renderSkills = () => {
@@ -236,25 +241,88 @@ const renderBadges = () => {
   updateBadgeToggle(source.length);
 };
 
-const renderVault = () => {
-  const sorted = [...badgeRecords].sort((a, b) => a.name.localeCompare(b.name));
-  const list = vaultExpanded ? sorted : sorted.slice(0, VAULT_COLLAPSED_COUNT);
+const scoreVaultBadge = (badge) => {
+  let score = 0;
+  const name = badge.name.toLowerCase();
 
-  ui.vaultList.innerHTML = list
+  if (["Cloud", "Security", "Infrastructure", "Networking", "DevOps"].includes(badge.category)) score += 40;
+  if (name.includes("certified")) score += 28;
+  if (name.includes("associate") || name.includes("professional")) score += 18;
+  if (name.includes("aws") || name.includes("oracle") || name.includes("google") || name.includes("isc2")) score += 16;
+  if (name.includes("lead auditor") || name.includes("cyberops") || name.includes("ccna")) score += 14;
+  if (name.includes("introduction") || name.includes("fundamentals")) score -= 8;
+
+  return score;
+};
+
+const renderVault = () => {
+  const filtered = badgeRecords
+    .filter((badge) => badge.name.toLowerCase().includes(vaultSearchTerm) || badge.category.toLowerCase().includes(vaultSearchTerm))
+    .sort((a, b) => a.name.localeCompare(b.name));
+
+  const featured = [...filtered]
+    .sort((a, b) => scoreVaultBadge(b) - scoreVaultBadge(a))
+    .slice(0, 6);
+
+  const groupedEntries = filtered.reduce((acc, badge) => {
+    const key = badge.category;
+    acc[key] ||= [];
+    acc[key].push(badge);
+    return acc;
+  }, {});
+
+  ui.vaultFeatured.innerHTML = featured
     .map(
       (badge) => `
-        <article class="vault-item">
-          <div class="vault-item__meta">
-            <span class="vault-item__title">${badge.name}</span>
-            <span class="vault-item__category">${badge.category}</span>
-          </div>
+        <article class="vault-featured-card">
+          <span class="vault-featured-card__category">${badge.category}</span>
+          <strong>${badge.name}</strong>
           <a href="${badge.certificateUrl}" target="_blank" rel="noreferrer">${currentLocale.shared.verify}</a>
         </article>
       `,
     )
     .join("");
 
-  if (sorted.length <= VAULT_COLLAPSED_COUNT) {
+  if (!filtered.length) {
+    ui.vaultFeatured.innerHTML = "";
+    ui.vaultGroups.innerHTML = `<div class="vault-empty">${currentLocale.vault.noResults}</div>`;
+    ui.vaultToggle.hidden = true;
+    return;
+  }
+
+  ui.vaultGroups.innerHTML = Object.entries(groupedEntries)
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([category, items]) => {
+      const orderedItems = [...items].sort((a, b) => scoreVaultBadge(b) - scoreVaultBadge(a) || a.name.localeCompare(b.name));
+      const visibleItems = vaultExpanded ? orderedItems : orderedItems.slice(0, VAULT_GROUP_COLLAPSED_COUNT);
+
+      return `
+        <section class="vault-group">
+          <div class="vault-group__header">
+            <h3>${category}</h3>
+            <span>${items.length}</span>
+          </div>
+          <div class="vault-list">
+            ${visibleItems
+              .map(
+                (badge) => `
+                  <article class="vault-item">
+                    <div class="vault-item__meta">
+                      <span class="vault-item__title">${badge.name}</span>
+                      <span class="vault-item__category">${badge.category}</span>
+                    </div>
+                    <a href="${badge.certificateUrl}" target="_blank" rel="noreferrer">${currentLocale.shared.verify}</a>
+                  </article>
+                `,
+              )
+              .join("")}
+          </div>
+        </section>
+      `;
+    })
+    .join("");
+
+  if (filtered.length <= VAULT_COLLAPSED_COUNT) {
     ui.vaultToggle.hidden = true;
     return;
   }
@@ -262,7 +330,7 @@ const renderVault = () => {
   ui.vaultToggle.hidden = false;
   ui.vaultToggle.textContent = vaultExpanded
     ? currentLocale.vault.toggle.less
-    : currentLocale.vault.toggle.more.replace("{count}", String(sorted.length - VAULT_COLLAPSED_COUNT));
+    : currentLocale.vault.toggle.more.replace("{count}", String(filtered.length - VAULT_COLLAPSED_COUNT));
 };
 
 const renderProjects = () => {
@@ -373,12 +441,18 @@ const bindEvents = () => {
     vaultExpanded = !vaultExpanded;
     renderVault();
   });
+
+  ui.vaultSearch.addEventListener("input", (event) => {
+    vaultSearchTerm = event.target.value.trim().toLowerCase();
+    renderVault();
+  });
 };
 
 const initialize = async () => {
   try {
     badgeRecords = await loadBadges();
     selectedBadgeFilter = "All";
+    vaultSearchTerm = "";
     await setLanguage(detectLanguage());
     bindEvents();
     maybeHideSplash();

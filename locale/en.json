@@ -94,6 +94,9 @@
     "eyebrow": "Certificate Vault",
     "title": "Compact register for certificate validation",
     "description": "A cleaner way to review and validate credentials, with direct access to public verification links without turning the page into a long raw list.",
+    "searchLabel": "Search certificate",
+    "searchPlaceholder": "Search by name or category",
+    "noResults": "No certificates found for this search.",
     "toggle": {
       "more": "Show {count} more",
       "less": "Show less"

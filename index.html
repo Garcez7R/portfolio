@@ -102,79 +102,110 @@
       </section>
 
       <!-- Domain-based skills with tooltip-ready skill chips. -->
-      <section class="section fade-in" id="skills">
-        <div class="section__intro">
-          <p class="eyebrow" data-i18n="skills.eyebrow"></p>
-          <h2 data-i18n="skills.title"></h2>
-          <p data-i18n="skills.description"></p>
+      <section class="section section--split fade-in" id="skills" data-section="02">
+        <div class="section-frame" data-section="02">
+          <div class="section__intro">
+            <p class="eyebrow" data-i18n="skills.eyebrow"></p>
+            <h2 data-i18n="skills.title"></h2>
+            <p data-i18n="skills.description"></p>
+          </div>
+          <div class="section__body">
+            <div class="skill-grid" id="skills-grid"></div>
+          </div>
         </div>
-        <div class="skill-grid" id="skills-grid"></div>
       </section>
 
       <!-- Credentials rendered from badges.md. -->
-      <section class="section fade-in" id="credentials">
-        <div class="section__intro">
-          <p class="eyebrow" data-i18n="credentials.eyebrow"></p>
-          <h2 data-i18n="credentials.title"></h2>
-          <p data-i18n="credentials.description"></p>
-        </div>
-        <div class="filters" id="badge-filters" aria-label="Certification filters"></div>
-        <div class="badge-grid" id="badge-grid"></div>
-        <div class="credentials__actions">
-          <button class="button button--ghost" id="badge-toggle" type="button"></button>
+      <section class="section section--split fade-in" id="credentials" data-section="03">
+        <div class="section-frame" data-section="03">
+          <div class="section__intro">
+            <p class="eyebrow" data-i18n="credentials.eyebrow"></p>
+            <h2 data-i18n="credentials.title"></h2>
+            <p data-i18n="credentials.description"></p>
+          </div>
+          <div class="section__body">
+            <div class="filters" id="badge-filters" aria-label="Certification filters"></div>
+            <div class="badge-grid" id="badge-grid"></div>
+            <div class="credentials__actions">
+              <button class="button button--ghost" id="badge-toggle" type="button"></button>
+            </div>
+          </div>
         </div>
       </section>
 
       <!-- PDF vault for verification links. -->
-      <section class="section fade-in" id="vault">
-        <div class="section__intro">
-          <p class="eyebrow" data-i18n="vault.eyebrow"></p>
-          <h2 data-i18n="vault.title"></h2>
-          <p data-i18n="vault.description"></p>
-        </div>
-        <div class="vault-list" id="vault-list"></div>
-        <div class="credentials__actions">
-          <button class="button button--ghost" id="vault-toggle" type="button"></button>
+      <section class="section section--split fade-in" id="vault" data-section="04">
+        <div class="section-frame section-frame--vault" data-section="04">
+          <div class="section__intro">
+            <p class="eyebrow" data-i18n="vault.eyebrow"></p>
+            <h2 data-i18n="vault.title"></h2>
+            <p data-i18n="vault.description"></p>
+          </div>
+          <div class="section__body">
+            <div class="vault-controls">
+              <label class="vault-search">
+                <span data-i18n="vault.searchLabel"></span>
+                <input id="vault-search" type="search" />
+              </label>
+            </div>
+            <div class="vault-featured" id="vault-featured"></div>
+            <div class="vault-groups" id="vault-groups"></div>
+            <div class="credentials__actions">
+              <button class="button button--ghost" id="vault-toggle" type="button"></button>
+            </div>
+          </div>
         </div>
       </section>
 
       <!-- Selected projects and labs. -->
-      <section class="section fade-in" id="projects">
-        <div class="section__intro">
-          <p class="eyebrow" data-i18n="projects.eyebrow"></p>
-          <h2 data-i18n="projects.title"></h2>
-          <p data-i18n="projects.description"></p>
+      <section class="section section--split fade-in" id="projects" data-section="05">
+        <div class="section-frame" data-section="05">
+          <div class="section__intro">
+            <p class="eyebrow" data-i18n="projects.eyebrow"></p>
+            <h2 data-i18n="projects.title"></h2>
+            <p data-i18n="projects.description"></p>
+          </div>
+          <div class="section__body">
+            <div class="project-grid" id="project-grid"></div>
+          </div>
         </div>
-        <div class="project-grid" id="project-grid"></div>
       </section>
 
       <!-- Lightweight metrics for quick technical scanning. -->
-      <section class="section fade-in" id="metrics">
-        <div class="section__intro">
-          <p class="eyebrow" data-i18n="metrics.eyebrow"></p>
-          <h2 data-i18n="metrics.title"></h2>
-          <p data-i18n="metrics.description"></p>
-        </div>
-        <div class="metrics-grid">
-          <article class="metric-card">
-            <h3 data-i18n="metrics.certificationsChart"></h3>
-            <div id="cert-metrics" class="metric-chart"></div>
-          </article>
-          <article class="metric-card">
-            <h3 data-i18n="metrics.skillsChart"></h3>
-            <div id="skills-metrics" class="metric-chart"></div>
-          </article>
+      <section class="section section--split fade-in" id="metrics" data-section="06">
+        <div class="section-frame" data-section="06">
+          <div class="section__intro">
+            <p class="eyebrow" data-i18n="metrics.eyebrow"></p>
+            <h2 data-i18n="metrics.title"></h2>
+            <p data-i18n="metrics.description"></p>
+          </div>
+          <div class="section__body">
+            <div class="metrics-grid">
+              <article class="metric-card">
+                <h3 data-i18n="metrics.certificationsChart"></h3>
+                <div id="cert-metrics" class="metric-chart"></div>
+              </article>
+              <article class="metric-card">
+                <h3 data-i18n="metrics.skillsChart"></h3>
+                <div id="skills-metrics" class="metric-chart"></div>
+              </article>
+            </div>
+          </div>
         </div>
       </section>
 
       <!-- Contact endpoints and resume access. -->
-      <section class="section fade-in" id="contact">
-        <div class="section__intro">
-          <p class="eyebrow" data-i18n="contact.eyebrow"></p>
-          <h2 data-i18n="contact.title"></h2>
-          <p data-i18n="contact.description"></p>
+      <section class="section section--split fade-in" id="contact" data-section="07">
+        <div class="section-frame" data-section="07">
+          <div class="section__intro">
+            <p class="eyebrow" data-i18n="contact.eyebrow"></p>
+            <h2 data-i18n="contact.title"></h2>
+            <p data-i18n="contact.description"></p>
+          </div>
+          <div class="section__body">
+            <div class="contact-grid" id="contact-grid"></div>
+          </div>
         </div>
-        <div class="contact-grid" id="contact-grid"></div>
       </section>
     </main>
 
