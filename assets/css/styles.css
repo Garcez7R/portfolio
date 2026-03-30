@@ -15,15 +15,28 @@
   --line-strong: rgba(222, 230, 240, 0.24);
   --shadow: 0 28px 80px rgba(0, 0, 0, 0.45);
   --glow: rgba(214, 224, 235, 0.08);
+  --bg-gradient:
+    radial-gradient(circle at 12% 16%, rgba(197, 206, 216, 0.08), transparent 0 24%),
+    radial-gradient(circle at 82% 10%, rgba(244, 247, 251, 0.05), transparent 0 18%),
+    linear-gradient(180deg, #030406 0%, #090b10 42%, #06080c 100%);
   --panel-surface:
     linear-gradient(180deg, rgba(17, 21, 28, 0.94), rgba(8, 10, 14, 0.98));
   --panel-overlay:
     linear-gradient(140deg, rgba(255, 255, 255, 0.03), transparent 36%);
   --panel-accent:
-    radial-gradient(circle at top right, rgba(212, 175, 55, 0.08), transparent 26%);
+    radial-gradient(circle at top right, rgba(244, 247, 251, 0.06), transparent 26%);
   --card-surface:
     linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.012)),
     rgba(10, 12, 16, 0.76);
+  --card-surface-hover:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.015)),
+    rgba(12, 15, 20, 0.82);
+  --control-surface:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.028), rgba(255, 255, 255, 0.014));
+  --control-surface-hover:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.022));
+  --accent-wash:
+    linear-gradient(180deg, rgba(212, 175, 55, 0.045), rgba(255, 255, 255, 0.012));
   --max-width: 1240px;
 }
 
@@ -41,11 +54,7 @@ body {
   color: var(--text);
   font-family: "Inter", sans-serif;
   line-height: 1.6;
-  background:
-    radial-gradient(circle at 12% 16%, rgba(197, 206, 216, 0.1), transparent 0 24%),
-    radial-gradient(circle at 82% 10%, rgba(212, 175, 55, 0.08), transparent 0 18%),
-    radial-gradient(circle at 76% 34%, rgba(63, 185, 80, 0.05), transparent 0 16%),
-    linear-gradient(180deg, #030406 0%, #090b10 42%, #06080c 100%);
+  background: var(--bg-gradient);
 }
 
 body::before {
@@ -186,7 +195,7 @@ main {
   line-height: 0.9;
   letter-spacing: -0.08em;
   color: transparent;
-  background: linear-gradient(180deg, rgba(244, 247, 251, 0.14), rgba(212, 175, 55, 0.05));
+  background: linear-gradient(180deg, rgba(244, 247, 251, 0.14), rgba(244, 247, 251, 0.05));
   -webkit-background-clip: text;
   background-clip: text;
   opacity: 0.9;
@@ -205,7 +214,7 @@ main {
 .contact-card,
 .vault-item {
   border: 1px solid var(--line);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.015));
+  background: var(--card-surface);
   box-shadow: var(--shadow);
 }
 
@@ -217,8 +226,8 @@ main {
   border-radius: 34px;
   overflow: hidden;
   background:
-    linear-gradient(125deg, rgba(255, 255, 255, 0.05), transparent 30%),
-    radial-gradient(circle at top right, rgba(212, 175, 55, 0.1), transparent 30%),
+    linear-gradient(125deg, rgba(255, 255, 255, 0.045), transparent 30%),
+    radial-gradient(circle at top right, rgba(244, 247, 251, 0.05), transparent 30%),
     linear-gradient(180deg, rgba(17, 21, 28, 0.96), rgba(8, 10, 14, 0.99));
 }
 
@@ -270,7 +279,7 @@ main {
   border: 1px solid rgba(212, 175, 55, 0.24);
   border-radius: 22px;
   background:
-    linear-gradient(180deg, rgba(212, 175, 55, 0.08), rgba(255, 255, 255, 0.02)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.015)),
     rgba(10, 12, 16, 0.8);
   overflow: hidden;
   box-shadow: 0 18px 42px rgba(0, 0, 0, 0.32);
@@ -303,7 +312,7 @@ main {
   padding: 1.15rem 1.15rem;
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 18px;
-  background: linear-gradient(180deg, rgba(7, 8, 11, 0.95), rgba(17, 20, 25, 0.86));
+  background: var(--card-surface);
   color: var(--text-soft);
   font-size: 0.92rem;
   line-height: 1.55;
@@ -330,7 +339,7 @@ main {
   padding: 0.5rem 0.8rem;
   border: 1px solid var(--line);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--control-surface);
   color: var(--text-soft);
   font-size: 0.72rem;
   letter-spacing: 0.08em;
@@ -557,7 +566,7 @@ h2 {
   padding: 0.88rem 1rem;
   border: 1px solid var(--line-strong);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.025);
+  background: var(--control-surface);
   color: var(--text-soft);
   transition:
     transform 0.2s ease,
@@ -569,12 +578,12 @@ h2 {
 .button:hover {
   transform: translateY(-2px);
   border-color: rgba(255, 255, 255, 0.28);
-  background: rgba(255, 255, 255, 0.055);
+  background: var(--control-surface-hover);
   color: var(--silver-strong);
 }
 
 .button--primary {
-  background: linear-gradient(180deg, rgba(212, 175, 55, 0.16), rgba(255, 255, 255, 0.04));
+  background: linear-gradient(180deg, rgba(212, 175, 55, 0.12), rgba(255, 255, 255, 0.03));
   border-color: rgba(212, 175, 55, 0.22);
   color: var(--silver-strong);
 }
@@ -632,7 +641,7 @@ h2 {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), transparent 42%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.024), transparent 42%);
   pointer-events: none;
 }
 
@@ -659,7 +668,7 @@ h2 {
   padding: 0.65rem 0.8rem;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.025);
+  background: var(--control-surface);
   color: var(--text-soft);
   font: inherit;
   cursor: help;
@@ -672,7 +681,7 @@ h2 {
 .skill-chip:hover {
   transform: translateY(-1px);
   border-color: rgba(63, 185, 80, 0.26);
-  background: rgba(63, 185, 80, 0.06);
+  background: var(--control-surface-hover);
 }
 
 .skill-chip__icon {
@@ -681,7 +690,7 @@ h2 {
   width: 1.6rem;
   height: 1.6rem;
   border-radius: 999px;
-  background: rgba(212, 175, 55, 0.12);
+  background: rgba(244, 247, 251, 0.08);
   color: var(--gold);
   font-family: "JetBrains Mono", monospace;
   font-size: 0.72rem;
@@ -711,7 +720,7 @@ h2 {
   padding: 0.68rem 0.92rem;
   border: 1px solid var(--line);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.015);
+  background: var(--control-surface);
   color: var(--muted);
   cursor: pointer;
   transition:
@@ -723,8 +732,8 @@ h2 {
 .filters button.is-active,
 .filters button:hover {
   color: var(--silver-strong);
-  background: rgba(63, 185, 80, 0.08);
-  border-color: rgba(63, 185, 80, 0.2);
+  background: var(--control-surface-hover);
+  border-color: rgba(244, 247, 251, 0.18);
 }
 
 .badge-grid {
@@ -754,7 +763,7 @@ h2 {
 .badge-card--core {
   border-color: rgba(212, 175, 55, 0.22);
   background:
-    linear-gradient(180deg, rgba(212, 175, 55, 0.05), rgba(255, 255, 255, 0.01)),
+    var(--accent-wash),
     var(--card-surface);
 }
 
@@ -777,9 +786,7 @@ h2 {
 .badge-card:hover {
   transform: translateY(-5px);
   border-color: rgba(212, 175, 55, 0.24);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.014)),
-    rgba(12, 15, 20, 0.82);
+  background: var(--card-surface-hover);
 }
 
 .badge-card__visual {
@@ -790,8 +797,8 @@ h2 {
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 18px;
   background:
-    radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 60%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.06), transparent 60%),
+    var(--control-surface);
 }
 
 .badge-card__visual img {
@@ -818,7 +825,7 @@ h2 {
   height: 84px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 20px;
-  background: linear-gradient(180deg, rgba(212, 175, 55, 0.12), rgba(197, 206, 216, 0.03));
+  background: var(--control-surface-hover);
   color: var(--silver-strong);
   font-family: "JetBrains Mono", monospace;
   font-size: 1.4rem;
@@ -867,9 +874,7 @@ h2 {
 .project-card:hover {
   transform: scale(1.02);
   border-color: rgba(212, 175, 55, 0.22);
-  background:
-    linear-gradient(180deg, rgba(212, 175, 55, 0.04), rgba(255, 255, 255, 0.012)),
-    rgba(12, 15, 20, 0.82);
+  background: var(--card-surface-hover);
 }
 
 .project-card:nth-child(2n) {
@@ -944,7 +949,7 @@ h2 {
   padding: 0.9rem 1rem;
   border: 1px solid var(--line);
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.025);
+  background: var(--control-surface);
   color: var(--text-soft);
   font: inherit;
 }
@@ -969,7 +974,7 @@ h2 {
   border: 1px solid rgba(212, 175, 55, 0.16);
   border-radius: 18px;
   background:
-    linear-gradient(180deg, rgba(212, 175, 55, 0.05), rgba(255, 255, 255, 0.01)),
+    var(--accent-wash),
     var(--card-surface);
 }
 
@@ -1000,7 +1005,7 @@ h2 {
   padding: 1.15rem 1.2rem;
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--control-surface);
   color: var(--muted);
 }
 
@@ -1008,7 +1013,7 @@ h2 {
   padding: 1rem;
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.015);
+  background: var(--control-surface);
 }
 
 .vault-group__header {
@@ -1094,7 +1099,7 @@ h2 {
   overflow: hidden;
   height: 10px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--control-surface);
 }
 
 .metric-bar span {
