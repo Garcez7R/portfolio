@@ -126,11 +126,13 @@
     "description": "Credenciais selecionadas para evidenciar uma trajetória consistente entre operação, infraestrutura, cloud e segurança.",
     "coreTitle": "Core Credentials",
     "coreDescription": "As credenciais com maior sinal imediato para leitura executiva, recrutamento e contextos de cloud security.",
+    "morePrompt": "As demais credenciais ficam recolhidas por padrão para manter a leitura mais limpa. Abra a coleção completa quando quiser aprofundar.",
     "coreLabel": "Core",
     "filters": {
       "all": "Todas"
     },
     "toggle": {
+      "open": "Abrir mais {count}",
       "more": "Mostrar mais {count}",
       "less": "Mostrar menos"
     }

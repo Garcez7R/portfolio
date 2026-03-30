@@ -28,7 +28,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./assets/css/styles.css?v=9668796" />
+    <link rel="stylesheet" href="./assets/css/styles.css?v=20260330-corecred" />
   </head>
   <body>
     <!-- Splash screen shown only once per browser session. -->
@@ -127,10 +127,15 @@
               </div>
               <div class="credentials-core__grid" id="core-badge-grid"></div>
             </div>
-            <div class="filters" id="badge-filters" aria-label="Certification filters"></div>
-            <div class="badge-grid" id="badge-grid"></div>
-            <div class="credentials__actions">
-              <button class="button button--ghost" id="badge-toggle" type="button"></button>
+            <div class="credentials-more" id="credentials-more">
+              <p class="credentials-more__prompt" data-i18n="credentials.morePrompt"></p>
+              <div class="credentials-more__content" id="credentials-more-content" hidden>
+                <div class="filters" id="badge-filters" aria-label="Certification filters"></div>
+                <div class="badge-grid" id="badge-grid"></div>
+              </div>
+              <div class="credentials__actions">
+                <button class="button button--ghost" id="badge-toggle" type="button"></button>
+              </div>
             </div>
           </div>
         </div>
@@ -210,6 +215,6 @@
       <p data-i18n="footer.copy"></p>
     </footer>
 
-    <script type="module" src="./assets/js/main.js?v=9668796"></script>
+    <script type="module" src="./assets/js/main.js?v=20260330-corecred"></script>
   </body>
 </html>

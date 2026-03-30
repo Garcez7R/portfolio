@@ -126,11 +126,13 @@
     "description": "A curated set of credentials showing consistent progress across operations, infrastructure, cloud and security.",
     "coreTitle": "Core Credentials",
     "coreDescription": "The credentials with the strongest immediate signal for executive review, recruiting and cloud security contexts.",
+    "morePrompt": "Additional credentials stay collapsed by default to keep the section cleaner. Open the full collection whenever you want a deeper view.",
     "coreLabel": "Core",
     "filters": {
       "all": "All"
     },
     "toggle": {
+      "open": "Open {count} more",
       "more": "Show {count} more",
       "less": "Show less"
     }

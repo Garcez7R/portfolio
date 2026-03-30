@@ -4,7 +4,6 @@ const STORAGE_KEYS = {
 };
 
 const DEFAULT_BADGE_IMAGE = "./assets/img/badges/placeholder-badge.svg";
-const BADGES_COLLAPSED_COUNT = 12;
 const VAULT_COLLAPSED_COUNT = 8;
 const VAULT_GROUP_COLLAPSED_COUNT = 3;
 const CATEGORY_ORDER = ["Cloud", "Security", "Infrastructure", "DevOps", "Networking", "Linux", "Other"];
@@ -22,6 +21,8 @@ const ui = {
   heroPillars: document.getElementById("hero-pillars"),
   skillsGrid: document.getElementById("skills-grid"),
   coreBadgeGrid: document.getElementById("core-badge-grid"),
+  credentialsMorePrompt: document.querySelector(".credentials-more__prompt"),
+  credentialsMoreContent: document.getElementById("credentials-more-content"),
   badgeGrid: document.getElementById("badge-grid"),
   badgeFilters: document.getElementById("badge-filters"),
   badgeToggle: document.getElementById("badge-toggle"),
@@ -215,15 +216,24 @@ const buildFilters = () => {
 };
 
 const updateBadgeToggle = (totalItems) => {
-  if (totalItems <= BADGES_COLLAPSED_COUNT) {
+  if (totalItems === 0) {
     ui.badgeToggle.hidden = true;
+    ui.credentialsMorePrompt.hidden = false;
+    ui.credentialsMoreContent.hidden = true;
+    return;
+  }
+
+  ui.credentialsMorePrompt.hidden = badgesExpanded;
+  ui.credentialsMoreContent.hidden = !badgesExpanded;
+
+  if (!badgesExpanded) {
+    ui.badgeToggle.hidden = false;
+    ui.badgeToggle.textContent = currentLocale.credentials.toggle.open.replace("{count}", String(totalItems));
     return;
   }
 
   ui.badgeToggle.hidden = false;
-  ui.badgeToggle.textContent = badgesExpanded
-    ? currentLocale.credentials.toggle.less
-    : currentLocale.credentials.toggle.more.replace("{count}", String(totalItems - BADGES_COLLAPSED_COUNT));
+  ui.badgeToggle.textContent = currentLocale.credentials.toggle.less;
 };
 
 const renderBadges = () => {
@@ -233,7 +243,7 @@ const renderBadges = () => {
   const coreBadges = allSorted.slice(0, 4);
   const coreNames = new Set(coreBadges.map((badge) => badge.name));
   const filtered = selectedBadgeFilter === "All" ? allSorted.filter((badge) => !coreNames.has(badge.name)) : allSorted.filter((badge) => badge.category === selectedBadgeFilter);
-  const list = badgesExpanded ? filtered : filtered.slice(0, BADGES_COLLAPSED_COUNT);
+  const list = badgesExpanded ? filtered : [];
 
   ui.coreBadgeGrid.innerHTML = coreBadges
     .map((badge) => {
