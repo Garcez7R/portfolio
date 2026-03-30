@@ -123,10 +123,10 @@
   "credentials": {
     "eyebrow": "Certificações",
     "title": "Credenciais que dão lastro à trajetória",
-    "description": "Credenciais selecionadas para evidenciar uma trajetória consistente entre operação, infraestrutura, cloud e segurança.",
+    "description": "Seleção de credenciais que conecta experiência operacional, infraestrutura, cloud e segurança.",
     "coreTitle": "Core Credentials",
-    "coreDescription": "As credenciais com maior sinal imediato para leitura executiva, recrutamento e contextos de cloud security.",
-    "morePrompt": "As demais credenciais ficam recolhidas por padrão para manter a leitura mais limpa. Abra a coleção completa quando quiser aprofundar.",
+    "coreDescription": "Credenciais centrais em cloud, segurança e operação, com leitura imediata para contextos técnicos e executivos.",
+    "morePrompt": "Credenciais adicionais e trilhas complementares.",
     "coreLabel": "Core",
     "filters": {
       "all": "Todas"
@@ -140,7 +140,7 @@
   "vault": {
     "eyebrow": "Vault de Certificados",
     "title": "Validação direta das credenciais",
-    "description": "Acesse rapidamente certificados e credenciais, com foco em Cloud Security e Cybersecurity.",
+    "description": "Consulta objetiva de certificados e credenciais com foco em cloud, segurança e infraestrutura.",
     "searchLabel": "Buscar certificado",
     "searchPlaceholder": "Buscar por nome ou categoria",
     "noResults": "Nenhum certificado encontrado para esta busca.",

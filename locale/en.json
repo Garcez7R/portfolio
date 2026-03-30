@@ -123,10 +123,10 @@
   "credentials": {
     "eyebrow": "Certifications",
     "title": "Credentials that reinforce the trajectory",
-    "description": "A curated set of credentials showing consistent progress across operations, infrastructure, cloud and security.",
+    "description": "A curated credential set connecting operational experience, infrastructure, cloud and security.",
     "coreTitle": "Core Credentials",
-    "coreDescription": "The credentials with the strongest immediate signal for executive review, recruiting and cloud security contexts.",
-    "morePrompt": "Additional credentials stay collapsed by default to keep the section cleaner. Open the full collection whenever you want a deeper view.",
+    "coreDescription": "Core credentials across cloud, security and operations with immediate relevance for technical and executive review.",
+    "morePrompt": "Additional credentials and supporting learning tracks.",
     "coreLabel": "Core",
     "filters": {
       "all": "All"
@@ -140,7 +140,7 @@
   "vault": {
     "eyebrow": "Certificate Vault",
     "title": "Direct credential validation",
-    "description": "Quick access to certificates and credentials, with focus on Cloud Security and Cybersecurity.",
+    "description": "Direct access to certificates and credentials across cloud, security and infrastructure.",
     "searchLabel": "Search certificate",
     "searchPlaceholder": "Search by name or category",
     "noResults": "No certificates found for this search.",
