@@ -411,7 +411,7 @@ h3 {
 
 h1 {
   max-width: 8ch;
-  font-size: clamp(3rem, 10vw, 5.6rem);
+  font-size: clamp(2.6rem, 8vw, 4.8rem);
   letter-spacing: -0.05em;
 }
 
