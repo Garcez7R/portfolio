@@ -82,6 +82,7 @@
     "eyebrow": "Certifications",
     "title": "Credentials that reinforce the trajectory",
     "description": "A prioritized selection to highlight depth, consistency and technical direction.",
+    "coreLabel": "Core",
     "filters": {
       "all": "All"
     },

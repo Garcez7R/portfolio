@@ -233,11 +233,13 @@ const renderBadges = () => {
     (a, b) => scoreBadge(b) - scoreBadge(a) || a.name.localeCompare(b.name),
   );
   const list = badgesExpanded ? source : source.slice(0, BADGES_COLLAPSED_COUNT);
+  const coreNames = new Set(source.slice(0, 6).map((badge) => badge.name));
 
   ui.badgeGrid.innerHTML = list
     .map((badge) => {
       const imageSrc = badge.badgeUrl || DEFAULT_BADGE_IMAGE;
       const isPlaceholder = imageSrc === DEFAULT_BADGE_IMAGE;
+      const isCore = coreNames.has(badge.name);
       const badgeMark = badge.name
         .split(/\s+/)
         .filter(Boolean)
@@ -246,7 +248,8 @@ const renderBadges = () => {
         .join("");
 
       return `
-        <article class="badge-card">
+        <article class="badge-card ${isCore ? "badge-card--core" : ""}">
+          ${isCore ? `<span class="badge-card__priority">${currentLocale.credentials.coreLabel}</span>` : ""}
           <div class="badge-card__visual ${isPlaceholder ? "is-placeholder" : ""}">
             ${
               isPlaceholder
