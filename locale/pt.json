@@ -98,29 +98,29 @@
   "projects": {
     "eyebrow": "Projetos",
     "title": "Trabalhos práticos selecionados",
-    "description": "Cards simples para trabalhos práticos, labs e implementações dignas de portfólio.",
+    "description": "Produtos práticos com foco em operação, fluxo de marketplace e plataformas de serviço pensadas com arquitetura web escalável.",
     "items": [
       {
-        "kind": "Plataforma de Segurança",
-        "name": "Heimdall Guardian",
-        "description": "Projeto conceitual focado em monitoramento protetivo, visibilidade de postura de segurança e interface orientada a operações.",
-        "stack": ["Segurança", "Monitoramento", "Frontend", "Arquitetura"],
+        "kind": "PWA de Operação em Saúde",
+        "name": "TranspSaude",
+        "description": "PWA para apoio à operação do transporte em saúde, com fluxo de solicitação, análise, distribuição operacional e consulta pública. Estruturado com Cloudflare Pages, Functions e D1.",
+        "stack": ["PWA", "Cloudflare Pages", "Functions", "D1"],
         "github": "https://github.com/Garcez7R",
         "demo": "https://github.com/Garcez7R"
       },
       {
-        "kind": "Portfólio",
-        "name": "Portfolio Tech Pro",
-        "description": "Portfólio estático multilíngue para GitHub Pages com certificações orientadas por markdown.",
-        "stack": ["HTML", "CSS", "JavaScript", "GitHub Pages"],
-        "github": "https://github.com/Garcez7R/portfolio",
-        "demo": "https://Garcez7R.github.io/portfolio/"
+        "kind": "Marketplace",
+        "name": "TEKA",
+        "description": "Marketplace para conectar leitores e sebos, com catálogo, estoque, papéis de usuário, scanner por ISBN, OCR, PWA e arquitetura pensada para crescimento com foco em UX e compliance.",
+        "stack": ["Marketplace", "PWA", "OCR", "Compliance"],
+        "github": "https://github.com/Garcez7R",
+        "demo": "https://github.com/Garcez7R"
       },
       {
-        "kind": "Lab Cloud",
-        "name": "Cloud Study Lab",
-        "description": "Espaço de repositório para labs, anotações e material de prática relacionado a certificações de cloud e infraestrutura.",
-        "stack": ["Markdown", "Linux", "Anotações Cloud"],
+        "kind": "PWA para Beleza",
+        "name": "Konnektx",
+        "description": "PWA para barbearias, salões e profissionais de beleza, com página pública, agenda, fidelização e base preparada para evolução com Cloudflare Worker.",
+        "stack": ["PWA", "Agenda", "Fidelização", "Cloudflare Worker"],
         "github": "https://github.com/Garcez7R",
         "demo": "https://github.com/Garcez7R"
       }
