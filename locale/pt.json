@@ -1,0 +1,118 @@
+{
+  "seo": {
+    "title": "R. Garcez | Portfólio Cloud, Segurança e Infraestrutura",
+    "description": "Portfólio técnico focado em certificações, cloud, segurança, infraestrutura e projetos práticos."
+  },
+  "nav": {
+    "skills": "Skills",
+    "credentials": "Credenciais",
+    "vault": "PDF Vault",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "hero": {
+    "eyebrow": "Cloud | Segurança | Infraestrutura",
+    "name": "R. Garcez",
+    "title": "Portfólio técnico para vagas de Cloud, Segurança e Infraestrutura",
+    "description": "Perfil orientado por certificações, com base prática em operações de cloud, segurança, Linux, redes e entrega de infraestrutura.",
+    "cv": "Baixar CV"
+  },
+  "skills": {
+    "eyebrow": "Competências",
+    "title": "Capacidades técnicas organizadas por domínio",
+    "description": "Uma visão limpa das áreas em que concentro mais energia: cloud, segurança, infraestrutura e operações de entrega.",
+    "items": [
+      {
+        "title": "Cloud",
+        "items": ["Fundamentos AWS", "Fundamentos OCI", "Noções de IAM", "Mapeamento de serviços principais"]
+      },
+      {
+        "title": "Security",
+        "items": ["Conceitos de segurança", "Bases de identidade", "Consciência de risco", "Mentalidade de configuração segura"]
+      },
+      {
+        "title": "Infrastructure",
+        "items": ["Administração Linux", "Fundamentos de redes", "Suporte a sistemas", "Documentação e operações"]
+      },
+      {
+        "title": "DevOps",
+        "items": ["Fluxo com Git", "Deploy estático", "Noções de CI/CD", "Mentalidade de automação"]
+      }
+    ]
+  },
+  "credentials": {
+    "eyebrow": "Certificações",
+    "title": "Credenciais carregadas via badges.md",
+    "description": "Esta seção é renderizada a partir da tabela markdown na raiz do projeto, deixando a atualização das certificações centralizada e simples.",
+    "filters": {
+      "all": "Todas"
+    }
+  },
+  "vault": {
+    "eyebrow": "Vault de Documentos",
+    "title": "Links de validação e referências de certificados",
+    "description": "Uma lista enxuta para recrutadores e times de contratação validarem credenciais sem poluição visual."
+  },
+  "projects": {
+    "eyebrow": "Projetos",
+    "title": "Trabalhos práticos selecionados",
+    "description": "Cards simples para trabalhos práticos, labs e implementações dignas de portfólio.",
+    "items": [
+      {
+        "name": "Portfolio Tech Pro",
+        "description": "Portfólio estático multilíngue para GitHub Pages com certificações orientadas por markdown.",
+        "stack": ["HTML", "CSS", "JavaScript", "GitHub Pages"],
+        "github": "https://github.com/Garcez7R/portfolio",
+        "demo": "https://Garcez7R.github.io/portfolio/"
+      },
+      {
+        "name": "Cloud Study Lab",
+        "description": "Espaço de repositório para labs, anotações e material de prática relacionado a certificações de cloud e infraestrutura.",
+        "stack": ["Markdown", "Linux", "Anotações Cloud"],
+        "github": "https://github.com/Garcez7R",
+        "demo": "https://github.com/Garcez7R"
+      }
+    ]
+  },
+  "metrics": {
+    "eyebrow": "Métricas",
+    "title": "Um retrato técnico compacto",
+    "description": "Dois gráficos leves resumem certificações por categoria e cobertura de skills por domínio.",
+    "certificationsChart": "Certificações por categoria",
+    "skillsChart": "Skills por domínio"
+  },
+  "contact": {
+    "eyebrow": "Contato",
+    "title": "Links profissionais",
+    "description": "Canais diretos para recrutadores, colaboradores e conversas técnicas de contratação.",
+    "items": [
+      {
+        "label": "GitHub",
+        "value": "github.com/Garcez7R",
+        "href": "https://github.com/Garcez7R"
+      },
+      {
+        "label": "LinkedIn",
+        "value": "linkedin.com",
+        "href": "https://www.linkedin.com"
+      },
+      {
+        "label": "Email",
+        "value": "seu-email@exemplo.com",
+        "href": "mailto:seu-email@exemplo.com"
+      },
+      {
+        "label": "CV",
+        "value": "Abrir PDF",
+        "href": "./assets/docs/cv.pdf"
+      }
+    ]
+  },
+  "shared": {
+    "verify": "Verificar",
+    "demo": "Demo"
+  },
+  "footer": {
+    "copy": "Construído como um portfólio rápido, estático e amigável para recrutadores."
+  }
+}

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Portfolio cover</title>
+  <desc id="desc">Social preview banner for the portfolio.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#111c29"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#3fb950"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="980" cy="90" r="180" fill="#d4af37" opacity="0.08"/>
+  <circle cx="160" cy="540" r="220" fill="#3fb950" opacity="0.08"/>
+  <rect x="80" y="90" width="1040" height="450" rx="28" fill="none" stroke="url(#accent)" stroke-opacity="0.45" stroke-width="2"/>
+  <text x="120" y="220" fill="#3fb950" font-family="JetBrains Mono, monospace" font-size="28">Cloud | Security | Infrastructure</text>
+  <text x="120" y="320" fill="#c9d1d9" font-family="Inter, sans-serif" font-size="84" font-weight="700">R. Garcez</text>
+  <text x="120" y="400" fill="#d4af37" font-family="JetBrains Mono, monospace" font-size="32">Technical Portfolio</text>
+  <text x="120" y="470" fill="#8b949e" font-family="Inter, sans-serif" font-size="30">Certifications, projects and recruiter-friendly technical proof.</text>
+</svg>

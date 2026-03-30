@@ -1,0 +1,118 @@
+{
+  "seo": {
+    "title": "R. Garcez | Cloud, Security & Infrastructure Portfolio",
+    "description": "Technical portfolio focused on certifications, cloud, security, infrastructure, and practical projects."
+  },
+  "nav": {
+    "skills": "Skills",
+    "credentials": "Credentials",
+    "vault": "PDF Vault",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "eyebrow": "Cloud | Security | Infrastructure",
+    "name": "R. Garcez",
+    "title": "Technical Portfolio for Cloud, Security and Infrastructure Roles",
+    "description": "Certification-driven profile with hands-on foundations in cloud operations, security, Linux, networking and infrastructure delivery.",
+    "cv": "Download CV"
+  },
+  "skills": {
+    "eyebrow": "Core Skills",
+    "title": "Technical capabilities organized by domain",
+    "description": "A clean overview of the areas I focus on most: cloud, security, infrastructure and delivery operations.",
+    "items": [
+      {
+        "title": "Cloud",
+        "items": ["AWS fundamentals", "OCI foundations", "IAM basics", "Core services mapping"]
+      },
+      {
+        "title": "Security",
+        "items": ["Security concepts", "Identity basics", "Risk awareness", "Secure configuration mindset"]
+      },
+      {
+        "title": "Infrastructure",
+        "items": ["Linux administration", "Networking basics", "System support", "Documentation and operations"]
+      },
+      {
+        "title": "DevOps",
+        "items": ["Git workflow", "Static deployments", "CI/CD awareness", "Automation mindset"]
+      }
+    ]
+  },
+  "credentials": {
+    "eyebrow": "Certifications",
+    "title": "Credentials sourced from badges.md",
+    "description": "This section is rendered from the markdown table in the project root, making certification updates centralized and easy to maintain.",
+    "filters": {
+      "all": "All"
+    }
+  },
+  "vault": {
+    "eyebrow": "Document Vault",
+    "title": "Verification links and certificate references",
+    "description": "A streamlined list for recruiters and hiring teams to validate credentials without visual clutter."
+  },
+  "projects": {
+    "eyebrow": "Projects",
+    "title": "Selected hands-on work",
+    "description": "Simple cards for practical work, labs and portfolio-grade implementations.",
+    "items": [
+      {
+        "name": "Portfolio Tech Pro",
+        "description": "Static multilingual portfolio designed for GitHub Pages with markdown-driven certifications.",
+        "stack": ["HTML", "CSS", "JavaScript", "GitHub Pages"],
+        "github": "https://github.com/Garcez7R/portfolio",
+        "demo": "https://Garcez7R.github.io/portfolio/"
+      },
+      {
+        "name": "Cloud Study Lab",
+        "description": "Repository space for labs, notes and practice material related to cloud and infrastructure certifications.",
+        "stack": ["Markdown", "Linux", "Cloud Notes"],
+        "github": "https://github.com/Garcez7R",
+        "demo": "https://github.com/Garcez7R"
+      }
+    ]
+  },
+  "metrics": {
+    "eyebrow": "Metrics",
+    "title": "A compact technical snapshot",
+    "description": "Two lightweight charts summarize certifications by category and skill coverage by domain.",
+    "certificationsChart": "Certifications by category",
+    "skillsChart": "Skills by domain"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Professional links",
+    "description": "Direct channels for recruiters, collaborators and technical hiring conversations.",
+    "items": [
+      {
+        "label": "GitHub",
+        "value": "github.com/Garcez7R",
+        "href": "https://github.com/Garcez7R"
+      },
+      {
+        "label": "LinkedIn",
+        "value": "linkedin.com",
+        "href": "https://www.linkedin.com"
+      },
+      {
+        "label": "Email",
+        "value": "your-email@example.com",
+        "href": "mailto:your-email@example.com"
+      },
+      {
+        "label": "CV",
+        "value": "Open PDF",
+        "href": "./assets/docs/cv.pdf"
+      }
+    ]
+  },
+  "shared": {
+    "verify": "Verify",
+    "demo": "Demo"
+  },
+  "footer": {
+    "copy": "Built as a fast, static, recruiter-friendly portfolio."
+  }
+}

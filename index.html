@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>R. Garcez | Cloud, Security & Infrastructure Portfolio</title>
+    <meta
+      name="description"
+      content="Technical portfolio focused on certifications, cloud, security, infrastructure, and practical projects."
+    />
+    <meta property="og:title" content="R. Garcez | Tech Portfolio" />
+    <meta
+      property="og:description"
+      content="Professional portfolio highlighting certifications, skills, projects, and technical documents."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://Garcez7R.github.io/portfolio/" />
+    <meta property="og:image" content="https://Garcez7R.github.io/portfolio/assets/img/og-cover.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="R. Garcez | Tech Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Cloud, security, infrastructure and certification-focused technical portfolio."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="splash" id="splash" aria-hidden="true">
+      <div class="splash__bar"></div>
+      <div class="splash__terminal">
+        <p>[SYSTEM] Initializing modules...</p>
+        <p>[OK] Cloud credentials loaded.</p>
+        <p>[READY] Launching portfolio...</p>
+      </div>
+    </div>
+
+    <header class="topbar">
+      <a class="brand" href="#hero">R. Garcez</a>
+      <nav class="topnav" aria-label="Primary">
+        <a href="#skills" data-i18n="nav.skills"></a>
+        <a href="#credentials" data-i18n="nav.credentials"></a>
+        <a href="#vault" data-i18n="nav.vault"></a>
+        <a href="#projects" data-i18n="nav.projects"></a>
+        <a href="#contact" data-i18n="nav.contact"></a>
+      </nav>
+      <div class="lang-switch" aria-label="Language switcher">
+        <button type="button" data-lang-btn="pt">PT</button>
+        <span>|</span>
+        <button type="button" data-lang-btn="en">EN</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero section fade-in" id="hero">
+        <div class="hero__content">
+          <p class="eyebrow" data-i18n="hero.eyebrow"></p>
+          <h1 data-i18n="hero.name"></h1>
+          <p class="hero__title" data-i18n="hero.title"></p>
+          <p class="hero__description" data-i18n="hero.description"></p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="https://github.com/Garcez7R" target="_blank" rel="noreferrer">
+              GitHub
+            </a>
+            <a class="button" href="https://www.linkedin.com" target="_blank" rel="noreferrer">
+              LinkedIn
+            </a>
+            <a class="button" href="./assets/docs/cv.pdf" target="_blank" rel="noreferrer" data-i18n="hero.cv"></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section fade-in" id="skills">
+        <div class="section__intro">
+          <p class="eyebrow" data-i18n="skills.eyebrow"></p>
+          <h2 data-i18n="skills.title"></h2>
+          <p data-i18n="skills.description"></p>
+        </div>
+        <div class="skill-grid" id="skills-grid"></div>
+      </section>
+
+      <section class="section fade-in" id="credentials">
+        <div class="section__intro">
+          <p class="eyebrow" data-i18n="credentials.eyebrow"></p>
+          <h2 data-i18n="credentials.title"></h2>
+          <p data-i18n="credentials.description"></p>
+        </div>
+        <div class="filters" id="badge-filters" aria-label="Certification filters"></div>
+        <div class="badge-grid" id="badge-grid"></div>
+      </section>
+
+      <section class="section fade-in" id="vault">
+        <div class="section__intro">
+          <p class="eyebrow" data-i18n="vault.eyebrow"></p>
+          <h2 data-i18n="vault.title"></h2>
+          <p data-i18n="vault.description"></p>
+        </div>
+        <div class="vault-list" id="vault-list"></div>
+      </section>
+
+      <section class="section fade-in" id="projects">
+        <div class="section__intro">
+          <p class="eyebrow" data-i18n="projects.eyebrow"></p>
+          <h2 data-i18n="projects.title"></h2>
+          <p data-i18n="projects.description"></p>
+        </div>
+        <div class="project-grid" id="project-grid"></div>
+      </section>
+
+      <section class="section fade-in" id="metrics">
+        <div class="section__intro">
+          <p class="eyebrow" data-i18n="metrics.eyebrow"></p>
+          <h2 data-i18n="metrics.title"></h2>
+          <p data-i18n="metrics.description"></p>
+        </div>
+        <div class="metrics-grid">
+          <article class="metric-card">
+            <h3 data-i18n="metrics.certificationsChart"></h3>
+            <div id="cert-metrics" class="metric-chart"></div>
+          </article>
+          <article class="metric-card">
+            <h3 data-i18n="metrics.skillsChart"></h3>
+            <div id="skills-metrics" class="metric-chart"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section fade-in" id="contact">
+        <div class="section__intro">
+          <p class="eyebrow" data-i18n="contact.eyebrow"></p>
+          <h2 data-i18n="contact.title"></h2>
+          <p data-i18n="contact.description"></p>
+        </div>
+        <div class="contact-grid" id="contact-grid"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p data-i18n="footer.copy"></p>
+    </footer>
+
+    <script type="module" src="./assets/js/main.js"></script>
+  </body>
+</html>
