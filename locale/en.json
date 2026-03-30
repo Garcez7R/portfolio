@@ -14,13 +14,13 @@
     "eyebrow": "Cloud | Security | Infrastructure",
     "name": "Rafael Garcez",
     "title": "Cloud, Cybersecurity and Infrastructure Professional",
-    "description": "I am building my path at the intersection of cloud, security and infrastructure, grounded in technical fundamentals, disciplined learning and real respect for operations.",
+    "description": "I work at the convergence of cloud, security and infrastructure, with focus on operations, technical consistency and continuous growth.",
     "cv": "Download CV",
     "panelTag": "STATUS",
     "panelTitle": "Technical Snapshot",
-    "panelLine1": "Centered on secure, scalable and well-operated environments.",
-    "panelLine2": "Continuous learning translated into practice, documentation and delivery.",
-    "panelLine3": "Built to show consistency, not just intention.",
+    "panelLine1": "Secure, scalable and well-operated environments.",
+    "panelLine2": "Learning translated into practice and delivery.",
+    "panelLine3": "Technical consistency at the center of the path.",
     "rail1": "CERTIFICATION-FIRST",
     "rail2": "OPERATION-DRIVEN PROJECTS",
     "rail3": "PT-BR + EN",
@@ -33,8 +33,8 @@
   },
   "skills": {
     "eyebrow": "Core Skills",
-    "title": "A technical foundation in constant evolution",
-    "description": "These are the areas where I am deepening my profile today, combining strong fundamentals, context awareness and readiness for more demanding environments.",
+    "title": "A technical foundation under continuous development",
+    "description": "Cloud, security, infrastructure and delivery currently form the core of my professional growth.",
     "items": [
       {
         "title": "Cloud",
@@ -80,8 +80,8 @@
   },
   "credentials": {
     "eyebrow": "Certifications",
-    "title": "Credentials that support the trajectory",
-    "description": "More than volume, these certifications reflect consistency, study discipline and a serious commitment to technical growth.",
+    "title": "Credentials that reinforce the trajectory",
+    "description": "A prioritized selection to highlight depth, consistency and technical direction.",
     "filters": {
       "all": "All"
     },
@@ -93,7 +93,7 @@
   "vault": {
     "eyebrow": "Certificate Vault",
     "title": "Direct credential validation",
-    "description": "A concise area for quick review and verification of the certifications that matter most.",
+    "description": "A concise area for reviewing certifications, with emphasis on the ones that carry stronger professional signal.",
     "searchLabel": "Search certificate",
     "searchPlaceholder": "Search by name or category",
     "noResults": "No certificates found for this search.",
@@ -104,8 +104,8 @@
   },
   "projects": {
     "eyebrow": "Projects",
-    "title": "Projects where idea, architecture and execution meet",
-    "description": "Each product below reflects a build decision: solving a real problem with structure, clarity and attention to the operating experience.",
+    "title": "Projects shaped by product vision and execution",
+    "description": "Products designed to solve real problems with technical structure, clear flows and attention to operational reality.",
     "items": [
       {
         "kind": "Health Operations PWA",
@@ -136,14 +136,14 @@
   "metrics": {
     "eyebrow": "Metrics",
     "title": "A quick view of the profile",
-    "description": "A compact snapshot of where my training stands today and where my strongest technical momentum is developing.",
+    "description": "A compact snapshot of credential distribution and the areas where my strongest technical momentum is building.",
     "certificationsChart": "Certifications by category",
     "skillsChart": "Skills by domain"
   },
   "contact": {
     "eyebrow": "Contact",
     "title": "Let’s connect",
-    "description": "Open to opportunities, thoughtful conversations and teams that value technical fundamentals, ownership and long-term growth.",
+    "description": "Open to opportunities and conversations with teams that value technical fundamentals, ownership and consistent growth.",
     "items": [
       {
         "label": "GitHub",

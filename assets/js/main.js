@@ -7,6 +7,7 @@ const DEFAULT_BADGE_IMAGE = "./assets/img/badges/placeholder-badge.svg";
 const BADGES_COLLAPSED_COUNT = 12;
 const VAULT_COLLAPSED_COUNT = 8;
 const VAULT_GROUP_COLLAPSED_COUNT = 3;
+const CATEGORY_ORDER = ["Cloud", "Security", "Infrastructure", "DevOps", "Networking", "Linux", "Other"];
 
 let currentLocale = {};
 let currentLanguage = "en";
@@ -47,6 +48,26 @@ const normalizeCategory = (value) => {
   };
 
   return map[value.trim().toLowerCase()] || value.trim();
+};
+
+const getCategoryPriority = (category) => {
+  const index = CATEGORY_ORDER.indexOf(category);
+  return index === -1 ? CATEGORY_ORDER.length : index;
+};
+
+const scoreBadge = (badge) => {
+  let score = 0;
+  const name = badge.name.toLowerCase();
+
+  score += (CATEGORY_ORDER.length - getCategoryPriority(badge.category)) * 10;
+  if (name.includes("certified")) score += 28;
+  if (name.includes("associate") || name.includes("professional")) score += 18;
+  if (name.includes("aws") || name.includes("oracle") || name.includes("google") || name.includes("isc2")) score += 16;
+  if (name.includes("lead auditor") || name.includes("cyberops") || name.includes("ccna")) score += 14;
+  if (name.includes("candidate")) score += 8;
+  if (name.includes("introduction") || name.includes("fundamentals")) score -= 8;
+
+  return score;
 };
 
 const detectLanguage = () => {
@@ -168,7 +189,12 @@ const renderHeroStats = () => {
 };
 
 const buildFilters = () => {
-  const categories = ["All", ...new Set(badgeRecords.map((badge) => badge.category))];
+  const categories = [
+    "All",
+    ...[...new Set(badgeRecords.map((badge) => badge.category))].sort(
+      (a, b) => getCategoryPriority(a) - getCategoryPriority(b) || a.localeCompare(b),
+    ),
+  ];
   ui.badgeFilters.innerHTML = categories
     .map(
       (category, index) => `
@@ -203,7 +229,9 @@ const updateBadgeToggle = (totalItems) => {
 };
 
 const renderBadges = () => {
-  const source = selectedBadgeFilter === "All" ? badgeRecords : badgeRecords.filter((badge) => badge.category === selectedBadgeFilter);
+  const source = (selectedBadgeFilter === "All" ? badgeRecords : badgeRecords.filter((badge) => badge.category === selectedBadgeFilter)).sort(
+    (a, b) => scoreBadge(b) - scoreBadge(a) || a.name.localeCompare(b.name),
+  );
   const list = badgesExpanded ? source : source.slice(0, BADGES_COLLAPSED_COUNT);
 
   ui.badgeGrid.innerHTML = list
@@ -241,27 +269,13 @@ const renderBadges = () => {
   updateBadgeToggle(source.length);
 };
 
-const scoreVaultBadge = (badge) => {
-  let score = 0;
-  const name = badge.name.toLowerCase();
-
-  if (["Cloud", "Security", "Infrastructure", "Networking", "DevOps"].includes(badge.category)) score += 40;
-  if (name.includes("certified")) score += 28;
-  if (name.includes("associate") || name.includes("professional")) score += 18;
-  if (name.includes("aws") || name.includes("oracle") || name.includes("google") || name.includes("isc2")) score += 16;
-  if (name.includes("lead auditor") || name.includes("cyberops") || name.includes("ccna")) score += 14;
-  if (name.includes("introduction") || name.includes("fundamentals")) score -= 8;
-
-  return score;
-};
-
 const renderVault = () => {
   const filtered = badgeRecords
     .filter((badge) => badge.name.toLowerCase().includes(vaultSearchTerm) || badge.category.toLowerCase().includes(vaultSearchTerm))
     .sort((a, b) => a.name.localeCompare(b.name));
 
   const featured = [...filtered]
-    .sort((a, b) => scoreVaultBadge(b) - scoreVaultBadge(a))
+    .sort((a, b) => scoreBadge(b) - scoreBadge(a))
     .slice(0, 6);
 
   const groupedEntries = filtered.reduce((acc, badge) => {
@@ -293,7 +307,7 @@ const renderVault = () => {
   ui.vaultGroups.innerHTML = Object.entries(groupedEntries)
     .sort(([a], [b]) => a.localeCompare(b))
     .map(([category, items]) => {
-      const orderedItems = [...items].sort((a, b) => scoreVaultBadge(b) - scoreVaultBadge(a) || a.name.localeCompare(b.name));
+      const orderedItems = [...items].sort((a, b) => scoreBadge(b) - scoreBadge(a) || a.name.localeCompare(b.name));
       const visibleItems = vaultExpanded ? orderedItems : orderedItems.slice(0, VAULT_GROUP_COLLAPSED_COUNT);
 
       return `
