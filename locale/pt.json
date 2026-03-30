@@ -55,8 +55,8 @@
   },
   "skills": {
     "eyebrow": "Competências",
-    "title": "Base operacional com direção clara para segurança",
-    "description": "A combinação entre experiência prática em infraestrutura e evolução contínua em cloud e cybersecurity é o eixo central do meu perfil hoje.",
+    "title": "Competências",
+    "description": "Base operacional sólida com evolução consistente em cloud, segurança e ambientes críticos.",
     "items": [
       {
         "title": "Cloud",
@@ -122,7 +122,7 @@
   },
   "credentials": {
     "eyebrow": "Certificações",
-    "title": "Validação técnica de competências operacionais",
+    "title": "Credenciais",
     "description": "Credenciais que reforçam experiência prática em infraestrutura, cloud, segurança e operação.",
     "coreTitle": "Core Credentials",
     "coreDescription": "Credenciais centrais em cloud, segurança e operação, com leitura imediata para contextos técnicos e executivos.",
@@ -139,8 +139,8 @@
   },
   "vault": {
     "eyebrow": "Vault de Certificados",
-    "title": "Validação direta das credenciais",
-    "description": "Consulta objetiva de certificados e credenciais com foco em cloud, segurança e infraestrutura.",
+    "title": "Certificados",
+    "description": "Consulta direta de certificados, trilhas e credenciais em cloud, segurança e infraestrutura.",
     "searchLabel": "Buscar certificado",
     "searchPlaceholder": "Buscar por nome ou categoria",
     "noResults": "Nenhum certificado encontrado para esta busca.",
@@ -151,8 +151,8 @@
   },
   "projects": {
     "eyebrow": "Projetos",
-    "title": "Projetos com visão de produto e execução",
-    "description": "Projetos concebidos com lógica de produto, mas sustentados por uma base operacional forte em arquitetura, confiabilidade e segurança.",
+    "title": "Projetos",
+    "description": "Arquitetura, execução e evolução de produtos com base em confiabilidade, operação e segurança.",
     "items": [
       {
         "kind": "PWA de operação em saúde",
@@ -182,8 +182,8 @@
   },
   "metrics": {
     "eyebrow": "Métricas",
-    "title": "Panorama do perfil em um olhar",
-    "description": "Resumo visual da evolução em infraestrutura, segurança e cloud, destacando áreas com maior volume de estudo e certificações.",
+    "title": "Panorama",
+    "description": "Distribuição atual entre infraestrutura, segurança e cloud, com foco nas áreas de maior profundidade.",
     "certificationsChart": "Certificações por categoria",
     "skillsChart": "Competências por domínio",
     "securityFocusNote": "Foco atual em segurança: {percent}% da trilha de certificações."
@@ -191,7 +191,7 @@
   "contact": {
     "eyebrow": "Contato",
     "title": "Vamos conversar",
-    "description": "Disponível para oportunidades remotas ou presenciais em times que valorizam experiência operacional sólida e evolução contínua em Cloud Security e Cybersecurity.",
+    "description": "Disponível para oportunidades remotas ou presenciais em times que valorizam solidez operacional e evolução contínua em segurança.",
     "items": [
       {
         "label": "GitHub",
