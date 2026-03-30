@@ -172,6 +172,23 @@ main {
   pointer-events: none;
 }
 
+.section-shell[data-section]::after,
+.vault-shell[data-section]::after,
+.insight-shell[data-section]::after,
+.contact-shell[data-section]::after {
+  content: attr(data-section);
+  position: absolute;
+  top: -0.35rem;
+  right: 0.2rem;
+  z-index: 0;
+  color: rgba(244, 247, 251, 0.08);
+  font-family: "JetBrains Mono", monospace;
+  font-size: clamp(3.6rem, 10vw, 8.5rem);
+  line-height: 0.9;
+  letter-spacing: -0.08em;
+  pointer-events: none;
+}
+
 .hero {
   padding-top: 3.25rem;
 }
@@ -429,6 +446,8 @@ h2 {
   display: grid;
   gap: 0.35rem;
   margin-bottom: 1.9rem;
+  position: relative;
+  z-index: 1;
 }
 
 .section--skills .section-shell {
@@ -441,6 +460,7 @@ h2 {
   max-width: 40rem;
   padding-left: 1.2rem;
   border-left: 1px solid rgba(197, 206, 216, 0.16);
+  z-index: 1;
 }
 
 .section--credentials .section-shell {
@@ -503,6 +523,7 @@ h2 {
 
 .section--projects .project-grid {
   position: relative;
+  z-index: 1;
 }
 
 .section--projects .project-grid::before {
@@ -523,6 +544,7 @@ h2 {
 
 .section--metrics .section__intro {
   max-width: 36rem;
+  z-index: 1;
 }
 
 .section--contact .contact-shell {
