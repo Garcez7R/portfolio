@@ -58,20 +58,40 @@
 
     <main>
       <section class="hero section fade-in" id="hero">
-        <div class="hero__content">
-          <p class="eyebrow" data-i18n="hero.eyebrow"></p>
-          <h1 data-i18n="hero.name"></h1>
-          <p class="hero__title" data-i18n="hero.title"></p>
-          <p class="hero__description" data-i18n="hero.description"></p>
-          <div class="hero__actions">
-            <a class="button button--primary" href="https://github.com/Garcez7R" target="_blank" rel="noreferrer">
-              GitHub
-            </a>
-            <a class="button" href="https://www.linkedin.com" target="_blank" rel="noreferrer">
-              LinkedIn
-            </a>
-            <a class="button" href="./assets/docs/cv.pdf" target="_blank" rel="noreferrer" data-i18n="hero.cv"></a>
+        <div class="hero__shell">
+          <div class="hero__content">
+            <p class="eyebrow" data-i18n="hero.eyebrow"></p>
+            <h1 data-i18n="hero.name"></h1>
+            <p class="hero__title" data-i18n="hero.title"></p>
+            <p class="hero__description" data-i18n="hero.description"></p>
+            <div class="hero__actions">
+              <a class="button button--primary" href="https://github.com/Garcez7R" target="_blank" rel="noreferrer">
+                GitHub
+              </a>
+              <a class="button" href="https://www.linkedin.com" target="_blank" rel="noreferrer">
+                LinkedIn
+              </a>
+              <a class="button" href="./assets/docs/cv.pdf" target="_blank" rel="noreferrer" data-i18n="hero.cv"></a>
+            </div>
           </div>
+          <aside class="hero__panel" aria-label="Technical summary">
+            <div class="hero__panel-head">
+              <span data-i18n="hero.panelTag"></span>
+              <strong data-i18n="hero.panelTitle"></strong>
+            </div>
+            <div class="hero__stats" id="hero-stats"></div>
+            <div class="hero__terminal">
+              <p data-i18n="hero.panelLine1"></p>
+              <p data-i18n="hero.panelLine2"></p>
+              <p data-i18n="hero.panelLine3"></p>
+            </div>
+          </aside>
+        </div>
+        <div class="hero__rail">
+          <span data-i18n="hero.rail1"></span>
+          <span data-i18n="hero.rail2"></span>
+          <span data-i18n="hero.rail3"></span>
+          <span data-i18n="hero.rail4"></span>
         </div>
       </section>
 

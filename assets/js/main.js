@@ -11,6 +11,7 @@ let badgeRecords = [];
 
 const ui = {
   splash: document.getElementById("splash"),
+  heroStats: document.getElementById("hero-stats"),
   skillsGrid: document.getElementById("skills-grid"),
   badgeGrid: document.getElementById("badge-grid"),
   badgeFilters: document.getElementById("badge-filters"),
@@ -124,6 +125,26 @@ const renderSkills = () => {
     .join("");
 };
 
+const renderHeroStats = () => {
+  const categories = new Set(badgeRecords.map((badge) => badge.category));
+  const securityCount = badgeRecords.filter((badge) => badge.category === "Security").length;
+
+  ui.heroStats.innerHTML = `
+    <article class="hero-stat">
+      <span>${currentLocale.hero.stats.total}</span>
+      <strong>${badgeRecords.length}</strong>
+    </article>
+    <article class="hero-stat">
+      <span>${currentLocale.hero.stats.categories}</span>
+      <strong>${categories.size}</strong>
+    </article>
+    <article class="hero-stat">
+      <span>${currentLocale.hero.stats.security}</span>
+      <strong>${securityCount}</strong>
+    </article>
+  `;
+};
+
 const buildFilters = () => {
   const categories = ["All", ...new Set(badgeRecords.map((badge) => badge.category))];
   ui.badgeFilters.innerHTML = categories
@@ -149,15 +170,25 @@ const renderBadges = (filter = "All") => {
   const list = filter === "All" ? badgeRecords : badgeRecords.filter((badge) => badge.category === filter);
 
   ui.badgeGrid.innerHTML = list
-    .map(
-      (badge) => `
+    .map((badge) => {
+      const imageSrc = badge.badgeUrl || DEFAULT_BADGE_IMAGE;
+      const isPlaceholder = imageSrc === DEFAULT_BADGE_IMAGE;
+      const badgeMark = badge.name
+        .split(/\s+/)
+        .filter(Boolean)
+        .slice(0, 2)
+        .map((word) => word[0]?.toUpperCase() || "")
+        .join("");
+
+      return `
         <article class="badge-card">
-          <img
-            src="${badge.badgeUrl || DEFAULT_BADGE_IMAGE}"
-            alt="${badge.name} badge"
-            loading="lazy"
-            onerror="this.src='${DEFAULT_BADGE_IMAGE}'"
-          />
+          <div class="badge-card__visual ${isPlaceholder ? "is-placeholder" : ""}">
+            ${
+              isPlaceholder
+                ? `<div class="badge-card__mark" aria-hidden="true">${badgeMark}</div>`
+                : `<img src="${imageSrc}" alt="${badge.name} badge" loading="lazy" onerror="this.parentElement.classList.add('is-placeholder'); this.parentElement.innerHTML='<div class=&quot;badge-card__mark&quot; aria-hidden=&quot;true&quot;>${badgeMark}</div>';" />`
+            }
+          </div>
           <div>
             <h3>${badge.name}</h3>
             <p>${badge.category}</p>
@@ -166,8 +197,8 @@ const renderBadges = (filter = "All") => {
             <a href="${badge.certificateUrl}" target="_blank" rel="noreferrer">${currentLocale.shared.verify}</a>
           </div>
         </article>
-      `,
-    )
+      `;
+    })
     .join("");
 };
 
@@ -265,6 +296,7 @@ const setLanguage = async (language) => {
   localStorage.setItem(STORAGE_KEYS.language, language);
   currentLocale = await loadLocale(language);
   applyI18n();
+  renderHeroStats();
   renderSkills();
   buildFilters();
   renderBadges();

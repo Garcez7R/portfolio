@@ -15,7 +15,21 @@
     "name": "R. Garcez",
     "title": "Technical Portfolio for Cloud, Security and Infrastructure Roles",
     "description": "Certification-driven profile with hands-on foundations in cloud operations, security, Linux, networking and infrastructure delivery.",
-    "cv": "Download CV"
+    "cv": "Download CV",
+    "panelTag": "STATUS",
+    "panelTitle": "Technical Snapshot",
+    "panelLine1": "Primary direction: cybersecurity, cloud and infrastructure.",
+    "panelLine2": "Credential stack centralized and rendered from markdown.",
+    "panelLine3": "Static delivery optimized for GitHub Pages.",
+    "rail1": "CERTIFICATION-FIRST",
+    "rail2": "STATIC / FAST / MAINTAINABLE",
+    "rail3": "PT-BR + EN",
+    "rail4": "RECRUITER-READY",
+    "stats": {
+      "total": "Certifications",
+      "categories": "Domains",
+      "security": "Security focus"
+    }
   },
   "skills": {
     "eyebrow": "Core Skills",

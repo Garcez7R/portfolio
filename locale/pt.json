@@ -15,7 +15,21 @@
     "name": "R. Garcez",
     "title": "Portfólio técnico para vagas de Cloud, Segurança e Infraestrutura",
     "description": "Perfil orientado por certificações, com base prática em operações de cloud, segurança, Linux, redes e entrega de infraestrutura.",
-    "cv": "Baixar CV"
+    "cv": "Baixar CV",
+    "panelTag": "STATUS",
+    "panelTitle": "Resumo Técnico",
+    "panelLine1": "Direção principal: cibersegurança, cloud e infraestrutura.",
+    "panelLine2": "Stack de credenciais centralizada e renderizada por markdown.",
+    "panelLine3": "Entrega estática otimizada para GitHub Pages.",
+    "rail1": "FOCO EM CERTIFICAÇÕES",
+    "rail2": "ESTÁTICO / RÁPIDO / MANTÍVEL",
+    "rail3": "PT-BR + EN",
+    "rail4": "PRONTO PARA RECRUTADOR",
+    "stats": {
+      "total": "Certificações",
+      "categories": "Domínios",
+      "security": "Foco em segurança"
+    }
   },
   "skills": {
     "eyebrow": "Competências",
