@@ -107,8 +107,7 @@ img {
 .metric-label,
 .contact-card span,
 .hero__signal,
-.hero__terminal,
-.hero__rail {
+.hero__terminal {
   font-family: "JetBrains Mono", monospace;
 }
 
@@ -375,23 +374,6 @@ main {
   color: var(--muted);
   font-size: 0.82rem;
   line-height: 1.45;
-}
-
-.hero__rail {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 1.25rem;
-}
-
-.hero__rail span {
-  padding: 0.5rem 0.8rem;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--control-surface);
-  color: var(--text-soft);
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
 }
 
 .eyebrow {
