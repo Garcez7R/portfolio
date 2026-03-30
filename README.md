@@ -32,6 +32,7 @@ Technical portfolio focused on certifications, cloud, security, infrastructure a
 
 - Replace placeholder badge art in `assets/img/badges/`.
 - Add your real PDFs inside `assets/docs/certificates/`.
+- Replace the placeholder files `assets/docs/cv.pdf` and `assets/docs/certificates/placeholder-certificate.pdf`.
 - Update LinkedIn, email and CV link placeholders.
 - Replace sample projects and skill wording as needed.
 - If desired, add a custom `assets/img/og-cover.png` for social previews.
