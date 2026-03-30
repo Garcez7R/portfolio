@@ -181,11 +181,15 @@ main {
   top: -0.35rem;
   right: 0.2rem;
   z-index: 0;
-  color: rgba(244, 247, 251, 0.08);
   font-family: "JetBrains Mono", monospace;
   font-size: clamp(3.6rem, 10vw, 8.5rem);
   line-height: 0.9;
   letter-spacing: -0.08em;
+  color: transparent;
+  background: linear-gradient(180deg, rgba(244, 247, 251, 0.14), rgba(212, 175, 55, 0.05));
+  -webkit-background-clip: text;
+  background-clip: text;
+  opacity: 0.9;
   pointer-events: none;
 }
 
