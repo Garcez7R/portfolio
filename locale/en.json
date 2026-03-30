@@ -13,7 +13,7 @@
   "hero": {
     "eyebrow": "Cloud | Security | Infrastructure",
     "name": "R. Garcez",
-    "title": "Technical Portfolio for Cloud, Security and Infrastructure Roles",
+    "title": "Cloud Architect / Cybersecurity",
     "description": "Certification-driven profile with hands-on foundations in cloud operations, security, Linux, networking and infrastructure delivery.",
     "cv": "Download CV",
     "panelTag": "STATUS",
@@ -38,19 +38,43 @@
     "items": [
       {
         "title": "Cloud",
-        "items": ["AWS fundamentals", "OCI foundations", "IAM basics", "Core services mapping"]
+        "description": "Core services, identity and architecture fundamentals for cloud environments.",
+        "items": [
+          { "name": "AWS", "icon": "AW", "description": "Core AWS services, IAM basics and cloud practitioner foundations." },
+          { "name": "OCI", "icon": "OC", "description": "Oracle Cloud Infrastructure foundations and baseline service familiarity." },
+          { "name": "IAM", "icon": "ID", "description": "Identity, access and least-privilege concepts across cloud platforms." },
+          { "name": "Cloud Ops", "icon": "CO", "description": "Operational discipline for cloud resources, documentation and support." }
+        ]
       },
       {
         "title": "Security",
-        "items": ["Security concepts", "Identity basics", "Risk awareness", "Secure configuration mindset"]
+        "description": "Security-first mindset across governance, identity, auditing and defensive practices.",
+        "items": [
+          { "name": "SOC", "icon": "SC", "description": "Awareness of detection, response and operational security workflows." },
+          { "name": "GRC", "icon": "GR", "description": "Governance, risk, compliance and policy-oriented security thinking." },
+          { "name": "OWASP", "icon": "OW", "description": "API and web application security fundamentals with OWASP alignment." },
+          { "name": "Zero Trust", "icon": "ZT", "description": "Identity-centric access control and verification-oriented design." }
+        ]
       },
       {
         "title": "Infrastructure",
-        "items": ["Linux administration", "Networking basics", "System support", "Documentation and operations"]
+        "description": "Operational base for systems, Linux, networks and technical support environments.",
+        "items": [
+          { "name": "Linux", "icon": "LX", "description": "Command line, system basics, administration routines and diagnostics." },
+          { "name": "Networking", "icon": "NW", "description": "Routing, switching, connectivity and network troubleshooting concepts." },
+          { "name": "Systems", "icon": "SY", "description": "Host support, system health checks and configuration awareness." },
+          { "name": "Docs", "icon": "DC", "description": "Operational documentation, runbooks and technical organization." }
+        ]
       },
       {
         "title": "DevOps",
-        "items": ["Git workflow", "Static deployments", "CI/CD awareness", "Automation mindset"]
+        "description": "Lean delivery practices for versioning, deployment and automation mindset.",
+        "items": [
+          { "name": "Git", "icon": "GT", "description": "Branching, commits, repository hygiene and collaboration workflow." },
+          { "name": "CI/CD", "icon": "CI", "description": "Awareness of deployment pipelines and automated delivery stages." },
+          { "name": "Automation", "icon": "AU", "description": "Process simplification and repeatable operational routines." },
+          { "name": "Pages", "icon": "PG", "description": "Static publishing workflows using GitHub Pages and simple pipelines." }
+        ]
       }
     ]
   },
@@ -60,6 +84,10 @@
     "description": "This section is rendered from the markdown table in the project root, making certification updates centralized and easy to maintain.",
     "filters": {
       "all": "All"
+    },
+    "toggle": {
+      "more": "Show {count} more",
+      "less": "Show less"
     }
   },
   "vault": {
@@ -73,6 +101,15 @@
     "description": "Simple cards for practical work, labs and portfolio-grade implementations.",
     "items": [
       {
+        "kind": "Security Platform",
+        "name": "Heimdall Guardian",
+        "description": "Concept project focused on protective monitoring, security posture visibility and an operations-first interface.",
+        "stack": ["Security", "Monitoring", "Frontend", "Architecture"],
+        "github": "https://github.com/Garcez7R",
+        "demo": "https://github.com/Garcez7R"
+      },
+      {
+        "kind": "Portfolio",
         "name": "Portfolio Tech Pro",
         "description": "Static multilingual portfolio designed for GitHub Pages with markdown-driven certifications.",
         "stack": ["HTML", "CSS", "JavaScript", "GitHub Pages"],
@@ -80,6 +117,7 @@
         "demo": "https://Garcez7R.github.io/portfolio/"
       },
       {
+        "kind": "Cloud Lab",
         "name": "Cloud Study Lab",
         "description": "Repository space for labs, notes and practice material related to cloud and infrastructure certifications.",
         "stack": ["Markdown", "Linux", "Cloud Notes"],

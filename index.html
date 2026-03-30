@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
   <body>
+    <!-- Splash screen shown only once per browser session. -->
     <div class="splash" id="splash" aria-hidden="true">
       <div class="splash__bar"></div>
       <div class="splash__terminal">
@@ -40,6 +41,7 @@
       </div>
     </div>
 
+    <!-- Sticky navigation with language switcher. -->
     <header class="topbar">
       <a class="brand" href="#hero">R. Garcez</a>
       <nav class="topnav" aria-label="Primary">
@@ -57,6 +59,7 @@
     </header>
 
     <main>
+      <!-- Hero section with profile, headline and technical summary. -->
       <section class="hero section fade-in" id="hero">
         <div class="hero__shell">
           <div class="hero__content">
@@ -75,6 +78,9 @@
             </div>
           </div>
           <aside class="hero__panel" aria-label="Technical summary">
+            <div class="hero__profile-frame">
+              <img src="./assets/img/profile-placeholder.svg" alt="Rafael Garcez profile portrait placeholder" />
+            </div>
             <div class="hero__panel-head">
               <span data-i18n="hero.panelTag"></span>
               <strong data-i18n="hero.panelTitle"></strong>
@@ -95,6 +101,7 @@
         </div>
       </section>
 
+      <!-- Domain-based skills with tooltip-ready skill chips. -->
       <section class="section fade-in" id="skills">
         <div class="section__intro">
           <p class="eyebrow" data-i18n="skills.eyebrow"></p>
@@ -104,6 +111,7 @@
         <div class="skill-grid" id="skills-grid"></div>
       </section>
 
+      <!-- Credentials rendered from badges.md. -->
       <section class="section fade-in" id="credentials">
         <div class="section__intro">
           <p class="eyebrow" data-i18n="credentials.eyebrow"></p>
@@ -112,8 +120,12 @@
         </div>
         <div class="filters" id="badge-filters" aria-label="Certification filters"></div>
         <div class="badge-grid" id="badge-grid"></div>
+        <div class="credentials__actions">
+          <button class="button button--ghost" id="badge-toggle" type="button"></button>
+        </div>
       </section>
 
+      <!-- PDF vault for verification links. -->
       <section class="section fade-in" id="vault">
         <div class="section__intro">
           <p class="eyebrow" data-i18n="vault.eyebrow"></p>
@@ -123,6 +135,7 @@
         <div class="vault-list" id="vault-list"></div>
       </section>
 
+      <!-- Selected projects and labs. -->
       <section class="section fade-in" id="projects">
         <div class="section__intro">
           <p class="eyebrow" data-i18n="projects.eyebrow"></p>
@@ -132,6 +145,7 @@
         <div class="project-grid" id="project-grid"></div>
       </section>
 
+      <!-- Lightweight metrics for quick technical scanning. -->
       <section class="section fade-in" id="metrics">
         <div class="section__intro">
           <p class="eyebrow" data-i18n="metrics.eyebrow"></p>
@@ -150,6 +164,7 @@
         </div>
       </section>
 
+      <!-- Contact endpoints and resume access. -->
       <section class="section fade-in" id="contact">
         <div class="section__intro">
           <p class="eyebrow" data-i18n="contact.eyebrow"></p>

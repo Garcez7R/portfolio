@@ -1,5 +1,5 @@
 :root {
-  --bg: #06070a;
+  --bg: #0d1117;
   --bg-soft: #0b0d12;
   --surface: rgba(15, 18, 23, 0.92);
   --surface-strong: rgba(20, 24, 31, 0.98);
@@ -9,6 +9,8 @@
   --muted: #8d99a8;
   --silver: #c5ced8;
   --silver-strong: #f4f7fb;
+  --gold: #d4af37;
+  --green: #3fb950;
   --line: rgba(197, 206, 216, 0.14);
   --line-strong: rgba(222, 230, 240, 0.24);
   --shadow: 0 28px 80px rgba(0, 0, 0, 0.45);
@@ -200,6 +202,22 @@ main {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
 }
 
+.hero__profile-frame {
+  width: 132px;
+  height: 132px;
+  margin-bottom: 0.25rem;
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(212, 175, 55, 0.08), rgba(255, 255, 255, 0.02));
+  overflow: hidden;
+}
+
+.hero__profile-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .hero__panel-head {
   display: flex;
   justify-content: space-between;
@@ -301,7 +319,7 @@ h2 {
 }
 
 .hero__title {
-  color: var(--silver);
+  color: var(--gold);
   font-size: 0.96rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -356,8 +374,14 @@ h2 {
 }
 
 .button--primary {
-  background: linear-gradient(180deg, rgba(240, 244, 249, 0.13), rgba(255, 255, 255, 0.04));
+  background: linear-gradient(180deg, rgba(212, 175, 55, 0.16), rgba(255, 255, 255, 0.04));
+  border-color: rgba(212, 175, 55, 0.22);
   color: var(--silver-strong);
+}
+
+.button--ghost {
+  min-width: auto;
+  color: var(--silver);
 }
 
 .skill-grid,
@@ -400,7 +424,52 @@ h2 {
   pointer-events: none;
 }
 
-.skill-card ul,
+.skill-card__description {
+  margin: 0 0 1rem;
+  color: var(--muted);
+}
+
+.skill-chip-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.025);
+  color: var(--text-soft);
+  font: inherit;
+  cursor: help;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.skill-chip:hover {
+  transform: translateY(-1px);
+  border-color: rgba(63, 185, 80, 0.26);
+  background: rgba(63, 185, 80, 0.06);
+}
+
+.skill-chip__icon {
+  display: grid;
+  place-items: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 999px;
+  background: rgba(212, 175, 55, 0.12);
+  color: var(--gold);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+}
+
 .project-stack {
   margin: 0;
   padding-left: 1rem;
@@ -437,8 +506,8 @@ h2 {
 .filters button.is-active,
 .filters button:hover {
   color: var(--silver-strong);
-  background: rgba(255, 255, 255, 0.06);
-  border-color: var(--line-strong);
+  background: rgba(63, 185, 80, 0.08);
+  border-color: rgba(63, 185, 80, 0.2);
 }
 
 .badge-grid {
@@ -463,7 +532,7 @@ h2 {
 
 .badge-card:hover {
   transform: translateY(-5px);
-  border-color: rgba(227, 234, 243, 0.28);
+  border-color: rgba(212, 175, 55, 0.24);
   background: linear-gradient(180deg, rgba(24, 29, 37, 0.98), rgba(11, 13, 17, 1));
 }
 
@@ -503,11 +572,33 @@ h2 {
   height: 86px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 20px;
-  background: linear-gradient(180deg, rgba(248, 250, 252, 0.1), rgba(197, 206, 216, 0.03));
+  background: linear-gradient(180deg, rgba(212, 175, 55, 0.12), rgba(197, 206, 216, 0.03));
   color: var(--silver-strong);
   font-family: "JetBrains Mono", monospace;
   font-size: 1.4rem;
   letter-spacing: 0.08em;
+}
+
+.credentials__actions {
+  margin-top: 1.4rem;
+}
+
+.project-card {
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+  border-color: rgba(212, 175, 55, 0.22);
+}
+
+.project-card__eyebrow {
+  margin: 0 0 0.6rem;
+  color: var(--green);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .badge-card p,
@@ -571,7 +662,7 @@ h2 {
   display: block;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, rgba(239, 244, 248, 0.92), rgba(153, 166, 181, 0.65));
+  background: linear-gradient(90deg, rgba(212, 175, 55, 0.9), rgba(63, 185, 80, 0.7));
 }
 
 .contact-card {
@@ -641,7 +732,9 @@ h2 {
   left: 0;
   width: 100%;
   height: 3px;
-  background: linear-gradient(90deg, rgba(250, 252, 255, 0.95), rgba(149, 159, 172, 0.4));
+  background: linear-gradient(90deg, var(--gold), var(--green));
+  transform-origin: left center;
+  animation: splashLoad 1.2s ease forwards;
 }
 
 .splash__terminal {
@@ -659,6 +752,15 @@ h2 {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes splashLoad {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
   }
 }
 

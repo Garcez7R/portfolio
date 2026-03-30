@@ -1,13 +1,16 @@
 const STORAGE_KEYS = {
   language: "portfolio-language",
-  splashSeen: "portfolio-splash-seen",
+  splashSeen: "portfolio-splash-seen-session",
 };
 
 const DEFAULT_BADGE_IMAGE = "./assets/img/badges/placeholder-badge.svg";
+const BADGES_COLLAPSED_COUNT = 12;
 
 let currentLocale = {};
 let currentLanguage = "en";
 let badgeRecords = [];
+let selectedBadgeFilter = "All";
+let badgesExpanded = false;
 
 const ui = {
   splash: document.getElementById("splash"),
@@ -15,6 +18,7 @@ const ui = {
   skillsGrid: document.getElementById("skills-grid"),
   badgeGrid: document.getElementById("badge-grid"),
   badgeFilters: document.getElementById("badge-filters"),
+  badgeToggle: document.getElementById("badge-toggle"),
   vaultList: document.getElementById("vault-list"),
   projectGrid: document.getElementById("project-grid"),
   certMetrics: document.getElementById("cert-metrics"),
@@ -116,9 +120,19 @@ const renderSkills = () => {
       (skillGroup) => `
         <article class="skill-card">
           <h3>${skillGroup.title}</h3>
-          <ul>
-            ${skillGroup.items.map((item) => `<li>${item}</li>`).join("")}
-          </ul>
+          <p class="skill-card__description">${skillGroup.description}</p>
+          <div class="skill-chip-grid">
+            ${skillGroup.items
+              .map(
+                (item) => `
+                  <button class="skill-chip" type="button" title="${item.description}" aria-label="${item.name}: ${item.description}">
+                    <span class="skill-chip__icon">${item.icon}</span>
+                    <span>${item.name}</span>
+                  </button>
+                `,
+              )
+              .join("")}
+          </div>
         </article>
       `,
     )
@@ -150,7 +164,7 @@ const buildFilters = () => {
   ui.badgeFilters.innerHTML = categories
     .map(
       (category, index) => `
-        <button type="button" data-filter="${category}" class="${index === 0 ? "is-active" : ""}">
+        <button type="button" data-filter="${category}" class="${category === selectedBadgeFilter || (index === 0 && !selectedBadgeFilter) ? "is-active" : ""}">
           ${category === "All" ? currentLocale.credentials.filters.all : category}
         </button>
       `,
@@ -161,13 +175,28 @@ const buildFilters = () => {
     button.addEventListener("click", () => {
       ui.badgeFilters.querySelectorAll("button").forEach((item) => item.classList.remove("is-active"));
       button.classList.add("is-active");
-      renderBadges(button.dataset.filter);
+      selectedBadgeFilter = button.dataset.filter;
+      badgesExpanded = false;
+      renderBadges();
     });
   });
 };
 
-const renderBadges = (filter = "All") => {
-  const list = filter === "All" ? badgeRecords : badgeRecords.filter((badge) => badge.category === filter);
+const updateBadgeToggle = (totalItems) => {
+  if (totalItems <= BADGES_COLLAPSED_COUNT) {
+    ui.badgeToggle.hidden = true;
+    return;
+  }
+
+  ui.badgeToggle.hidden = false;
+  ui.badgeToggle.textContent = badgesExpanded
+    ? currentLocale.credentials.toggle.less
+    : currentLocale.credentials.toggle.more.replace("{count}", String(totalItems - BADGES_COLLAPSED_COUNT));
+};
+
+const renderBadges = () => {
+  const source = selectedBadgeFilter === "All" ? badgeRecords : badgeRecords.filter((badge) => badge.category === selectedBadgeFilter);
+  const list = badgesExpanded ? source : source.slice(0, BADGES_COLLAPSED_COUNT);
 
   ui.badgeGrid.innerHTML = list
     .map((badge) => {
@@ -200,6 +229,8 @@ const renderBadges = (filter = "All") => {
       `;
     })
     .join("");
+
+  updateBadgeToggle(source.length);
 };
 
 const renderVault = () => {
@@ -220,6 +251,7 @@ const renderProjects = () => {
     .map(
       (project) => `
         <article class="project-card">
+          <p class="project-card__eyebrow">${project.kind}</p>
           <h3>${project.name}</h3>
           <p>${project.description}</p>
           <ul class="project-stack">
@@ -280,15 +312,15 @@ const renderContacts = () => {
 };
 
 const maybeHideSplash = () => {
-  if (localStorage.getItem(STORAGE_KEYS.splashSeen)) {
+  if (sessionStorage.getItem(STORAGE_KEYS.splashSeen)) {
     ui.splash.classList.add("is-hidden");
     return;
   }
 
   window.setTimeout(() => {
     ui.splash.classList.add("is-hidden");
-    localStorage.setItem(STORAGE_KEYS.splashSeen, "true");
-  }, 1000);
+    sessionStorage.setItem(STORAGE_KEYS.splashSeen, "true");
+  }, 1200);
 };
 
 const setLanguage = async (language) => {
@@ -312,11 +344,17 @@ const bindEvents = () => {
       setLanguage(button.dataset.langBtn);
     });
   });
+
+  ui.badgeToggle.addEventListener("click", () => {
+    badgesExpanded = !badgesExpanded;
+    renderBadges();
+  });
 };
 
 const initialize = async () => {
   try {
     badgeRecords = await loadBadges();
+    selectedBadgeFilter = "All";
     await setLanguage(detectLanguage());
     bindEvents();
     maybeHideSplash();

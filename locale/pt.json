@@ -13,7 +13,7 @@
   "hero": {
     "eyebrow": "Cloud | Segurança | Infraestrutura",
     "name": "R. Garcez",
-    "title": "Portfólio técnico para vagas de Cloud, Segurança e Infraestrutura",
+    "title": "Cloud Architect / Cybersecurity",
     "description": "Perfil orientado por certificações, com base prática em operações de cloud, segurança, Linux, redes e entrega de infraestrutura.",
     "cv": "Baixar CV",
     "panelTag": "STATUS",
@@ -38,19 +38,43 @@
     "items": [
       {
         "title": "Cloud",
-        "items": ["Fundamentos AWS", "Fundamentos OCI", "Noções de IAM", "Mapeamento de serviços principais"]
+        "description": "Serviços centrais, identidade e fundamentos de arquitetura para ambientes em nuvem.",
+        "items": [
+          { "name": "AWS", "icon": "AW", "description": "Serviços centrais AWS, noções de IAM e base de cloud practitioner." },
+          { "name": "OCI", "icon": "OC", "description": "Fundamentos Oracle Cloud Infrastructure e familiaridade com serviços-base." },
+          { "name": "IAM", "icon": "ID", "description": "Conceitos de identidade, acesso e menor privilégio em cloud." },
+          { "name": "Cloud Ops", "icon": "CO", "description": "Disciplina operacional para recursos em nuvem, documentação e suporte." }
+        ]
       },
       {
         "title": "Security",
-        "items": ["Conceitos de segurança", "Bases de identidade", "Consciência de risco", "Mentalidade de configuração segura"]
+        "description": "Mentalidade security-first em governança, identidade, auditoria e práticas defensivas.",
+        "items": [
+          { "name": "SOC", "icon": "SC", "description": "Noções de detecção, resposta e rotinas operacionais de segurança." },
+          { "name": "GRC", "icon": "GR", "description": "Governança, risco, conformidade e visão orientada a políticas." },
+          { "name": "OWASP", "icon": "OW", "description": "Fundamentos de segurança de APIs e aplicações web alinhados ao OWASP." },
+          { "name": "Zero Trust", "icon": "ZT", "description": "Controle de acesso centrado em identidade e validação contínua." }
+        ]
       },
       {
         "title": "Infrastructure",
-        "items": ["Administração Linux", "Fundamentos de redes", "Suporte a sistemas", "Documentação e operações"]
+        "description": "Base operacional para sistemas, Linux, redes e ambientes de suporte técnico.",
+        "items": [
+          { "name": "Linux", "icon": "LX", "description": "Linha de comando, fundamentos de sistema, administração e diagnóstico." },
+          { "name": "Networking", "icon": "NW", "description": "Roteamento, switching, conectividade e troubleshooting de rede." },
+          { "name": "Systems", "icon": "SY", "description": "Suporte a hosts, checagens de saúde e consciência de configuração." },
+          { "name": "Docs", "icon": "DC", "description": "Documentação operacional, runbooks e organização técnica." }
+        ]
       },
       {
         "title": "DevOps",
-        "items": ["Fluxo com Git", "Deploy estático", "Noções de CI/CD", "Mentalidade de automação"]
+        "description": "Práticas enxutas de entrega para versionamento, deploy e mentalidade de automação.",
+        "items": [
+          { "name": "Git", "icon": "GT", "description": "Branches, commits, higiene de repositório e fluxo de colaboração." },
+          { "name": "CI/CD", "icon": "CI", "description": "Noções de pipelines de entrega e estágios automatizados de deploy." },
+          { "name": "Automation", "icon": "AU", "description": "Simplificação de processos e rotinas operacionais repetíveis." },
+          { "name": "Pages", "icon": "PG", "description": "Publicação estática com GitHub Pages e pipelines simples." }
+        ]
       }
     ]
   },
@@ -60,6 +84,10 @@
     "description": "Esta seção é renderizada a partir da tabela markdown na raiz do projeto, deixando a atualização das certificações centralizada e simples.",
     "filters": {
       "all": "Todas"
+    },
+    "toggle": {
+      "more": "Mostrar mais {count}",
+      "less": "Mostrar menos"
     }
   },
   "vault": {
@@ -73,6 +101,15 @@
     "description": "Cards simples para trabalhos práticos, labs e implementações dignas de portfólio.",
     "items": [
       {
+        "kind": "Plataforma de Segurança",
+        "name": "Heimdall Guardian",
+        "description": "Projeto conceitual focado em monitoramento protetivo, visibilidade de postura de segurança e interface orientada a operações.",
+        "stack": ["Segurança", "Monitoramento", "Frontend", "Arquitetura"],
+        "github": "https://github.com/Garcez7R",
+        "demo": "https://github.com/Garcez7R"
+      },
+      {
+        "kind": "Portfólio",
         "name": "Portfolio Tech Pro",
         "description": "Portfólio estático multilíngue para GitHub Pages com certificações orientadas por markdown.",
         "stack": ["HTML", "CSS", "JavaScript", "GitHub Pages"],
@@ -80,6 +117,7 @@
         "demo": "https://Garcez7R.github.io/portfolio/"
       },
       {
+        "kind": "Lab Cloud",
         "name": "Cloud Study Lab",
         "description": "Espaço de repositório para labs, anotações e material de prática relacionado a certificações de cloud e infraestrutura.",
         "stack": ["Markdown", "Linux", "Anotações Cloud"],

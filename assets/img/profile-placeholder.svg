@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" role="img" aria-labelledby="title desc">
+  <title id="title">Profile placeholder</title>
+  <desc id="desc">Stylized monochrome profile placeholder for Rafael Garcez portfolio.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f141b"/>
+      <stop offset="100%" stop-color="#090b10"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#c5ced8"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="480" rx="48" fill="url(#bg)"/>
+  <circle cx="240" cy="164" r="82" fill="#1c2430" stroke="url(#ring)" stroke-width="4"/>
+  <path d="M110 398c24-72 84-110 130-110s106 38 130 110" fill="#1b212b" stroke="#c5ced8" stroke-opacity=".38" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="240" cy="164" r="46" fill="#c5ced8" fill-opacity=".14"/>
+  <text x="240" y="446" text-anchor="middle" fill="#c5ced8" font-family="JetBrains Mono, monospace" font-size="26">PROFILE</text>
+</svg>
