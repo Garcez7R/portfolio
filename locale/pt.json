@@ -13,8 +13,8 @@
   "hero": {
     "eyebrow": "Cloud | Segurança | Infraestrutura",
     "name": "Rafael Garcez",
-    "title": "Cloud Security | Cybersecurity | Infraestrutura Segura",
-    "description": "Profissional de TI com base sólida em infraestrutura, Linux, redes e operação em ambientes NOC/SOC, hoje direcionando essa experiência para Cloud Security, Blue Team e construção de ambientes digitais mais seguros.",
+    "title": "Cloud Security | Cybersecurity | Infraestrutura e Operações Seguras",
+    "description": "Profissional de TI com sólida experiência em infraestrutura, Linux, redes e operação em ambientes NOC/SOC. Atualmente, direciono essa expertise para Cloud Security, Blue Team e construção de ambientes digitais seguros e resilientes.",
     "cv": "Baixar CV",
     "panelTag": "STATUS",
     "panelTitle": "Resumo Técnico",
@@ -25,22 +25,22 @@
       {
         "icon": "CL",
         "title": "Cloud Security",
-        "description": "Fundamentos de arquitetura, IAM e segurança em nuvem com foco prático."
+        "description": "Fundamentos de arquitetura, IAM e segurança em nuvem com aplicação prática."
       },
       {
         "icon": "BT",
         "title": "Blue Team",
-        "description": "Mentalidade defensiva orientada a monitoramento, resposta e resiliência."
+        "description": "Abordagem defensiva com foco em monitoramento, resposta a incidentes e resiliência."
       },
       {
         "icon": "IF",
-        "title": "Infra Ops",
-        "description": "Infraestrutura, Linux, redes e disponibilidade como base de decisão."
+        "title": "Infraestrutura",
+        "description": "Linux, redes e disponibilidade como base para decisões seguras."
       },
       {
         "icon": "AU",
-        "title": "Automation",
-        "description": "Entrega enxuta com scripts, backup, observabilidade e disciplina operacional."
+        "title": "Automação",
+        "description": "Scripts, backup, observabilidade e operações enxutas."
       }
     ],
     "rail1": "15+ ANOS EM OPERAÇÃO E INFRA",
@@ -60,7 +60,7 @@
     "items": [
       {
         "title": "Cloud",
-        "description": "Fundamentos de arquitetura, identidade, operação e segurança aplicados a ambientes em nuvem.",
+        "description": "Arquitetura, identidade, operação e segurança em nuvem, com aplicação prática.",
         "items": [
           { "name": "AWS", "icon": "AW", "description": "Fundamentos AWS com foco em arquitetura básica, segurança e operação cloud." },
           { "name": "OCI", "icon": "OC", "description": "Oracle Cloud Infrastructure foundations e leitura sólida dos serviços-base." },
@@ -138,7 +138,7 @@
   "vault": {
     "eyebrow": "Vault de Certificados",
     "title": "Validação direta das credenciais",
-    "description": "Consulta objetiva das credenciais, trilhas e certificações com maior sinal profissional para contextos de cloud e cybersecurity.",
+    "description": "Acesse rapidamente certificados e credenciais, com foco em Cloud Security e Cybersecurity.",
     "searchLabel": "Buscar certificado",
     "searchPlaceholder": "Buscar por nome ou categoria",
     "noResults": "Nenhum certificado encontrado para esta busca.",
@@ -153,15 +153,15 @@
     "description": "Projetos concebidos com lógica de produto, mas sustentados por uma base operacional forte em arquitetura, confiabilidade e segurança.",
     "items": [
       {
-        "kind": "PWA de Operação em Saúde",
+        "kind": "PWA de operação em saúde",
         "name": "TranspSaude",
-        "description": "PWA para apoio à operação do transporte em saúde, com fluxo de solicitação, análise, distribuição operacional e consulta pública. Estruturado com Cloudflare Pages, Functions e D1.",
+        "description": "PWA de operação em saúde, com fluxo de solicitações, análise e distribuição operacional. Estruturado com Cloudflare Pages, Functions e D1.",
         "stack": ["PWA", "Cloudflare Pages", "Functions", "D1"],
         "github": "https://github.com/Garcez7R",
         "demo": "https://github.com/Garcez7R"
       },
       {
-        "kind": "Marketplace",
+        "kind": "Marketplace de livros e sebos",
         "name": "TEKA",
         "description": "Marketplace para conectar leitores e sebos, com catálogo, estoque, papéis de usuário, scanner por ISBN, OCR, PWA e arquitetura pensada para crescimento com foco em UX e compliance.",
         "stack": ["Marketplace", "PWA", "OCR", "Compliance"],
@@ -169,7 +169,7 @@
         "demo": "https://github.com/Garcez7R"
       },
       {
-        "kind": "PWA para Beleza",
+        "kind": "PWA para salões e profissionais de beleza",
         "name": "Konnektx",
         "description": "PWA para barbearias, salões e profissionais de beleza, com página pública, agenda, fidelização e base preparada para evolução com Cloudflare Worker.",
         "stack": ["PWA", "Agenda", "Fidelização", "Cloudflare Worker"],
@@ -181,14 +181,14 @@
   "metrics": {
     "eyebrow": "Métricas",
     "title": "Panorama do perfil em um olhar",
-    "description": "Um recorte da evolução entre infraestrutura, segurança e cloud, mostrando onde o volume de estudo e certificação está mais concentrado.",
+    "description": "Resumo visual da evolução em infraestrutura, segurança e cloud, destacando áreas com maior volume de estudo e certificações.",
     "certificationsChart": "Certificações por categoria",
     "skillsChart": "Competências por domínio"
   },
   "contact": {
     "eyebrow": "Contato",
     "title": "Vamos conversar",
-    "description": "Aberto a oportunidades remotas ou presenciais com times que valorizam base técnica sólida, responsabilidade operacional e evolução consistente em cloud e segurança.",
+    "description": "Disponível para oportunidades remotas ou presenciais em times que valorizam experiência operacional sólida e evolução contínua em Cloud Security e Cybersecurity.",
     "items": [
       {
         "label": "GitHub",
@@ -202,8 +202,8 @@
       },
       {
         "label": "Email",
-        "value": "seu-email@exemplo.com",
-        "href": "mailto:seu-email@exemplo.com"
+        "value": "rgs.dba@gmail.com",
+        "href": "mailto:rgs.dba@gmail.com"
       },
       {
         "label": "CV",

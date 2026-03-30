@@ -13,8 +13,8 @@
   "hero": {
     "eyebrow": "Cloud | Security | Infrastructure",
     "name": "Rafael Garcez",
-    "title": "Cloud Security | Cybersecurity | Secure Infrastructure",
-    "description": "IT professional with a strong foundation in infrastructure, Linux, networking and NOC/SOC operations, now channeling that experience into Cloud Security, Blue Team practices and secure digital environments.",
+    "title": "Cloud Security | Cybersecurity | Secure Infrastructure and Operations",
+    "description": "IT professional with solid experience in infrastructure, Linux, networking and NOC/SOC operations. I am currently channeling that expertise into Cloud Security, Blue Team practices and resilient digital environments.",
     "cv": "Download CV",
     "panelTag": "STATUS",
     "panelTitle": "Technical Snapshot",
@@ -25,22 +25,22 @@
       {
         "icon": "CL",
         "title": "Cloud Security",
-        "description": "Architecture, IAM and cloud security foundations with a practical orientation."
+        "description": "Architecture, IAM and cloud security foundations with practical application."
       },
       {
         "icon": "BT",
         "title": "Blue Team",
-        "description": "A defense-oriented mindset focused on monitoring, response and resilience."
+        "description": "A defensive approach focused on monitoring, incident response and resilience."
       },
       {
         "icon": "IF",
-        "title": "Infra Ops",
-        "description": "Infrastructure, Linux, networking and availability as the operational base."
+        "title": "Infrastructure",
+        "description": "Linux, networking and availability as the base for secure decisions."
       },
       {
         "icon": "AU",
         "title": "Automation",
-        "description": "Lean delivery through scripting, backup, observability and disciplined operations."
+        "description": "Scripts, backup, observability and lean operations."
       }
     ],
     "rail1": "15+ YEARS IN INFRASTRUCTURE AND OPERATIONS",
@@ -60,7 +60,7 @@
     "items": [
       {
         "title": "Cloud",
-        "description": "Architecture, identity, operations and security foundations applied to cloud environments.",
+        "description": "Architecture, identity, operations and cloud security with practical application.",
         "items": [
           { "name": "AWS", "icon": "AW", "description": "AWS fundamentals with emphasis on security, operations and core architecture." },
           { "name": "OCI", "icon": "OC", "description": "Oracle Cloud Infrastructure foundations and solid baseline service familiarity." },
@@ -138,7 +138,7 @@
   "vault": {
     "eyebrow": "Certificate Vault",
     "title": "Direct credential validation",
-    "description": "A concise validation area for the credentials, tracks and certifications that carry the strongest signal for cloud and cybersecurity roles.",
+    "description": "Quick access to certificates and credentials, with focus on Cloud Security and Cybersecurity.",
     "searchLabel": "Search certificate",
     "searchPlaceholder": "Search by name or category",
     "noResults": "No certificates found for this search.",
@@ -153,15 +153,15 @@
     "description": "Products designed with product thinking, but grounded in operational discipline, architecture awareness and secure delivery choices.",
     "items": [
       {
-        "kind": "Health Operations PWA",
+        "kind": "Healthcare operations PWA",
         "name": "TranspSaude",
-        "description": "PWA supporting healthcare transport operations with request flow, review, operational distribution and public consultation. Structured with Cloudflare Pages, Functions and D1.",
+        "description": "Healthcare operations PWA with request flow, review and operational distribution. Structured with Cloudflare Pages, Functions and D1.",
         "stack": ["PWA", "Cloudflare Pages", "Functions", "D1"],
         "github": "https://github.com/Garcez7R",
         "demo": "https://github.com/Garcez7R"
       },
       {
-        "kind": "Marketplace Platform",
+        "kind": "Book and used-book marketplace",
         "name": "TEKA",
         "description": "Marketplace connecting readers and used bookstores with catalog, inventory, user roles, ISBN scanner, OCR, PWA support and architecture designed for growth with UX and compliance in mind.",
         "stack": ["Marketplace", "PWA", "OCR", "Compliance"],
@@ -169,7 +169,7 @@
         "demo": "https://github.com/Garcez7R"
       },
       {
-        "kind": "Beauty Services PWA",
+        "kind": "Beauty professionals PWA",
         "name": "Konnektx",
         "description": "PWA for barbershops, salons and beauty professionals with public page, scheduling, loyalty features and a base prepared to evolve with Cloudflare Worker.",
         "stack": ["PWA", "Scheduling", "Loyalty", "Cloudflare Worker"],
@@ -181,14 +181,14 @@
   "metrics": {
     "eyebrow": "Metrics",
     "title": "A quick view of the profile",
-    "description": "A compact view of how current study volume and certifications are distributed across infrastructure, security and cloud.",
+    "description": "A visual summary of growth across infrastructure, security and cloud, highlighting areas with stronger study and certification volume.",
     "certificationsChart": "Certifications by category",
     "skillsChart": "Skills by domain"
   },
   "contact": {
     "eyebrow": "Contact",
     "title": "Let’s connect",
-    "description": "Open to remote or on-site opportunities with teams that value strong technical fundamentals, operational ownership and consistent growth in cloud and security.",
+    "description": "Available for remote or on-site opportunities with teams that value strong operational experience and continuous growth in Cloud Security and Cybersecurity.",
     "items": [
       {
         "label": "GitHub",
@@ -202,8 +202,8 @@
       },
       {
         "label": "Email",
-        "value": "your-email@example.com",
-        "href": "mailto:your-email@example.com"
+        "value": "rgs.dba@gmail.com",
+        "href": "mailto:rgs.dba@gmail.com"
       },
       {
         "label": "CV",
