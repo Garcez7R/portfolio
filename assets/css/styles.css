@@ -263,7 +263,11 @@ main {
 
 .hero__profile-stage {
   position: relative;
-  min-height: 250px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 164px;
+  align-items: end;
+  gap: 1rem;
+  min-height: 220px;
   padding: 1rem;
   border: 1px solid var(--line);
   border-radius: 30px;
@@ -275,10 +279,9 @@ main {
 }
 
 .hero__profile-frame {
-  position: absolute;
-  right: 1rem;
-  bottom: 1rem;
-  width: min(100%, 180px);
+  position: relative;
+  justify-self: end;
+  width: min(100%, 164px);
   aspect-ratio: 1 / 1.12;
   border: 1px solid rgba(212, 175, 55, 0.24);
   border-radius: 22px;
@@ -298,7 +301,7 @@ main {
 .hero__signal {
   display: grid;
   gap: 0.2rem;
-  max-width: 10rem;
+  max-width: 13rem;
   color: var(--muted);
   font-size: 0.7rem;
   letter-spacing: 0.1em;
@@ -1473,7 +1476,9 @@ h2 {
   }
 
   .hero__profile-stage {
-    min-height: 220px;
+    grid-template-columns: 1fr;
+    align-items: start;
+    min-height: auto;
   }
 
   .hero__pillars {
@@ -1481,12 +1486,10 @@ h2 {
   }
 
   .hero__profile-frame {
-    position: relative;
-    right: auto;
-    bottom: auto;
     width: 100%;
     max-width: 180px;
-    margin-top: 1.25rem;
+    justify-self: start;
+    margin-top: 0.2rem;
   }
 
   .hero__terminal {
