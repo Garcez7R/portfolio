@@ -54,7 +54,7 @@
     }
   },
   "skills": {
-    "eyebrow": "Core Skills",
+    "eyebrow": "Domains",
     "title": "Skills",
     "description": "A strong operational foundation shaped by steady growth across cloud, security and critical environments.",
     "items": [
@@ -152,7 +152,7 @@
     }
   },
   "projects": {
-    "eyebrow": "Projects",
+    "eyebrow": "Case Studies",
     "title": "Projects",
     "description": "Architecture, execution and product evolution grounded in reliability, operations and security.",
     "items": [

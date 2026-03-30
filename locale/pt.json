@@ -54,7 +54,7 @@
     }
   },
   "skills": {
-    "eyebrow": "Competências",
+    "eyebrow": "Domínios",
     "title": "Competências",
     "description": "Base operacional sólida com evolução consistente em cloud, segurança e ambientes críticos.",
     "items": [
@@ -152,7 +152,7 @@
     }
   },
   "projects": {
-    "eyebrow": "Projetos",
+    "eyebrow": "Cases",
     "title": "Projetos",
     "description": "Arquitetura, execução e evolução de produtos com base em confiabilidade, operação e segurança.",
     "items": [
