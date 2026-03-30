@@ -257,6 +257,11 @@ main {
   align-content: start;
 }
 
+.hero__summary {
+  display: grid;
+  gap: 0.9rem;
+}
+
 .hero__profile-stage {
   position: relative;
   min-height: 250px;
@@ -326,6 +331,50 @@ main {
 
 .hero__terminal p:last-child {
   margin-bottom: 0;
+}
+
+.hero__pillars {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.hero-pillar {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.75rem;
+  align-items: start;
+  padding: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 18px;
+  background: var(--control-surface);
+}
+
+.hero-pillar__icon {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  background: rgba(244, 247, 251, 0.08);
+  color: var(--silver-strong);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+}
+
+.hero-pillar strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--silver-strong);
+  font-size: 0.86rem;
+}
+
+.hero-pillar p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.45;
 }
 
 .hero__rail {
@@ -449,6 +498,42 @@ h2 {
   position: relative;
   z-index: 1;
   padding-top: 0.4rem;
+}
+
+.credentials-core {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1.1rem;
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  border-radius: 24px;
+  background:
+    var(--accent-wash),
+    var(--control-surface);
+}
+
+.credentials-core__intro {
+  display: grid;
+  gap: 0.3rem;
+  max-width: 40rem;
+}
+
+.credentials-core__eyebrow {
+  color: var(--gold);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.credentials-core__intro p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.credentials-core__grid {
+  display: grid;
+  gap: 0.9rem;
 }
 
 .section--vault .vault-shell {
@@ -610,7 +695,7 @@ h2 {
 }
 
 .skill-grid {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
 }
 
 .project-grid {
@@ -696,12 +781,6 @@ h2 {
   font-size: 0.72rem;
 }
 
-.project-stack {
-  margin: 0;
-  padding-left: 1rem;
-  color: var(--muted);
-}
-
 .skill-card h3,
 .project-card h3,
 .metric-card h3,
@@ -765,6 +844,61 @@ h2 {
   background:
     var(--accent-wash),
     var(--card-surface);
+}
+
+.core-badge-card {
+  display: grid;
+  gap: 0.9rem;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  background: var(--card-surface);
+}
+
+.core-badge-card__visual {
+  display: grid;
+  place-items: center;
+  min-height: 112px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.06), transparent 60%),
+    var(--control-surface);
+}
+
+.core-badge-card__visual img {
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+  filter: grayscale(1) brightness(1.05);
+}
+
+.core-badge-card:hover .core-badge-card__visual img {
+  filter: grayscale(0.08) brightness(1.08);
+}
+
+.core-badge-card__body {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.core-badge-card__category {
+  margin: 0;
+  color: var(--gold);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.core-badge-card__body h3 {
+  margin: 0;
+  color: var(--silver-strong);
+  line-height: 1.25;
+}
+
+.core-badge-card__body a {
+  color: var(--text-soft);
 }
 
 .badge-card__priority {
@@ -863,8 +997,8 @@ h2 {
 
 .project-card {
   display: grid;
-  align-content: start;
-  gap: 0.4rem;
+  grid-template-rows: auto auto 1fr auto;
+  gap: 0.65rem;
   min-height: 100%;
   padding-top: 1.55rem;
   transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
@@ -894,6 +1028,25 @@ h2 {
   text-transform: uppercase;
 }
 
+.project-stack-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.project-stack-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.42rem 0.65rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  background: var(--control-surface);
+  color: var(--text-soft);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+}
+
 .badge-card p,
 .badge-card a,
 .project-card p,
@@ -917,6 +1070,11 @@ h2 {
 .vault-item a,
 .contact-card a {
   color: var(--text-soft);
+}
+
+.project-links--footer {
+  margin-top: auto;
+  padding-top: 0.3rem;
 }
 
 .badge-meta a {
@@ -1230,6 +1388,15 @@ h2 {
     padding-top: 1rem;
   }
 
+  .credentials-core {
+    grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .credentials-core__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .section--skills .section-shell {
     grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
     align-items: start;
@@ -1273,6 +1440,10 @@ h2 {
     min-height: 220px;
   }
 
+  .hero__pillars {
+    grid-template-columns: 1fr;
+  }
+
   .hero__profile-frame {
     position: relative;
     right: auto;
@@ -1285,6 +1456,10 @@ h2 {
   .hero__terminal {
     width: 100%;
     justify-self: stretch;
+  }
+
+  .credentials-core__grid {
+    grid-template-columns: 1fr;
   }
 
   .vault-item {

@@ -21,6 +21,28 @@
     "panelLine1": "Practical base in infrastructure, availability and operational response.",
     "panelLine2": "Growth driven by certifications, labs and self-directed projects.",
     "panelLine3": "Current focus on Cloud Security, Blue Team, hardening and lean operations.",
+    "pillars": [
+      {
+        "icon": "CL",
+        "title": "Cloud Security",
+        "description": "Architecture, IAM and cloud security foundations with a practical orientation."
+      },
+      {
+        "icon": "BT",
+        "title": "Blue Team",
+        "description": "A defense-oriented mindset focused on monitoring, response and resilience."
+      },
+      {
+        "icon": "IF",
+        "title": "Infra Ops",
+        "description": "Infrastructure, Linux, networking and availability as the operational base."
+      },
+      {
+        "icon": "AU",
+        "title": "Automation",
+        "description": "Lean delivery through scripting, backup, observability and disciplined operations."
+      }
+    ],
     "rail1": "15+ YEARS IN INFRASTRUCTURE AND OPERATIONS",
     "rail2": "NOC/SOC | LINUX | NETWORKING",
     "rail3": "CLOUD AND SECURITY CERTIFICATIONS",
@@ -75,6 +97,26 @@
           { "name": "Backup", "icon": "BK", "description": "BorgBackup, 3-2-1 strategy, deduplication and continuity-minded operations." },
           { "name": "Observability", "icon": "OB", "description": "Monitoring signals, operational awareness and reliable environment support." }
         ]
+      },
+      {
+        "title": "Networking",
+        "description": "Connectivity, VPN, segmentation, perimeter support and secure corporate networking foundations.",
+        "items": [
+          { "name": "OpenVPN", "icon": "OV", "description": "Secure remote access with VPN, certificates and access control." },
+          { "name": "pfSense", "icon": "PF", "description": "Perimeter support, rules, segmentation and practical security infrastructure." },
+          { "name": "DNS / Routing", "icon": "DR", "description": "Operational familiarity with connectivity, resolution and traffic flow." },
+          { "name": "Certificates", "icon": "CA", "description": "Practical use of digital certificates for secure access and services." }
+        ]
+      },
+      {
+        "title": "Other",
+        "description": "Complementary tools and experience that reinforce operations, continuity and technical range.",
+        "items": [
+          { "name": "FreeBSD", "icon": "FB", "description": "Experience with Unix-like systems beyond the Linux ecosystem." },
+          { "name": "Asterisk", "icon": "AS", "description": "Digital intercom and VoIP communication integration projects." },
+          { "name": "SQL", "icon": "SQ", "description": "Database modeling, querying and administration fundamentals." },
+          { "name": "GLPI", "icon": "GL", "description": "Support operations, inventory workflows and corporate service handling." }
+        ]
       }
     ]
   },
@@ -82,6 +124,8 @@
     "eyebrow": "Certifications",
     "title": "Credentials that reinforce the trajectory",
     "description": "A curated set of credentials showing consistent progress across operations, infrastructure, cloud and security.",
+    "coreTitle": "Core Credentials",
+    "coreDescription": "The credentials with the strongest immediate signal for executive review, recruiting and cloud security contexts.",
     "coreLabel": "Core",
     "filters": {
       "all": "All"

@@ -19,7 +19,9 @@ let vaultSearchTerm = "";
 
 const ui = {
   splash: document.getElementById("splash"),
+  heroPillars: document.getElementById("hero-pillars"),
   skillsGrid: document.getElementById("skills-grid"),
+  coreBadgeGrid: document.getElementById("core-badge-grid"),
   badgeGrid: document.getElementById("badge-grid"),
   badgeFilters: document.getElementById("badge-filters"),
   badgeToggle: document.getElementById("badge-toggle"),
@@ -167,6 +169,22 @@ const renderSkills = () => {
     .join("");
 };
 
+const renderHeroPillars = () => {
+  ui.heroPillars.innerHTML = currentLocale.hero.pillars
+    .map(
+      (pillar) => `
+        <article class="hero-pillar">
+          <span class="hero-pillar__icon" aria-hidden="true">${pillar.icon}</span>
+          <div>
+            <strong>${pillar.title}</strong>
+            <p>${pillar.description}</p>
+          </div>
+        </article>
+      `,
+    )
+    .join("");
+};
+
 const buildFilters = () => {
   const categories = [
     "All",
@@ -208,17 +226,18 @@ const updateBadgeToggle = (totalItems) => {
 };
 
 const renderBadges = () => {
-  const source = (selectedBadgeFilter === "All" ? badgeRecords : badgeRecords.filter((badge) => badge.category === selectedBadgeFilter)).sort(
+  const allSorted = [...badgeRecords].sort(
     (a, b) => scoreBadge(b) - scoreBadge(a) || a.name.localeCompare(b.name),
   );
-  const list = badgesExpanded ? source : source.slice(0, BADGES_COLLAPSED_COUNT);
-  const coreNames = new Set(source.slice(0, 6).map((badge) => badge.name));
+  const coreBadges = allSorted.slice(0, 4);
+  const coreNames = new Set(coreBadges.map((badge) => badge.name));
+  const filtered = selectedBadgeFilter === "All" ? allSorted.filter((badge) => !coreNames.has(badge.name)) : allSorted.filter((badge) => badge.category === selectedBadgeFilter);
+  const list = badgesExpanded ? filtered : filtered.slice(0, BADGES_COLLAPSED_COUNT);
 
-  ui.badgeGrid.innerHTML = list
+  ui.coreBadgeGrid.innerHTML = coreBadges
     .map((badge) => {
       const imageSrc = badge.badgeUrl || DEFAULT_BADGE_IMAGE;
       const isPlaceholder = imageSrc === DEFAULT_BADGE_IMAGE;
-      const isCore = coreNames.has(badge.name);
       const badgeMark = badge.name
         .split(/\s+/)
         .filter(Boolean)
@@ -227,8 +246,37 @@ const renderBadges = () => {
         .join("");
 
       return `
-        <article class="badge-card ${isCore ? "badge-card--core" : ""}">
-          ${isCore ? `<span class="badge-card__priority">${currentLocale.credentials.coreLabel}</span>` : ""}
+        <article class="core-badge-card">
+          <div class="core-badge-card__visual ${isPlaceholder ? "is-placeholder" : ""}">
+            ${
+              isPlaceholder
+                ? `<div class="badge-card__mark" aria-hidden="true">${badgeMark}</div>`
+                : `<img src="${imageSrc}" alt="${badge.name} badge" loading="lazy" onerror="this.parentElement.classList.add('is-placeholder'); this.parentElement.innerHTML='<div class=&quot;badge-card__mark&quot; aria-hidden=&quot;true&quot;>${badgeMark}</div>';" />`
+            }
+          </div>
+          <div class="core-badge-card__body">
+            <p class="core-badge-card__category">${badge.category}</p>
+            <h3>${badge.name}</h3>
+            <a href="${badge.certificateUrl}" target="_blank" rel="noreferrer">${currentLocale.shared.verify}</a>
+          </div>
+        </article>
+      `;
+    })
+    .join("");
+
+  ui.badgeGrid.innerHTML = list
+    .map((badge) => {
+      const imageSrc = badge.badgeUrl || DEFAULT_BADGE_IMAGE;
+      const isPlaceholder = imageSrc === DEFAULT_BADGE_IMAGE;
+      const badgeMark = badge.name
+        .split(/\s+/)
+        .filter(Boolean)
+        .slice(0, 2)
+        .map((word) => word[0]?.toUpperCase() || "")
+        .join("");
+
+      return `
+        <article class="badge-card">
           <div class="badge-card__visual ${isPlaceholder ? "is-placeholder" : ""}">
             ${
               isPlaceholder
@@ -248,7 +296,7 @@ const renderBadges = () => {
     })
     .join("");
 
-  updateBadgeToggle(source.length);
+  updateBadgeToggle(filtered.length);
 };
 
 const renderVault = () => {
@@ -337,10 +385,10 @@ const renderProjects = () => {
           <p class="project-card__eyebrow">${project.kind}</p>
           <h3>${project.name}</h3>
           <p>${project.description}</p>
-          <ul class="project-stack">
-            ${project.stack.map((item) => `<li>${item}</li>`).join("")}
-          </ul>
-          <div class="project-links">
+          <div class="project-stack-list">
+            ${project.stack.map((item) => `<span class="project-stack-chip">${item}</span>`).join("")}
+          </div>
+          <div class="project-links project-links--footer">
             <a href="${project.github}" target="_blank" rel="noreferrer">GitHub</a>
             <a href="${project.demo}" target="_blank" rel="noreferrer">${currentLocale.shared.demo}</a>
           </div>
@@ -411,6 +459,7 @@ const setLanguage = async (language) => {
   localStorage.setItem(STORAGE_KEYS.language, language);
   currentLocale = await loadLocale(language);
   applyI18n();
+  renderHeroPillars();
   renderSkills();
   buildFilters();
   renderBadges();

@@ -21,6 +21,28 @@
     "panelLine1": "Base prática em infraestrutura, disponibilidade e resposta operacional.",
     "panelLine2": "Evolução guiada por certificações, laboratórios e projetos autorais.",
     "panelLine3": "Foco atual em Cloud Security, Blue Team, hardening e operação enxuta.",
+    "pillars": [
+      {
+        "icon": "CL",
+        "title": "Cloud Security",
+        "description": "Fundamentos de arquitetura, IAM e segurança em nuvem com foco prático."
+      },
+      {
+        "icon": "BT",
+        "title": "Blue Team",
+        "description": "Mentalidade defensiva orientada a monitoramento, resposta e resiliência."
+      },
+      {
+        "icon": "IF",
+        "title": "Infra Ops",
+        "description": "Infraestrutura, Linux, redes e disponibilidade como base de decisão."
+      },
+      {
+        "icon": "AU",
+        "title": "Automation",
+        "description": "Entrega enxuta com scripts, backup, observabilidade e disciplina operacional."
+      }
+    ],
     "rail1": "15+ ANOS EM OPERAÇÃO E INFRA",
     "rail2": "NOC/SOC | LINUX | REDES",
     "rail3": "CERTIFICAÇÕES EM CLOUD E SEGURANÇA",
@@ -75,6 +97,26 @@
           { "name": "Backup", "icon": "BK", "description": "BorgBackup, estratégia 3-2-1, deduplicação e continuidade operacional." },
           { "name": "Observability", "icon": "OB", "description": "Monitoramento, sinais operacionais e manutenção de ambientes confiáveis." }
         ]
+      },
+      {
+        "title": "Networking",
+        "description": "Conectividade, VPN, segmentação, perímetro e suporte a ambientes corporativos seguros.",
+        "items": [
+          { "name": "OpenVPN", "icon": "OV", "description": "Acesso remoto seguro com VPN, certificados e controle de acesso." },
+          { "name": "pfSense", "icon": "PF", "description": "Perímetro, regras, segmentação e suporte a infraestrutura de segurança." },
+          { "name": "DNS / Routing", "icon": "DR", "description": "Noções operacionais de conectividade, resolução e tráfego em rede." },
+          { "name": "Certificates", "icon": "CA", "description": "Uso prático de certificados digitais em acesso seguro e serviços." }
+        ]
+      },
+      {
+        "title": "Other",
+        "description": "Ferramentas e experiências complementares que reforçam visão de operação e continuidade.",
+        "items": [
+          { "name": "FreeBSD", "icon": "FB", "description": "Vivência com sistemas Unix-like além do ecossistema Linux." },
+          { "name": "Asterisk", "icon": "AS", "description": "Projetos de interfonia digital e integração de comunicação VoIP." },
+          { "name": "SQL", "icon": "SQ", "description": "Fundamentos de modelagem, consulta e administração de banco de dados." },
+          { "name": "GLPI", "icon": "GL", "description": "Apoio à operação, inventário e fluxo de suporte em ambientes corporativos." }
+        ]
       }
     ]
   },
@@ -82,6 +124,8 @@
     "eyebrow": "Certificações",
     "title": "Credenciais que dão lastro à trajetória",
     "description": "Credenciais selecionadas para evidenciar uma trajetória consistente entre operação, infraestrutura, cloud e segurança.",
+    "coreTitle": "Core Credentials",
+    "coreDescription": "As credenciais com maior sinal imediato para leitura executiva, recrutamento e contextos de cloud security.",
     "coreLabel": "Core",
     "filters": {
       "all": "Todas"
