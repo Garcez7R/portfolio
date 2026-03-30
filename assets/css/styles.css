@@ -315,19 +315,19 @@ main {
 }
 
 .signal-band {
-  padding-top: 2rem;
+  padding-top: 2.35rem;
 }
 
 .signal-band__grid {
   display: grid;
-  gap: 1rem;
+  gap: 1.15rem;
 }
 
 .signal-card {
   position: relative;
-  padding: 1.15rem 1.25rem 1.25rem;
-  border: 1px solid rgba(197, 206, 216, 0.12);
-  border-radius: 28px;
+  padding: 1.45rem 1.45rem 1.5rem;
+  border: 1px solid rgba(197, 206, 216, 0.14);
+  border-radius: 32px;
   background:
     var(--panel-overlay),
     var(--panel-surface);
@@ -351,22 +351,23 @@ main {
 
 .signal-card span {
   display: block;
-  max-width: 12ch;
+  max-width: 14ch;
   color: var(--muted);
   font-family: "JetBrains Mono", monospace;
-  font-size: 0.72rem;
+  font-size: 0.76rem;
   line-height: 1.35;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
 .signal-card strong {
   display: block;
-  margin-top: 0.55rem;
+  margin-top: 0.7rem;
   color: var(--silver-strong);
-  font-size: clamp(2.8rem, 10vw, 5.5rem);
-  line-height: 0.88;
-  letter-spacing: -0.08em;
+  font-size: clamp(4.2rem, 14vw, 8rem);
+  line-height: 0.8;
+  letter-spacing: -0.1em;
+  text-wrap: nowrap;
 }
 
 .eyebrow {
@@ -1186,6 +1187,11 @@ h2 {
 
   .signal-band__grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+  }
+
+  .signal-card {
+    min-height: 220px;
   }
 
   .section--skills .section-shell {
@@ -1280,5 +1286,9 @@ h2 {
 
   .signal-band {
     padding-top: 1.4rem;
+  }
+
+  .signal-card strong {
+    font-size: clamp(3.8rem, 18vw, 5.8rem);
   }
 }
