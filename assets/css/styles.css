@@ -401,13 +401,22 @@ h2 {
 .section--skills .section-shell {
   display: grid;
   gap: 1.8rem;
-  padding: 0;
+  padding: 1.9rem 2rem 2rem;
+  border: 1px solid rgba(197, 206, 216, 0.12);
+  border-radius: 34px;
+  background:
+    var(--panel-overlay),
+    var(--panel-surface);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.section--skills .section-shell::before {
+  background: var(--panel-accent);
 }
 
 .section--skills .section__intro {
   max-width: 40rem;
-  padding-left: 1.2rem;
-  border-left: 1px solid rgba(197, 206, 216, 0.16);
   z-index: 1;
 }
 
