@@ -430,12 +430,27 @@ const createMetricRows = (entriesObject) => {
     .join("");
 };
 
+const getContactGlyph = (label) => {
+  const normalized = label.trim().toLowerCase();
+  const map = {
+    github: "GH",
+    linkedin: "IN",
+    email: "@@",
+    cv: "CV",
+  };
+
+  return map[normalized] || normalized.slice(0, 2).toUpperCase();
+};
+
 const renderContacts = () => {
   ui.contactGrid.innerHTML = currentLocale.contact.items
     .map(
       (item) => `
         <article class="contact-card">
-          <span>${item.label}</span>
+          <div class="contact-card__head">
+            <span class="contact-card__icon" aria-hidden="true">${getContactGlyph(item.label)}</span>
+            <span>${item.label}</span>
+          </div>
           <a href="${item.href}" target="_blank" rel="noreferrer">${item.value}</a>
         </article>
       `,
