@@ -14,7 +14,7 @@
     "eyebrow": "Cloud | Security | Infrastructure",
     "name": "Rafael Garcez",
     "title": "Cloud Security | Cybersecurity | Secure Infrastructure and Operations",
-    "description": "IT professional with solid experience in infrastructure, Linux, networking and NOC/SOC operations. I am currently channeling that expertise into Cloud Security, Blue Team practices and resilient digital environments.",
+    "description": "I turn hands-on experience in infrastructure, Linux and networking into secure and resilient digital environments. With 15+ years across operations and NOC/SOC contexts, I now focus on Cloud Security, Blue Team practices and hardening of critical systems.",
     "cv": "Download CV",
     "panelTag": "STATUS",
     "panelTitle": "Technical Snapshot",
@@ -25,22 +25,22 @@
       {
         "icon": "CL",
         "title": "Cloud Security",
-        "description": "Architecture, IAM and cloud security foundations with practical application."
+        "description": "Planning and execution of secure cloud architecture, with IAM and proactive protection."
       },
       {
         "icon": "BT",
         "title": "Blue Team",
-        "description": "A defensive approach focused on monitoring, incident response and resilience."
+        "description": "Monitoring, detection and incident response focused on continuous protection and resilience."
       },
       {
         "icon": "IF",
         "title": "Infrastructure",
-        "description": "Linux, networking and availability as the base for secure decisions."
+        "description": "Administration of Linux, networking and critical systems with availability and security in mind."
       },
       {
         "icon": "AU",
         "title": "Automation",
-        "description": "Scripts, backup, observability and lean operations."
+        "description": "Scripts, reliable backups, observability and lean operations."
       }
     ],
     "rail1": "15+ YEARS IN INFRASTRUCTURE AND OPERATIONS",
@@ -197,8 +197,8 @@
       },
       {
         "label": "LinkedIn",
-        "value": "linkedin.com",
-        "href": "https://www.linkedin.com"
+        "value": "linkedin.com/in/rgarcez7",
+        "href": "https://www.linkedin.com/in/rgarcez7/"
       },
       {
         "label": "Email",
