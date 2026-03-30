@@ -1,7 +1,7 @@
 {
   "seo": {
     "title": "Rafael Garcez | Cloud, Cibersegurança e Infraestrutura",
-    "description": "Portfólio técnico de Rafael Garcez com certificações, projetos e competências em cloud, cibersegurança, infraestrutura e operação."
+    "description": "Portfólio técnico de Rafael Garcez, profissional com base em infraestrutura, Linux, redes, NOC/SOC e evolução focada em Cloud Security e Cybersecurity."
   },
   "nav": {
     "skills": "Competências",
@@ -13,18 +13,18 @@
   "hero": {
     "eyebrow": "Cloud | Segurança | Infraestrutura",
     "name": "Rafael Garcez",
-    "title": "Profissional em Cloud, Cibersegurança e Infraestrutura",
-    "description": "Atuo na convergência entre cloud, segurança e infraestrutura, com foco em operação, consistência técnica e evolução contínua.",
+    "title": "Cloud Security | Cybersecurity | Infraestrutura Segura",
+    "description": "Profissional de TI com base sólida em infraestrutura, Linux, redes e operação em ambientes NOC/SOC, hoje direcionando essa experiência para Cloud Security, Blue Team e construção de ambientes digitais mais seguros.",
     "cv": "Baixar CV",
     "panelTag": "STATUS",
     "panelTitle": "Resumo Técnico",
-    "panelLine1": "Ambientes seguros, escaláveis e bem operados.",
-    "panelLine2": "Aprendizado traduzido em prática e entrega.",
-    "panelLine3": "Consistência técnica como eixo da trajetória.",
-    "rail1": "FOCO EM CERTIFICAÇÕES",
-    "rail2": "PROJETOS COM BASE OPERACIONAL",
-    "rail3": "PT-BR + EN",
-    "rail4": "LEITURA RÁPIDA PARA RH E GESTÃO",
+    "panelLine1": "Base prática em infraestrutura, disponibilidade e resposta operacional.",
+    "panelLine2": "Evolução guiada por certificações, laboratórios e projetos autorais.",
+    "panelLine3": "Foco atual em Cloud Security, Blue Team, hardening e operação enxuta.",
+    "rail1": "15+ ANOS EM OPERAÇÃO E INFRA",
+    "rail2": "NOC/SOC | LINUX | REDES",
+    "rail3": "CERTIFICAÇÕES EM CLOUD E SEGURANÇA",
+    "rail4": "PT-BR + EN",
     "stats": {
       "total": "Certificações",
       "categories": "Domínios",
@@ -33,47 +33,47 @@
   },
   "skills": {
     "eyebrow": "Competências",
-    "title": "Base técnica em construção contínua",
-    "description": "Cloud, segurança, infraestrutura e entrega formam hoje o núcleo do meu desenvolvimento profissional.",
+    "title": "Base operacional com direção clara para segurança",
+    "description": "A combinação entre experiência prática em infraestrutura e evolução contínua em cloud e cybersecurity é o eixo central do meu perfil hoje.",
     "items": [
       {
         "title": "Cloud",
-        "description": "Serviços centrais, identidade e fundamentos de arquitetura para ambientes em nuvem.",
+        "description": "Fundamentos de arquitetura, identidade, operação e segurança aplicados a ambientes em nuvem.",
         "items": [
-          { "name": "AWS", "icon": "AW", "description": "Serviços centrais AWS, noções de IAM e base de cloud practitioner." },
-          { "name": "OCI", "icon": "OC", "description": "Fundamentos Oracle Cloud Infrastructure e familiaridade com serviços-base." },
-          { "name": "IAM", "icon": "ID", "description": "Conceitos de identidade, acesso e menor privilégio em cloud." },
-          { "name": "Cloud Ops", "icon": "CO", "description": "Disciplina operacional para recursos em nuvem, documentação e suporte." }
+          { "name": "AWS", "icon": "AW", "description": "Fundamentos AWS com foco em arquitetura básica, segurança e operação cloud." },
+          { "name": "OCI", "icon": "OC", "description": "Oracle Cloud Infrastructure foundations e leitura sólida dos serviços-base." },
+          { "name": "IAM", "icon": "ID", "description": "Identidade, controle de acesso e menor privilégio em cloud e ambientes híbridos." },
+          { "name": "Cloudflare", "icon": "CF", "description": "Publicação, edge delivery e base de projetos autorais em plataforma cloud." }
         ]
       },
       {
         "title": "Security",
-        "description": "Mentalidade security-first em governança, identidade, auditoria e práticas defensivas.",
+        "description": "Visão orientada à defesa, identidade, hardening, auditoria e proteção de ambientes digitais.",
         "items": [
-          { "name": "SOC", "icon": "SC", "description": "Noções de detecção, resposta e rotinas operacionais de segurança." },
-          { "name": "GRC", "icon": "GR", "description": "Governança, risco, conformidade e visão orientada a políticas." },
-          { "name": "OWASP", "icon": "OW", "description": "Fundamentos de segurança de APIs e aplicações web alinhados ao OWASP." },
-          { "name": "Zero Trust", "icon": "ZT", "description": "Controle de acesso centrado em identidade e validação contínua." }
+          { "name": "Blue Team", "icon": "BT", "description": "Mentalidade defensiva com foco em monitoramento, resposta e resiliência operacional." },
+          { "name": "SOC", "icon": "SC", "description": "Vivência e estudos voltados a rotinas de detecção, triagem e resposta." },
+          { "name": "SIEM/EDR", "icon": "SE", "description": "Familiaridade conceitual com telemetria, correlação e defesa orientada por evidências." },
+          { "name": "Hardening", "icon": "HD", "description": "Mitigação de riscos, segurança perimetral, acesso seguro e redução de superfície." }
         ]
       },
       {
         "title": "Infrastructure",
-        "description": "Base operacional para sistemas, Linux, redes e ambientes de suporte técnico.",
+        "description": "Experiência prática em sistemas, redes, diretórios, monitoramento e sustentação de ambientes críticos.",
         "items": [
-          { "name": "Linux", "icon": "LX", "description": "Linha de comando, fundamentos de sistema, administração e diagnóstico." },
-          { "name": "Networking", "icon": "NW", "description": "Roteamento, switching, conectividade e troubleshooting de rede." },
-          { "name": "Systems", "icon": "SY", "description": "Suporte a hosts, checagens de saúde e consciência de configuração." },
-          { "name": "Docs", "icon": "DC", "description": "Documentação operacional, runbooks e organização técnica." }
+          { "name": "Linux", "icon": "LX", "description": "Administração de ambientes Linux desktop e server com foco operacional." },
+          { "name": "Networking", "icon": "NW", "description": "Redes, VPN, conectividade, troubleshooting e infraestrutura segura." },
+          { "name": "AD / GPO", "icon": "AD", "description": "Ambientes Windows Server, diretório, políticas e administração corporativa." },
+          { "name": "Zabbix", "icon": "ZB", "description": "Monitoramento, visibilidade operacional e apoio a ambientes NOC/SOC." }
         ]
       },
       {
         "title": "DevOps",
-        "description": "Práticas enxutas de entrega para versionamento, deploy e mentalidade de automação.",
+        "description": "Automação prática, versionamento, backup, observabilidade e entrega enxuta com base operacional.",
         "items": [
-          { "name": "Git", "icon": "GT", "description": "Branches, commits, higiene de repositório e fluxo de colaboração." },
-          { "name": "CI/CD", "icon": "CI", "description": "Noções de pipelines de entrega e estágios automatizados de deploy." },
-          { "name": "Automation", "icon": "AU", "description": "Simplificação de processos e rotinas operacionais repetíveis." },
-          { "name": "Pages", "icon": "PG", "description": "Publicação estática com GitHub Pages e pipelines simples." }
+          { "name": "Git", "icon": "GT", "description": "Versionamento, higiene de repositório e base de colaboração técnica." },
+          { "name": "Shell / Python", "icon": "SP", "description": "Automação de rotinas, apoio operacional e produtividade em CLI." },
+          { "name": "Backup", "icon": "BK", "description": "BorgBackup, estratégia 3-2-1, deduplicação e continuidade operacional." },
+          { "name": "Observability", "icon": "OB", "description": "Monitoramento, sinais operacionais e manutenção de ambientes confiáveis." }
         ]
       }
     ]
@@ -81,7 +81,7 @@
   "credentials": {
     "eyebrow": "Certificações",
     "title": "Credenciais que dão lastro à trajetória",
-    "description": "Uma seleção priorizada para evidenciar profundidade, constância e direção técnica.",
+    "description": "Credenciais selecionadas para evidenciar uma trajetória consistente entre operação, infraestrutura, cloud e segurança.",
     "coreLabel": "Core",
     "filters": {
       "all": "Todas"
@@ -94,7 +94,7 @@
   "vault": {
     "eyebrow": "Vault de Certificados",
     "title": "Validação direta das credenciais",
-    "description": "Consulta rápida das certificações com prioridade para as mais relevantes no contexto profissional.",
+    "description": "Consulta objetiva das credenciais, trilhas e certificações com maior sinal profissional para contextos de cloud e cybersecurity.",
     "searchLabel": "Buscar certificado",
     "searchPlaceholder": "Buscar por nome ou categoria",
     "noResults": "Nenhum certificado encontrado para esta busca.",
@@ -106,7 +106,7 @@
   "projects": {
     "eyebrow": "Projetos",
     "title": "Projetos com visão de produto e execução",
-    "description": "Produtos pensados para resolver problemas reais com estrutura técnica, clareza de fluxo e atenção à operação.",
+    "description": "Projetos concebidos com lógica de produto, mas sustentados por uma base operacional forte em arquitetura, confiabilidade e segurança.",
     "items": [
       {
         "kind": "PWA de Operação em Saúde",
@@ -137,14 +137,14 @@
   "metrics": {
     "eyebrow": "Métricas",
     "title": "Panorama do perfil em um olhar",
-    "description": "Um recorte sintético da distribuição das credenciais e das áreas em que venho ganhando tração.",
+    "description": "Um recorte da evolução entre infraestrutura, segurança e cloud, mostrando onde o volume de estudo e certificação está mais concentrado.",
     "certificationsChart": "Certificações por categoria",
     "skillsChart": "Competências por domínio"
   },
   "contact": {
     "eyebrow": "Contato",
     "title": "Vamos conversar",
-    "description": "Aberto a oportunidades e conversas com times que valorizam fundamento técnico, responsabilidade e crescimento consistente.",
+    "description": "Aberto a oportunidades remotas ou presenciais com times que valorizam base técnica sólida, responsabilidade operacional e evolução consistente em cloud e segurança.",
     "items": [
       {
         "label": "GitHub",
@@ -173,6 +173,6 @@
     "demo": "Demo"
   },
   "footer": {
-    "copy": "Rafael Garcez | Cloud, cibersegurança e infraestrutura."
+    "copy": "Rafael Garcez | Cloud Security, cibersegurança e infraestrutura segura."
   }
 }

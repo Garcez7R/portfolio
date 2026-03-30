@@ -1,7 +1,7 @@
 {
   "seo": {
     "title": "Rafael Garcez | Cloud, Cybersecurity and Infrastructure",
-    "description": "Technical portfolio for Rafael Garcez featuring certifications, projects and capabilities in cloud, cybersecurity, infrastructure and operations."
+    "description": "Technical portfolio for Rafael Garcez, built on infrastructure, Linux, networking, NOC/SOC operations and an active focus on Cloud Security and Cybersecurity."
   },
   "nav": {
     "skills": "Skills",
@@ -13,18 +13,18 @@
   "hero": {
     "eyebrow": "Cloud | Security | Infrastructure",
     "name": "Rafael Garcez",
-    "title": "Cloud, Cybersecurity and Infrastructure Professional",
-    "description": "I work at the convergence of cloud, security and infrastructure, with focus on operations, technical consistency and continuous growth.",
+    "title": "Cloud Security | Cybersecurity | Secure Infrastructure",
+    "description": "IT professional with a strong foundation in infrastructure, Linux, networking and NOC/SOC operations, now channeling that experience into Cloud Security, Blue Team practices and secure digital environments.",
     "cv": "Download CV",
     "panelTag": "STATUS",
     "panelTitle": "Technical Snapshot",
-    "panelLine1": "Secure, scalable and well-operated environments.",
-    "panelLine2": "Learning translated into practice and delivery.",
-    "panelLine3": "Technical consistency at the center of the path.",
-    "rail1": "CERTIFICATION-FIRST",
-    "rail2": "OPERATION-DRIVEN PROJECTS",
-    "rail3": "PT-BR + EN",
-    "rail4": "FAST TO REVIEW FOR HIRING TEAMS",
+    "panelLine1": "Practical base in infrastructure, availability and operational response.",
+    "panelLine2": "Growth driven by certifications, labs and self-directed projects.",
+    "panelLine3": "Current focus on Cloud Security, Blue Team, hardening and lean operations.",
+    "rail1": "15+ YEARS IN INFRASTRUCTURE AND OPERATIONS",
+    "rail2": "NOC/SOC | LINUX | NETWORKING",
+    "rail3": "CLOUD AND SECURITY CERTIFICATIONS",
+    "rail4": "PT-BR + EN",
     "stats": {
       "total": "Certifications",
       "categories": "Domains",
@@ -33,47 +33,47 @@
   },
   "skills": {
     "eyebrow": "Core Skills",
-    "title": "A technical foundation under continuous development",
-    "description": "Cloud, security, infrastructure and delivery currently form the core of my professional growth.",
+    "title": "An operational foundation with a clear security direction",
+    "description": "Hands-on infrastructure experience combined with continuous growth in cloud and cybersecurity defines the current center of my profile.",
     "items": [
       {
         "title": "Cloud",
-        "description": "Core services, identity and architecture fundamentals for cloud environments.",
+        "description": "Architecture, identity, operations and security foundations applied to cloud environments.",
         "items": [
-          { "name": "AWS", "icon": "AW", "description": "Core AWS services, IAM basics and cloud practitioner foundations." },
-          { "name": "OCI", "icon": "OC", "description": "Oracle Cloud Infrastructure foundations and baseline service familiarity." },
-          { "name": "IAM", "icon": "ID", "description": "Identity, access and least-privilege concepts across cloud platforms." },
-          { "name": "Cloud Ops", "icon": "CO", "description": "Operational discipline for cloud resources, documentation and support." }
+          { "name": "AWS", "icon": "AW", "description": "AWS fundamentals with emphasis on security, operations and core architecture." },
+          { "name": "OCI", "icon": "OC", "description": "Oracle Cloud Infrastructure foundations and solid baseline service familiarity." },
+          { "name": "IAM", "icon": "ID", "description": "Identity, access control and least-privilege concepts across cloud and hybrid environments." },
+          { "name": "Cloudflare", "icon": "CF", "description": "Edge delivery, publishing workflows and the platform base behind self-directed products." }
         ]
       },
       {
         "title": "Security",
-        "description": "Security-first mindset across governance, identity, auditing and defensive practices.",
+        "description": "A defense-oriented view across identity, hardening, auditing and protection of digital environments.",
         "items": [
-          { "name": "SOC", "icon": "SC", "description": "Awareness of detection, response and operational security workflows." },
-          { "name": "GRC", "icon": "GR", "description": "Governance, risk, compliance and policy-oriented security thinking." },
-          { "name": "OWASP", "icon": "OW", "description": "API and web application security fundamentals with OWASP alignment." },
-          { "name": "Zero Trust", "icon": "ZT", "description": "Identity-centric access control and verification-oriented design." }
+          { "name": "Blue Team", "icon": "BT", "description": "Defensive mindset centered on monitoring, response and operational resilience." },
+          { "name": "SOC", "icon": "SC", "description": "Practice and study aligned with detection, triage and response workflows." },
+          { "name": "SIEM/EDR", "icon": "SE", "description": "Conceptual familiarity with telemetry, correlation and evidence-driven defense." },
+          { "name": "Hardening", "icon": "HD", "description": "Risk mitigation, secure access, perimeter protection and surface reduction." }
         ]
       },
       {
         "title": "Infrastructure",
-        "description": "Operational base for systems, Linux, networks and technical support environments.",
+        "description": "Hands-on experience with systems, networks, directories, monitoring and support for critical environments.",
         "items": [
-          { "name": "Linux", "icon": "LX", "description": "Command line, system basics, administration routines and diagnostics." },
-          { "name": "Networking", "icon": "NW", "description": "Routing, switching, connectivity and network troubleshooting concepts." },
-          { "name": "Systems", "icon": "SY", "description": "Host support, system health checks and configuration awareness." },
-          { "name": "Docs", "icon": "DC", "description": "Operational documentation, runbooks and technical organization." }
+          { "name": "Linux", "icon": "LX", "description": "Linux desktop and server administration with an operations-first mindset." },
+          { "name": "Networking", "icon": "NW", "description": "Networking, VPN, connectivity troubleshooting and secure infrastructure foundations." },
+          { "name": "AD / GPO", "icon": "AD", "description": "Windows Server environments, directory services, policies and enterprise administration." },
+          { "name": "Zabbix", "icon": "ZB", "description": "Monitoring, operational visibility and support for NOC/SOC-style environments." }
         ]
       },
       {
         "title": "DevOps",
-        "description": "Lean delivery practices for versioning, deployment and automation mindset.",
+        "description": "Practical automation, versioning, backup, observability and lean delivery with an operational base.",
         "items": [
-          { "name": "Git", "icon": "GT", "description": "Branching, commits, repository hygiene and collaboration workflow." },
-          { "name": "CI/CD", "icon": "CI", "description": "Awareness of deployment pipelines and automated delivery stages." },
-          { "name": "Automation", "icon": "AU", "description": "Process simplification and repeatable operational routines." },
-          { "name": "Pages", "icon": "PG", "description": "Static publishing workflows using GitHub Pages and simple pipelines." }
+          { "name": "Git", "icon": "GT", "description": "Version control, repository hygiene and a clean collaboration baseline." },
+          { "name": "Shell / Python", "icon": "SP", "description": "CLI-driven automation, routine simplification and operational productivity." },
+          { "name": "Backup", "icon": "BK", "description": "BorgBackup, 3-2-1 strategy, deduplication and continuity-minded operations." },
+          { "name": "Observability", "icon": "OB", "description": "Monitoring signals, operational awareness and reliable environment support." }
         ]
       }
     ]
@@ -81,7 +81,7 @@
   "credentials": {
     "eyebrow": "Certifications",
     "title": "Credentials that reinforce the trajectory",
-    "description": "A prioritized selection to highlight depth, consistency and technical direction.",
+    "description": "A curated set of credentials showing consistent progress across operations, infrastructure, cloud and security.",
     "coreLabel": "Core",
     "filters": {
       "all": "All"
@@ -94,7 +94,7 @@
   "vault": {
     "eyebrow": "Certificate Vault",
     "title": "Direct credential validation",
-    "description": "A concise area for reviewing certifications, with emphasis on the ones that carry stronger professional signal.",
+    "description": "A concise validation area for the credentials, tracks and certifications that carry the strongest signal for cloud and cybersecurity roles.",
     "searchLabel": "Search certificate",
     "searchPlaceholder": "Search by name or category",
     "noResults": "No certificates found for this search.",
@@ -106,7 +106,7 @@
   "projects": {
     "eyebrow": "Projects",
     "title": "Projects shaped by product vision and execution",
-    "description": "Products designed to solve real problems with technical structure, clear flows and attention to operational reality.",
+    "description": "Products designed with product thinking, but grounded in operational discipline, architecture awareness and secure delivery choices.",
     "items": [
       {
         "kind": "Health Operations PWA",
@@ -137,14 +137,14 @@
   "metrics": {
     "eyebrow": "Metrics",
     "title": "A quick view of the profile",
-    "description": "A compact snapshot of credential distribution and the areas where my strongest technical momentum is building.",
+    "description": "A compact view of how current study volume and certifications are distributed across infrastructure, security and cloud.",
     "certificationsChart": "Certifications by category",
     "skillsChart": "Skills by domain"
   },
   "contact": {
     "eyebrow": "Contact",
     "title": "Let’s connect",
-    "description": "Open to opportunities and conversations with teams that value technical fundamentals, ownership and consistent growth.",
+    "description": "Open to remote or on-site opportunities with teams that value strong technical fundamentals, operational ownership and consistent growth in cloud and security.",
     "items": [
       {
         "label": "GitHub",
@@ -173,6 +173,6 @@
     "demo": "Demo"
   },
   "footer": {
-    "copy": "Rafael Garcez | Cloud, cybersecurity and infrastructure."
+    "copy": "Rafael Garcez | Cloud Security, cybersecurity and secure infrastructure."
   }
 }
