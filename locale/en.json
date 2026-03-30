@@ -14,7 +14,7 @@
     "eyebrow": "Cloud | Security | Infrastructure",
     "name": "Rafael Garcez",
     "title": "Cloud Security | Cybersecurity | Secure Infrastructure and Operations",
-    "description": "I turn hands-on experience in infrastructure, Linux and networking into secure and resilient digital environments. With 15+ years across operations and NOC/SOC contexts, I now focus on Cloud Security, Blue Team practices and hardening of critical systems.",
+    "description": "Infrastructure and security specialist with 15+ years across critical operations, support environments and NOC/SOC contexts. I connect hands-on experience in Linux, networking and operations with an active focus on Cloud Security, Blue Team practices and hardening of critical systems.",
     "cv": "Download CV",
     "panelTag": "STATUS",
     "panelTitle": "Technical Snapshot",
@@ -34,13 +34,13 @@
       },
       {
         "icon": "IF",
-        "title": "Infrastructure",
-        "description": "Linux, networking and critical systems with availability and security in mind."
+        "title": "Infrastructure & Support",
+        "description": "Linux, networking and critical systems with high availability, operational support and security in mind."
       },
       {
         "icon": "AU",
-        "title": "Automation",
-        "description": "Scripts, reliable backups, observability and lean operations."
+        "title": "DevSecOps & Automation",
+        "description": "Scripts, observability, backup and operational automation with a security-first mindset."
       }
     ],
     "rail1": "15+ YEARS IN INFRASTRUCTURE AND OPERATIONS",
@@ -122,8 +122,8 @@
   },
   "credentials": {
     "eyebrow": "Certifications",
-    "title": "Credentials that reinforce the trajectory",
-    "description": "A curated credential set connecting operational experience, infrastructure, cloud and security.",
+    "title": "Technical validation of operational capabilities",
+    "description": "Credentials that reinforce hands-on experience across infrastructure, cloud, security and operations.",
     "coreTitle": "Core Credentials",
     "coreDescription": "Core credentials across cloud, security and operations with immediate relevance for technical and executive review.",
     "morePrompt": "Additional credentials and supporting learning tracks.",
@@ -157,7 +157,7 @@
       {
         "kind": "Healthcare operations PWA",
         "name": "TranspSaude",
-        "description": "Healthcare operations PWA with request flow, review and operational distribution. Structured with Cloudflare Pages, Functions and D1.",
+        "description": "Operational architecture for healthcare transport, covering requests, review, dispatch and public consultation. Structured with Cloudflare Pages, Functions and D1, with emphasis on reliability, operational clarity and secure evolution.",
         "stack": ["PWA", "Cloudflare Pages", "Functions", "D1"],
         "github": "https://github.com/Garcez7R",
         "demo": "https://github.com/Garcez7R"
@@ -165,7 +165,7 @@
       {
         "kind": "Book and used-book marketplace",
         "name": "TEKA",
-        "description": "Marketplace connecting readers and used bookstores with catalog, inventory, user roles, ISBN scanner, OCR, PWA support and architecture designed for growth with UX and compliance in mind.",
+        "description": "Marketplace with catalog, inventory, user roles, ISBN scanning and OCR, designed for growth with emphasis on UX, operational traceability and compliance.",
         "stack": ["Marketplace", "PWA", "OCR", "Compliance"],
         "github": "https://github.com/Garcez7R",
         "demo": "https://github.com/Garcez7R"
@@ -173,7 +173,7 @@
       {
         "kind": "Beauty professionals PWA",
         "name": "Konnektx",
-        "description": "PWA for barbershops, salons and beauty professionals with public page, scheduling, loyalty features and a base prepared to evolve with Cloudflare Worker.",
+        "description": "Serverless-ready base for small businesses with public page, scheduling and loyalty flows, prepared to evolve with Cloudflare Worker and shaped around operational isolation, privacy and secure growth.",
         "stack": ["PWA", "Scheduling", "Loyalty", "Cloudflare Worker"],
         "github": "https://github.com/Garcez7R",
         "demo": "https://github.com/Garcez7R"
@@ -185,7 +185,8 @@
     "title": "A quick view of the profile",
     "description": "A visual summary of growth across infrastructure, security and cloud, highlighting areas with stronger study and certification volume.",
     "certificationsChart": "Certifications by category",
-    "skillsChart": "Skills by domain"
+    "skillsChart": "Skills by domain",
+    "securityFocusNote": "Current security focus: {percent}% of the certification track."
   },
   "contact": {
     "eyebrow": "Contact",

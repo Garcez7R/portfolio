@@ -32,6 +32,7 @@ const ui = {
   vaultSearch: document.getElementById("vault-search"),
   projectGrid: document.getElementById("project-grid"),
   certMetrics: document.getElementById("cert-metrics"),
+  certMetricsNote: document.getElementById("cert-metrics-note"),
   skillsMetrics: document.getElementById("skills-metrics"),
   contactGrid: document.getElementById("contact-grid"),
   langButtons: document.querySelectorAll("[data-lang-btn]"),
@@ -414,6 +415,8 @@ const renderMetrics = () => {
     acc[badge.category] = (acc[badge.category] || 0) + 1;
     return acc;
   }, {});
+  const totalBadges = badgeRecords.length;
+  const securityPercent = totalBadges ? Math.round(((badgeCounts.Security || 0) / totalBadges) * 100) : 0;
 
   const skillCounts = currentLocale.skills.items.reduce((acc, skillGroup) => {
     acc[skillGroup.title] = skillGroup.items.length;
@@ -421,6 +424,7 @@ const renderMetrics = () => {
   }, {});
 
   ui.certMetrics.innerHTML = createMetricRows(badgeCounts);
+  ui.certMetricsNote.textContent = currentLocale.metrics.securityFocusNote.replace("{percent}", String(securityPercent));
   ui.skillsMetrics.innerHTML = createMetricRows(skillCounts);
 };
 

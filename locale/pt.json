@@ -14,7 +14,7 @@
     "eyebrow": "Cloud | Segurança | Infraestrutura",
     "name": "Rafael Garcez",
     "title": "Cloud Security | Cybersecurity | Infraestrutura e Operações Seguras",
-    "description": "Transformo experiência prática em infraestrutura, Linux e redes em ambientes digitais seguros e resilientes. Com 15+ anos atuando em operação e contexto NOC/SOC, hoje foco em Cloud Security, Blue Team e hardening de sistemas críticos.",
+    "description": "Especialista em infraestrutura e segurança com 15+ anos de experiência em operações críticas, sustentação e contexto NOC/SOC. Hoje conecto base prática em Linux, redes e operação à evolução em Cloud Security, Blue Team e hardening de sistemas críticos.",
     "cv": "Baixar CV",
     "panelTag": "STATUS",
     "panelTitle": "Resumo Técnico",
@@ -34,13 +34,13 @@
       },
       {
         "icon": "IF",
-        "title": "Infraestrutura",
-        "description": "Linux, redes e sistemas críticos com foco em disponibilidade e segurança."
+        "title": "Infra & Sustentação",
+        "description": "Linux, redes e sistemas críticos com foco em alta disponibilidade, sustentação e segurança."
       },
       {
         "icon": "AU",
-        "title": "Automação",
-        "description": "Scripts, backups confiáveis, observabilidade e operações enxutas."
+        "title": "DevSecOps & Automação",
+        "description": "Scripts, observabilidade, backup e automação operacional com viés de segurança."
       }
     ],
     "rail1": "15+ ANOS EM OPERAÇÃO E INFRA",
@@ -122,8 +122,8 @@
   },
   "credentials": {
     "eyebrow": "Certificações",
-    "title": "Credenciais que dão lastro à trajetória",
-    "description": "Seleção de credenciais que conecta experiência operacional, infraestrutura, cloud e segurança.",
+    "title": "Validação técnica de competências operacionais",
+    "description": "Credenciais que reforçam experiência prática em infraestrutura, cloud, segurança e operação.",
     "coreTitle": "Core Credentials",
     "coreDescription": "Credenciais centrais em cloud, segurança e operação, com leitura imediata para contextos técnicos e executivos.",
     "morePrompt": "Credenciais adicionais e trilhas complementares.",
@@ -157,7 +157,7 @@
       {
         "kind": "PWA de operação em saúde",
         "name": "TranspSaude",
-        "description": "PWA de operação em saúde, com fluxo de solicitações, análise e distribuição operacional. Estruturado com Cloudflare Pages, Functions e D1.",
+        "description": "Arquitetura operacional para transporte em saúde, com fluxo de solicitações, análise, distribuição e consulta pública. Estruturado com Cloudflare Pages, Functions e D1, com foco em confiabilidade, clareza operacional e evolução segura.",
         "stack": ["PWA", "Cloudflare Pages", "Functions", "D1"],
         "github": "https://github.com/Garcez7R",
         "demo": "https://github.com/Garcez7R"
@@ -165,7 +165,7 @@
       {
         "kind": "Marketplace de livros e sebos",
         "name": "TEKA",
-        "description": "Marketplace para conectar leitores e sebos, com catálogo, estoque, papéis de usuário, scanner por ISBN, OCR, PWA e arquitetura pensada para crescimento com foco em UX e compliance.",
+        "description": "Marketplace com catálogo, estoque, papéis de usuário, scanner por ISBN e OCR, concebido para crescimento com foco em UX, rastreabilidade operacional e compliance.",
         "stack": ["Marketplace", "PWA", "OCR", "Compliance"],
         "github": "https://github.com/Garcez7R",
         "demo": "https://github.com/Garcez7R"
@@ -173,7 +173,7 @@
       {
         "kind": "PWA para salões e profissionais de beleza",
         "name": "Konnektx",
-        "description": "PWA para barbearias, salões e profissionais de beleza, com página pública, agenda, fidelização e base preparada para evolução com Cloudflare Worker.",
+        "description": "Base serverless para pequenos negócios com página pública, agenda e fidelização, preparada para evoluir com Cloudflare Worker e foco em isolamento operacional, privacidade e crescimento seguro.",
         "stack": ["PWA", "Agenda", "Fidelização", "Cloudflare Worker"],
         "github": "https://github.com/Garcez7R",
         "demo": "https://github.com/Garcez7R"
@@ -185,7 +185,8 @@
     "title": "Panorama do perfil em um olhar",
     "description": "Resumo visual da evolução em infraestrutura, segurança e cloud, destacando áreas com maior volume de estudo e certificações.",
     "certificationsChart": "Certificações por categoria",
-    "skillsChart": "Competências por domínio"
+    "skillsChart": "Competências por domínio",
+    "securityFocusNote": "Foco atual em segurança: {percent}% da trilha de certificações."
   },
   "contact": {
     "eyebrow": "Contato",
