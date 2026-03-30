@@ -331,62 +331,6 @@ main {
   letter-spacing: 0.08em;
 }
 
-.signal-band {
-  padding-top: 2.35rem;
-}
-
-.signal-band__grid {
-  display: grid;
-  gap: 1.15rem;
-}
-
-.signal-card {
-  position: relative;
-  padding: 1.45rem 1.45rem 1.5rem;
-  border: 1px solid rgba(197, 206, 216, 0.14);
-  border-radius: 32px;
-  background:
-    var(--panel-overlay),
-    var(--panel-surface);
-  box-shadow: var(--shadow);
-  overflow: hidden;
-}
-
-.signal-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--panel-accent);
-  pointer-events: none;
-}
-
-.signal-card span,
-.signal-card strong {
-  position: relative;
-  z-index: 1;
-}
-
-.signal-card span {
-  display: block;
-  max-width: 14ch;
-  color: var(--muted);
-  font-family: "JetBrains Mono", monospace;
-  font-size: 0.76rem;
-  line-height: 1.35;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.signal-card strong {
-  display: block;
-  margin-top: 0.7rem;
-  color: var(--silver-strong);
-  font-size: clamp(4.2rem, 14vw, 8rem);
-  line-height: 0.8;
-  letter-spacing: -0.1em;
-  text-wrap: nowrap;
-}
-
 .eyebrow {
   margin: 0 0 0.8rem;
   color: var(--silver);
@@ -1207,15 +1151,6 @@ h2 {
     padding-top: 1rem;
   }
 
-  .signal-band__grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    align-items: stretch;
-  }
-
-  .signal-card {
-    min-height: 220px;
-  }
-
   .section--skills .section-shell {
     grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
     align-items: start;
@@ -1306,11 +1241,4 @@ h2 {
     padding-top: 4.5rem;
   }
 
-  .signal-band {
-    padding-top: 1.4rem;
-  }
-
-  .signal-card strong {
-    font-size: clamp(3.8rem, 18vw, 5.8rem);
-  }
 }

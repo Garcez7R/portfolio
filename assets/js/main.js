@@ -19,7 +19,6 @@ let vaultSearchTerm = "";
 
 const ui = {
   splash: document.getElementById("splash"),
-  heroStats: document.getElementById("hero-stats"),
   skillsGrid: document.getElementById("skills-grid"),
   badgeGrid: document.getElementById("badge-grid"),
   badgeFilters: document.getElementById("badge-filters"),
@@ -166,26 +165,6 @@ const renderSkills = () => {
       `,
     )
     .join("");
-};
-
-const renderHeroStats = () => {
-  const categories = new Set(badgeRecords.map((badge) => badge.category));
-  const securityCount = badgeRecords.filter((badge) => badge.category === "Security").length;
-
-  ui.heroStats.innerHTML = `
-    <article class="signal-card">
-      <span>${currentLocale.hero.stats.total}</span>
-      <strong>${badgeRecords.length}</strong>
-    </article>
-    <article class="signal-card">
-      <span>${currentLocale.hero.stats.categories}</span>
-      <strong>${categories.size}</strong>
-    </article>
-    <article class="signal-card">
-      <span>${currentLocale.hero.stats.security}</span>
-      <strong>${securityCount}</strong>
-    </article>
-  `;
 };
 
 const buildFilters = () => {
@@ -432,7 +411,6 @@ const setLanguage = async (language) => {
   localStorage.setItem(STORAGE_KEYS.language, language);
   currentLocale = await loadLocale(language);
   applyI18n();
-  renderHeroStats();
   renderSkills();
   buildFilters();
   renderBadges();
