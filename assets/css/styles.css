@@ -1321,7 +1321,7 @@ h2 {
   height: 3px;
   background: linear-gradient(90deg, var(--gold), var(--green));
   transform-origin: left center;
-  animation: splashLoad 1.2s ease forwards;
+  animation: splashLoad 2.1s ease forwards;
 }
 
 .splash__terminal {
