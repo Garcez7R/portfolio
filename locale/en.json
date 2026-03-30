@@ -14,13 +14,13 @@
     "eyebrow": "Cloud | Security | Infrastructure",
     "name": "Rafael Garcez",
     "title": "Cloud, Cybersecurity and Infrastructure Professional",
-    "description": "Certification-driven technical profile with practical foundations in cloud, security, Linux, networking and operational support. Focused on reliable environments, strong technical organization and consistent growth toward higher-responsibility roles.",
+    "description": "I am building my path at the intersection of cloud, security and infrastructure, grounded in technical fundamentals, disciplined learning and real respect for operations.",
     "cv": "Download CV",
     "panelTag": "STATUS",
     "panelTitle": "Technical Snapshot",
-    "panelLine1": "Career direction centered on cloud operations, security and infrastructure.",
-    "panelLine2": "Portfolio structured for fast evaluation by recruiters and hiring managers.",
-    "panelLine3": "Evidence consolidated through credentials, projects and verifiable documentation.",
+    "panelLine1": "Centered on secure, scalable and well-operated environments.",
+    "panelLine2": "Continuous learning translated into practice, documentation and delivery.",
+    "panelLine3": "Built to show consistency, not just intention.",
     "rail1": "CERTIFICATION-FIRST",
     "rail2": "OPERATION-DRIVEN PROJECTS",
     "rail3": "PT-BR + EN",
@@ -33,8 +33,8 @@
   },
   "skills": {
     "eyebrow": "Core Skills",
-    "title": "Technical capabilities organized around key domains",
-    "description": "A concise view of the capabilities that support my current profile and long-term positioning across cloud, security, infrastructure and delivery practices.",
+    "title": "A technical foundation in constant evolution",
+    "description": "These are the areas where I am deepening my profile today, combining strong fundamentals, context awareness and readiness for more demanding environments.",
     "items": [
       {
         "title": "Cloud",
@@ -80,8 +80,8 @@
   },
   "credentials": {
     "eyebrow": "Certifications",
-    "title": "Credentials and validated learning path",
-    "description": "These certifications reinforce consistency, study discipline and practical familiarity with cloud, security, networking and infrastructure topics.",
+    "title": "Credentials that support the trajectory",
+    "description": "More than volume, these certifications reflect consistency, study discipline and a serious commitment to technical growth.",
     "filters": {
       "all": "All"
     },
@@ -92,8 +92,8 @@
   },
   "vault": {
     "eyebrow": "Certificate Vault",
-    "title": "Compact register for certificate validation",
-    "description": "A cleaner way to review and validate credentials, with direct access to public verification links without turning the page into a long raw list.",
+    "title": "Direct credential validation",
+    "description": "A concise area for quick review and verification of the certifications that matter most.",
     "searchLabel": "Search certificate",
     "searchPlaceholder": "Search by name or category",
     "noResults": "No certificates found for this search.",
@@ -104,8 +104,8 @@
   },
   "projects": {
     "eyebrow": "Projects",
-    "title": "Projects that demonstrate practical execution",
-    "description": "A selected set of products showing architectural thinking, operational awareness, user experience care and the ability to turn requirements into working solutions.",
+    "title": "Projects where idea, architecture and execution meet",
+    "description": "Each product below reflects a build decision: solving a real problem with structure, clarity and attention to the operating experience.",
     "items": [
       {
         "kind": "Health Operations PWA",
@@ -135,15 +135,15 @@
   },
   "metrics": {
     "eyebrow": "Metrics",
-    "title": "Fast technical profile overview",
-    "description": "A compact visual summary to support quick evaluation of capability breadth and credential distribution.",
+    "title": "A quick view of the profile",
+    "description": "A compact snapshot of where my training stands today and where my strongest technical momentum is developing.",
     "certificationsChart": "Certifications by category",
     "skillsChart": "Skills by domain"
   },
   "contact": {
     "eyebrow": "Contact",
-    "title": "Professional contact channels",
-    "description": "Direct links for networking, hiring conversations, technical discussions and opportunity outreach.",
+    "title": "Let’s connect",
+    "description": "Open to opportunities, thoughtful conversations and teams that value technical fundamentals, ownership and long-term growth.",
     "items": [
       {
         "label": "GitHub",
@@ -172,6 +172,6 @@
     "demo": "Demo"
   },
   "footer": {
-    "copy": "Technical portfolio structured for quick review, objective validation and professional presentation."
+    "copy": "Rafael Garcez | Cloud, cybersecurity and infrastructure."
   }
 }

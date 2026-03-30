@@ -14,13 +14,13 @@
     "eyebrow": "Cloud | Segurança | Infraestrutura",
     "name": "Rafael Garcez",
     "title": "Profissional em Cloud, Cibersegurança e Infraestrutura",
-    "description": "Perfil técnico orientado por certificações, com base prática em cloud, segurança, Linux, redes e suporte operacional. Foco em ambientes confiáveis, boa organização técnica e evolução consistente para desafios de maior responsabilidade.",
+    "description": "Construo minha trajetória na interseção entre cloud, segurança e infraestrutura, com base técnica sólida, disciplina de aprendizado e atenção real à operação.",
     "cv": "Baixar CV",
     "panelTag": "STATUS",
     "panelTitle": "Resumo Técnico",
-    "panelLine1": "Direcionamento profissional para operações de cloud, segurança e infraestrutura.",
-    "panelLine2": "Portfólio estruturado para facilitar avaliação técnica por recrutadores e gestores.",
-    "panelLine3": "Evidências reunidas em credenciais, projetos e documentação verificável.",
+    "panelLine1": "Interesse central em ambientes seguros, escaláveis e bem operados.",
+    "panelLine2": "Aprendizado contínuo convertido em prática, documentação e entrega.",
+    "panelLine3": "Portfólio pensado para mostrar consistência, não apenas intenção.",
     "rail1": "FOCO EM CERTIFICAÇÕES",
     "rail2": "PROJETOS COM BASE OPERACIONAL",
     "rail3": "PT-BR + EN",
@@ -33,8 +33,8 @@
   },
   "skills": {
     "eyebrow": "Competências",
-    "title": "Competências organizadas pelas frentes mais relevantes",
-    "description": "Visão objetiva das capacidades técnicas que sustentam minha atuação e meu desenvolvimento: cloud, segurança, infraestrutura e práticas de entrega.",
+    "title": "Base técnica em evolução constante",
+    "description": "As frentes que concentram minha energia hoje combinam fundamentos fortes, leitura rápida de contexto e apetite por ambientes de maior complexidade.",
     "items": [
       {
         "title": "Cloud",
@@ -80,8 +80,8 @@
   },
   "credentials": {
     "eyebrow": "Certificações",
-    "title": "Credenciais e trilha de aprendizado validada",
-    "description": "As certificações reforçam consistência, disciplina de estudo e familiaridade prática com temas de cloud, segurança, redes e infraestrutura.",
+    "title": "Credenciais que sustentam a trajetória",
+    "description": "Mais do que volume, as certificações mostram constância, profundidade de estudo e compromisso com uma formação técnica séria.",
     "filters": {
       "all": "Todas"
     },
@@ -92,8 +92,8 @@
   },
   "vault": {
     "eyebrow": "Vault de Certificados",
-    "title": "Registro rápido para validação de certificados",
-    "description": "Uma visualização mais limpa para consulta e validação de credenciais, com acesso direto aos links públicos sem poluir a página.",
+    "title": "Validação direta das credenciais",
+    "description": "Uma área objetiva para consulta, conferência e leitura rápida das certificações mais relevantes.",
     "searchLabel": "Buscar certificado",
     "searchPlaceholder": "Buscar por nome ou categoria",
     "noResults": "Nenhum certificado encontrado para esta busca.",
@@ -104,8 +104,8 @@
   },
   "projects": {
     "eyebrow": "Projetos",
-    "title": "Projetos que demonstram aplicação prática",
-    "description": "Seleção de produtos que evidenciam raciocínio de arquitetura, preocupação com operação, experiência do usuário e capacidade de transformar requisitos em solução funcional.",
+    "title": "Projetos que conectam ideia, arquitetura e execução",
+    "description": "Cada produto abaixo representa uma decisão de construção: resolver um problema real com estrutura, clareza e atenção à experiência de uso.",
     "items": [
       {
         "kind": "PWA de Operação em Saúde",
@@ -135,15 +135,15 @@
   },
   "metrics": {
     "eyebrow": "Métricas",
-    "title": "Leitura rápida do perfil técnico",
-    "description": "Resumo visual para apoiar uma avaliação inicial sobre amplitude de competências e distribuição das credenciais.",
+    "title": "Panorama do perfil em um olhar",
+    "description": "Um recorte sintético para facilitar a leitura do momento atual da minha formação e das frentes em que venho amadurecendo.",
     "certificationsChart": "Certificações por categoria",
     "skillsChart": "Competências por domínio"
   },
   "contact": {
     "eyebrow": "Contato",
-    "title": "Canais para contato profissional",
-    "description": "Links diretos para networking, oportunidades, conversas técnicas e processos seletivos.",
+    "title": "Vamos conversar",
+    "description": "Fico aberto a oportunidades, conexões estratégicas e conversas com times que valorizam fundamento técnico, responsabilidade e evolução contínua.",
     "items": [
       {
         "label": "GitHub",
@@ -172,6 +172,6 @@
     "demo": "Demo"
   },
   "footer": {
-    "copy": "Portfólio técnico estruturado para leitura rápida, validação objetiva e apresentação profissional."
+    "copy": "Rafael Garcez | Cloud, cibersegurança e infraestrutura."
   }
 }
