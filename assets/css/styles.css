@@ -15,6 +15,15 @@
   --line-strong: rgba(222, 230, 240, 0.24);
   --shadow: 0 28px 80px rgba(0, 0, 0, 0.45);
   --glow: rgba(214, 224, 235, 0.08);
+  --panel-surface:
+    linear-gradient(180deg, rgba(17, 21, 28, 0.94), rgba(8, 10, 14, 0.98));
+  --panel-overlay:
+    linear-gradient(140deg, rgba(255, 255, 255, 0.03), transparent 36%);
+  --panel-accent:
+    radial-gradient(circle at top right, rgba(212, 175, 55, 0.08), transparent 26%);
+  --card-surface:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.012)),
+    rgba(10, 12, 16, 0.76);
   --max-width: 1240px;
 }
 
@@ -225,9 +234,9 @@ main {
   border: 1px solid var(--line);
   border-radius: 30px;
   background:
-    radial-gradient(circle at 26% 20%, rgba(212, 175, 55, 0.14), transparent 24%),
-    linear-gradient(140deg, rgba(255, 255, 255, 0.04), transparent 42%),
-    rgba(8, 10, 14, 0.76);
+    var(--panel-accent),
+    var(--panel-overlay),
+    var(--panel-surface);
   overflow: hidden;
 }
 
@@ -320,8 +329,8 @@ main {
   border: 1px solid rgba(197, 206, 216, 0.12);
   border-radius: 28px;
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.035), transparent 38%),
-    rgba(9, 11, 15, 0.84);
+    var(--panel-overlay),
+    var(--panel-surface);
   box-shadow: var(--shadow);
   overflow: hidden;
 }
@@ -330,7 +339,7 @@ main {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.09), transparent 28%);
+  background: var(--panel-accent);
   pointer-events: none;
 }
 
@@ -438,16 +447,14 @@ h2 {
   border: 1px solid rgba(197, 206, 216, 0.12);
   border-radius: 34px;
   background:
-    linear-gradient(140deg, rgba(255, 255, 255, 0.03), transparent 34%),
-    linear-gradient(180deg, rgba(13, 16, 21, 0.96), rgba(7, 9, 12, 0.98));
+    var(--panel-overlay),
+    var(--panel-surface);
   box-shadow: var(--shadow);
   overflow: hidden;
 }
 
 .section--credentials .section-shell::before {
-  background:
-    radial-gradient(circle at top right, rgba(212, 175, 55, 0.1), transparent 24%),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.04), transparent 18%);
+  background: var(--panel-accent);
 }
 
 .credentials-stage {
@@ -461,16 +468,14 @@ h2 {
   border: 1px solid rgba(197, 206, 216, 0.1);
   border-radius: 34px;
   background:
-    radial-gradient(circle at bottom left, rgba(63, 185, 80, 0.05), transparent 24%),
-    linear-gradient(180deg, rgba(9, 11, 15, 0.9), rgba(6, 8, 11, 0.98));
+    var(--panel-overlay),
+    var(--panel-surface);
   box-shadow: var(--shadow);
   overflow: hidden;
 }
 
 .section--vault .vault-shell::before {
-  background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03), transparent 22%),
-    radial-gradient(circle at top right, rgba(197, 206, 216, 0.08), transparent 26%);
+  background: var(--panel-accent);
 }
 
 .vault-shell__head,
@@ -526,8 +531,8 @@ h2 {
   border: 1px solid rgba(197, 206, 216, 0.12);
   border-radius: 30px;
   background:
-    linear-gradient(120deg, rgba(255, 255, 255, 0.03), transparent 34%),
-    linear-gradient(180deg, rgba(12, 15, 20, 0.9), rgba(8, 10, 14, 0.98));
+    var(--panel-overlay),
+    var(--panel-surface);
   box-shadow: var(--shadow);
 }
 
@@ -634,9 +639,7 @@ h2 {
 
 .skill-card {
   min-height: 100%;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015)),
-    rgba(10, 12, 16, 0.7);
+  background: var(--card-surface);
 }
 
 .skill-chip-grid {
@@ -734,7 +737,7 @@ h2 {
   border: 1px solid var(--line);
   border-radius: 24px;
   overflow: hidden;
-  background: linear-gradient(180deg, rgba(20, 24, 30, 0.95), rgba(11, 13, 17, 0.98));
+  background: var(--card-surface);
   transition:
     transform 0.22s ease,
     border-color 0.22s ease,
@@ -746,8 +749,8 @@ h2 {
 .badge-card--core {
   border-color: rgba(212, 175, 55, 0.22);
   background:
-    linear-gradient(180deg, rgba(212, 175, 55, 0.06), rgba(255, 255, 255, 0.015)),
-    linear-gradient(180deg, rgba(20, 24, 30, 0.95), rgba(11, 13, 17, 0.98));
+    linear-gradient(180deg, rgba(212, 175, 55, 0.05), rgba(255, 255, 255, 0.01)),
+    var(--card-surface);
 }
 
 .badge-card__priority {
@@ -769,7 +772,9 @@ h2 {
 .badge-card:hover {
   transform: translateY(-5px);
   border-color: rgba(212, 175, 55, 0.24);
-  background: linear-gradient(180deg, rgba(24, 29, 37, 0.98), rgba(11, 13, 17, 1));
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.014)),
+    rgba(12, 15, 20, 0.82);
 }
 
 .badge-card__visual {
@@ -826,17 +831,15 @@ h2 {
   min-height: 100%;
   padding-top: 1.55rem;
   transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.012)),
-    rgba(10, 12, 16, 0.74);
+  background: var(--card-surface);
 }
 
 .project-card:hover {
   transform: scale(1.02);
   border-color: rgba(212, 175, 55, 0.22);
   background:
-    linear-gradient(180deg, rgba(212, 175, 55, 0.05), rgba(255, 255, 255, 0.015)),
-    rgba(10, 12, 16, 0.82);
+    linear-gradient(180deg, rgba(212, 175, 55, 0.04), rgba(255, 255, 255, 0.012)),
+    rgba(12, 15, 20, 0.82);
 }
 
 .project-card:nth-child(2n) {
@@ -925,8 +928,8 @@ h2 {
   border: 1px solid rgba(212, 175, 55, 0.16);
   border-radius: 18px;
   background:
-    linear-gradient(180deg, rgba(212, 175, 55, 0.08), rgba(255, 255, 255, 0.01)),
-    linear-gradient(180deg, rgba(19, 22, 27, 0.94), rgba(10, 12, 15, 0.98));
+    linear-gradient(180deg, rgba(212, 175, 55, 0.05), rgba(255, 255, 255, 0.01)),
+    var(--card-surface);
 }
 
 .vault-featured-card strong {
@@ -1001,7 +1004,7 @@ h2 {
   padding: 1rem 1.1rem;
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 18px;
-  background: linear-gradient(180deg, rgba(19, 22, 27, 0.94), rgba(10, 12, 15, 0.98));
+  background: var(--card-surface);
 }
 
 .vault-item__meta {
@@ -1031,9 +1034,7 @@ h2 {
 
 .metric-card {
   padding: 1.45rem;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.012)),
-    rgba(10, 12, 16, 0.74);
+  background: var(--card-surface);
 }
 
 .metric-row {
@@ -1067,9 +1068,7 @@ h2 {
   align-items: flex-start;
   justify-content: space-between;
   min-height: 170px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.012)),
-    rgba(10, 12, 16, 0.72);
+  background: var(--card-surface);
 }
 
 .contact-card span {
