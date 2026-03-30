@@ -1286,6 +1286,19 @@ h2 {
   background: linear-gradient(90deg, rgba(212, 175, 55, 0.9), rgba(63, 185, 80, 0.7));
 }
 
+.metric-row--security .metric-label {
+  color: var(--silver-strong);
+}
+
+.metric-row--security .metric-bar {
+  background: rgba(63, 185, 80, 0.12);
+}
+
+.metric-row--security .metric-bar span {
+  background: linear-gradient(90deg, rgba(63, 185, 80, 0.98), rgba(244, 247, 251, 0.78));
+  box-shadow: 0 0 18px rgba(63, 185, 80, 0.2);
+}
+
 .metric-note {
   margin: 1rem 0 0;
   color: var(--muted);

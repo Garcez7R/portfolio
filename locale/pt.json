@@ -14,7 +14,7 @@
     "eyebrow": "Cloud | Segurança | Infraestrutura",
     "name": "Rafael Garcez",
     "title": "Cloud Security | Cybersecurity | Infraestrutura e Operações Seguras",
-    "description": "Especialista em infraestrutura e segurança com 15+ anos de experiência em operações críticas, sustentação e contexto NOC/SOC. Hoje conecto base prática em Linux, redes e operação à evolução em Cloud Security, Blue Team e hardening de sistemas críticos.",
+    "description": "Especialista em infraestrutura e segurança com 15+ anos de experiência em operações críticas e contexto NOC/SOC. Conecto a solidez operacional em Linux e redes à evolução em Cloud Security, Blue Team e hardening de sistemas críticos.",
     "cv": "Baixar CV",
     "panelTag": "STATUS",
     "panelTitle": "Resumo Técnico",
@@ -159,7 +159,7 @@
       {
         "kind": "PWA de operação em saúde",
         "name": "TranspSaude",
-        "description": "Arquitetura operacional para transporte em saúde, com fluxo de solicitações, análise, distribuição e consulta pública. Estruturado com Cloudflare Pages, Functions e D1, com foco em confiabilidade, clareza operacional e evolução segura.",
+        "description": "Arquitetura serverless para transporte em saúde, com fluxo de solicitações, análise, distribuição e consulta pública. Estruturado com Cloudflare Pages, Functions e D1, com foco em resiliência, disponibilidade e evolução segura.",
         "stack": ["PWA", "Cloudflare Pages", "Functions", "D1"],
         "github": "https://github.com/Garcez7R/transpsaude",
         "demo": ""

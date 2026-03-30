@@ -439,12 +439,15 @@ const createMetricRows = (entriesObject) => {
 
   return entries
     .map(
-      ([label, value]) => `
-        <div class="metric-row">
+      ([label, value]) => {
+        const slug = label.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+        return `
+        <div class="metric-row metric-row--${slug}">
           <div class="metric-label"><span>${label}</span><span>${value}</span></div>
           <div class="metric-bar"><span style="width: ${(value / max) * 100}%"></span></div>
         </div>
-      `,
+      `;
+      },
     )
     .join("");
 };
