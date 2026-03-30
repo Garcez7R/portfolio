@@ -56,20 +56,20 @@
   "skills": {
     "eyebrow": "Domínios",
     "title": "Competências",
-    "description": "Base operacional sólida com evolução consistente em cloud, segurança e ambientes críticos.",
+    "description": "Base operacional sólida com evolução consistente em nuvem, segurança e ambientes críticos.",
     "items": [
       {
-        "title": "Cloud",
+        "title": "Nuvem",
         "description": "Arquitetura, identidade, operação e segurança em nuvem, com aplicação prática.",
         "items": [
-          { "name": "AWS", "icon": "AW", "description": "Fundamentos AWS com foco em arquitetura básica, segurança e operação cloud." },
-          { "name": "OCI", "icon": "OC", "description": "Oracle Cloud Infrastructure foundations e leitura sólida dos serviços-base." },
-          { "name": "IAM", "icon": "ID", "description": "Identidade, controle de acesso e menor privilégio em cloud e ambientes híbridos." },
-          { "name": "Cloudflare", "icon": "CF", "description": "Publicação, edge delivery e base de projetos autorais em plataforma cloud." }
+          { "name": "AWS", "icon": "AW", "description": "Fundamentos de AWS com foco em arquitetura básica, segurança e operação em nuvem." },
+          { "name": "OCI", "icon": "OC", "description": "Fundamentos de Oracle Cloud Infrastructure e leitura sólida dos serviços-base." },
+          { "name": "IAM", "icon": "ID", "description": "Identidade, controle de acesso e menor privilégio em nuvem e ambientes híbridos." },
+          { "name": "Cloudflare", "icon": "CF", "description": "Publicação, entrega em borda e base de projetos autorais em plataforma de nuvem." }
         ]
       },
       {
-        "title": "Security",
+        "title": "Segurança",
         "description": "Visão orientada à defesa, identidade, hardening, auditoria e proteção de ambientes digitais.",
         "items": [
           { "name": "Blue Team", "icon": "BT", "description": "Mentalidade defensiva com foco em monitoramento, resposta e resiliência operacional." },
@@ -79,11 +79,11 @@
         ]
       },
       {
-        "title": "Infrastructure",
+        "title": "Infraestrutura",
         "description": "Experiência prática em sistemas, redes, diretórios, monitoramento e sustentação de ambientes críticos.",
         "items": [
-          { "name": "Linux", "icon": "LX", "description": "Administração de ambientes Linux desktop e server com foco operacional." },
-          { "name": "Networking", "icon": "NW", "description": "Redes, VPN, conectividade, troubleshooting e infraestrutura segura." },
+          { "name": "Linux", "icon": "LX", "description": "Administração de ambientes Linux desktop e servidor com foco operacional." },
+          { "name": "Redes", "icon": "NW", "description": "Redes, VPN, conectividade, troubleshooting e infraestrutura segura." },
           { "name": "AD / GPO", "icon": "AD", "description": "Ambientes Windows Server, diretório, políticas e administração corporativa." },
           { "name": "Zabbix", "icon": "ZB", "description": "Monitoramento, visibilidade operacional e apoio a ambientes NOC/SOC." }
         ]
@@ -95,21 +95,21 @@
           { "name": "Git", "icon": "GT", "description": "Versionamento, higiene de repositório e base de colaboração técnica." },
           { "name": "Shell / Python", "icon": "SP", "description": "Automação de rotinas, apoio operacional e produtividade em CLI." },
           { "name": "Backup", "icon": "BK", "description": "BorgBackup, estratégia 3-2-1, deduplicação e continuidade operacional." },
-          { "name": "Observability", "icon": "OB", "description": "Monitoramento, sinais operacionais e manutenção de ambientes confiáveis." }
+          { "name": "Observabilidade", "icon": "OB", "description": "Monitoramento, sinais operacionais e manutenção de ambientes confiáveis." }
         ]
       },
       {
-        "title": "Networking",
+        "title": "Redes",
         "description": "Conectividade, VPN, segmentação, perímetro e suporte a ambientes corporativos seguros.",
         "items": [
           { "name": "OpenVPN", "icon": "OV", "description": "Acesso remoto seguro com VPN, certificados e controle de acesso." },
           { "name": "pfSense", "icon": "PF", "description": "Perímetro, regras, segmentação e suporte a infraestrutura de segurança." },
-          { "name": "DNS / Routing", "icon": "DR", "description": "Noções operacionais de conectividade, resolução e tráfego em rede." },
-          { "name": "Certificates", "icon": "CA", "description": "Uso prático de certificados digitais em acesso seguro e serviços." }
+          { "name": "DNS / Roteamento", "icon": "DR", "description": "Noções operacionais de conectividade, resolução e tráfego em rede." },
+          { "name": "Certificados", "icon": "CA", "description": "Uso prático de certificados digitais em acesso seguro e serviços." }
         ]
       },
       {
-        "title": "Other",
+        "title": "Outros",
         "description": "Ferramentas e experiências complementares que reforçam visão de operação e continuidade.",
         "items": [
           { "name": "FreeBSD", "icon": "FB", "description": "Vivência com sistemas Unix-like além do ecossistema Linux." },
