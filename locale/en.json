@@ -6,7 +6,7 @@
   "nav": {
     "skills": "Skills",
     "credentials": "Credentials",
-    "vault": "PDF Vault",
+    "vault": "Certificates",
     "projects": "Projects",
     "contact": "Contact"
   },
@@ -91,9 +91,13 @@
     }
   },
   "vault": {
-    "eyebrow": "Document Vault",
-    "title": "Fast access to certificate validation and documents",
-    "description": "Direct links designed to simplify screening, credential verification and review by recruiters, managers and technical evaluators."
+    "eyebrow": "Certificate Vault",
+    "title": "Compact register for certificate validation",
+    "description": "A cleaner way to review and validate credentials, with direct access to public verification links without turning the page into a long raw list.",
+    "toggle": {
+      "more": "Show {count} more",
+      "less": "Show less"
+    }
   },
   "projects": {
     "eyebrow": "Projects",

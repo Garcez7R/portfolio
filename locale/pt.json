@@ -6,7 +6,7 @@
   "nav": {
     "skills": "Competências",
     "credentials": "Credenciais",
-    "vault": "PDF Vault",
+    "vault": "Certificados",
     "projects": "Projetos",
     "contact": "Contato"
   },
@@ -91,9 +91,13 @@
     }
   },
   "vault": {
-    "eyebrow": "Vault de Documentos",
-    "title": "Validação rápida de certificados e documentos",
-    "description": "Acesso direto às comprovações para agilizar triagem, validação de credenciais e análise por times de recrutamento e liderança."
+    "eyebrow": "Vault de Certificados",
+    "title": "Registro rápido para validação de certificados",
+    "description": "Uma visualização mais limpa para consulta e validação de credenciais, com acesso direto aos links públicos sem poluir a página.",
+    "toggle": {
+      "more": "Mostrar mais {count}",
+      "less": "Mostrar menos"
+    }
   },
   "projects": {
     "eyebrow": "Projetos",

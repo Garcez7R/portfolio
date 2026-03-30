@@ -5,12 +5,14 @@ const STORAGE_KEYS = {
 
 const DEFAULT_BADGE_IMAGE = "./assets/img/badges/placeholder-badge.svg";
 const BADGES_COLLAPSED_COUNT = 12;
+const VAULT_COLLAPSED_COUNT = 8;
 
 let currentLocale = {};
 let currentLanguage = "en";
 let badgeRecords = [];
 let selectedBadgeFilter = "All";
 let badgesExpanded = false;
+let vaultExpanded = false;
 
 const ui = {
   splash: document.getElementById("splash"),
@@ -20,6 +22,7 @@ const ui = {
   badgeFilters: document.getElementById("badge-filters"),
   badgeToggle: document.getElementById("badge-toggle"),
   vaultList: document.getElementById("vault-list"),
+  vaultToggle: document.getElementById("vault-toggle"),
   projectGrid: document.getElementById("project-grid"),
   certMetrics: document.getElementById("cert-metrics"),
   skillsMetrics: document.getElementById("skills-metrics"),
@@ -234,16 +237,32 @@ const renderBadges = () => {
 };
 
 const renderVault = () => {
-  ui.vaultList.innerHTML = badgeRecords
+  const sorted = [...badgeRecords].sort((a, b) => a.name.localeCompare(b.name));
+  const list = vaultExpanded ? sorted : sorted.slice(0, VAULT_COLLAPSED_COUNT);
+
+  ui.vaultList.innerHTML = list
     .map(
       (badge) => `
         <article class="vault-item">
-          <span>${badge.name}</span>
+          <div class="vault-item__meta">
+            <span class="vault-item__title">${badge.name}</span>
+            <span class="vault-item__category">${badge.category}</span>
+          </div>
           <a href="${badge.certificateUrl}" target="_blank" rel="noreferrer">${currentLocale.shared.verify}</a>
         </article>
       `,
     )
     .join("");
+
+  if (sorted.length <= VAULT_COLLAPSED_COUNT) {
+    ui.vaultToggle.hidden = true;
+    return;
+  }
+
+  ui.vaultToggle.hidden = false;
+  ui.vaultToggle.textContent = vaultExpanded
+    ? currentLocale.vault.toggle.less
+    : currentLocale.vault.toggle.more.replace("{count}", String(sorted.length - VAULT_COLLAPSED_COUNT));
 };
 
 const renderProjects = () => {
@@ -348,6 +367,11 @@ const bindEvents = () => {
   ui.badgeToggle.addEventListener("click", () => {
     badgesExpanded = !badgesExpanded;
     renderBadges();
+  });
+
+  ui.vaultToggle.addEventListener("click", () => {
+    vaultExpanded = !vaultExpanded;
+    renderVault();
   });
 };
 
