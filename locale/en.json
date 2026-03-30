@@ -159,24 +159,24 @@
         "name": "TranspSaude",
         "description": "Operational architecture for healthcare transport, covering requests, review, dispatch and public consultation. Structured with Cloudflare Pages, Functions and D1, with emphasis on reliability, operational clarity and secure evolution.",
         "stack": ["PWA", "Cloudflare Pages", "Functions", "D1"],
-        "github": "https://github.com/Garcez7R",
-        "demo": "https://github.com/Garcez7R"
+        "github": "https://github.com/Garcez7R/transpsaude",
+        "demo": ""
       },
       {
         "kind": "Book and used-book marketplace",
         "name": "TEKA",
         "description": "Marketplace with catalog, inventory, user roles, ISBN scanning and OCR, designed for growth with emphasis on UX, operational traceability and compliance.",
         "stack": ["Marketplace", "PWA", "OCR", "Compliance"],
-        "github": "https://github.com/Garcez7R",
-        "demo": "https://github.com/Garcez7R"
+        "github": "https://github.com/Garcez7R/mvp-teka",
+        "demo": ""
       },
       {
         "kind": "Beauty professionals PWA",
         "name": "Konnektx",
         "description": "Serverless-ready base for small businesses with public page, scheduling and loyalty flows, prepared to evolve with Cloudflare Worker and shaped around operational isolation, privacy and secure growth.",
         "stack": ["PWA", "Scheduling", "Loyalty", "Cloudflare Worker"],
-        "github": "https://github.com/Garcez7R",
-        "demo": "https://github.com/Garcez7R"
+        "github": "https://github.com/Garcez7R/Konnektx",
+        "demo": ""
       }
     ]
   },

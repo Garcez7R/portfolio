@@ -402,7 +402,7 @@ const renderProjects = () => {
           </div>
           <div class="project-links project-links--footer">
             <a href="${project.github}" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="${project.demo}" target="_blank" rel="noreferrer">${currentLocale.shared.demo}</a>
+            ${project.demo ? `<a href="${project.demo}" target="_blank" rel="noreferrer">${currentLocale.shared.demo}</a>` : ""}
           </div>
         </article>
       `,
