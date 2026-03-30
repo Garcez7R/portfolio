@@ -141,10 +141,12 @@
     "eyebrow": "Certificate Vault",
     "title": "Certificates",
     "description": "Direct access to certificates, learning tracks and credentials across cloud, security and infrastructure.",
+    "morePrompt": "Full certificate archive and supporting learning tracks.",
     "searchLabel": "Search certificate",
     "searchPlaceholder": "Search by name or category",
     "noResults": "No certificates found for this search.",
     "toggle": {
+      "open": "Open full archive",
       "more": "Show {count} more",
       "less": "Show less"
     }

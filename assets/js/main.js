@@ -4,8 +4,6 @@ const STORAGE_KEYS = {
 };
 
 const DEFAULT_BADGE_IMAGE = "./assets/img/badges/placeholder-badge.svg";
-const VAULT_COLLAPSED_COUNT = 8;
-const VAULT_GROUP_COLLAPSED_COUNT = 3;
 const CATEGORY_ORDER = ["Cloud", "Security", "Infrastructure", "DevOps", "Networking", "Linux", "Other"];
 
 let currentLocale = {};
@@ -27,6 +25,8 @@ const ui = {
   badgeFilters: document.getElementById("badge-filters"),
   badgeToggle: document.getElementById("badge-toggle"),
   vaultFeatured: document.getElementById("vault-featured"),
+  vaultMorePrompt: document.getElementById("vault-more-prompt"),
+  vaultMoreContent: document.getElementById("vault-more-content"),
   vaultGroups: document.getElementById("vault-groups"),
   vaultToggle: document.getElementById("vault-toggle"),
   vaultSearch: document.getElementById("vault-search"),
@@ -341,16 +341,22 @@ const renderVault = () => {
 
   if (!filtered.length) {
     ui.vaultFeatured.innerHTML = "";
+    ui.vaultMorePrompt.hidden = true;
+    ui.vaultMoreContent.hidden = false;
     ui.vaultGroups.innerHTML = `<div class="vault-empty">${currentLocale.vault.noResults}</div>`;
     ui.vaultToggle.hidden = true;
     return;
   }
 
-  ui.vaultGroups.innerHTML = Object.entries(groupedEntries)
+  const hasArchive = filtered.length > featured.length;
+  ui.vaultMorePrompt.hidden = vaultExpanded || !hasArchive;
+  ui.vaultMoreContent.hidden = !vaultExpanded;
+
+  ui.vaultGroups.innerHTML = vaultExpanded
+    ? Object.entries(groupedEntries)
     .sort(([a], [b]) => a.localeCompare(b))
     .map(([category, items]) => {
       const orderedItems = [...items].sort((a, b) => scoreBadge(b) - scoreBadge(a) || a.name.localeCompare(b.name));
-      const visibleItems = vaultExpanded ? orderedItems : orderedItems.slice(0, VAULT_GROUP_COLLAPSED_COUNT);
 
       return `
         <section class="vault-group">
@@ -359,7 +365,7 @@ const renderVault = () => {
             <span>${items.length}</span>
           </div>
           <div class="vault-list">
-            ${visibleItems
+            ${orderedItems
               .map(
                 (badge) => `
                   <article class="vault-item">
@@ -376,17 +382,16 @@ const renderVault = () => {
         </section>
       `;
     })
-    .join("");
+    .join("")
+    : "";
 
-  if (filtered.length <= VAULT_COLLAPSED_COUNT) {
+  if (!hasArchive) {
     ui.vaultToggle.hidden = true;
     return;
   }
 
   ui.vaultToggle.hidden = false;
-  ui.vaultToggle.textContent = vaultExpanded
-    ? currentLocale.vault.toggle.less
-    : currentLocale.vault.toggle.more.replace("{count}", String(filtered.length - VAULT_COLLAPSED_COUNT));
+  ui.vaultToggle.textContent = vaultExpanded ? currentLocale.vault.toggle.less : currentLocale.vault.toggle.open;
 };
 
 const renderProjects = () => {

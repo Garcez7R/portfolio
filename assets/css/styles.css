@@ -542,6 +542,19 @@ h2 {
   gap: 0.2rem;
 }
 
+.vault-more {
+  display: grid;
+  gap: 1rem;
+}
+
+.vault-more__prompt {
+  margin-top: 0.2rem;
+}
+
+.vault-more__content {
+  display: grid;
+}
+
 .section--vault .vault-shell {
   padding: 2rem;
   border: 1px solid rgba(197, 206, 216, 0.1);

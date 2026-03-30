@@ -141,10 +141,12 @@
     "eyebrow": "Vault de Certificados",
     "title": "Certificados",
     "description": "Consulta direta de certificados, trilhas e credenciais em cloud, segurança e infraestrutura.",
+    "morePrompt": "Arquivo completo de certificados e trilhas complementares.",
     "searchLabel": "Buscar certificado",
     "searchPlaceholder": "Buscar por nome ou categoria",
     "noResults": "Nenhum certificado encontrado para esta busca.",
     "toggle": {
+      "open": "Abrir arquivo completo",
       "more": "Mostrar mais {count}",
       "less": "Mostrar menos"
     }
