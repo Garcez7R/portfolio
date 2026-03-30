@@ -734,7 +734,7 @@ h2 {
 .badge-card {
   position: relative;
   display: grid;
-  grid-template-rows: auto minmax(116px, 1fr) auto;
+  grid-template-rows: auto minmax(124px, 124px) auto;
   gap: 1rem;
   padding: 1.2rem;
   border: 1px solid var(--line);
@@ -747,6 +747,7 @@ h2 {
     background 0.22s ease;
   width: 220px;
   max-width: 100%;
+  min-height: 356px;
 }
 
 .badge-card--core {
@@ -825,14 +826,18 @@ h2 {
 
 .badge-card__body {
   display: grid;
-  align-content: start;
+  grid-template-rows: minmax(0, 1fr) auto;
   gap: 0.55rem;
-  min-height: 0;
+  min-height: 124px;
 }
 
 .badge-card__body h3 {
   margin: 0;
   line-height: 1.28;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .badge-card__category {
@@ -898,6 +903,7 @@ h2 {
 
 .badge-meta {
   margin-top: auto;
+  min-height: 1.5rem;
 }
 
 .badge-meta a,
