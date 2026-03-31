@@ -25,6 +25,11 @@
     linear-gradient(140deg, rgba(255, 255, 255, 0.03), transparent 36%);
   --panel-accent:
     radial-gradient(circle at top right, rgba(244, 247, 251, 0.06), transparent 26%);
+  --panel-chrome:
+    radial-gradient(circle at 1rem 1rem, rgba(63, 185, 80, 0.82) 0 1.4px, transparent 1.7px),
+    radial-gradient(circle at 1.45rem 1rem, rgba(212, 175, 55, 0.78) 0 1.4px, transparent 1.7px),
+    radial-gradient(circle at 1.9rem 1rem, rgba(244, 247, 251, 0.56) 0 1.4px, transparent 1.7px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0 2.05rem, rgba(255, 255, 255, 0.07) 2.05rem 2.1rem, transparent 2.1rem);
   --card-surface:
     linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.012)),
     rgba(10, 12, 16, 0.76);
@@ -400,6 +405,7 @@ main {
   border-radius: 34px;
   overflow: hidden;
   background:
+    var(--panel-chrome),
     linear-gradient(125deg, rgba(255, 255, 255, 0.045), transparent 30%),
     radial-gradient(circle at top right, rgba(244, 247, 251, 0.05), transparent 30%),
     linear-gradient(180deg, rgba(17, 21, 28, 0.96), rgba(8, 10, 14, 0.99));
@@ -422,6 +428,7 @@ main {
   position: absolute;
   inset: 0;
   background:
+    linear-gradient(180deg, rgba(63, 185, 80, 0.04), transparent 20%),
     linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.02), transparent),
     radial-gradient(circle at top right, var(--glow), transparent 26%);
   pointer-events: none;
@@ -785,6 +792,7 @@ h2 {
   border: 1px solid rgba(197, 206, 216, 0.12);
   border-radius: 42px 26px 34px 30px;
   background:
+    var(--panel-chrome),
     var(--panel-overlay),
     var(--panel-surface);
   box-shadow: var(--shadow);
@@ -792,7 +800,9 @@ h2 {
 }
 
 .section--skills .section-shell::before {
-  background: var(--panel-accent);
+  background:
+    linear-gradient(180deg, rgba(63, 185, 80, 0.03), transparent 22%),
+    var(--panel-accent);
 }
 
 .section--skills .section__intro {
@@ -812,6 +822,7 @@ h2 {
   border: 1px solid rgba(197, 206, 216, 0.12);
   border-radius: 26px 40px 28px 34px;
   background:
+    var(--panel-chrome),
     var(--panel-overlay),
     var(--panel-surface);
   box-shadow: var(--shadow);
@@ -819,7 +830,9 @@ h2 {
 }
 
 .section--credentials .section-shell::before {
-  background: var(--panel-accent);
+  background:
+    linear-gradient(180deg, rgba(212, 175, 55, 0.03), transparent 22%),
+    var(--panel-accent);
 }
 
 .credentials-stage {
@@ -914,6 +927,7 @@ h2 {
   border: 1px solid rgba(197, 206, 216, 0.1);
   border-radius: 40px 24px 32px 28px;
   background:
+    var(--panel-chrome),
     var(--panel-overlay),
     var(--panel-surface);
   box-shadow: var(--shadow);
@@ -921,7 +935,9 @@ h2 {
 }
 
 .section--vault .vault-shell::before {
-  background: var(--panel-accent);
+  background:
+    linear-gradient(180deg, rgba(63, 185, 80, 0.03), transparent 22%),
+    var(--panel-accent);
 }
 
 .vault-shell__head,
@@ -944,6 +960,7 @@ h2 {
   border: 1px solid rgba(197, 206, 216, 0.12);
   border-radius: 28px 42px 32px 26px;
   background:
+    var(--panel-chrome),
     var(--panel-overlay),
     var(--panel-surface);
   box-shadow: var(--shadow);
@@ -951,7 +968,9 @@ h2 {
 }
 
 .section--projects .section-shell::before {
-  background: var(--panel-accent);
+  background:
+    linear-gradient(180deg, rgba(63, 185, 80, 0.03), transparent 22%),
+    var(--panel-accent);
 }
 
 .section--projects .section-heading {
@@ -970,6 +989,7 @@ h2 {
   border: 1px solid rgba(197, 206, 216, 0.12);
   border-radius: 36px 26px 34px 22px;
   background:
+    var(--panel-chrome),
     var(--panel-overlay),
     var(--panel-surface);
   box-shadow: var(--shadow);
@@ -977,7 +997,9 @@ h2 {
 }
 
 .section--metrics .insight-shell::before {
-  background: var(--panel-accent);
+  background:
+    linear-gradient(180deg, rgba(212, 175, 55, 0.03), transparent 22%),
+    var(--panel-accent);
 }
 
 .section--metrics .section__intro {
@@ -992,9 +1014,16 @@ h2 {
   border: 1px solid rgba(197, 206, 216, 0.12);
   border-radius: 24px 38px 30px 26px;
   background:
+    var(--panel-chrome),
     var(--panel-overlay),
     var(--panel-surface);
   box-shadow: var(--shadow);
+}
+
+.section--contact .contact-shell::before {
+  background:
+    linear-gradient(180deg, rgba(63, 185, 80, 0.03), transparent 22%),
+    var(--panel-accent);
 }
 
 .hero__actions,
@@ -1021,6 +1050,14 @@ h2 {
     border-color 0.2s ease,
     background 0.2s ease,
     color 0.2s ease;
+}
+
+.button::before {
+  content: ">";
+  margin-right: 0.45rem;
+  color: rgba(63, 185, 80, 0.78);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem;
 }
 
 .button:hover {
