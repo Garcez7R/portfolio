@@ -95,7 +95,7 @@ const createBadgeVisual = (badge, className) => {
       ${
         isPlaceholder
           ? `<div class="badge-card__mark" aria-hidden="true">${badgeMark}</div>`
-          : `<img src="${imageSrc}" alt="${badge.name} badge" loading="lazy" onerror="this.parentElement.classList.add('is-placeholder'); this.parentElement.innerHTML='<div class=&quot;badge-card__mark&quot; aria-hidden=&quot;true&quot;>${badgeMark}</div>';" />`
+          : `<img src="${imageSrc}" alt="" loading="lazy" onerror="this.onerror=null; this.parentElement.classList.add('is-placeholder'); this.parentElement.innerHTML='<div class=&quot;badge-card__mark&quot; aria-hidden=&quot;true&quot;>${badgeMark}</div>';" />`
       }
     </div>
   `;
