@@ -64,6 +64,8 @@ const scoreBadge = (badge) => {
   const name = badge.name.toLowerCase();
 
   if (name.includes("aws certified cloud practitioner")) score += 1000;
+  if (name.includes("cyberops associate")) score += 120;
+  if (name.includes("oracle cloud infrastructure 2025 certified foundations associate")) score -= 24;
   score += (CATEGORY_ORDER.length - getCategoryPriority(badge.category)) * 10;
   if (name.includes("certified")) score += 28;
   if (name.includes("associate") || name.includes("professional")) score += 18;
