@@ -164,12 +164,41 @@ img {
 .topnav a::before {
   content: "";
   width: 0.8rem;
-  height: 0.55rem;
+  height: 0.8rem;
+  flex: 0 0 auto;
   border-left: 1px solid rgba(212, 175, 55, 0.5);
   border-top: 1px solid rgba(63, 185, 80, 0.42);
   border-bottom: 1px solid rgba(63, 185, 80, 0.18);
-  border-radius: 2px 0 0 2px;
+  border-right: 1px solid transparent;
+  border-radius: 0.22rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.02), transparent);
   opacity: 0.78;
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease,
+    background 0.22s ease,
+    box-shadow 0.22s ease,
+    opacity 0.22s ease;
+}
+
+.topnav a::after {
+  content: "";
+  position: absolute;
+  left: 1.45rem;
+  width: 0.95rem;
+  height: 0.28rem;
+  border-radius: 999px;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(63, 185, 80, 0.86) 0 34%,
+      rgba(255, 255, 255, 0.08) 34% 42%,
+      rgba(212, 175, 55, 0.72) 42% 74%,
+      rgba(255, 255, 255, 0.08) 74% 100%
+    );
+  opacity: 0;
+  transform: translateX(-0.22rem) scaleX(0.78);
+  transition: opacity 0.22s ease, transform 0.22s ease;
 }
 
 .topnav a,
@@ -188,13 +217,26 @@ img {
 .topnav a:hover::before {
   border-left-color: rgba(212, 175, 55, 0.82);
   border-top-color: rgba(63, 185, 80, 0.78);
+  border-bottom-color: rgba(63, 185, 80, 0.42);
+  background: linear-gradient(135deg, rgba(63, 185, 80, 0.1), rgba(255, 255, 255, 0.02));
+  transform: translateX(1px);
 }
 
 .topnav a.is-current::before {
-  border-left-color: rgba(212, 175, 55, 0.92);
-  border-top-color: rgba(63, 185, 80, 0.9);
-  border-bottom-color: rgba(63, 185, 80, 0.4);
+  border-color: rgba(63, 185, 80, 0.7);
+  background:
+    linear-gradient(180deg, rgba(63, 185, 80, 0.18), rgba(63, 185, 80, 0.06)),
+    linear-gradient(135deg, rgba(212, 175, 55, 0.12), transparent 72%);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04),
+    0 0 0 3px rgba(63, 185, 80, 0.07);
   animation: navSignalPulse 1.3s ease-out;
+}
+
+.topnav a:hover::after,
+.topnav a.is-current::after {
+  opacity: 1;
+  transform: translateX(0) scaleX(1);
 }
 
 .lang-switch {
@@ -1140,16 +1182,16 @@ h2 {
   width: 72px;
   aspect-ratio: 1 / 1;
   min-height: 0;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.03);
   border-radius: 16px;
   background:
-    radial-gradient(circle at top, rgba(255, 255, 255, 0.06), transparent 60%),
-    var(--control-surface);
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.04), transparent 62%),
+    rgba(255, 255, 255, 0.01);
 }
 
 .core-badge-card__visual img {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
   filter: grayscale(1) brightness(1.05);
 }
@@ -1213,16 +1255,16 @@ h2 {
   aspect-ratio: 1 / 1;
   height: auto;
   min-height: 0;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.03);
   border-radius: 16px;
   background:
-    radial-gradient(circle at top, rgba(255, 255, 255, 0.06), transparent 60%),
-    var(--control-surface);
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.04), transparent 62%),
+    rgba(255, 255, 255, 0.01);
 }
 
 .badge-card__visual img {
-  width: 36px;
-  height: 36px;
+  width: 52px;
+  height: 52px;
   object-fit: contain;
   filter: grayscale(1) brightness(1.05);
   transition: filter 0.22s ease, transform 0.22s ease;
@@ -1240,14 +1282,14 @@ h2 {
 .badge-card__mark {
   display: grid;
   place-items: center;
-  width: 36px;
-  height: 36px;
+  width: 48px;
+  height: 48px;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
+  border-radius: 14px;
   background: var(--control-surface-hover);
   color: var(--silver-strong);
   font-family: "JetBrains Mono", monospace;
-  font-size: 0.68rem;
+  font-size: 0.8rem;
   letter-spacing: 0.08em;
 }
 
@@ -1578,16 +1620,16 @@ h2 {
   place-items: center;
   width: 72px;
   aspect-ratio: 1 / 1;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.03);
   border-radius: 16px;
   background:
-    radial-gradient(circle at top, rgba(255, 255, 255, 0.06), transparent 60%),
-    var(--control-surface);
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.04), transparent 62%),
+    rgba(255, 255, 255, 0.01);
 }
 
 .vault-badge-thumb img {
-  width: 44px;
-  height: 44px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
   filter: grayscale(1) brightness(1.05);
 }
@@ -1598,22 +1640,22 @@ h2 {
 }
 
 .vault-badge-thumb--small img {
-  width: 34px;
-  height: 34px;
+  width: 44px;
+  height: 44px;
 }
 
 .vault-badge-thumb .badge-card__mark {
-  width: 44px;
-  height: 44px;
+  width: 54px;
+  height: 54px;
   border-radius: 14px;
-  font-size: 0.78rem;
+  font-size: 0.86rem;
 }
 
 .vault-badge-thumb--small .badge-card__mark {
-  width: 34px;
-  height: 34px;
+  width: 40px;
+  height: 40px;
   border-radius: 12px;
-  font-size: 0.68rem;
+  font-size: 0.72rem;
 }
 
 .metric-chart {
