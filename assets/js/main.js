@@ -553,6 +553,8 @@ const bindSectionSpy = () => {
     });
   };
 
+  const contactSection = document.getElementById("contact");
+
   const observer = new IntersectionObserver(
     (entries) => {
       const visible = entries
@@ -580,6 +582,20 @@ const bindSectionSpy = () => {
   if (initialSection) {
     setCurrentLink(initialSection);
   }
+
+  const syncContactAtPageEnd = () => {
+    if (!contactSection) return;
+    const scrollBottom = window.scrollY + window.innerHeight;
+    const pageBottom = document.documentElement.scrollHeight;
+
+    if (pageBottom - scrollBottom <= 32) {
+      setCurrentLink(contactSection);
+    }
+  };
+
+  window.addEventListener("scroll", syncContactAtPageEnd, { passive: true });
+  window.addEventListener("resize", syncContactAtPageEnd);
+  syncContactAtPageEnd();
 };
 
 const initialize = async () => {
