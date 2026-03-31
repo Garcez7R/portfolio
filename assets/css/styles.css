@@ -646,7 +646,6 @@ h2 {
 .section-heading::after,
 .section__intro::after,
 .credentials-core__intro::after,
-.hero__signal::after,
 .metric-card h3::after {
   content: "";
   display: block;
@@ -680,6 +679,11 @@ h2 {
 .section--skills .section__intro {
   max-width: 40rem;
   z-index: 1;
+}
+
+.section--skills .section__intro h2 {
+  max-width: 9ch;
+  font-size: clamp(1.7rem, 3vw, 2.45rem);
 }
 
 .section--credentials .section-shell {
@@ -810,13 +814,6 @@ h2 {
   display: grid;
   gap: 1.5rem;
   margin-bottom: 0;
-}
-
-.vault-shell__head::after {
-  content: "";
-  width: min(240px, 44%);
-  height: 1px;
-  background: linear-gradient(90deg, rgba(212, 175, 55, 0.62), rgba(63, 185, 80, 0.28), transparent);
 }
 
 .section--projects .section-shell {
