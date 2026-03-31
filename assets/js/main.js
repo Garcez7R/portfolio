@@ -35,6 +35,7 @@ const ui = {
   certMetricsNote: document.getElementById("cert-metrics-note"),
   skillsMetrics: document.getElementById("skills-metrics"),
   contactGrid: document.getElementById("contact-grid"),
+  heroCvLink: document.getElementById("hero-cv-link"),
   langButtons: document.querySelectorAll("[data-lang-btn]"),
   navLinks: document.querySelectorAll(".topnav a"),
 };
@@ -481,6 +482,14 @@ const renderContacts = () => {
     .join("");
 };
 
+const syncCvLinks = () => {
+  const cvHref = currentLanguage === "en" ? "./assets/docs/cv-en.pdf" : "./assets/docs/cv.pdf";
+
+  if (ui.heroCvLink) {
+    ui.heroCvLink.href = cvHref;
+  }
+};
+
 const maybeHideSplash = () => {
   if (sessionStorage.getItem(STORAGE_KEYS.splashSeen)) {
     ui.splash.classList.add("is-hidden");
@@ -506,6 +515,7 @@ const setLanguage = async (language) => {
   renderProjects();
   renderMetrics();
   renderContacts();
+  syncCvLinks();
 };
 
 const bindEvents = () => {

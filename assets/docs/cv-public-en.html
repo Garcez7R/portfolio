@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rafael Garcez | Public Resume</title>
+    <style>
+      :root {
+        --bg: #ffffff;
+        --text: #17202b;
+        --muted: #4d5a6a;
+        --line: #d9e0e8;
+        --accent: #0f7a5a;
+        --accent-soft: #eef7f4;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Inter", "Segoe UI", Arial, sans-serif;
+        line-height: 1.5;
+      }
+
+      .page {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 44px 48px;
+      }
+
+      header {
+        padding-bottom: 18px;
+        border-bottom: 2px solid var(--line);
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: 31px;
+        line-height: 1.05;
+        letter-spacing: -0.03em;
+      }
+
+      .headline {
+        margin: 0 0 14px;
+        color: var(--accent);
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 16px;
+        color: var(--muted);
+        font-size: 13.5px;
+      }
+
+      .meta span {
+        white-space: nowrap;
+      }
+
+      main {
+        display: grid;
+        gap: 24px;
+        padding-top: 24px;
+      }
+
+      section {
+        display: grid;
+        gap: 10px;
+      }
+
+      h2 {
+        margin: 0;
+        padding: 8px 12px;
+        background: var(--accent-soft);
+        border-left: 4px solid var(--accent);
+        font-size: 14px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      p {
+        margin: 0;
+        font-size: 14px;
+      }
+
+      .role {
+        display: grid;
+        gap: 4px;
+      }
+
+      .role-title {
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      .role-company {
+        color: var(--muted);
+        font-size: 13.5px;
+      }
+
+      ul {
+        margin: 2px 0 0 18px;
+        padding: 0;
+      }
+
+      li {
+        margin: 0 0 6px;
+        font-size: 14px;
+      }
+
+      .grid {
+        display: grid;
+        gap: 12px;
+      }
+
+      .summary-grid {
+        display: grid;
+        gap: 14px;
+      }
+
+      .keyword-strip {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .keyword-strip span {
+        display: inline-flex;
+        align-items: center;
+        padding: 5px 9px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: #f8fafc;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      .skill-group {
+        display: grid;
+        gap: 4px;
+      }
+
+      .skill-group strong {
+        font-size: 14px;
+      }
+
+      .footnote {
+        margin-top: 6px;
+        color: var(--muted);
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <h1>Rafael Garcez</h1>
+        <p class="headline">Cloud Security | Cybersecurity | Infrastructure | Secure Operations</p>
+        <div class="meta">
+          <span>Porto Alegre, RS, Brazil</span>
+          <span>rgs.dba@gmail.com</span>
+          <span>linkedin.com/in/rgarcez7</span>
+          <span>github.com/Garcez7R</span>
+        </div>
+      </header>
+
+      <main>
+        <section>
+          <h2>Professional Summary</h2>
+          <div class="summary-grid">
+            <p>
+              IT professional with a strong background in infrastructure, systems administration, networking and
+              information security, supporting critical operations and business continuity. Brings hands-on experience
+              across Linux, Windows Server, monitoring, backup, secure connectivity and hardening, while steadily
+              evolving toward Cloud Security, Blue Team practices, IAM, governance and protection of corporate
+              environments.
+            </p>
+            <div class="keyword-strip">
+              <span>Cloud Security</span>
+              <span>Cybersecurity</span>
+              <span>Blue Team</span>
+              <span>Linux</span>
+              <span>Windows Server</span>
+              <span>IAM</span>
+              <span>Networking</span>
+              <span>Zabbix</span>
+              <span>VPN</span>
+              <span>Hardening</span>
+              <span>pfSense</span>
+              <span>BorgBackup</span>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Core Competencies</h2>
+          <div class="grid">
+            <div class="skill-group">
+              <strong>Infrastructure & Systems</strong>
+              <p>Linux and Windows Server administration, Active Directory, virtualization, availability and operational support.</p>
+            </div>
+            <div class="skill-group">
+              <strong>Security & Networking</strong>
+              <p>Secure VPNs, digital certificates, pfSense, network segmentation, hardening, access auditing, firewall and practices aligned with NIST, CIS Controls and ISO 27001.</p>
+            </div>
+            <div class="skill-group">
+              <strong>Operations & Observability</strong>
+              <p>Zabbix monitoring, GLPI integration, troubleshooting, operational response, 3-2-1 backup, deduplication and recovery.</p>
+            </div>
+            <div class="skill-group">
+              <strong>Cloud & Automation</strong>
+              <p>AWS, Google Cloud, Oracle Cloud and Cloudflare fundamentals, with Shell Script, Python, SQL and Git in technical routines.</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Professional Experience</h2>
+          <div class="role">
+            <div class="role-title">IT Manager and Administrative Lead</div>
+            <div class="role-company">Grupo Life Brasil | Porto Alegre, RS, Brazil</div>
+          </div>
+          <ul>
+            <li>Led corporate infrastructure with Windows Server and Zentyal administration, AD/DC, GPOs and centralized authentication.</li>
+            <li>Implemented secure remote access with OpenVPN, digital certificates, pfSense and permission control for internal environments.</li>
+            <li>Designed a 3-2-1 backup strategy with BorgBackup, SSH tunneling, deduplication and business continuity focus.</li>
+            <li>Structured monitoring with Zabbix, GLPI integration and alerts for availability, performance and technical support workflows.</li>
+            <li>Applied security best practices, risk mitigation, perimeter protection and operational compliance measures.</li>
+            <li>Also handled administrative coordination and vendor management while sustaining critical technical operations.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Education</h2>
+          <p><strong>Bachelor’s Degree in Software Engineering</strong> | Universidade de Uberaba (Uniube)</p>
+        </section>
+
+        <section>
+          <h2>Certifications & Relevant Training</h2>
+          <ul>
+            <li>AWS Certified Cloud Practitioner</li>
+            <li>Fortinet Certified Associate Cybersecurity and FortiGate 7.6 Operator</li>
+            <li>Google Cybersecurity Professional Certificate</li>
+            <li>IBM SkillsBuild Cybersecurity Certificate</li>
+            <li>ISC2 Candidate</li>
+            <li>Cisco Junior Cybersecurity Analyst Career Path, Network Defense, Endpoint Security and Ethical Hacker</li>
+            <li>Qualified for the CCNA and CyberOps certification stage in the 11th Cisco Marathon</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Technical Skills</h2>
+          <div class="grid">
+            <div class="skill-group">
+              <strong>Operating Systems</strong>
+              <p>Linux, Ubuntu, Debian, CentOS, Zentyal, Windows Server, Windows 10 and 11.</p>
+            </div>
+            <div class="skill-group">
+              <strong>Networking & Security</strong>
+              <p>Active Directory, GPOs, OpenVPN, digital certificates, pfSense, VLANs, hardening, firewall, IDS/IPS, access auditing and security practices aligned with ISO 27001, NIST and CIS Controls.</p>
+            </div>
+            <div class="skill-group">
+              <strong>Services & Infrastructure</strong>
+              <p>Zabbix, GLPI, BorgBackup, CUPS, Jasmine, Asterisk, virtualization, SSH tunneling and backup automation.</p>
+            </div>
+            <div class="skill-group">
+              <strong>Tools & Languages</strong>
+              <p>Python, Shell Script, SQL, Linux CLI and Git.</p>
+            </div>
+            <div class="skill-group">
+              <strong>Cloud & Platforms</strong>
+              <p>AWS, Google Cloud, Oracle Cloud, Cloudflare and cloud architecture and security fundamentals.</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Selected Technical Projects</h2>
+          <ul>
+            <li><strong>AWS Cloud Security – IAM &amp; Governance:</strong> hands-on IAM, least privilege, risk analysis and governance case built around a simulated corporate environment.</li>
+            <li><strong>Secure Remote Access with OpenVPN + Zentyal:</strong> corporate solution with digital certificates, pfSense, permission control and audit trails.</li>
+            <li><strong>Secure Backup with BorgBackup and VPN/SSH Tunnel:</strong> 3-2-1 backup strategy with deduplication, redundancy and fast recovery for servers and critical equipment.</li>
+            <li><strong>Digital Intercom with Asterisk:</strong> migration from analog intercom to VoIP-based communication with network segmentation and user control.</li>
+          </ul>
+        </section>
+
+        <p class="footnote">
+          Public resume version prepared for portfolio use, with reduced exposure of sensitive personal information.
+        </p>
+      </main>
+    </div>
+  </body>
+</html>
