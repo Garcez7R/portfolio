@@ -74,6 +74,30 @@ const scoreBadge = (badge) => {
   return score;
 };
 
+const createBadgeMark = (name) =>
+  name
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((word) => word[0]?.toUpperCase() || "")
+    .join("");
+
+const createBadgeVisual = (badge, className) => {
+  const imageSrc = badge.badgeUrl || DEFAULT_BADGE_IMAGE;
+  const isPlaceholder = imageSrc === DEFAULT_BADGE_IMAGE;
+  const badgeMark = createBadgeMark(badge.name);
+
+  return `
+    <div class="${className} ${isPlaceholder ? "is-placeholder" : ""}">
+      ${
+        isPlaceholder
+          ? `<div class="badge-card__mark" aria-hidden="true">${badgeMark}</div>`
+          : `<img src="${imageSrc}" alt="${badge.name} badge" loading="lazy" onerror="this.parentElement.classList.add('is-placeholder'); this.parentElement.innerHTML='<div class=&quot;badge-card__mark&quot; aria-hidden=&quot;true&quot;>${badgeMark}</div>';" />`
+      }
+    </div>
+  `;
+};
+
 const detectLanguage = () => {
   const saved = localStorage.getItem(STORAGE_KEYS.language);
   if (saved === "pt" || saved === "en") {
@@ -248,24 +272,9 @@ const renderBadges = () => {
 
   ui.coreBadgeGrid.innerHTML = coreBadges
     .map((badge) => {
-      const imageSrc = badge.badgeUrl || DEFAULT_BADGE_IMAGE;
-      const isPlaceholder = imageSrc === DEFAULT_BADGE_IMAGE;
-      const badgeMark = badge.name
-        .split(/\s+/)
-        .filter(Boolean)
-        .slice(0, 2)
-        .map((word) => word[0]?.toUpperCase() || "")
-        .join("");
-
       return `
         <article class="core-badge-card">
-          <div class="core-badge-card__visual ${isPlaceholder ? "is-placeholder" : ""}">
-            ${
-              isPlaceholder
-                ? `<div class="badge-card__mark" aria-hidden="true">${badgeMark}</div>`
-                : `<img src="${imageSrc}" alt="${badge.name} badge" loading="lazy" onerror="this.parentElement.classList.add('is-placeholder'); this.parentElement.innerHTML='<div class=&quot;badge-card__mark&quot; aria-hidden=&quot;true&quot;>${badgeMark}</div>';" />`
-            }
-          </div>
+          ${createBadgeVisual(badge, "core-badge-card__visual")}
           <div class="core-badge-card__body">
             <p class="core-badge-card__category">${badge.category}</p>
             <h3>${badge.name}</h3>
@@ -278,24 +287,9 @@ const renderBadges = () => {
 
   ui.badgeGrid.innerHTML = list
     .map((badge) => {
-      const imageSrc = badge.badgeUrl || DEFAULT_BADGE_IMAGE;
-      const isPlaceholder = imageSrc === DEFAULT_BADGE_IMAGE;
-      const badgeMark = badge.name
-        .split(/\s+/)
-        .filter(Boolean)
-        .slice(0, 2)
-        .map((word) => word[0]?.toUpperCase() || "")
-        .join("");
-
       return `
         <article class="badge-card">
-          <div class="badge-card__visual ${isPlaceholder ? "is-placeholder" : ""}">
-            ${
-              isPlaceholder
-                ? `<div class="badge-card__mark" aria-hidden="true">${badgeMark}</div>`
-                : `<img src="${imageSrc}" alt="${badge.name} badge" loading="lazy" onerror="this.parentElement.classList.add('is-placeholder'); this.parentElement.innerHTML='<div class=&quot;badge-card__mark&quot; aria-hidden=&quot;true&quot;>${badgeMark}</div>';" />`
-            }
-          </div>
+          ${createBadgeVisual(badge, "badge-card__visual")}
           <div class="badge-card__body">
             <h3>${badge.name}</h3>
             <p class="badge-card__category">${badge.category}</p>
@@ -331,9 +325,12 @@ const renderVault = () => {
     .map(
       (badge) => `
         <article class="vault-featured-card">
-          <span class="vault-featured-card__category">${badge.category}</span>
-          <strong>${badge.name}</strong>
-          <a href="${badge.certificateUrl}" target="_blank" rel="noreferrer">${currentLocale.shared.verify}</a>
+          ${createBadgeVisual(badge, "vault-badge-thumb")}
+          <div class="vault-featured-card__body">
+            <span class="vault-featured-card__category">${badge.category}</span>
+            <strong>${badge.name}</strong>
+            <a href="${badge.certificateUrl}" target="_blank" rel="noreferrer">${currentLocale.shared.verify}</a>
+          </div>
         </article>
       `,
     )
@@ -369,6 +366,7 @@ const renderVault = () => {
               .map(
                 (badge) => `
                   <article class="vault-item">
+                    ${createBadgeVisual(badge, "vault-badge-thumb vault-badge-thumb--small")}
                     <div class="vault-item__meta">
                       <span class="vault-item__title">${badge.name}</span>
                       <span class="vault-item__category">${badge.category}</span>

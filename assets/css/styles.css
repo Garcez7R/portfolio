@@ -1088,7 +1088,7 @@ h2 {
 }
 
 .badge-grid {
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 188px), 1fr));
   justify-content: stretch;
 }
 
@@ -1096,10 +1096,10 @@ h2 {
   position: relative;
   display: grid;
   grid-template-rows: auto auto auto;
-  gap: 1rem;
-  padding: 1.2rem;
+  gap: 0.8rem;
+  padding: 0.95rem;
   border: 1px solid var(--line);
-  border-radius: 24px;
+  border-radius: 20px;
   overflow: visible;
   background: var(--card-surface);
   transition:
@@ -1119,27 +1119,29 @@ h2 {
 
 .core-badge-card {
   display: grid;
-  gap: 0.9rem;
-  padding: 1rem;
+  gap: 0.7rem;
+  padding: 0.9rem;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 22px;
+  border-radius: 20px;
   background: var(--card-surface);
 }
 
 .core-badge-card__visual {
   display: grid;
   place-items: center;
-  min-height: 96px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  min-height: 0;
   border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 18px;
+  border-radius: 16px;
   background:
     radial-gradient(circle at top, rgba(255, 255, 255, 0.06), transparent 60%),
     var(--control-surface);
 }
 
 .core-badge-card__visual img {
-  width: 58px;
-  height: 58px;
+  width: 54px;
+  height: 54px;
   object-fit: contain;
   filter: grayscale(1) brightness(1.05);
 }
@@ -1174,10 +1176,10 @@ h2 {
 
 .badge-card__priority {
   position: absolute;
-  top: 0.85rem;
-  right: 0.85rem;
+  top: 0.7rem;
+  right: 0.7rem;
   z-index: 1;
-  padding: 0.24rem 0.48rem;
+  padding: 0.18rem 0.4rem;
   border: 1px solid rgba(212, 175, 55, 0.18);
   border-radius: 999px;
   background: rgba(212, 175, 55, 0.1);
@@ -1197,18 +1199,20 @@ h2 {
 .badge-card__visual {
   display: grid;
   place-items: center;
-  height: 124px;
-  min-height: 124px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  min-height: 0;
   border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 18px;
+  border-radius: 16px;
   background:
     radial-gradient(circle at top, rgba(255, 255, 255, 0.06), transparent 60%),
     var(--control-surface);
 }
 
 .badge-card__visual img {
-  width: 64px;
-  height: 64px;
+  width: 56px;
+  height: 56px;
   object-fit: contain;
   filter: grayscale(1) brightness(1.05);
   transition: filter 0.22s ease, transform 0.22s ease;
@@ -1226,24 +1230,25 @@ h2 {
 .badge-card__mark {
   display: grid;
   place-items: center;
-  width: 64px;
-  height: 64px;
+  width: 56px;
+  height: 56px;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 20px;
+  border-radius: 16px;
   background: var(--control-surface-hover);
   color: var(--silver-strong);
   font-family: "JetBrains Mono", monospace;
-  font-size: 1.08rem;
+  font-size: 0.94rem;
   letter-spacing: 0.08em;
 }
 
 .badge-card__body {
   display: grid;
-  gap: 0.55rem;
+  gap: 0.4rem;
 }
 
 .badge-card__body h3 {
   margin: 0;
+  font-size: 0.92rem;
   line-height: 1.28;
 }
 
@@ -1411,14 +1416,16 @@ h2 {
 .vault-featured {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   margin-bottom: 0;
 }
 
 .vault-featured-card {
   display: grid;
-  gap: 0.55rem;
-  padding: 1rem 1.05rem;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 0.85rem;
+  align-items: start;
+  padding: 0.95rem;
   border: 1px solid rgba(212, 175, 55, 0.16);
   border-radius: 18px;
   background:
@@ -1428,7 +1435,10 @@ h2 {
 
 .vault-featured-card::before {
   content: "";
-  width: 2.6rem;
+  position: absolute;
+  top: 0.85rem;
+  left: 0.95rem;
+  width: 2.2rem;
   height: 1px;
   background: linear-gradient(90deg, rgba(63, 185, 80, 0.58), rgba(212, 175, 55, 0.28), transparent);
 }
@@ -1440,9 +1450,15 @@ h2 {
     var(--card-surface);
 }
 
+.vault-featured-card__body {
+  display: grid;
+  gap: 0.32rem;
+  min-width: 0;
+}
+
 .vault-featured-card strong {
   color: var(--silver-strong);
-  font-size: 0.98rem;
+  font-size: 0.92rem;
   line-height: 1.35;
 }
 
@@ -1500,18 +1516,18 @@ h2 {
 
 .vault-list {
   display: grid;
-  gap: 0.85rem;
+  gap: 0.75rem;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .vault-item {
-  display: flex;
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr) auto;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1rem 1.1rem;
+  gap: 0.85rem;
+  padding: 0.8rem 0.9rem;
   border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 18px;
+  border-radius: 16px;
   background: var(--card-surface);
 }
 
@@ -1533,16 +1549,59 @@ h2 {
 
 .vault-item__title {
   color: var(--text-soft);
-  font-size: 0.96rem;
+  font-size: 0.9rem;
   line-height: 1.4;
 }
 
 .vault-item__category {
   color: var(--muted);
   font-family: "JetBrains Mono", monospace;
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+.vault-badge-thumb {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  aspect-ratio: 1 / 1;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.06), transparent 60%),
+    var(--control-surface);
+}
+
+.vault-badge-thumb img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  filter: grayscale(1) brightness(1.05);
+}
+
+.vault-badge-thumb--small {
+  width: 54px;
+  border-radius: 14px;
+}
+
+.vault-badge-thumb--small img {
+  width: 34px;
+  height: 34px;
+}
+
+.vault-badge-thumb .badge-card__mark {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  font-size: 0.78rem;
+}
+
+.vault-badge-thumb--small .badge-card__mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  font-size: 0.68rem;
 }
 
 .metric-chart {
@@ -1952,8 +2011,16 @@ h2 {
   }
 
   .vault-item {
-    flex-direction: column;
-    align-items: flex-start;
+    grid-template-columns: 54px minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .vault-item::after {
+    display: none;
+  }
+
+  .vault-item a {
+    grid-column: 2;
   }
 
   .badge-grid {
