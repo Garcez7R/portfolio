@@ -772,6 +772,22 @@ h2 {
   z-index: 1;
 }
 
+.section-heading::after,
+.section__intro::after,
+.credentials-core__intro::after {
+  content: "";
+  display: block;
+  width: min(220px, 46%);
+  height: 1px;
+  margin-top: 0.5rem;
+  background: linear-gradient(
+    90deg,
+    rgba(212, 175, 55, 0.62),
+    rgba(63, 185, 80, 0.28),
+    transparent
+  );
+}
+
 .metric-card h3::after {
   content: "";
   display: block;
