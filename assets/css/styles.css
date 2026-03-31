@@ -2134,13 +2134,15 @@ h2 {
 
   .hero__shell {
     grid-template-areas: "visual content";
-    grid-template-columns: minmax(300px, 0.84fr) minmax(0, 1.66fr);
+    grid-template-columns: minmax(320px, 0.92fr) minmax(0, 1.58fr);
     align-items: stretch;
     padding: 2.1rem;
   }
 
   .hero__content {
-    padding: 2.05rem 1.35rem 1.7rem 0.8rem;
+    justify-self: end;
+    width: min(100%, 52rem);
+    padding: 2.05rem 0.65rem 1.7rem 1.95rem;
   }
 
   .hero__visual {
