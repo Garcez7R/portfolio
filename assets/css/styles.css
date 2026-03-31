@@ -794,12 +794,10 @@ h2 {
 
 .skill-grid {
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  grid-auto-rows: minmax(220px, auto);
 }
 
 .project-grid {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  grid-auto-rows: minmax(260px, auto);
 }
 
 .contact-grid {
@@ -820,7 +818,7 @@ h2 {
   position: relative;
   border-radius: 24px;
   padding: 1.35rem;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .skill-card::before,
@@ -843,8 +841,15 @@ h2 {
   text-wrap: pretty;
 }
 
+.skill-card h3,
+.project-card h3,
+.metric-card h3,
+.badge-card h3,
+.core-badge-card__body h3 {
+  line-height: 1.18;
+}
+
 .skill-card {
-  min-height: 100%;
   background: var(--card-surface);
 }
 
@@ -943,12 +948,12 @@ h2 {
 .badge-card {
   position: relative;
   display: grid;
-  grid-template-rows: auto minmax(124px, 124px) auto;
+  grid-template-rows: auto auto auto;
   gap: 1rem;
   padding: 1.2rem;
   border: 1px solid var(--line);
   border-radius: 24px;
-  overflow: hidden;
+  overflow: visible;
   background: var(--card-surface);
   transition:
     transform 0.22s ease,
@@ -956,7 +961,6 @@ h2 {
     background 0.22s ease;
   width: 220px;
   max-width: 100%;
-  min-height: 356px;
 }
 
 .badge-card--core {
@@ -1088,18 +1092,12 @@ h2 {
 
 .badge-card__body {
   display: grid;
-  grid-template-rows: minmax(0, 1fr) auto;
   gap: 0.55rem;
-  min-height: 124px;
 }
 
 .badge-card__body h3 {
   margin: 0;
   line-height: 1.28;
-  display: -webkit-box;
-  overflow: hidden;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
 }
 
 .badge-card__category {
@@ -1119,7 +1117,6 @@ h2 {
   display: grid;
   grid-template-rows: auto auto 1fr auto;
   gap: 0.65rem;
-  min-height: 100%;
   padding-top: 1.55rem;
   transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
   background: var(--card-surface);
@@ -1144,11 +1141,11 @@ h2 {
 }
 
 .project-card:nth-child(2n) {
-  transform: translateY(2rem);
+  transform: none;
 }
 
 .project-card:nth-child(2n):hover {
-  transform: translateY(2rem) scale(1.02);
+  transform: scale(1.02);
 }
 
 .project-card__eyebrow {
@@ -1192,6 +1189,12 @@ h2 {
 .core-badge-card__body h3,
 .metric-label span:first-child {
   text-wrap: pretty;
+}
+
+.project-card p,
+.vault-item__title,
+.contact-card a {
+  line-height: 1.55;
 }
 
 .badge-meta,
@@ -1444,7 +1447,6 @@ h2 {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  min-height: 170px;
   background: var(--card-surface);
 }
 
@@ -1604,7 +1606,6 @@ h2 {
 
   .hero__content {
     padding: 2rem 1.7rem 1.5rem;
-    min-height: 100%;
   }
 
   .hero__visual {
@@ -1625,10 +1626,6 @@ h2 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .credentials-core__grid .core-badge-card:first-child {
-    grid-column: span 2;
-  }
-
   .section--skills .section-shell {
     grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
     align-items: stretch;
@@ -1644,10 +1641,6 @@ h2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .skill-card:first-child {
-    grid-column: span 2;
-  }
-
   .vault-shell__head {
     grid-template-columns: minmax(0, 1fr) minmax(280px, 340px);
     align-items: end;
@@ -1657,17 +1650,8 @@ h2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .vault-featured-card:first-child {
-    grid-column: span 2;
-  }
-
   .section--projects .project-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .section--projects .project-grid .project-card:first-child {
-    grid-column: span 2;
-    min-height: 320px;
   }
 
   .section--metrics .insight-shell {
@@ -1693,11 +1677,6 @@ h2 {
 
   .contact-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .contact-grid .contact-card:first-child {
-    grid-row: span 2;
-    min-height: 100%;
   }
 }
 
