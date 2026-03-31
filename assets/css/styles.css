@@ -451,7 +451,7 @@ main {
 .hero__profile-stage {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 178px;
+  grid-template-columns: 178px minmax(0, 1fr);
   align-items: stretch;
   gap: 1.15rem;
   min-height: 236px;
@@ -479,7 +479,7 @@ main {
 
 .hero__profile-frame {
   position: relative;
-  justify-self: end;
+  justify-self: start;
   align-self: end;
   width: min(100%, 178px);
   aspect-ratio: 1 / 1.12;
