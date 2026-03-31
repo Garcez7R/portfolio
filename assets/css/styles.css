@@ -159,8 +159,20 @@ main {
   padding: 1.25rem 1.25rem 6rem;
 }
 
+.bento-main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
 .section {
   padding: 6.25rem 0 0;
+  min-width: 0;
+}
+
+.section:not(.section--hero) {
+  padding-top: 0;
 }
 
 .section-shell,
@@ -508,6 +520,8 @@ h2 {
 }
 
 .section--credentials .section-shell {
+  display: grid;
+  gap: 1.4rem;
   padding: 2rem;
   border: 1px solid rgba(197, 206, 216, 0.12);
   border-radius: 34px;
@@ -598,6 +612,8 @@ h2 {
 }
 
 .section--vault .vault-shell {
+  display: grid;
+  gap: 1.3rem;
   padding: 2rem;
   border: 1px solid rgba(197, 206, 216, 0.1);
   border-radius: 34px;
@@ -622,7 +638,7 @@ h2 {
 .vault-shell__head {
   display: grid;
   gap: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
 }
 
 .section--projects .section-shell {
@@ -765,6 +781,12 @@ h2 {
 
 .contact-grid {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.bento-span-3,
+.bento-span-5,
+.bento-span-8 {
+  grid-column: span 1;
 }
 
 .skill-card,
@@ -1477,12 +1499,29 @@ h2 {
 }
 
 @media (min-width: 920px) {
+  .bento-main {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    gap: 1.35rem;
+  }
+
+  .bento-span-3 {
+    grid-column: span 3;
+  }
+
+  .bento-span-5 {
+    grid-column: span 5;
+  }
+
+  .bento-span-8 {
+    grid-column: span 8;
+  }
+
   .topnav {
     display: flex;
   }
 
   .hero__shell {
-    grid-template-columns: minmax(0, 1.35fr) minmax(360px, 0.95fr);
+    grid-template-columns: minmax(0, 1.45fr) minmax(360px, 0.9fr);
     align-items: stretch;
     padding: 1.9rem;
   }
@@ -1505,13 +1544,13 @@ h2 {
   }
 
   .section--skills .section-shell {
-    grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
-    align-items: start;
+    grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
+    align-items: stretch;
   }
 
   .section--skills .section__intro {
-    position: sticky;
-    top: 6.5rem;
+    position: relative;
+    top: auto;
     padding-right: 2rem;
   }
 
@@ -1521,19 +1560,38 @@ h2 {
   }
 
   .section--metrics .insight-shell {
-    grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
-    align-items: start;
+    grid-template-columns: 1fr;
+    align-items: stretch;
   }
 
   .section--metrics .section__intro {
-    position: sticky;
-    top: 6.5rem;
-    padding-right: 2rem;
+    position: relative;
+    top: auto;
+    padding-right: 0;
+    max-width: 38rem;
   }
 
   .section--contact .contact-shell {
-    grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
+    grid-template-columns: minmax(220px, 300px) minmax(0, 1fr);
     align-items: start;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 919px) {
+  .bento-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.15rem;
+  }
+
+  .bento-span-8,
+  .bento-span-5,
+  .bento-span-3 {
+    grid-column: span 2;
+  }
+
+  .section--skills .section-shell,
+  .section--contact .contact-shell {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1599,7 +1657,7 @@ h2 {
   }
 
   .section {
-    padding-top: 4.5rem;
+    padding-top: 0;
   }
 
 }
