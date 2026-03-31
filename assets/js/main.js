@@ -600,6 +600,10 @@ const bindSectionSpy = () => {
 
 const initialize = async () => {
   try {
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
     badgeRecords = await loadBadges();
     selectedBadgeFilter = "All";
     vaultSearchTerm = "";

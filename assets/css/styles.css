@@ -277,6 +277,36 @@ img {
   line-height: 1;
 }
 
+.lang-switch button .flag {
+  min-width: 1.4rem;
+  width: 1.4rem;
+  height: 0.95rem;
+  padding: 0;
+  border-radius: 999px;
+  background: none;
+  overflow: hidden;
+}
+
+.lang-switch button .flag--br {
+  background:
+    radial-gradient(circle at center, #274b26 0 18%, transparent 19%),
+    linear-gradient(135deg, transparent 33%, #f2c94c 33% 67%, transparent 67%),
+    #1f8f4a;
+}
+
+.lang-switch button .flag--us {
+  background:
+    linear-gradient(180deg, #274072 0 52%, transparent 52%),
+    repeating-linear-gradient(
+      180deg,
+      #b3262e 0 9%,
+      #f4f7fb 9% 18%
+    );
+  background-size: 42% 54%, 100% 100%;
+  background-repeat: no-repeat;
+  background-position: left top, center;
+}
+
 .lang-switch button.is-active span[aria-hidden="true"],
 .lang-switch button:hover span[aria-hidden="true"] {
   color: var(--silver-strong);
@@ -638,11 +668,22 @@ main {
 }
 
 .eyebrow {
+  display: inline-grid;
+  gap: 0.45rem;
   margin: 0 0 0.8rem;
   color: var(--silver);
   font-size: 0.78rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+}
+
+.eyebrow::before,
+.credentials-core__eyebrow::before {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(212, 175, 55, 0.68), rgba(63, 185, 80, 0.34), transparent);
 }
 
 h1,
@@ -719,9 +760,6 @@ h2 {
   z-index: 1;
 }
 
-.section-heading::after,
-.section__intro::after,
-.credentials-core__intro::after,
 .metric-card h3::after {
   content: "";
   display: block;
@@ -806,6 +844,8 @@ h2 {
 }
 
 .credentials-core__eyebrow {
+  display: inline-grid;
+  gap: 0.45rem;
   color: var(--gold);
   font-family: "JetBrains Mono", monospace;
   font-size: 0.72rem;
