@@ -121,6 +121,29 @@
         gap: 12px;
       }
 
+      .summary-grid {
+        display: grid;
+        gap: 14px;
+      }
+
+      .keyword-strip {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .keyword-strip span {
+        display: inline-flex;
+        align-items: center;
+        padding: 5px 9px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: #f8fafc;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 600;
+      }
+
       .skill-group {
         display: grid;
         gap: 4px;
@@ -141,7 +164,7 @@
     <div class="page">
       <header>
         <h1>Rafael Garcez</h1>
-        <p class="headline">Cloud Security | Cybersecurity | Infraestrutura e Operações Seguras</p>
+        <p class="headline">Cloud Security | Cybersecurity | Infraestrutura | Operações Seguras</p>
         <div class="meta">
           <span>Porto Alegre, RS</span>
           <span>rgs.dba@gmail.com</span>
@@ -153,15 +176,51 @@
       <main>
         <section>
           <h2>Resumo Profissional</h2>
-          <p>
-            Profissional de TI com ampla experiência em infraestrutura, administração de sistemas e segurança da
-            informação, atuando em suporte técnico, redes, servidores e soluções corporativas seguras. Possui base
-            sólida em ambientes Linux e Windows, virtualização, monitoramento com Zabbix, automação de backups com
-            BorgBackup e conectividade segura com OpenVPN, certificados digitais e Active Directory. Atualmente
-            direciona sua evolução para Cloud Security, Blue Team e hardening de ambientes críticos, combinando
-            vivência operacional com formação contínua e certificações em instituições como Cisco, Fortinet, ISC2,
-            IBM e Google.
-          </p>
+          <div class="summary-grid">
+            <p>
+              Profissional de TI com sólida trajetória em infraestrutura, administração de sistemas, redes e segurança
+              da informação, com atuação em ambientes operacionais críticos e suporte à continuidade de negócio.
+              Combina experiência prática em Linux, Windows Server, monitoramento, backup, conectividade segura e
+              hardening com evolução direcionada para Cloud Security, Blue Team, IAM, governança e proteção de
+              ambientes corporativos.
+            </p>
+            <div class="keyword-strip">
+              <span>Cloud Security</span>
+              <span>Cybersecurity</span>
+              <span>Blue Team</span>
+              <span>Linux</span>
+              <span>Windows Server</span>
+              <span>IAM</span>
+              <span>Networking</span>
+              <span>Zabbix</span>
+              <span>VPN</span>
+              <span>Hardening</span>
+              <span>pfSense</span>
+              <span>BorgBackup</span>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Competências-Chave</h2>
+          <div class="grid">
+            <div class="skill-group">
+              <strong>Infraestrutura e Sistemas</strong>
+              <p>Administração de servidores Linux e Windows Server, Active Directory, virtualização, disponibilidade e sustentação operacional.</p>
+            </div>
+            <div class="skill-group">
+              <strong>Segurança e Redes</strong>
+              <p>VPNs seguras, certificados digitais, pfSense, segmentação de rede, hardening, auditoria de acessos, firewall e boas práticas alinhadas a NIST, CIS Controls e ISO 27001.</p>
+            </div>
+            <div class="skill-group">
+              <strong>Operações e Observabilidade</strong>
+              <p>Monitoramento com Zabbix, integração com GLPI, troubleshooting, resposta operacional, backup 3-2-1, deduplicação e restauração.</p>
+            </div>
+            <div class="skill-group">
+              <strong>Cloud e Automação</strong>
+              <p>Fundamentos em AWS, Google Cloud, Oracle Cloud e Cloudflare, com uso de Shell Script, Python, SQL e Git em rotinas técnicas.</p>
+            </div>
+          </div>
         </section>
 
         <section>
@@ -171,13 +230,12 @@
             <div class="role-company">Grupo Life Brasil | Porto Alegre, RS</div>
           </div>
           <ul>
-            <li>Implantação e administração de servidores Windows Server e Zentyal com AD/DC, GPOs e autenticação centralizada.</li>
-            <li>Implementação de solução de interfonia digital com Asterisk, softphones e aplicativos VoIP.</li>
-            <li>Criação de acesso remoto seguro com OpenVPN, certificados digitais, pfSense e controle de permissões.</li>
-            <li>Desenvolvimento de solução de backup 3-2-1 automatizada com BorgBackup, túnel SSH e deduplicação.</li>
-            <li>Implantação de monitoramento com Zabbix, integração com GLPI e alertas operacionais.</li>
-            <li>Administração de servidores de impressão e suporte a infraestrutura crítica corporativa.</li>
-            <li>Aplicação de boas práticas de segurança, mitigação de riscos e conformidade operacional.</li>
+            <li>Liderança de infraestrutura corporativa com administração de Windows Server e Zentyal, AD/DC, GPOs e autenticação centralizada.</li>
+            <li>Implantação de acesso remoto seguro com OpenVPN, certificados digitais, pfSense e controle de permissões para ambientes internos.</li>
+            <li>Desenvolvimento de estratégia de backup 3-2-1 com BorgBackup, túnel SSH, deduplicação e foco em continuidade operacional.</li>
+            <li>Estruturação de monitoramento com Zabbix, integração com GLPI e alertas para disponibilidade, desempenho e suporte técnico.</li>
+            <li>Aplicação de boas práticas de segurança, mitigação de riscos, segurança perimetral e conformidade operacional.</li>
+            <li>Atuação também em gestão administrativa e coordenação de fornecedores, sustentando operação técnica e serviços críticos.</li>
           </ul>
         </section>
 
@@ -189,12 +247,12 @@
         <section>
           <h2>Certificações e Formação Relevante</h2>
           <ul>
+            <li>AWS Certified Cloud Practitioner</li>
             <li>Fortinet Certified Associate Cybersecurity e FortiGate 7.6 Operator</li>
             <li>Google Cybersecurity Professional Certificate</li>
             <li>IBM SkillsBuild Cybersecurity Certificate</li>
             <li>ISC2 Candidate</li>
-            <li>Junior Cybersecurity Analyst Career Path, Network Defense, Endpoint Security e Ethical Hacker</li>
-            <li>Google Cloud Skills Boost em Cloud Security, Risk Management e Security Best Practices</li>
+            <li>Cisco Junior Cybersecurity Analyst Career Path, Network Defense, Endpoint Security e Ethical Hacker</li>
             <li>Classificação para a fase de certificação CCNA e CyberOps na 11ª Maratona Cisco</li>
           </ul>
         </section>
@@ -220,7 +278,7 @@
             </div>
             <div class="skill-group">
               <strong>Cloud e Plataformas</strong>
-              <p>AWS, Google Cloud, Oracle Cloud, Cloudflare e fundamentos de segurança em nuvem.</p>
+              <p>AWS, Google Cloud, Oracle Cloud, Cloudflare e fundamentos de arquitetura e segurança em nuvem.</p>
             </div>
           </div>
         </section>
@@ -228,9 +286,10 @@
         <section>
           <h2>Projetos Técnicos Relevantes</h2>
           <ul>
-            <li><strong>Interfonia Digital com Asterisk:</strong> migração de sistema analógico para solução VoIP com rede dedicada e controle de usuários.</li>
+            <li><strong>AWS Cloud Security – IAM &amp; Governance:</strong> estudo prático de IAM, least privilege, análise de riscos e governança em cenário corporativo simulado.</li>
             <li><strong>Acesso Remoto Seguro com OpenVPN + Zentyal:</strong> solução corporativa com certificados digitais, pfSense, controle de permissões e trilhas de auditoria.</li>
             <li><strong>Backup Seguro com BorgBackup e Túnel VPN/SSH:</strong> implementação de estratégia 3-2-1 com deduplicação, redundância e restauração rápida para servidores e equipamentos críticos.</li>
+            <li><strong>Interfonia Digital com Asterisk:</strong> migração de sistema analógico para solução VoIP com rede dedicada, integração de softphones e controle de usuários.</li>
           </ul>
         </section>
 
