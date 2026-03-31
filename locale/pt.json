@@ -14,13 +14,13 @@
     "eyebrow": "Cloud | Segurança | Infraestrutura",
     "name": "Rafael Garcez",
     "title": "Cloud Security | Cybersecurity | Infraestrutura e Operações Seguras",
-    "description": "Especialista em infraestrutura e segurança com 15+ anos de experiência em operações críticas e contexto NOC/SOC. Conecto a solidez operacional em Linux e redes à evolução em Cloud Security, Blue Team e hardening de sistemas críticos.",
+    "description": "Especialista em infraestrutura e segurança com 15+ anos em operações críticas e contexto NOC/SOC. Uno profundidade operacional em Linux e redes à evolução consistente em Cloud Security, Blue Team e hardening de ambientes críticos.",
     "cv": "Baixar CV",
     "panelTag": "STATUS",
     "panelTitle": "Resumo Técnico",
-    "panelLine1": "Base prática em infraestrutura, disponibilidade e resposta operacional.",
-    "panelLine2": "Evolução guiada por certificações, laboratórios e projetos autorais.",
-    "panelLine3": "Foco atual em Cloud Security, Blue Team, hardening e operação enxuta.",
+    "panelLine1": "Base sólida em disponibilidade, sustentação e resposta operacional.",
+    "panelLine2": "Evolução sustentada por certificações, laboratórios e projetos aplicados.",
+    "panelLine3": "Foco atual em Cloud Security, Blue Team, hardening e controle operacional.",
     "pillars": [
       {
         "icon": "CL",
@@ -56,7 +56,7 @@
   "skills": {
     "eyebrow": "Domínios",
     "title": "Competências",
-    "description": "Base operacional sólida com evolução consistente em nuvem, segurança e ambientes críticos.",
+    "description": "Capacidades técnicas distribuídas entre cloud, segurança, infraestrutura e operação crítica.",
     "items": [
       {
         "title": "Nuvem",
@@ -123,10 +123,10 @@
   "credentials": {
     "eyebrow": "Certificações",
     "title": "Credenciais",
-    "description": "Credenciais que reforçam experiência prática em infraestrutura, cloud, segurança e operação.",
+    "description": "Credenciais selecionadas para reforçar profundidade prática em cloud, segurança e operação.",
     "coreTitle": "Core Credentials",
-    "coreDescription": "Credenciais centrais em cloud, segurança e operação, com leitura imediata para contextos técnicos e executivos.",
-    "morePrompt": "Credenciais adicionais e trilhas complementares.",
+    "coreDescription": "Conjunto principal de credenciais com leitura imediata para recrutamento, liderança técnica e gestão.",
+    "morePrompt": "Arquivo complementar de credenciais e trilhas de formação.",
     "coreLabel": "Core",
     "filters": {
       "all": "Todas"
@@ -140,8 +140,8 @@
   "vault": {
     "eyebrow": "Vault de Certificados",
     "title": "Certificados",
-    "description": "Em breve, esta área reunirá os PDFs e comprovantes finais das certificações, substituindo a visualização atual baseada nas badges.",
-    "morePrompt": "Enquanto os PDFs são organizados, o arquivo completo segue disponível com base nas credenciais já publicadas.",
+    "description": "Arquivo técnico de certificados e comprovações, preparado para concentrar os PDFs finais desta trilha profissional.",
+    "morePrompt": "Enquanto os PDFs finais são organizados, o arquivo completo permanece acessível pelas credenciais publicadas.",
     "searchLabel": "Buscar certificado",
     "searchPlaceholder": "Buscar por nome ou categoria",
     "noResults": "Nenhum certificado encontrado para esta busca.",
@@ -154,7 +154,7 @@
   "projects": {
     "eyebrow": "Cases",
     "title": "Projetos",
-    "description": "Arquitetura, execução e evolução de produtos com base em confiabilidade, operação e segurança.",
+    "description": "Casos selecionados em que arquitetura, execução e segurança aparecem como capacidade aplicada.",
     "items": [
       {
         "kind": "PWA de operação em saúde",
@@ -193,7 +193,7 @@
   "metrics": {
     "eyebrow": "Métricas",
     "title": "Panorama",
-    "description": "Distribuição atual entre infraestrutura, segurança e cloud, com foco nas áreas de maior profundidade.",
+    "description": "Leitura rápida da concentração atual entre infraestrutura, segurança e cloud.",
     "certificationsChart": "Certificações por categoria",
     "skillsChart": "Competências por domínio",
     "securityFocusNote": "Foco atual em segurança: {percent}% da trilha de certificações."
@@ -201,7 +201,7 @@
   "contact": {
     "eyebrow": "Contato",
     "title": "Vamos conversar",
-    "description": "Disponível para oportunidades remotas ou presenciais em times que valorizam solidez operacional e evolução contínua em segurança.",
+    "description": "Disponível para oportunidades remotas ou presenciais em times que valorizam maturidade operacional, segurança e evolução contínua.",
     "items": [
       {
         "label": "GitHub",
