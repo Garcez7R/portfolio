@@ -483,6 +483,8 @@ h2 {
   max-width: 64ch;
   color: var(--muted);
   font-size: 1rem;
+  line-height: 1.6;
+  text-wrap: pretty;
 }
 
 .section__intro {
@@ -498,12 +500,26 @@ h2 {
   margin-bottom: 0.9rem;
 }
 
+.section__intro h2,
+.section-heading h2 {
+  text-wrap: balance;
+}
+
 .section-heading {
   display: grid;
   gap: 0.35rem;
   margin-bottom: 1.9rem;
   position: relative;
   z-index: 1;
+}
+
+.section-heading::after,
+.section__intro::after {
+  content: "";
+  width: min(220px, 46%);
+  height: 1px;
+  margin-top: 0.35rem;
+  background: linear-gradient(90deg, rgba(212, 175, 55, 0.62), rgba(63, 185, 80, 0.28), transparent);
 }
 
 .section--skills .section-shell {
@@ -682,16 +698,6 @@ h2 {
   z-index: 1;
 }
 
-.section--projects .project-grid::before {
-  content: "";
-  position: absolute;
-  top: -1.25rem;
-  left: 0;
-  width: min(240px, 40%);
-  height: 1px;
-  background: linear-gradient(90deg, rgba(212, 175, 55, 0.65), transparent);
-}
-
 .section--metrics .insight-shell {
   display: grid;
   gap: 1.6rem;
@@ -833,6 +839,8 @@ h2 {
 .skill-card__description {
   margin: 0 0 1rem;
   color: var(--muted);
+  line-height: 1.55;
+  text-wrap: pretty;
 }
 
 .skill-card {
@@ -1177,6 +1185,13 @@ h2 {
 .vault-item span,
 .contact-card a {
   color: var(--muted);
+}
+
+.project-card p,
+.vault-item__title,
+.core-badge-card__body h3,
+.metric-label span:first-child {
+  text-wrap: pretty;
 }
 
 .badge-meta,
