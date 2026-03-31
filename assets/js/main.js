@@ -237,7 +237,7 @@ const buildFilters = () => {
       ui.badgeFilters.querySelectorAll("button").forEach((item) => item.classList.remove("is-active"));
       button.classList.add("is-active");
       selectedBadgeFilter = button.dataset.filter;
-      badgesExpanded = false;
+      badgesExpanded = true;
       renderBadges();
     });
   });
