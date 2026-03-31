@@ -1153,7 +1153,8 @@ h2 {
   transition:
     transform 0.22s ease,
     border-color 0.22s ease,
-    background 0.22s ease;
+    background 0.22s ease,
+    box-shadow 0.22s ease;
   width: 100%;
   max-width: none;
 }
@@ -1174,6 +1175,11 @@ h2 {
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 20px;
   background: var(--card-surface);
+  transition:
+    transform 0.24s ease,
+    border-color 0.24s ease,
+    background 0.24s ease,
+    box-shadow 0.24s ease;
 }
 
 .core-badge-card__visual {
@@ -1198,10 +1204,12 @@ h2 {
 
 .core-badge-card:hover .core-badge-card__visual img {
   filter: grayscale(0.08) brightness(1.08);
+  transform: scale(1.04);
 }
 
 .core-badge-card__body {
   display: grid;
+  grid-template-rows: auto 1fr auto;
   gap: 0.32rem;
   min-width: 0;
 }
@@ -1213,6 +1221,8 @@ h2 {
   font-size: 0.72rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  align-self: end;
+  margin-top: 0.18rem;
 }
 
 .core-badge-card__body h3 {
@@ -1224,6 +1234,15 @@ h2 {
 
 .core-badge-card__body a {
   color: var(--text-soft);
+}
+
+.core-badge-card:hover {
+  transform: translateY(-4px) rotate(-0.3deg);
+  border-color: rgba(212, 175, 55, 0.24);
+  background: var(--card-surface-hover);
+  box-shadow:
+    0 18px 34px rgba(0, 0, 0, 0.28),
+    0 0 0 1px rgba(63, 185, 80, 0.05);
 }
 
 .badge-card__priority {
@@ -1243,9 +1262,12 @@ h2 {
 }
 
 .badge-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) rotate(-0.35deg);
   border-color: rgba(212, 175, 55, 0.24);
   background: var(--card-surface-hover);
+  box-shadow:
+    0 18px 34px rgba(0, 0, 0, 0.28),
+    0 0 0 1px rgba(63, 185, 80, 0.05);
 }
 
 .badge-card__visual {
@@ -1272,7 +1294,7 @@ h2 {
 
 .badge-card:hover .badge-card__visual img {
   filter: grayscale(0.1) brightness(1.08);
-  transform: scale(1.03);
+  transform: scale(1.06) rotate(2deg);
 }
 
 .badge-card__visual.is-placeholder {
@@ -1295,6 +1317,7 @@ h2 {
 
 .badge-card__body {
   display: grid;
+  grid-template-rows: 1fr auto;
   gap: 0.4rem;
   min-width: 0;
 }
@@ -1312,6 +1335,8 @@ h2 {
   font-size: 0.74rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  align-self: end;
+  margin-top: 0.22rem;
 }
 
 .credentials__actions {
