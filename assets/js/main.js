@@ -531,6 +531,20 @@ const bindEvents = () => {
   });
 };
 
+const syncExpandablePanels = (activeSection) => {
+  const activeId = activeSection?.id || "";
+
+  if (badgesExpanded && activeId !== "credentials") {
+    badgesExpanded = false;
+    renderBadges();
+  }
+
+  if (vaultExpanded && activeId !== "vault") {
+    vaultExpanded = false;
+    renderVault();
+  }
+};
+
 const bindSectionSpy = () => {
   if (!ui.navLinks.length || !("IntersectionObserver" in window)) {
     return;
@@ -551,6 +565,7 @@ const bindSectionSpy = () => {
     ui.navLinks.forEach((link) => {
       link.classList.toggle("is-current", sectionMap.get(activeSection) === link);
     });
+    syncExpandablePanels(activeSection);
   };
 
   const contactSection = document.getElementById("contact");
