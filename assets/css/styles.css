@@ -1056,6 +1056,10 @@ h2 {
     var(--panel-accent);
 }
 
+.section--vault .section__intro .eyebrow::before {
+  display: none;
+}
+
 .vault-shell__head,
 .insight-shell,
 .contact-shell {
