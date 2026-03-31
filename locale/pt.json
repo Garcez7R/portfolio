@@ -179,6 +179,14 @@
         "stack": ["PWA", "Agenda", "Fidelização", "Cloudflare Worker"],
         "github": "https://github.com/Garcez7R/Konnektx",
         "demo": ""
+      },
+      {
+        "kind": "Governança IAM em AWS",
+        "name": "AWS Cloud Security – IAM & Governance",
+        "description": "Projeto offline de cloud security voltado à análise de risco, menor privilégio e governança em AWS IAM, com políticas documentadas, estudo de incidente e decisões técnicas estruturadas para contexto corporativo.",
+        "stack": ["AWS IAM", "Least Privilege", "Risk Analysis", "Governance"],
+        "github": "https://github.com/Garcez7R/aws-cloud-security-iam-governance",
+        "demo": ""
       }
     ]
   },
