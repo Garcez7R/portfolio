@@ -119,7 +119,7 @@ const loadLocale = async (language) => {
 };
 
 const loadBadges = async () => {
-  const response = await fetch("./badges.md");
+  const response = await fetch("./badges.md?v=20260331-real-badges");
 
   if (!response.ok) {
     throw new Error("Could not load badges.md");
