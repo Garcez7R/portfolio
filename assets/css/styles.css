@@ -175,10 +175,11 @@ img {
 .topnav a,
 .lang-switch button {
   color: var(--muted);
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
 }
 
 .topnav a:hover,
+.topnav a.is-current,
 .lang-switch button:hover,
 .lang-switch button.is-active {
   color: var(--silver-strong);
@@ -187,6 +188,13 @@ img {
 .topnav a:hover::before {
   border-left-color: rgba(212, 175, 55, 0.82);
   border-top-color: rgba(63, 185, 80, 0.78);
+}
+
+.topnav a.is-current::before {
+  border-left-color: rgba(212, 175, 55, 0.92);
+  border-top-color: rgba(63, 185, 80, 0.9);
+  border-bottom-color: rgba(63, 185, 80, 0.4);
+  animation: navSignalPulse 1.3s ease-out;
 }
 
 .lang-switch {
@@ -1804,6 +1812,21 @@ h2 {
   }
 }
 
+@keyframes navSignalPulse {
+  0% {
+    transform: translateX(-2px) scaleX(0.78);
+    opacity: 0.5;
+  }
+  45% {
+    transform: translateX(0) scaleX(1.08);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0) scaleX(1);
+    opacity: 1;
+  }
+}
+
 @media (min-width: 920px) {
   body {
     padding-left: 16.75rem;
@@ -1873,6 +1896,14 @@ h2 {
   .topnav a:hover {
     border-color: rgba(63, 185, 80, 0.14);
     background: linear-gradient(90deg, rgba(63, 185, 80, 0.08), rgba(255, 255, 255, 0.035));
+  }
+
+  .topnav a.is-current {
+    border-color: rgba(63, 185, 80, 0.16);
+    background:
+      linear-gradient(90deg, rgba(63, 185, 80, 0.12), rgba(255, 255, 255, 0.04)),
+      rgba(255, 255, 255, 0.02);
+    box-shadow: inset 3px 0 0 rgba(63, 185, 80, 0.24);
   }
 
   .lang-switch {

@@ -36,6 +36,7 @@ const ui = {
   skillsMetrics: document.getElementById("skills-metrics"),
   contactGrid: document.getElementById("contact-grid"),
   langButtons: document.querySelectorAll("[data-lang-btn]"),
+  navLinks: document.querySelectorAll(".topnav a"),
 };
 
 const normalizeCategory = (value) => {
@@ -528,6 +529,57 @@ const bindEvents = () => {
   });
 };
 
+const bindSectionSpy = () => {
+  if (!ui.navLinks.length || !("IntersectionObserver" in window)) {
+    return;
+  }
+
+  const sectionMap = new Map(
+    [...ui.navLinks]
+      .map((link) => {
+        const id = link.getAttribute("href");
+        if (!id?.startsWith("#")) return null;
+        const section = document.querySelector(id);
+        return section ? [section, link] : null;
+      })
+      .filter(Boolean),
+  );
+
+  const setCurrentLink = (activeSection) => {
+    ui.navLinks.forEach((link) => {
+      link.classList.toggle("is-current", sectionMap.get(activeSection) === link);
+    });
+  };
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+      if (visible) {
+        setCurrentLink(visible.target);
+      }
+    },
+    {
+      rootMargin: "-18% 0px -52% 0px",
+      threshold: [0.2, 0.4, 0.65],
+    },
+  );
+
+  sectionMap.forEach((_, section) => observer.observe(section));
+
+  const initialSection =
+    [...sectionMap.keys()].find((section) => {
+      const rect = section.getBoundingClientRect();
+      return rect.top <= window.innerHeight * 0.35 && rect.bottom > window.innerHeight * 0.35;
+    }) || [...sectionMap.keys()][0];
+
+  if (initialSection) {
+    setCurrentLink(initialSection);
+  }
+};
+
 const initialize = async () => {
   try {
     badgeRecords = await loadBadges();
@@ -535,6 +587,7 @@ const initialize = async () => {
     vaultSearchTerm = "";
     await setLanguage(detectLanguage());
     bindEvents();
+    bindSectionSpy();
     maybeHideSplash();
   } catch (error) {
     console.error(error);
