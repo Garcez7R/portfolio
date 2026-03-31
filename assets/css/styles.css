@@ -1542,6 +1542,11 @@ h2 {
   background:
     var(--accent-wash),
     var(--card-surface);
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease,
+    background 0.22s ease,
+    box-shadow 0.22s ease;
 }
 
 .vault-featured-card::before {
@@ -1571,6 +1576,9 @@ h2 {
   color: var(--silver-strong);
   font-size: 0.92rem;
   line-height: 1.35;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  text-wrap: pretty;
 }
 
 .vault-featured-card a {
@@ -1583,6 +1591,20 @@ h2 {
   font-size: 0.72rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.vault-featured-card:hover {
+  transform: translateY(-5px) rotate(-0.3deg);
+  border-color: rgba(212, 175, 55, 0.24);
+  background: var(--card-surface-hover);
+  box-shadow:
+    0 18px 34px rgba(0, 0, 0, 0.28),
+    0 0 0 1px rgba(63, 185, 80, 0.05);
+}
+
+.vault-featured-card:hover .vault-badge-thumb img {
+  filter: grayscale(0.1) brightness(1.08);
+  transform: scale(1.06) rotate(2deg);
 }
 
 .vault-groups {
@@ -1640,6 +1662,11 @@ h2 {
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 16px;
   background: var(--card-surface);
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease,
+    background 0.22s ease,
+    box-shadow 0.22s ease;
 }
 
 .vault-item::after {
@@ -1662,6 +1689,9 @@ h2 {
   color: var(--text-soft);
   font-size: 0.9rem;
   line-height: 1.4;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  text-wrap: pretty;
 }
 
 .vault-item__category {
@@ -1689,6 +1719,7 @@ h2 {
   height: 60px;
   object-fit: contain;
   filter: grayscale(1) brightness(1.05);
+  transition: filter 0.22s ease, transform 0.22s ease;
 }
 
 .vault-badge-thumb--small {
@@ -1713,6 +1744,20 @@ h2 {
   height: 40px;
   border-radius: 12px;
   font-size: 0.72rem;
+}
+
+.vault-item:hover {
+  transform: translateY(-4px) rotate(-0.25deg);
+  border-color: rgba(212, 175, 55, 0.22);
+  background: var(--card-surface-hover);
+  box-shadow:
+    0 16px 30px rgba(0, 0, 0, 0.24),
+    0 0 0 1px rgba(63, 185, 80, 0.04);
+}
+
+.vault-item:hover .vault-badge-thumb--small img {
+  filter: grayscale(0.1) brightness(1.08);
+  transform: scale(1.06) rotate(2deg);
 }
 
 .metric-chart {

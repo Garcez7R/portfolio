@@ -140,8 +140,8 @@
   "vault": {
     "eyebrow": "Certificate Vault",
     "title": "Certificates",
-    "description": "Direct access to certificates, learning tracks and credentials across cloud, security and infrastructure.",
-    "morePrompt": "Full certificate archive and supporting learning tracks.",
+    "description": "Soon this area will host the final certificate PDFs and supporting documents, replacing the current badge-based view.",
+    "morePrompt": "While the PDFs are being organized, the full archive remains available through the published credentials.",
     "searchLabel": "Search certificate",
     "searchPlaceholder": "Search by name or category",
     "noResults": "No certificates found for this search.",
