@@ -60,7 +60,7 @@
     "items": [
       {
         "title": "Nuvem",
-        "description": "Arquitetura, identidade, operação e segurança em nuvem, com aplicação prática.",
+        "description": "Arquitetura, identidade e operações de segurança em nuvem, com foco em soluções escaláveis e resilientes para proteger dados e serviços críticos.",
         "items": [
           { "name": "AWS", "icon": "AW", "description": "Fundamentos de AWS com foco em arquitetura básica, segurança e operação em nuvem." },
           { "name": "OCI", "icon": "OC", "description": "Fundamentos de Oracle Cloud Infrastructure e leitura sólida dos serviços-base." },
@@ -70,7 +70,7 @@
       },
       {
         "title": "Segurança",
-        "description": "Visão orientada à defesa, identidade, hardening, auditoria e proteção de ambientes digitais.",
+        "description": "Defesa estratégica e tática em identidade, hardening, auditoria e proteção proativa de ambientes digitais contra riscos e ameaças.",
         "items": [
           { "name": "Blue Team", "icon": "BT", "description": "Mentalidade defensiva com foco em monitoramento, resposta e resiliência operacional." },
           { "name": "SOC", "icon": "SC", "description": "Vivência e estudos voltados a rotinas de detecção, triagem e resposta." },
@@ -80,7 +80,7 @@
       },
       {
         "title": "Infraestrutura",
-        "description": "Experiência prática em sistemas, redes, diretórios, monitoramento e sustentação de ambientes críticos.",
+        "description": "Experiência comprovada em sistemas, redes, diretórios, monitoramento e sustentação para garantir disponibilidade e continuidade em ambientes críticos.",
         "items": [
           { "name": "Linux", "icon": "LX", "description": "Administração de ambientes Linux desktop e servidor com foco operacional." },
           { "name": "Redes", "icon": "NW", "description": "Redes, VPN, conectividade, troubleshooting e infraestrutura segura." },
@@ -159,7 +159,7 @@
       {
         "kind": "PWA de operação em saúde",
         "name": "TranspSaude",
-        "description": "Arquitetura serverless para transporte em saúde, com fluxo de solicitações, análise, distribuição e consulta pública. Estruturado com Cloudflare Pages, Functions e D1, com foco em resiliência, disponibilidade e evolução segura.",
+        "description": "Desenvolvimento de arquitetura serverless para transporte em saúde, organizando solicitações, análise, distribuição operacional e consulta pública. Estruturado com Cloudflare Pages, Functions e D1 para sustentar resiliência, disponibilidade contínua e evolução segura do serviço.",
         "stack": ["PWA", "Cloudflare Pages", "Functions", "D1"],
         "github": "https://github.com/Garcez7R/transpsaude",
         "demo": ""
@@ -183,7 +183,7 @@
       {
         "kind": "Governança IAM em AWS",
         "name": "AWS Cloud Security – IAM & Governance",
-        "description": "Projeto offline de cloud security voltado à análise de risco, menor privilégio e governança em AWS IAM, com políticas documentadas, estudo de incidente e decisões técnicas estruturadas para contexto corporativo.",
+        "description": "Projeto de cloud security voltado à análise de risco, governança e menor privilégio em AWS IAM. Reúne políticas documentadas, estudo de incidente e decisões técnicas estruturadas para fortalecer postura de segurança e aderência operacional em contexto corporativo.",
         "stack": ["AWS IAM", "Least Privilege", "Risk Analysis", "Governance"],
         "github": "https://github.com/Garcez7R/aws-cloud-security-iam-governance",
         "demo": ""
