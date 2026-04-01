@@ -1068,10 +1068,10 @@ h2 {
 
 .section--vault .section-shell {
   display: grid;
-  gap: 1.55rem;
-  padding: 2.2rem;
-  border: 1px solid rgba(197, 206, 216, 0.1);
-  border-radius: 40px 24px 32px 28px;
+  gap: 1.6rem;
+  padding: 1.9rem 2rem 2rem;
+  border: 1px solid rgba(197, 206, 216, 0.12);
+  border-radius: 30px 40px 32px 24px;
   background:
     var(--panel-chrome),
     var(--panel-overlay),
