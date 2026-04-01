@@ -126,7 +126,7 @@
     "description": "Credenciais selecionadas para reforçar profundidade prática em cloud, segurança e operação.",
     "coreTitle": "Core Credentials",
     "coreDescription": "Conjunto principal de credenciais com leitura imediata para recrutamento, liderança técnica e gestão.",
-    "morePrompt": "Arquivo complementar de credenciais e trilhas de formação.",
+    "morePrompt": "",
     "coreLabel": "Core",
     "filters": {
       "all": "Todas"
@@ -141,7 +141,7 @@
     "eyebrow": "Vault de Certificados",
     "title": "Certificados",
     "description": "Arquivo técnico de certificados e comprovações, preparado para concentrar os PDFs finais desta trilha profissional.",
-    "morePrompt": "Enquanto os PDFs finais são organizados, o arquivo completo permanece acessível pelas credenciais publicadas.",
+    "morePrompt": "",
     "searchLabel": "Buscar certificado",
     "searchPlaceholder": "Buscar por nome ou categoria",
     "noResults": "Nenhum certificado encontrado para esta busca.",

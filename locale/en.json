@@ -126,7 +126,7 @@
     "description": "Selected credentials that reinforce hands-on depth across cloud, security and operations.",
     "coreTitle": "Core Credentials",
     "coreDescription": "Primary credentials with immediate signal for recruiting, leadership review and technical assessment.",
-    "morePrompt": "Supplementary credential archive and supporting training paths.",
+    "morePrompt": "",
     "coreLabel": "Core",
     "filters": {
       "all": "All"
@@ -141,7 +141,7 @@
     "eyebrow": "Certificate Vault",
     "title": "Certificates",
     "description": "Technical archive prepared to host the final certificate PDFs and supporting validation documents.",
-    "morePrompt": "While the final PDFs are being organized, the complete archive remains accessible through the published credentials.",
+    "morePrompt": "",
     "searchLabel": "Search certificate",
     "searchPlaceholder": "Search by name or category",
     "noResults": "No certificates found for this search.",
