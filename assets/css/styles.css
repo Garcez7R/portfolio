@@ -2159,7 +2159,7 @@ h2 {
   border-radius: inherit;
   background: linear-gradient(90deg, rgba(212, 175, 55, 0.9), rgba(79, 215, 255, 0.72), rgba(63, 185, 80, 0.7));
   width: 0;
-  transition: width 1.9s cubic-bezier(0.16, 0.84, 0.24, 1);
+  transition: width 2.35s cubic-bezier(0.16, 0.84, 0.24, 1);
 }
 
 .metric-row--security .metric-label {
