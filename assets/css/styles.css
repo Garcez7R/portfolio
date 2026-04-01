@@ -1386,18 +1386,6 @@ h2 {
     0 0 0 1px rgba(79, 215, 255, 0.04);
 }
 
-.hero__shell:hover,
-.section-shell:hover,
-.vault-shell:hover,
-.insight-shell:hover,
-.contact-shell:hover {
-  transform: translateY(-3px) perspective(1400px) rotateX(1.35deg);
-  box-shadow:
-    0 24px 44px rgba(0, 0, 0, 0.32),
-    0 10px 20px rgba(0, 0, 0, 0.16),
-    0 0 0 1px rgba(79, 215, 255, 0.04);
-}
-
 .skill-card {
   background: var(--card-surface);
 }
@@ -2681,11 +2669,6 @@ h2 {
     transform: none;
   }
 
-  .hero__shell:hover,
-  .section-shell:hover,
-  .vault-shell:hover,
-  .insight-shell:hover,
-  .contact-shell:hover,
   .skill-card:hover,
   .contact-card:hover,
   .metric-card:hover,
