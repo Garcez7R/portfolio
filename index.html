@@ -28,7 +28,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./assets/css/styles.css?v=20260331-hero-ring-and-richer-sidebar" />
+    <link rel="stylesheet" href="./assets/css/styles.css?v=20260331-rebuild-vault-shell" />
   </head>
   <body>
     <div class="telemetry-band" aria-hidden="true">
@@ -150,19 +150,17 @@
 
       <!-- PDF vault for verification links. -->
       <section class="section section--vault bento-span-3 fade-in" id="vault">
-        <div class="vault-shell" data-section="03">
-          <div class="vault-shell__head">
-            <div class="section__intro section__intro--compact">
-              <p class="eyebrow" data-i18n="vault.eyebrow"></p>
-              <h2 data-i18n="vault.title"></h2>
-              <p data-i18n="vault.description"></p>
-            </div>
-            <div class="vault-controls">
-              <label class="vault-search">
-                <span data-i18n="vault.searchLabel"></span>
-                <input id="vault-search" type="search" />
-              </label>
-            </div>
+        <div class="section-shell section-shell--vault" data-section="03">
+          <div class="section-heading section-heading--vault">
+            <p class="eyebrow" data-i18n="vault.eyebrow"></p>
+            <h2 data-i18n="vault.title"></h2>
+            <p data-i18n="vault.description"></p>
+          </div>
+          <div class="vault-controls">
+            <label class="vault-search">
+              <span data-i18n="vault.searchLabel"></span>
+              <input id="vault-search" type="search" />
+            </label>
           </div>
           <div class="vault-featured" id="vault-featured"></div>
           <div class="vault-more">

@@ -1068,7 +1068,7 @@ h2 {
   display: grid;
 }
 
-.section--vault .vault-shell {
+.section--vault .section-shell {
   display: grid;
   gap: 1.55rem;
   padding: 2.2rem;
@@ -1082,34 +1082,27 @@ h2 {
   overflow: hidden;
 }
 
-.section--vault .vault-shell::before {
+.section--vault .section-shell::before {
   background:
     linear-gradient(180deg, rgba(63, 185, 80, 0.03), transparent 22%),
     var(--panel-accent);
 }
 
-.section--vault .section__intro .eyebrow::before {
-  content: none;
-  display: none !important;
-}
-
-.section--vault .section__intro::after {
-  content: none;
-  display: none !important;
-}
-
-.vault-shell__head,
 .insight-shell,
 .contact-shell {
   position: relative;
   z-index: 1;
 }
 
-.vault-shell__head {
-  display: grid;
-  gap: 1.5rem;
-  margin-bottom: 0;
-  padding-top: 1.65rem;
+.section--vault .section-heading {
+  max-width: 44rem;
+}
+
+.section--vault .vault-controls,
+.section--vault .vault-featured,
+.section--vault .vault-more {
+  position: relative;
+  z-index: 1;
 }
 
 .section--projects .section-shell {
@@ -2500,9 +2493,13 @@ h2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .vault-shell__head {
-    grid-template-columns: minmax(0, 1fr) minmax(280px, 340px);
-    align-items: end;
+  .section--vault .section-shell {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .section--vault .vault-controls {
+    max-width: 340px;
+    justify-self: end;
   }
 
   .vault-featured {
@@ -2703,7 +2700,7 @@ h2 {
   }
 
   .section--credentials .section-shell,
-  .section--vault .vault-shell,
+  .section--vault .section-shell,
   .section--contact .contact-shell {
     padding: 1.4rem;
     border-radius: 26px;
