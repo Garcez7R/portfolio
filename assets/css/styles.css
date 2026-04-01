@@ -1115,6 +1115,11 @@ h2 {
   display: none !important;
 }
 
+.section--vault .section__intro::after {
+  content: none;
+  display: none !important;
+}
+
 .vault-shell__head,
 .insight-shell,
 .contact-shell {
