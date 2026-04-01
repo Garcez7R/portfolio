@@ -455,8 +455,9 @@ const createMetricRows = (entriesObject) => {
 };
 
 const animateMetricBars = () => {
-  document.querySelectorAll(".metric-bar span").forEach((bar) => {
+  document.querySelectorAll(".metric-bar span").forEach((bar, index) => {
     const targetWidth = bar.dataset.width || "0%";
+    bar.style.transitionDelay = `${index * 140}ms`;
     requestAnimationFrame(() => {
       bar.style.width = targetWidth;
     });
