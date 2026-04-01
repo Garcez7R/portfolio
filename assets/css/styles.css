@@ -2609,13 +2609,15 @@ h2 {
   }
 
   .section--credentials .section-shell,
-  .section--vault .section-shell {
+  .section--vault .section-shell,
+  .section--projects .section-shell {
     grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
     align-items: start;
   }
 
   .section--credentials .section-heading,
-  .section--vault .section-heading {
+  .section--vault .section-heading,
+  .section--projects .section-heading {
     margin-bottom: 0;
     padding-right: 2rem;
     max-width: 18rem;
