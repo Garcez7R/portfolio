@@ -2224,7 +2224,13 @@ h2 {
   text-transform: uppercase;
 }
 
-.contact-card span {
+.contact-card__icon svg {
+  width: 1rem;
+  height: 1rem;
+  display: block;
+}
+
+.contact-card__label {
   color: var(--silver);
   font-size: 0.8rem;
   letter-spacing: 0.08em;

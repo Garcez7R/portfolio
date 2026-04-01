@@ -471,16 +471,32 @@ const resetMetricBars = () => {
   });
 };
 
-const getContactGlyph = (label) => {
+const getContactIcon = (label) => {
   const normalized = label.trim().toLowerCase();
-  const map = {
-    github: "GH",
-    linkedin: "IN",
-    email: "@@",
-    cv: "CV",
+  const icons = {
+    github: `
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M12 2C6.48 2 2 6.59 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-1.03-.01-1.87-2.78.62-3.37-1.21-3.37-1.21-.45-1.2-1.11-1.52-1.11-1.52-.91-.64.07-.63.07-.63 1 .08 1.53 1.06 1.53 1.06.9 1.56 2.36 1.11 2.94.85.09-.67.35-1.11.64-1.36-2.22-.26-4.55-1.14-4.55-5.08 0-1.12.39-2.03 1.03-2.74-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05A9.31 9.31 0 0 1 12 6.84c.85 0 1.71.12 2.51.36 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.71 1.03 1.62 1.03 2.74 0 3.95-2.33 4.81-4.56 5.07.36.31.68.91.68 1.84 0 1.33-.01 2.4-.01 2.73 0 .27.18.6.69.49A10.27 10.27 0 0 0 22 12.25C22 6.59 17.52 2 12 2Z" fill="currentColor"/>
+      </svg>
+    `,
+    linkedin: `
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M6.94 8.5H3.56V20h3.38V8.5Zm.22-3.55c0-1.01-.74-1.8-1.9-1.8-1.15 0-1.9.79-1.9 1.8 0 .99.73 1.8 1.86 1.8h.02c1.18 0 1.92-.81 1.92-1.8ZM20.44 13.14C20.44 9.62 18.6 8 16.15 8c-1.97 0-2.85 1.12-3.35 1.9V8.5H9.42c.04.92 0 11.5 0 11.5h3.38v-6.42c0-.34.02-.68.12-.93.27-.68.88-1.38 1.91-1.38 1.35 0 1.89 1.05 1.89 2.58V20h3.38v-6.86Z" fill="currentColor"/>
+      </svg>
+    `,
+    email: `
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M3 6.75A1.75 1.75 0 0 1 4.75 5h14.5A1.75 1.75 0 0 1 21 6.75v10.5A1.75 1.75 0 0 1 19.25 19H4.75A1.75 1.75 0 0 1 3 17.25V6.75Zm1.75-.25a.25.25 0 0 0-.16.44l6.67 5.38a1.2 1.2 0 0 0 1.48 0l6.67-5.38a.25.25 0 0 0-.16-.44H4.75Zm14.75 2.04-5.82 4.69a2.7 2.7 0 0 1-3.36 0L4.5 8.54v8.71c0 .14.11.25.25.25h14.5c.14 0 .25-.11.25-.25V8.54Z" fill="currentColor"/>
+      </svg>
+    `,
+    cv: `
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M7.75 3A1.75 1.75 0 0 0 6 4.75v14.5C6 20.22 6.78 21 7.75 21h8.5A1.75 1.75 0 0 0 18 19.25V8.56a1.75 1.75 0 0 0-.5-1.22l-3.84-3.84A1.75 1.75 0 0 0 12.44 3H7.75Zm4.5 1.5v3.25c0 .97.78 1.75 1.75 1.75h2.5v9.75a.25.25 0 0 1-.25.25h-8.5a.25.25 0 0 1-.25-.25V4.75c0-.14.11-.25.25-.25h4.5Zm1.5.31 2.44 2.44H14a.25.25 0 0 1-.25-.25V4.81ZM9 12.25c0-.41.34-.75.75-.75h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1-.75-.75Zm0 3c0-.41.34-.75.75-.75h4.5a.75.75 0 0 1 0 1.5h-4.5A.75.75 0 0 1 9 15.25Z" fill="currentColor"/>
+      </svg>
+    `,
   };
 
-  return map[normalized] || normalized.slice(0, 2).toUpperCase();
+  return icons[normalized] || icons.cv;
 };
 
 const renderContacts = () => {
@@ -489,8 +505,8 @@ const renderContacts = () => {
       (item) => `
         <article class="contact-card">
           <div class="contact-card__head">
-            <span class="contact-card__icon" aria-hidden="true">${getContactGlyph(item.label)}</span>
-            <span>${item.label}</span>
+            <span class="contact-card__icon" aria-hidden="true">${getContactIcon(item.label)}</span>
+            <span class="contact-card__label">${item.label}</span>
           </div>
           <a href="${item.href}" target="_blank" rel="noreferrer">${item.value}</a>
         </article>
