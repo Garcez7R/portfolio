@@ -493,6 +493,8 @@ main {
   position: absolute;
   inset: 0;
   background:
+    radial-gradient(ellipse 58% 82% at 18% 44%, transparent 0 71.7%, rgba(79, 215, 255, 0.08) 72%, transparent 72.5%),
+    radial-gradient(ellipse 58% 82% at 18% 44%, transparent 0 76.4%, rgba(244, 247, 251, 0.04) 76.8%, transparent 77.3%),
     radial-gradient(ellipse 54% 84% at 72% 53%, transparent 0 71.8%, rgba(79, 215, 255, 0.16) 72.1%, transparent 72.6%),
     linear-gradient(180deg, rgba(63, 185, 80, 0.04), transparent 20%),
     linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.02), transparent),
