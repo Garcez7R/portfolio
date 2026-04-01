@@ -480,6 +480,8 @@ main {
   position: absolute;
   inset: 0;
   background:
+    radial-gradient(ellipse 34% 48% at 18% 42%, rgba(79, 215, 255, 0.08), transparent 62%),
+    radial-gradient(ellipse 24% 36% at 22% 44%, rgba(255, 255, 255, 0.045), transparent 68%),
     linear-gradient(180deg, rgba(63, 185, 80, 0.04), transparent 20%),
     linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.02), transparent),
     radial-gradient(circle at top right, var(--glow), transparent 26%);
@@ -1103,6 +1105,7 @@ h2 {
   display: grid;
   gap: 1.5rem;
   margin-bottom: 0;
+  padding-top: 0.9rem;
 }
 
 .section--projects .section-shell {
