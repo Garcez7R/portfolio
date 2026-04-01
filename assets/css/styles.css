@@ -15,6 +15,13 @@
   --line: rgba(197, 206, 216, 0.14);
   --line-strong: rgba(222, 230, 240, 0.24);
   --shadow: 0 28px 80px rgba(0, 0, 0, 0.45);
+  --shadow-float:
+    0 16px 30px rgba(0, 0, 0, 0.22),
+    0 6px 16px rgba(0, 0, 0, 0.14);
+  --shadow-panel:
+    0 28px 56px rgba(0, 0, 0, 0.34),
+    0 12px 24px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
   --glow: rgba(214, 224, 235, 0.08);
   --bg-gradient:
     radial-gradient(circle at 12% 16%, rgba(197, 206, 216, 0.08), transparent 0 24%),
@@ -232,6 +239,7 @@ img {
 .topnav a {
   position: relative;
   overflow: hidden;
+  box-shadow: var(--shadow-float);
 }
 
 .topnav a::before {
@@ -443,7 +451,7 @@ main {
 .vault-item {
   border: 1px solid var(--line);
   background: var(--card-surface);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-panel);
 }
 
 .hero__shell {
@@ -456,6 +464,7 @@ main {
   padding: 1.6rem;
   border-radius: 34px;
   overflow: hidden;
+  transform-style: preserve-3d;
   background:
     var(--panel-chrome),
     linear-gradient(125deg, rgba(255, 255, 255, 0.045), transparent 30%),
@@ -492,6 +501,7 @@ main {
 .hero__visual {
   position: relative;
   z-index: 1;
+  transform: translateZ(0);
 }
 
 .hero__content {
@@ -542,6 +552,7 @@ main {
     var(--panel-overlay),
     var(--panel-surface);
   overflow: hidden;
+  box-shadow: var(--shadow-float);
   transition:
     transform 0.22s ease,
     border-color 0.22s ease,
@@ -575,6 +586,7 @@ main {
   box-shadow:
     0 20px 48px rgba(0, 0, 0, 0.34),
     inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transform: translateZ(10px);
   transition:
     transform 0.24s ease,
     border-color 0.24s ease,
@@ -682,6 +694,7 @@ main {
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.03),
     inset 3px 0 0 rgba(63, 185, 80, 0.2);
+  transform: translateZ(4px);
   transition:
     transform 0.22s ease,
     border-color 0.22s ease,
@@ -720,6 +733,10 @@ main {
   background:
     linear-gradient(90deg, rgba(63, 185, 80, 0.035), transparent 32%),
     var(--control-surface);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    0 10px 22px rgba(0, 0, 0, 0.14);
+  transform: translateZ(3px);
   transition:
     transform 0.22s ease,
     border-color 0.22s ease,
@@ -749,7 +766,7 @@ main {
 }
 
 .hero__profile-stage:hover {
-  transform: translateY(-3px);
+  transform: translateY(-3px) perspective(1200px) rotateX(1.4deg);
   border-color: rgba(79, 215, 255, 0.16);
   box-shadow:
     0 18px 34px rgba(0, 0, 0, 0.28),
@@ -757,7 +774,7 @@ main {
 }
 
 .hero__profile-stage:hover .hero__profile-frame {
-  transform: translateY(-2px);
+  transform: translateY(-2px) translateZ(16px);
   border-color: rgba(212, 175, 55, 0.36);
   box-shadow:
     0 24px 52px rgba(0, 0, 0, 0.38),
@@ -770,7 +787,7 @@ main {
 }
 
 .hero__terminal:hover {
-  transform: translateY(-2px);
+  transform: translateY(-2px) translateZ(8px);
   border-color: rgba(79, 215, 255, 0.14);
   background:
     linear-gradient(180deg, rgba(63, 185, 80, 0.04), transparent 30%),
@@ -782,7 +799,7 @@ main {
 }
 
 .hero-pillar:hover {
-  transform: translateY(-2px);
+  transform: translateY(-2px) translateZ(9px) perspective(900px) rotateX(2deg);
   border-color: rgba(79, 215, 255, 0.16);
   background:
     linear-gradient(90deg, rgba(63, 185, 80, 0.055), transparent 32%),
@@ -1298,6 +1315,7 @@ h2 {
   border-radius: 24px;
   padding: 1.35rem;
   overflow: visible;
+  transform-style: preserve-3d;
   transition:
     transform 0.22s ease,
     border-color 0.22s ease,
@@ -1310,6 +1328,7 @@ h2 {
 .vault-shell,
 .insight-shell,
 .contact-shell {
+  transform-style: preserve-3d;
   transition:
     transform 0.22s ease,
     border-color 0.22s ease,
@@ -1326,7 +1345,10 @@ h2 {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.024), transparent 42%);
+  border-radius: inherit;
+  background:
+    radial-gradient(circle at 14% 14%, rgba(255, 255, 255, 0.08), transparent 18%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.024), transparent 42%);
   pointer-events: none;
 }
 
@@ -1353,11 +1375,12 @@ h2 {
 .badge-card:hover,
 .core-badge-card:hover,
 .vault-group:hover {
-  transform: translateY(-4px);
+  transform: translateY(-4px) perspective(1200px) rotateX(2deg);
   border-color: rgba(79, 215, 255, 0.18);
   background: var(--card-surface-hover);
   box-shadow:
-    0 16px 30px rgba(0, 0, 0, 0.24),
+    0 22px 38px rgba(0, 0, 0, 0.28),
+    0 8px 18px rgba(0, 0, 0, 0.16),
     0 0 0 1px rgba(79, 215, 255, 0.04);
 }
 
@@ -1366,9 +1389,10 @@ h2 {
 .vault-shell:hover,
 .insight-shell:hover,
 .contact-shell:hover {
-  transform: translateY(-3px);
+  transform: translateY(-3px) perspective(1400px) rotateX(1.35deg);
   box-shadow:
-    0 18px 34px rgba(0, 0, 0, 0.28),
+    0 24px 44px rgba(0, 0, 0, 0.32),
+    0 10px 20px rgba(0, 0, 0, 0.16),
     0 0 0 1px rgba(79, 215, 255, 0.04);
 }
 
@@ -1486,6 +1510,7 @@ h2 {
     box-shadow 0.22s ease;
   width: 100%;
   max-width: none;
+  transform-style: preserve-3d;
 }
 
 .badge-card--core {
@@ -1504,6 +1529,9 @@ h2 {
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 20px;
   background: var(--card-surface);
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
   transition:
     transform 0.24s ease,
     border-color 0.24s ease,
@@ -1571,7 +1599,7 @@ h2 {
 }
 
 .core-badge-card:hover {
-  transform: translateY(-4px) rotate(-0.3deg);
+  transform: translateY(-4px) perspective(1200px) rotateX(2deg) rotate(-0.3deg);
   border-color: rgba(212, 175, 55, 0.24);
   background: var(--card-surface-hover);
   box-shadow:
@@ -1608,7 +1636,7 @@ h2 {
 }
 
 .badge-card:hover {
-  transform: translateY(-5px) rotate(-0.35deg);
+  transform: translateY(-5px) perspective(1200px) rotateX(2deg) rotate(-0.35deg);
   border-color: rgba(212, 175, 55, 0.24);
   background: var(--card-surface-hover);
   box-shadow:
@@ -1720,7 +1748,7 @@ h2 {
 }
 
 .project-card:hover {
-  transform: translateY(-4px) scale(1.01);
+  transform: translateY(-4px) perspective(1200px) rotateX(2deg) scale(1.01);
   border-color: rgba(212, 175, 55, 0.22);
   background: var(--card-surface-hover);
 }
@@ -1730,7 +1758,7 @@ h2 {
 }
 
 .project-card:nth-child(2n):hover {
-  transform: scale(1.02);
+  transform: perspective(1200px) rotateX(2deg) scale(1.02);
 }
 
 .project-card__eyebrow {
@@ -2643,6 +2671,25 @@ h2 {
   .project-card:nth-child(2n),
   .project-card:nth-child(2n):hover {
     transform: none;
+  }
+
+  .hero__shell:hover,
+  .section-shell:hover,
+  .vault-shell:hover,
+  .insight-shell:hover,
+  .contact-shell:hover,
+  .skill-card:hover,
+  .contact-card:hover,
+  .metric-card:hover,
+  .vault-item:hover,
+  .project-card:hover,
+  .badge-card:hover,
+  .core-badge-card:hover,
+  .vault-group:hover,
+  .hero__profile-stage:hover,
+  .hero__terminal:hover,
+  .hero-pillar:hover {
+    transform: translateY(-2px);
   }
 
   .section--credentials .section-shell,
