@@ -1095,9 +1095,19 @@ h2 {
   max-width: 44rem;
 }
 
+.vault-stage {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 1.35rem;
+  padding-top: 0.5rem;
+}
+
 .section--vault .vault-controls,
 .section--vault .vault-featured,
-.section--vault .vault-more {
+.section--vault .vault-more,
+.section--credentials .section-heading,
+.section--vault .section-heading {
   position: relative;
   z-index: 1;
 }
@@ -2489,17 +2499,26 @@ h2 {
     padding-right: 2rem;
   }
 
+  .section--credentials .section-shell,
+  .section--vault .section-shell {
+    grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .section--credentials .section-heading,
+  .section--vault .section-heading {
+    margin-bottom: 0;
+    padding-right: 2rem;
+    max-width: 18rem;
+  }
+
   .skill-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .section--vault .section-shell {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
   .section--vault .vault-controls {
     max-width: 340px;
-    justify-self: end;
+    justify-self: start;
   }
 
   .vault-featured {
