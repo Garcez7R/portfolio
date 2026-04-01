@@ -1000,10 +1000,7 @@ h2 {
   border: 1px solid rgba(197, 206, 216, 0.1);
   border-radius: 40px 24px 32px 28px;
   background:
-    radial-gradient(circle at 5.25rem 1rem, rgba(63, 185, 80, 0.82) 0 1.4px, transparent 1.7px),
-    radial-gradient(circle at 5.7rem 1rem, rgba(79, 215, 255, 0.82) 0 1.4px, transparent 1.7px),
-    radial-gradient(circle at 6.15rem 1rem, rgba(244, 247, 251, 0.56) 0 1.4px, transparent 1.7px),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0 2.05rem, rgba(255, 255, 255, 0.07) 2.05rem 2.1rem, transparent 2.1rem),
+    var(--panel-chrome),
     var(--panel-overlay),
     var(--panel-surface);
   box-shadow: var(--shadow);
@@ -1014,10 +1011,6 @@ h2 {
   background:
     linear-gradient(180deg, rgba(63, 185, 80, 0.03), transparent 22%),
     var(--panel-accent);
-}
-
-.section--vault .section__intro .eyebrow::before {
-  display: block;
 }
 
 .vault-shell__head,
@@ -1230,6 +1223,18 @@ h2 {
     box-shadow 0.22s ease;
 }
 
+.hero__shell,
+.section-shell,
+.vault-shell,
+.insight-shell,
+.contact-shell {
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease,
+    box-shadow 0.22s ease,
+    background 0.22s ease;
+}
+
 .skill-card::before,
 .project-card::before,
 .contact-card::before,
@@ -1262,12 +1267,26 @@ h2 {
 .contact-card:hover,
 .metric-card:hover,
 .vault-item:hover,
-.project-card:hover {
+.project-card:hover,
+.badge-card:hover,
+.core-badge-card:hover,
+.vault-group:hover {
   transform: translateY(-4px);
   border-color: rgba(79, 215, 255, 0.18);
   background: var(--card-surface-hover);
   box-shadow:
     0 16px 30px rgba(0, 0, 0, 0.24),
+    0 0 0 1px rgba(79, 215, 255, 0.04);
+}
+
+.hero__shell:hover,
+.section-shell:hover,
+.vault-shell:hover,
+.insight-shell:hover,
+.contact-shell:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 18px 34px rgba(0, 0, 0, 0.28),
     0 0 0 1px rgba(79, 215, 255, 0.04);
 }
 
@@ -1847,6 +1866,11 @@ h2 {
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 20px;
   background: var(--control-surface);
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease,
+    background 0.22s ease,
+    box-shadow 0.22s ease;
 }
 
 .vault-group__header {
@@ -2574,16 +2598,6 @@ h2 {
   .button {
     min-width: 0;
     width: 100%;
-  }
-
-  .section-shell[data-shell-label] .section-heading::before,
-  .section-shell[data-shell-label] .section__intro::before,
-  .vault-shell[data-shell-label] .section__intro::before,
-  .insight-shell[data-shell-label] .section__intro::before,
-  .contact-shell[data-shell-label] .section__intro::before,
-  .hero__shell[data-shell-label]::before {
-    font-size: 0.58rem;
-    letter-spacing: 0.12em;
   }
 
   .section {

@@ -599,10 +599,6 @@ const bindSectionSpy = () => {
 
       if (visible) {
         setCurrentLink(visible.target);
-        if (!metricsAnimated && visible.target === metricsSection) {
-          animateMetricBars();
-          metricsAnimated = true;
-        }
       }
     },
     {
@@ -638,10 +634,21 @@ const bindSectionSpy = () => {
   syncContactAtPageEnd();
 
   if (metricsSection) {
-    const rect = metricsSection.getBoundingClientRect();
-    if (rect.top < window.innerHeight && rect.bottom > 0) {
-      animateMetricBars();
-    }
+    const metricObserver = new IntersectionObserver(
+      (entries, observerRef) => {
+        const entry = entries.find((item) => item.isIntersecting);
+        if (!entry || metricsAnimated) return;
+        animateMetricBars();
+        metricsAnimated = true;
+        observerRef.disconnect();
+      },
+      {
+        rootMargin: "-10% 0px -20% 0px",
+        threshold: 0.2,
+      },
+    );
+
+    metricObserver.observe(metricsSection);
   }
 };
 
