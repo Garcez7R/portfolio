@@ -489,11 +489,8 @@ main {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 26% 36% at 19% 44%, rgba(6, 9, 13, 0.7) 0 58%, transparent 62%),
-    radial-gradient(ellipse 34% 48% at 19% 44%, rgba(79, 215, 255, 0.2) 0 2%, rgba(79, 215, 255, 0.1) 2% 60%, transparent 64%),
-    radial-gradient(ellipse 18% 24% at 19% 44%, rgba(244, 247, 251, 0.08), transparent 68%),
-    radial-gradient(ellipse 40% 56% at 18% 42%, rgba(79, 215, 255, 0.1), transparent 60%),
-    radial-gradient(ellipse 28% 40% at 22% 44%, rgba(255, 255, 255, 0.06), transparent 66%),
+    radial-gradient(ellipse 34% 48% at 18% 42%, rgba(79, 215, 255, 0.08), transparent 62%),
+    radial-gradient(ellipse 24% 36% at 22% 44%, rgba(255, 255, 255, 0.045), transparent 68%),
     linear-gradient(180deg, rgba(63, 185, 80, 0.04), transparent 20%),
     linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.02), transparent),
     radial-gradient(circle at top right, var(--glow), transparent 26%);
