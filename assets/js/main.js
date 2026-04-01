@@ -464,6 +464,13 @@ const animateMetricBars = () => {
   });
 };
 
+const resetMetricBars = () => {
+  document.querySelectorAll(".metric-bar span").forEach((bar) => {
+    bar.style.transitionDelay = "0ms";
+    bar.style.width = "0%";
+  });
+};
+
 const getContactGlyph = (label) => {
   const normalized = label.trim().toLowerCase();
   const map = {
@@ -590,8 +597,6 @@ const bindSectionSpy = () => {
 
   const contactSection = document.getElementById("contact");
   const metricsSection = document.getElementById("metrics");
-  let metricsAnimated = false;
-
   const observer = new IntersectionObserver(
     (entries) => {
       const visible = entries
@@ -636,12 +641,18 @@ const bindSectionSpy = () => {
 
   if (metricsSection) {
     const metricObserver = new IntersectionObserver(
-      (entries, observerRef) => {
-        const entry = entries.find((item) => item.isIntersecting);
-        if (!entry || metricsAnimated) return;
-        animateMetricBars();
-        metricsAnimated = true;
-        observerRef.disconnect();
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            resetMetricBars();
+            requestAnimationFrame(() => {
+              animateMetricBars();
+            });
+            return;
+          }
+
+          resetMetricBars();
+        });
       },
       {
         rootMargin: "-10% 0px -20% 0px",
