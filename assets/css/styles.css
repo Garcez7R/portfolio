@@ -489,8 +489,10 @@ main {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 34% 48% at 18% 42%, rgba(79, 215, 255, 0.08), transparent 62%),
-    radial-gradient(ellipse 24% 36% at 22% 44%, rgba(255, 255, 255, 0.045), transparent 68%),
+    radial-gradient(ellipse 29% 40% at 18% 42%, transparent 0 60%, rgba(79, 215, 255, 0.22) 61%, transparent 63%),
+    radial-gradient(ellipse 23% 32% at 18% 42%, transparent 0 68%, rgba(244, 247, 251, 0.14) 69%, transparent 71%),
+    radial-gradient(ellipse 34% 48% at 18% 42%, rgba(79, 215, 255, 0.07), transparent 62%),
+    radial-gradient(ellipse 24% 36% at 22% 44%, rgba(255, 255, 255, 0.04), transparent 68%),
     linear-gradient(180deg, rgba(63, 185, 80, 0.04), transparent 20%),
     linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.02), transparent),
     radial-gradient(circle at top right, var(--glow), transparent 26%);
@@ -2376,27 +2378,60 @@ h2 {
   }
 
   .topnav {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 0.42rem;
     margin-top: 1rem;
-    padding-left: 0.25rem;
+    padding: 1.1rem 0 0 0.7rem;
     border-left: 1px solid rgba(79, 215, 255, 0.08);
+  }
+
+  .topnav::before {
+    content: "NAV // ACCESS";
+    position: absolute;
+    top: 0;
+    left: 0.7rem;
+    color: rgba(201, 210, 221, 0.48);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .topnav::after {
+    content: "";
+    position: absolute;
+    top: 1.45rem;
+    left: 0;
+    width: 0.5rem;
+    height: calc(100% - 1.7rem);
+    border-radius: 999px;
+    background: linear-gradient(180deg, rgba(79, 215, 255, 0.24), rgba(63, 185, 80, 0.18), rgba(212, 175, 55, 0.1), transparent 88%);
+    opacity: 0.9;
   }
 
   .topnav a {
     display: inline-flex;
     align-items: center;
     gap: 0.7rem;
-    padding: 0.78rem 0.88rem;
-    border: 1px solid transparent;
-    border-radius: 16px;
-    background: rgba(255, 255, 255, 0.02);
+    min-height: 3rem;
+    padding: 0.82rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: 18px;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0.012)),
+      rgba(255, 255, 255, 0.02);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.03),
+      0 10px 20px rgba(0, 0, 0, 0.14);
   }
 
   .topnav a:hover {
     border-color: rgba(63, 185, 80, 0.14);
-    background: linear-gradient(90deg, rgba(63, 185, 80, 0.08), rgba(255, 255, 255, 0.035));
+    background:
+      linear-gradient(90deg, rgba(63, 185, 80, 0.08), rgba(255, 255, 255, 0.035)),
+      rgba(255, 255, 255, 0.02);
   }
 
   .topnav a.is-current {
@@ -2406,7 +2441,8 @@ h2 {
       rgba(255, 255, 255, 0.02);
     box-shadow:
       inset 3px 0 0 rgba(79, 215, 255, 0.3),
-      0 0 0 1px rgba(79, 215, 255, 0.04);
+      0 0 0 1px rgba(79, 215, 255, 0.04),
+      0 14px 28px rgba(0, 0, 0, 0.18);
   }
 
   .lang-switch {
