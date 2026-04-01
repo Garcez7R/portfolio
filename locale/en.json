@@ -10,6 +10,16 @@
     "projects": "Projects",
     "contact": "Contact"
   },
+  "sidebar": {
+    "cv": "Open CV",
+    "statusTitle": "Status",
+    "focusLabel": "Focus",
+    "focusValue": "Cloud Security // Blue Team // IAM",
+    "locationLabel": "Location",
+    "locationValue": "Brazil // Porto Alegre",
+    "availabilityLabel": "Availability",
+    "availabilityValue": "Remote priority // Open to hybrid"
+  },
   "hero": {
     "eyebrow": "Cloud | Security | Infrastructure",
     "name": "Rafael Garcez",

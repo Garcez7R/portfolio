@@ -28,7 +28,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./assets/css/styles.css?v=20260331-projects-match-pattern" />
+    <link rel="stylesheet" href="./assets/css/styles.css?v=20260331-sidebar-functional-hero-ellipses" />
   </head>
   <body>
     <div class="telemetry-band" aria-hidden="true">
@@ -58,23 +58,29 @@
         <a href="#projects" data-i18n="nav.projects"></a>
         <a href="#contact" data-i18n="nav.contact"></a>
       </nav>
-      <div class="sidebar-fill" aria-hidden="true">
-        <div class="sidebar-fill__panel sidebar-fill__panel--tags">
-          <span>SOC</span>
-          <span>IAM</span>
-          <span>OPS</span>
-          <span>SEC</span>
+      <div class="sidebar-fill" aria-label="Secondary portfolio controls">
+        <div class="sidebar-fill__panel sidebar-fill__panel--system">
+          <span class="sidebar-fill__caption">SYSTEM</span>
+          <a class="sidebar-fill__cv" id="sidebar-cv-link" href="./assets/docs/cv.pdf" target="_blank" rel="noreferrer">
+            <span>CV</span>
+            <strong data-i18n="sidebar.cv"></strong>
+          </a>
         </div>
-        <div class="sidebar-fill__panel sidebar-fill__panel--signal">
-          <div class="sidebar-fill__trace">
-            <i></i>
-            <i></i>
-            <i></i>
-            <i></i>
-          </div>
-          <div class="sidebar-fill__mini">
-            <span>LIVE</span>
-            <strong>SYNC</strong>
+        <div class="sidebar-fill__panel sidebar-fill__panel--status">
+          <span class="sidebar-fill__caption" data-i18n="sidebar.statusTitle"></span>
+          <div class="sidebar-fill__rows">
+            <div class="sidebar-fill__row">
+              <span data-i18n="sidebar.focusLabel"></span>
+              <strong data-i18n="sidebar.focusValue"></strong>
+            </div>
+            <div class="sidebar-fill__row">
+              <span data-i18n="sidebar.locationLabel"></span>
+              <strong data-i18n="sidebar.locationValue"></strong>
+            </div>
+            <div class="sidebar-fill__row">
+              <span data-i18n="sidebar.availabilityLabel"></span>
+              <strong data-i18n="sidebar.availabilityValue"></strong>
+            </div>
           </div>
         </div>
       </div>

@@ -36,6 +36,7 @@ const ui = {
   skillsMetrics: document.getElementById("skills-metrics"),
   contactGrid: document.getElementById("contact-grid"),
   heroCvLink: document.getElementById("hero-cv-link"),
+  sidebarCvLink: document.getElementById("sidebar-cv-link"),
   langButtons: document.querySelectorAll("[data-lang-btn]"),
   navLinks: document.querySelectorAll(".topnav a"),
 };
@@ -520,6 +521,10 @@ const syncCvLinks = () => {
 
   if (ui.heroCvLink) {
     ui.heroCvLink.href = cvHref;
+  }
+
+  if (ui.sidebarCvLink) {
+    ui.sidebarCvLink.href = cvHref;
   }
 };
 
