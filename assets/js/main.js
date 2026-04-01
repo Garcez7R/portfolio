@@ -446,12 +446,21 @@ const createMetricRows = (entriesObject) => {
         return `
         <div class="metric-row metric-row--${slug}">
           <div class="metric-label"><span>${label}</span><span>${value}</span></div>
-          <div class="metric-bar"><span style="width: ${(value / max) * 100}%"></span></div>
+          <div class="metric-bar"><span data-width="${(value / max) * 100}%"></span></div>
         </div>
       `;
       },
     )
     .join("");
+};
+
+const animateMetricBars = () => {
+  document.querySelectorAll(".metric-bar span").forEach((bar) => {
+    const targetWidth = bar.dataset.width || "0%";
+    requestAnimationFrame(() => {
+      bar.style.width = targetWidth;
+    });
+  });
 };
 
 const getContactGlyph = (label) => {
@@ -579,6 +588,8 @@ const bindSectionSpy = () => {
   };
 
   const contactSection = document.getElementById("contact");
+  const metricsSection = document.getElementById("metrics");
+  let metricsAnimated = false;
 
   const observer = new IntersectionObserver(
     (entries) => {
@@ -588,6 +599,10 @@ const bindSectionSpy = () => {
 
       if (visible) {
         setCurrentLink(visible.target);
+        if (!metricsAnimated && visible.target === metricsSection) {
+          animateMetricBars();
+          metricsAnimated = true;
+        }
       }
     },
     {
@@ -621,6 +636,13 @@ const bindSectionSpy = () => {
   window.addEventListener("scroll", syncContactAtPageEnd, { passive: true });
   window.addEventListener("resize", syncContactAtPageEnd);
   syncContactAtPageEnd();
+
+  if (metricsSection) {
+    const rect = metricsSection.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      animateMetricBars();
+    }
+  }
 };
 
 const initialize = async () => {

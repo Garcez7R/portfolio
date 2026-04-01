@@ -399,27 +399,6 @@ main {
   position: relative;
 }
 
-.section-shell[data-shell-label] .section-heading::before,
-.section-shell[data-shell-label] .section__intro::before,
-.vault-shell[data-shell-label] .section__intro::before,
-.insight-shell[data-shell-label] .section__intro::before,
-.contact-shell[data-shell-label] .section__intro::before {
-  content: attr(data-shell-label);
-  display: inline-flex;
-  align-items: center;
-  width: fit-content;
-  margin-bottom: 0.9rem;
-  padding: 0.28rem 0.58rem;
-  border: 1px solid rgba(79, 215, 255, 0.14);
-  border-radius: 999px;
-  background: linear-gradient(180deg, rgba(79, 215, 255, 0.08), rgba(255, 255, 255, 0.015));
-  color: rgba(201, 210, 221, 0.74);
-  font-family: "JetBrains Mono", monospace;
-  font-size: 0.62rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
 .section-shell::before,
 .vault-shell::before,
 .insight-shell::before,
@@ -494,25 +473,6 @@ main {
   background: linear-gradient(90deg, rgba(63, 185, 80, 0.42), rgba(79, 215, 255, 0.28), rgba(212, 175, 55, 0.2), transparent 78%);
   pointer-events: none;
   opacity: 0.7;
-}
-
-.hero__shell[data-shell-label]::before {
-  content: attr(data-shell-label);
-  position: absolute;
-  top: 0.92rem;
-  left: 1.35rem;
-  z-index: 2;
-  display: inline-flex;
-  align-items: center;
-  padding: 0.28rem 0.58rem;
-  border: 1px solid rgba(79, 215, 255, 0.14);
-  border-radius: 999px;
-  background: linear-gradient(180deg, rgba(79, 215, 255, 0.08), rgba(255, 255, 255, 0.015));
-  color: rgba(201, 210, 221, 0.74);
-  font-family: "JetBrains Mono", monospace;
-  font-size: 0.62rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
 }
 
 .hero__shell::before {
@@ -1057,7 +1017,7 @@ h2 {
 }
 
 .section--vault .section__intro .eyebrow::before {
-  display: none;
+  display: block;
 }
 
 .vault-shell__head,
@@ -1263,6 +1223,11 @@ h2 {
   border-radius: 24px;
   padding: 1.35rem;
   overflow: visible;
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease,
+    background 0.22s ease,
+    box-shadow 0.22s ease;
 }
 
 .skill-card::before,
@@ -1291,6 +1256,19 @@ h2 {
 .badge-card h3,
 .core-badge-card__body h3 {
   line-height: 1.18;
+}
+
+.skill-card:hover,
+.contact-card:hover,
+.metric-card:hover,
+.vault-item:hover,
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(79, 215, 255, 0.18);
+  background: var(--card-surface-hover);
+  box-shadow:
+    0 16px 30px rgba(0, 0, 0, 0.24),
+    0 0 0 1px rgba(79, 215, 255, 0.04);
 }
 
 .skill-card {
@@ -1641,7 +1619,7 @@ h2 {
 }
 
 .project-card:hover {
-  transform: scale(1.02);
+  transform: translateY(-4px) scale(1.01);
   border-color: rgba(212, 175, 55, 0.22);
   background: var(--card-surface-hover);
 }
@@ -1991,12 +1969,8 @@ h2 {
 }
 
 .vault-item:hover {
-  transform: translateY(-4px) rotate(-0.25deg);
+  transform: translateY(-4px) rotate(-0.18deg);
   border-color: rgba(212, 175, 55, 0.22);
-  background: var(--card-surface-hover);
-  box-shadow:
-    0 16px 30px rgba(0, 0, 0, 0.24),
-    0 0 0 1px rgba(63, 185, 80, 0.04);
 }
 
 .vault-item:hover .vault-badge-thumb--small img {
@@ -2050,6 +2024,8 @@ h2 {
   height: 100%;
   border-radius: inherit;
   background: linear-gradient(90deg, rgba(212, 175, 55, 0.9), rgba(79, 215, 255, 0.72), rgba(63, 185, 80, 0.7));
+  width: 0;
+  transition: width 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .metric-row--security .metric-label {
