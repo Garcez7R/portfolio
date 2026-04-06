@@ -1918,6 +1918,8 @@ h2 {
 }
 
 .vault-featured-card__category {
+  display: inline-block;
+  padding-right: 0.18rem;
   color: var(--gold);
   font-family: "JetBrains Mono", monospace;
   font-size: 0.72rem;
@@ -2032,6 +2034,8 @@ h2 {
 }
 
 .vault-item__category {
+  display: inline-block;
+  padding-right: 0.18rem;
   color: var(--muted);
   font-family: "JetBrains Mono", monospace;
   font-size: 0.68rem;
