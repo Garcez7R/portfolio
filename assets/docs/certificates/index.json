@@ -4,5 +4,89 @@
     "issuer": "Cisco NetAcad",
     "category": "Security",
     "file": "Cisco NetAcad - CyberOps Associate.pdf"
+  },
+  {
+    "title": "Cyber Threat Management",
+    "issuer": "Cisco NetAcad",
+    "category": "Security",
+    "file": "Cisco NetAcad - Cyber Threat Management.pdf"
+  },
+  {
+    "title": "Cyber Threat Management (Alt)",
+    "issuer": "Cisco NetAcad",
+    "category": "Security",
+    "file": "Cisco NetAcad - Cyber Threat Management (Alt).pdf"
+  },
+  {
+    "title": "Endpoint Security",
+    "issuer": "Cisco NetAcad",
+    "category": "Security",
+    "file": "Cisco NetAcad - Endpoint Security.pdf"
+  },
+  {
+    "title": "Ethical Hacker",
+    "issuer": "Cisco NetAcad",
+    "category": "Security",
+    "file": "Cisco NetAcad - Ethical Hacker.pdf"
+  },
+  {
+    "title": "Introduction to Cybersecurity",
+    "issuer": "Cisco NetAcad",
+    "category": "Security",
+    "file": "Cisco NetAcad - Introduction to Cybersecurity.pdf"
+  },
+  {
+    "title": "Introduction to Cybersecurity (Global)",
+    "issuer": "Cisco NetAcad",
+    "category": "Security",
+    "file": "Cisco NetAcad - Introduction to Cybersecurity (Global).pdf"
+  },
+  {
+    "title": "Junior Cybersecurity Analyst Career Path",
+    "issuer": "Cisco NetAcad",
+    "category": "Security",
+    "file": "Cisco NetAcad - Junior Cybersecurity Analyst Career Path.pdf"
+  },
+  {
+    "title": "Network Defense",
+    "issuer": "Cisco NetAcad",
+    "category": "Security",
+    "file": "Cisco NetAcad - Network Defense.pdf"
+  },
+  {
+    "title": "Networking Basics",
+    "issuer": "Cisco NetAcad",
+    "category": "Networking",
+    "file": "Cisco NetAcad - Networking Basics.pdf"
+  },
+  {
+    "title": "Networking Devices and Initial Configuration",
+    "issuer": "Cisco NetAcad",
+    "category": "Networking",
+    "file": "Cisco NetAcad - Networking Devices and Initial Configuration.pdf"
+  },
+  {
+    "title": "Network Technician Career Path",
+    "issuer": "Cisco NetAcad",
+    "category": "Networking",
+    "file": "Cisco NetAcad - Network Technician Career Path.pdf"
+  },
+  {
+    "title": "Certified Associate in Cybersecurity",
+    "issuer": "Fortinet",
+    "category": "Security",
+    "file": "Fortinet - Certified Associate in Cybersecurity.pdf"
+  },
+  {
+    "title": "Introduction to Critical Infrastructure Protection (ICIP)",
+    "issuer": "OPSWAT",
+    "category": "Security",
+    "file": "OPSWAT - Introduction to Critical Infrastructure Protection (ICIP).png"
+  },
+  {
+    "title": "Certified Network Security Practitioner (CNSP)",
+    "issuer": "The SecOps Group",
+    "category": "Security",
+    "file": "The SecOps Group - Certified Network Security Practitioner (CNSP).pdf"
   }
 ]
