@@ -64,13 +64,6 @@ const buildCertificateUrl = (filePath) => {
   return encodeURI(`./assets/docs/certificates/${filePath}`);
 };
 
-const createIssuerMark = (issuer) =>
-  issuer
-    .split(/\s+/)
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((word) => word[0]?.toUpperCase() || "")
-    .join("");
 
 const getCategoryPriority = (category) => {
   const index = CATEGORY_ORDER.indexOf(category);
@@ -377,24 +370,11 @@ const renderVault = () => {
   const formatVaultMeta = (record) => {
     const issuer = record.issuer || "";
     const category = record.category;
-    const logo = record.logoUrl || record.logo || "";
-    const issuerMark = issuer ? createIssuerMark(issuer) : "";
 
-    const issuerBadge = issuer
-      ? `
-        <span class="vault-issuer">
-          ${
-            logo
-              ? `<img src="${logo}" alt="${issuer} logo" loading="lazy" />`
-              : `<span class="vault-issuer__mark" aria-hidden="true">${issuerMark}</span>`
-          }
-          <span class="vault-issuer__name">${issuer}</span>
-        </span>
-      `
-      : "";
-
-    const separator = issuer ? `<span class="vault-meta-sep">·</span>` : "";
-    return `${issuerBadge}${separator}<span class="vault-category-tag">${category}</span>`;
+    if (issuer) {
+      return `${issuer} · ${category}`;
+    }
+    return category;
   };
 
   const groupedEntries = filtered.reduce((acc, badge) => {
