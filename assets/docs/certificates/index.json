@@ -42,6 +42,60 @@
     "file": "Cisco NetAcad - Introduction to Cybersecurity (Global).pdf"
   },
   {
+    "title": "Google Cybersecurity Professional Certificate",
+    "issuer": "Google Coursera",
+    "category": "Security",
+    "file": "Google Coursera - Google Cybersecurity Professional Certificate.pdf"
+  },
+  {
+    "title": "Foundations of Cybersecurity",
+    "issuer": "Google Coursera",
+    "category": "Security",
+    "file": "Google Coursera - Foundations of Cybersecurity.pdf"
+  },
+  {
+    "title": "Play It Safe Manage Security Risks",
+    "issuer": "Google Coursera",
+    "category": "Security",
+    "file": "Google Coursera - Play It Safe Manage Security Risks.pdf"
+  },
+  {
+    "title": "Connect and Protect Networks and Network Security",
+    "issuer": "Google Coursera",
+    "category": "Security",
+    "file": "Google Coursera - Connect and Protect Networks and Network Security.pdf"
+  },
+  {
+    "title": "Tools of the Trade Linux and SQL",
+    "issuer": "Google Coursera",
+    "category": "Security",
+    "file": "Google Coursera - Tools of the Trade Linux and SQL.pdf"
+  },
+  {
+    "title": "Assets, Threats and Vulnerabilities",
+    "issuer": "Google Coursera",
+    "category": "Security",
+    "file": "Google Coursera - Assets, Threats and Vulnerabilities.pdf"
+  },
+  {
+    "title": "Sound the Alarm Detection and Response",
+    "issuer": "Google Coursera",
+    "category": "Security",
+    "file": "Google Coursera - Sound the Alarm Detection and Response.pdf"
+  },
+  {
+    "title": "Automate Cybersecurity Tasks with Python",
+    "issuer": "Google Coursera",
+    "category": "Security",
+    "file": "Google Coursera - Automate Cybersecurity Tasks with Python.pdf"
+  },
+  {
+    "title": "Put It to Work Prepare for Cybersecurity Jobs",
+    "issuer": "Google Coursera",
+    "category": "Security",
+    "file": "Google Coursera - Put It to Work Prepare for Cybersecurity Jobs.pdf"
+  },
+  {
     "title": "Junior Cybersecurity Analyst Career Path",
     "issuer": "Cisco NetAcad",
     "category": "Security",
@@ -88,6 +142,12 @@
     "issuer": "Fortinet",
     "category": "Security",
     "file": "Fortinet - FortiGate 7.6 Operator.pdf"
+  },
+  {
+    "title": "AI Prompting Essentials",
+    "issuer": "Management and Strategy Institute",
+    "category": "Other",
+    "file": "Management and Strategy Institute - AI Prompting Essentials.pdf"
   },
   {
     "title": "ISO IEC 27001 2022 Lead Auditor",
