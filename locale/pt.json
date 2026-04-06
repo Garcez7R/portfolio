@@ -150,7 +150,7 @@
   "vault": {
     "eyebrow": "Vault de Certificados",
     "title": "Certificados",
-    "description": "Arquivo técnico de certificados e comprovações, preparado para concentrar os PDFs finais desta trilha profissional.",
+    "description": "Arquivo técnico com PDFs reais dos certificados, organizado por entidade emissora e área.",
     "morePrompt": "",
     "searchLabel": "Buscar certificado",
     "searchPlaceholder": "Buscar por nome ou categoria",

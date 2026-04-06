@@ -150,7 +150,7 @@
   "vault": {
     "eyebrow": "Certificate Vault",
     "title": "Certificates",
-    "description": "Technical archive prepared to host the final certificate PDFs and supporting validation documents.",
+    "description": "Technical archive with real certificate PDFs, organized by issuer and domain.",
     "morePrompt": "",
     "searchLabel": "Search certificate",
     "searchPlaceholder": "Search by name or category",
