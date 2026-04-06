@@ -15,6 +15,7 @@ let selectedBadgeFilter = "All";
 let badgesExpanded = false;
 let vaultExpanded = false;
 let vaultSearchTerm = "";
+let activeCertUrl = "";
 
 const ui = {
   splash: document.getElementById("splash"),
@@ -39,6 +40,11 @@ const ui = {
   contactGrid: document.getElementById("contact-grid"),
   heroCvLink: document.getElementById("hero-cv-link"),
   sidebarCvLink: document.getElementById("sidebar-cv-link"),
+  certPreview: document.getElementById("cert-preview"),
+  certPreviewTitle: document.getElementById("cert-preview-title"),
+  certPreviewFrame: document.getElementById("cert-preview-frame"),
+  certPreviewOpen: document.getElementById("cert-preview-open"),
+  certPreviewCloseButtons: document.querySelectorAll("[data-preview-close]"),
   langButtons: document.querySelectorAll("[data-lang-btn]"),
   navLinks: document.querySelectorAll(".topnav a"),
 };
@@ -63,6 +69,14 @@ const buildCertificateUrl = (filePath) => {
   if (/^https?:\/\//i.test(filePath)) return filePath;
   return encodeURI(`./assets/docs/certificates/${filePath}`);
 };
+
+const createIssuerMark = (issuer) =>
+  issuer
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((word) => word[0]?.toUpperCase() || "")
+    .join("");
 
 const getCategoryPriority = (category) => {
   const index = CATEGORY_ORDER.indexOf(category);
@@ -213,6 +227,10 @@ const applyI18n = () => {
   document.querySelector('meta[name="twitter:title"]').setAttribute("content", currentLocale.seo.title);
   document.querySelector('meta[name="twitter:description"]').setAttribute("content", currentLocale.seo.description);
   ui.vaultSearch.setAttribute("placeholder", currentLocale.vault.searchPlaceholder);
+
+  if (ui.certPreviewOpen) {
+    ui.certPreviewOpen.textContent = currentLocale.shared.openPdf;
+  }
 };
 
 const renderSkills = () => {
@@ -367,10 +385,26 @@ const renderVault = () => {
     .slice(0, 6);
 
   const formatVaultMeta = (record) => {
-    if (record.issuer) {
-      return `${record.issuer} · ${record.category}`;
-    }
-    return record.category;
+    const issuer = record.issuer || "";
+    const category = record.category;
+    const logo = record.logoUrl || record.logo || "";
+    const issuerMark = issuer ? createIssuerMark(issuer) : "";
+
+    const issuerBadge = issuer
+      ? `
+        <span class="vault-issuer">
+          ${
+            logo
+              ? `<img src="${logo}" alt="${issuer} logo" loading="lazy" />`
+              : `<span class="vault-issuer__mark" aria-hidden="true">${issuerMark}</span>`
+          }
+          <span class="vault-issuer__name">${issuer}</span>
+        </span>
+      `
+      : "";
+
+    const separator = issuer ? `<span class="vault-meta-sep">·</span>` : "";
+    return `${issuerBadge}${separator}<span class="vault-category-tag">${category}</span>`;
   };
 
   const groupedEntries = filtered.reduce((acc, badge) => {
@@ -388,7 +422,12 @@ const renderVault = () => {
           <div class="vault-featured-card__body">
             <span class="vault-featured-card__category">${formatVaultMeta(badge)}</span>
             <strong>${badge.name}</strong>
-            <a href="${badge.certificateUrl}" target="_blank" rel="noreferrer">${currentLocale.shared.verify}</a>
+            <div class="vault-actions">
+              <button class="vault-action" type="button" data-cert-preview data-cert-url="${badge.certificateUrl}" data-cert-title="${badge.name}">
+                ${currentLocale.shared.preview}
+              </button>
+              <a href="${badge.certificateUrl}" target="_blank" rel="noreferrer">${currentLocale.shared.verify}</a>
+            </div>
           </div>
         </article>
       `,
@@ -430,7 +469,12 @@ const renderVault = () => {
                       <span class="vault-item__title">${badge.name}</span>
                       <span class="vault-item__category">${formatVaultMeta(badge)}</span>
                     </div>
-                    <a href="${badge.certificateUrl}" target="_blank" rel="noreferrer">${currentLocale.shared.verify}</a>
+                    <div class="vault-actions">
+                      <button class="vault-action" type="button" data-cert-preview data-cert-url="${badge.certificateUrl}" data-cert-title="${badge.name}">
+                        ${currentLocale.shared.preview}
+                      </button>
+                      <a href="${badge.certificateUrl}" target="_blank" rel="noreferrer">${currentLocale.shared.verify}</a>
+                    </div>
                   </article>
                 `,
               )
@@ -631,6 +675,43 @@ const bindEvents = () => {
     vaultSearchTerm = event.target.value.trim().toLowerCase();
     renderVault();
   });
+
+  document.addEventListener("click", (event) => {
+    const previewButton = event.target.closest("[data-cert-preview]");
+    if (previewButton) {
+      event.preventDefault();
+      const url = previewButton.dataset.certUrl;
+      const title = previewButton.dataset.certTitle;
+      openCertPreview(url, title);
+      return;
+    }
+
+    if (event.target.closest("[data-preview-close]")) {
+      closeCertPreview();
+    }
+  });
+};
+
+const openCertPreview = (url, title) => {
+  if (!ui.certPreview || !ui.certPreviewFrame || !url) return;
+  activeCertUrl = url;
+  ui.certPreviewFrame.src = url;
+  if (ui.certPreviewTitle) {
+    ui.certPreviewTitle.textContent = title || "Certificate";
+  }
+  if (ui.certPreviewOpen) {
+    ui.certPreviewOpen.href = url;
+  }
+  ui.certPreview.removeAttribute("aria-hidden");
+  ui.certPreview.classList.add("is-open");
+};
+
+const closeCertPreview = () => {
+  if (!ui.certPreview || !ui.certPreviewFrame) return;
+  ui.certPreviewFrame.src = "";
+  activeCertUrl = "";
+  ui.certPreview.setAttribute("aria-hidden", "true");
+  ui.certPreview.classList.remove("is-open");
 };
 
 const syncExpandablePanels = (activeSection) => {

@@ -237,6 +237,9 @@
   },
   "shared": {
     "verify": "Verify",
+    "preview": "Preview",
+    "openPdf": "Open PDF",
+    "close": "Close",
     "demo": "Demo"
   },
   "footer": {
