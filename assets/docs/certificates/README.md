@@ -9,3 +9,5 @@ Cisco - CyberOps Associate.pdf
 Fortinet - Certified Associate Cybersecurity.pdf
 
 Use nomes claros e consistentes para facilitar a busca no site.
+
+Depois de adicionar um PDF, atualize o arquivo index.json nesta mesma pasta.

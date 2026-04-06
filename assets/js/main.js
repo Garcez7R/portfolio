@@ -4,11 +4,13 @@ const STORAGE_KEYS = {
 };
 
 const DEFAULT_BADGE_IMAGE = "./assets/img/badges/placeholder-badge.svg";
+const CERTIFICATE_INDEX = "./assets/docs/certificates/index.json";
 const CATEGORY_ORDER = ["Cloud", "Security", "Infrastructure", "DevOps", "Networking", "Linux", "Other"];
 
 let currentLocale = {};
 let currentLanguage = "en";
 let badgeRecords = [];
+let certificateRecords = [];
 let selectedBadgeFilter = "All";
 let badgesExpanded = false;
 let vaultExpanded = false;
@@ -54,6 +56,12 @@ const normalizeCategory = (value) => {
   };
 
   return map[value.trim().toLowerCase()] || value.trim();
+};
+
+const buildCertificateUrl = (filePath) => {
+  if (!filePath) return "";
+  if (/^https?:\/\//i.test(filePath)) return filePath;
+  return encodeURI(`./assets/docs/certificates/${filePath}`);
 };
 
 const getCategoryPriority = (category) => {
@@ -131,6 +139,37 @@ const loadBadges = async () => {
 
   const markdown = await response.text();
   return parseBadgeMarkdown(markdown);
+};
+
+const loadCertificates = async () => {
+  const response = await fetch(`${CERTIFICATE_INDEX}?v=20260406`);
+
+  if (!response.ok) {
+    return [];
+  }
+
+  const data = await response.json();
+  const items = Array.isArray(data) ? data : data.items || [];
+
+  return items
+    .map((item) => {
+      const name = item.title || item.name;
+      const issuer = item.issuer || "";
+      const category = normalizeCategory(item.category || "Other");
+      const certificateUrl = buildCertificateUrl(item.file || item.url);
+      const badgeUrl = item.badgeUrl || "";
+
+      if (!name || !certificateUrl) return null;
+
+      return {
+        name,
+        issuer,
+        category,
+        certificateUrl,
+        badgeUrl,
+      };
+    })
+    .filter(Boolean);
 };
 
 const parseBadgeMarkdown = (markdown) => {
@@ -311,13 +350,28 @@ const renderBadges = () => {
 };
 
 const renderVault = () => {
-  const filtered = badgeRecords
-    .filter((badge) => badge.name.toLowerCase().includes(vaultSearchTerm) || badge.category.toLowerCase().includes(vaultSearchTerm))
+  const sourceRecords = certificateRecords.length ? certificateRecords : badgeRecords;
+  const filtered = sourceRecords
+    .filter((badge) => {
+      const term = vaultSearchTerm;
+      return (
+        badge.name.toLowerCase().includes(term) ||
+        badge.category.toLowerCase().includes(term) ||
+        (badge.issuer || "").toLowerCase().includes(term)
+      );
+    })
     .sort((a, b) => a.name.localeCompare(b.name));
 
   const featured = [...filtered]
     .sort((a, b) => scoreBadge(b) - scoreBadge(a))
     .slice(0, 6);
+
+  const formatVaultMeta = (record) => {
+    if (record.issuer) {
+      return `${record.issuer} · ${record.category}`;
+    }
+    return record.category;
+  };
 
   const groupedEntries = filtered.reduce((acc, badge) => {
     const key = badge.category;
@@ -332,7 +386,7 @@ const renderVault = () => {
         <article class="vault-featured-card">
           ${createBadgeVisual(badge, "vault-badge-thumb")}
           <div class="vault-featured-card__body">
-            <span class="vault-featured-card__category">${badge.category}</span>
+            <span class="vault-featured-card__category">${formatVaultMeta(badge)}</span>
             <strong>${badge.name}</strong>
             <a href="${badge.certificateUrl}" target="_blank" rel="noreferrer">${currentLocale.shared.verify}</a>
           </div>
@@ -374,7 +428,7 @@ const renderVault = () => {
                     ${createBadgeVisual(badge, "vault-badge-thumb vault-badge-thumb--small")}
                     <div class="vault-item__meta">
                       <span class="vault-item__title">${badge.name}</span>
-                      <span class="vault-item__category">${badge.category}</span>
+                      <span class="vault-item__category">${formatVaultMeta(badge)}</span>
                     </div>
                     <a href="${badge.certificateUrl}" target="_blank" rel="noreferrer">${currentLocale.shared.verify}</a>
                   </article>
@@ -692,6 +746,7 @@ const initialize = async () => {
     }
     window.scrollTo({ top: 0, left: 0, behavior: "auto" });
     badgeRecords = await loadBadges();
+    certificateRecords = await loadCertificates();
     selectedBadgeFilter = "All";
     vaultSearchTerm = "";
     await setLanguage(detectLanguage());
