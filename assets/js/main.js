@@ -15,7 +15,6 @@ let selectedBadgeFilter = "All";
 let badgesExpanded = false;
 let vaultExpanded = false;
 let vaultSearchTerm = "";
-let activeCertUrl = "";
 
 const ui = {
   splash: document.getElementById("splash"),
@@ -40,11 +39,6 @@ const ui = {
   contactGrid: document.getElementById("contact-grid"),
   heroCvLink: document.getElementById("hero-cv-link"),
   sidebarCvLink: document.getElementById("sidebar-cv-link"),
-  certPreview: document.getElementById("cert-preview"),
-  certPreviewTitle: document.getElementById("cert-preview-title"),
-  certPreviewFrame: document.getElementById("cert-preview-frame"),
-  certPreviewOpen: document.getElementById("cert-preview-open"),
-  certPreviewCloseButtons: document.querySelectorAll("[data-preview-close]"),
   langButtons: document.querySelectorAll("[data-lang-btn]"),
   navLinks: document.querySelectorAll(".topnav a"),
 };
@@ -227,10 +221,6 @@ const applyI18n = () => {
   document.querySelector('meta[name="twitter:title"]').setAttribute("content", currentLocale.seo.title);
   document.querySelector('meta[name="twitter:description"]').setAttribute("content", currentLocale.seo.description);
   ui.vaultSearch.setAttribute("placeholder", currentLocale.vault.searchPlaceholder);
-
-  if (ui.certPreviewOpen) {
-    ui.certPreviewOpen.textContent = currentLocale.shared.openPdf;
-  }
 };
 
 const renderSkills = () => {
@@ -422,12 +412,7 @@ const renderVault = () => {
           <div class="vault-featured-card__body">
             <span class="vault-featured-card__category">${formatVaultMeta(badge)}</span>
             <strong>${badge.name}</strong>
-            <div class="vault-actions">
-              <button class="vault-action" type="button" data-cert-preview data-cert-url="${badge.certificateUrl}" data-cert-title="${badge.name}">
-                ${currentLocale.shared.preview}
-              </button>
-              <a href="${badge.certificateUrl}" target="_blank" rel="noreferrer">${currentLocale.shared.verify}</a>
-            </div>
+            <a href="${badge.certificateUrl}" target="_blank" rel="noreferrer">${currentLocale.shared.verify}</a>
           </div>
         </article>
       `,
@@ -469,12 +454,7 @@ const renderVault = () => {
                       <span class="vault-item__title">${badge.name}</span>
                       <span class="vault-item__category">${formatVaultMeta(badge)}</span>
                     </div>
-                    <div class="vault-actions">
-                      <button class="vault-action" type="button" data-cert-preview data-cert-url="${badge.certificateUrl}" data-cert-title="${badge.name}">
-                        ${currentLocale.shared.preview}
-                      </button>
-                      <a href="${badge.certificateUrl}" target="_blank" rel="noreferrer">${currentLocale.shared.verify}</a>
-                    </div>
+                    <a href="${badge.certificateUrl}" target="_blank" rel="noreferrer">${currentLocale.shared.verify}</a>
                   </article>
                 `,
               )
@@ -675,43 +655,6 @@ const bindEvents = () => {
     vaultSearchTerm = event.target.value.trim().toLowerCase();
     renderVault();
   });
-
-  document.addEventListener("click", (event) => {
-    const previewButton = event.target.closest("[data-cert-preview]");
-    if (previewButton) {
-      event.preventDefault();
-      const url = previewButton.dataset.certUrl;
-      const title = previewButton.dataset.certTitle;
-      openCertPreview(url, title);
-      return;
-    }
-
-    if (event.target.closest("[data-preview-close]")) {
-      closeCertPreview();
-    }
-  });
-};
-
-const openCertPreview = (url, title) => {
-  if (!ui.certPreview || !ui.certPreviewFrame || !url) return;
-  activeCertUrl = url;
-  ui.certPreviewFrame.src = url;
-  if (ui.certPreviewTitle) {
-    ui.certPreviewTitle.textContent = title || "Certificate";
-  }
-  if (ui.certPreviewOpen) {
-    ui.certPreviewOpen.href = url;
-  }
-  ui.certPreview.removeAttribute("aria-hidden");
-  ui.certPreview.classList.add("is-open");
-};
-
-const closeCertPreview = () => {
-  if (!ui.certPreview || !ui.certPreviewFrame) return;
-  ui.certPreviewFrame.src = "";
-  activeCertUrl = "";
-  ui.certPreview.setAttribute("aria-hidden", "true");
-  ui.certPreview.classList.remove("is-open");
 };
 
 const syncExpandablePanels = (activeSection) => {
