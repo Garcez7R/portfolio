@@ -78,10 +78,28 @@
     "file": "Fortinet - Certified Associate in Cybersecurity.pdf"
   },
   {
+    "title": "FortiGate 7.6 Operator",
+    "issuer": "Fortinet",
+    "category": "Security",
+    "file": "Fortinet - FortiGate 7.6 Operator.pdf"
+  },
+  {
+    "title": "ISO IEC 27001 2022 Lead Auditor",
+    "issuer": "Mastermind",
+    "category": "Security",
+    "file": "Mastermind - ISO IEC 27001 2022 Lead Auditor.pdf"
+  },
+  {
     "title": "Introduction to Critical Infrastructure Protection (ICIP)",
     "issuer": "OPSWAT",
     "category": "Security",
     "file": "OPSWAT - Introduction to Critical Infrastructure Protection (ICIP).png"
+  },
+  {
+    "title": "Certified Artificial Intelligence Security & Risk (CAISR)",
+    "issuer": "Red Team Leaders",
+    "category": "Security",
+    "file": "Red Team Leaders - Certified Artificial Intelligence Security & Risk (CAISR).pdf"
   },
   {
     "title": "Certified Network Security Practitioner (CNSP)",
