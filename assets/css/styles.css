@@ -893,6 +893,7 @@ h2 {
   border-radius: 50%;
   border: 1px solid rgba(79, 215, 255, 0.26);
   background:
+    url("./assets/img/earth-wire.svg") center/78% no-repeat,
     radial-gradient(circle at 30% 30%, rgba(255, 180, 84, 0.16), transparent 55%),
     radial-gradient(circle at 70% 70%, rgba(79, 215, 255, 0.18), transparent 55%),
     repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.08) 0 1px, transparent 1px 12px),
