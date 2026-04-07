@@ -1,20 +1,34 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <defs>
-    <linearGradient id="ocean" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0" stop-color="#4fd7ff" stop-opacity="0.35"/>
-      <stop offset="1" stop-color="#ffb454" stop-opacity="0.2"/>
+    <radialGradient id="ocean" cx="35%" cy="28%" r="65%">
+      <stop offset="0" stop-color="#63e1ff" stop-opacity="0.75"/>
+      <stop offset="0.55" stop-color="#1e5c7a" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#0b1622" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="atmosphere" cx="45%" cy="35%" r="60%">
+      <stop offset="0" stop-color="#7ce8ff" stop-opacity="0.5"/>
+      <stop offset="0.6" stop-color="#7ce8ff" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#7ce8ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="land" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#a6f7c2" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#ffd58a" stop-opacity="0.6"/>
     </linearGradient>
+    <clipPath id="planet">
+      <circle cx="256" cy="256" r="230"/>
+    </clipPath>
   </defs>
-  <circle cx="256" cy="256" r="230" fill="url(#ocean)" opacity="0.45"/>
-  <g fill="#cfe9ff" opacity="0.5">
-    <path d="M140 180c28-26 54-36 86-40 14-2 32 4 38 18 6 14-5 26-18 32-22 10-52 10-78 20-18 7-22 24-38 32-14 7-30-2-28-18 2-16 14-32 38-44z"/>
-    <path d="M300 140c24-18 62-20 86-4 20 14 16 36-6 44-18 6-34-6-52-4-16 2-24 14-30 28-6 16-8 34-24 40-18 6-30-12-24-28 8-22 26-48 50-76z"/>
-    <path d="M320 260c26-10 54-4 72 12 16 14 12 32-6 38-22 8-46-8-66 2-18 10-20 30-30 46-10 16-30 20-40 8-12-14-4-34 8-48 14-16 30-28 62-42z"/>
-    <path d="M150 300c22-10 44-6 58 10 10 12 6 26-8 32-16 8-34-4-50 4-16 8-20 24-30 36-10 12-26 14-34 4-8-10-2-26 10-38 14-14 26-32 54-48z"/>
+
+  <circle cx="256" cy="256" r="230" fill="url(#ocean)"/>
+  <g clip-path="url(#planet)">
+    <g fill="url(#land)" opacity="0.82">
+      <path d="M118 190c24-30 58-48 92-50 32-2 52 8 60 22 8 16-2 32-20 38-24 8-48 4-72 12-22 6-30 24-52 34-18 8-36-2-34-20 2-18 10-26 26-36z"/>
+      <path d="M302 140c30-18 70-18 98 4 20 16 18 38-4 46-20 8-42-6-62-2-20 4-30 18-38 34-8 16-10 34-28 40-18 6-32-10-26-26 8-20 24-44 60-96z"/>
+      <path d="M330 256c30-12 62-4 82 14 16 16 12 36-10 42-24 8-50-10-72 2-20 12-22 34-36 50-12 16-32 20-42 6-10-14-2-36 12-50 18-18 36-30 66-44z"/>
+      <path d="M160 310c24-12 48-6 64 10 12 12 8 28-10 34-18 8-38-4-56 6-18 10-22 26-34 38-10 12-28 14-36 2-8-12-2-28 12-40 16-14 30-32 60-50z"/>
+      <path d="M210 118c18-12 42-18 60-12 16 6 16 22 4 30-14 10-30 6-44 12-16 8-22 22-36 30-14 6-28-6-24-18 4-12 16-26 40-42z"/>
+    </g>
+    <circle cx="210" cy="230" r="120" fill="url(#atmosphere)"/>
   </g>
-  <g fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="2">
-    <path d="M72 256c30-80 110-136 198-136 88 0 168 56 198 136-30 80-110 136-198 136-88 0-168-56-198-136z"/>
-    <path d="M256 40c-48 46-76 124-76 216s28 170 76 216"/>
-    <path d="M256 40c48 46 76 124 76 216s-28 170-76 216"/>
-  </g>
+  <circle cx="256" cy="256" r="230" fill="none" stroke="rgba(124,232,255,0.28)" stroke-width="3"/>
 </svg>
