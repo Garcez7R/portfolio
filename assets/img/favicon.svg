@@ -7,6 +7,6 @@
   </defs>
   <rect width="256" height="256" rx="48" fill="#ff5a5f"/>
   <rect x="18" y="18" width="220" height="220" rx="38" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/>
-  <path d="M70 56h74c32 0 56 20 56 50 0 24-16 40-36 46l40 48h-34l-36-44h-30v44h-34V56zm34 28v44h38c18 0 28-10 28-22 0-12-10-22-28-22h-38z" fill="url(#rune)"/>
+  <path d="M110 52v152M110 52h64c28 0 46 16 46 38s-18 38-46 38h-38M110 128l92 76" fill="none" stroke="url(#rune)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M62 214h132" stroke="url(#rune)" stroke-width="6" stroke-linecap="round"/>
 </svg>
