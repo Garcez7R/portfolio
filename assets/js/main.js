@@ -37,6 +37,7 @@ const ui = {
   certMetricsNote: document.getElementById("cert-metrics-note"),
   skillsMetrics: document.getElementById("skills-metrics"),
   contactGrid: document.getElementById("contact-grid"),
+  heroTickerTrack: document.getElementById("hero-ticker-track"),
   heroCvLink: document.getElementById("hero-cv-link"),
   sidebarCvLink: document.getElementById("sidebar-cv-link"),
   langButtons: document.querySelectorAll("[data-lang-btn]"),
@@ -285,6 +286,7 @@ const buildFilters = () => {
       renderBadges();
     });
   });
+  renderHeroTicker();
 };
 
 const updateBadgeToggle = (totalItems) => {
@@ -494,6 +496,16 @@ const renderMetrics = () => {
   ui.certMetrics.innerHTML = createMetricRows(badgeCounts);
   ui.certMetricsNote.textContent = currentLocale.metrics.securityFocusNote.replace("{percent}", String(securityPercent));
   ui.skillsMetrics.innerHTML = createMetricRows(skillCounts);
+};
+
+const renderHeroTicker = () => {
+  if (!ui.heroTickerTrack || !currentLocale.hero?.ticker?.length) return;
+  const tickerItems = currentLocale.hero.ticker;
+  const buildLine = () =>
+    tickerItems
+      .map((item) => `<span>${item}</span>`)
+      .join('<span class="hero__ticker-sep">•</span>');
+  ui.heroTickerTrack.innerHTML = `${buildLine()}<span class="hero__ticker-sep">•</span>${buildLine()}`;
 };
 
 const createMetricRows = (entriesObject) => {
@@ -757,6 +769,7 @@ const initialize = async () => {
     selectedBadgeFilter = "All";
     vaultSearchTerm = "";
     await setLanguage(detectLanguage());
+    renderHeroTicker();
     bindEvents();
     bindSectionSpy();
     maybeHideSplash();
