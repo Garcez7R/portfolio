@@ -2006,11 +2006,24 @@ h2 {
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 16px;
   background: var(--card-surface);
+  position: relative;
   transition:
     transform 0.22s ease,
     border-color 0.22s ease,
     background 0.22s ease,
     box-shadow 0.22s ease;
+}
+
+.vault-item::before {
+  content: "";
+  position: absolute;
+  left: 0.9rem;
+  right: 3.4rem;
+  top: 0.55rem;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255, 180, 84, 0.45), rgba(79, 215, 255, 0.12), transparent 78%);
+  opacity: 0.65;
+  pointer-events: none;
 }
 
 .vault-item::after {
@@ -2151,6 +2164,7 @@ h2 {
   display: block;
   height: 100%;
   border-radius: inherit;
+  position: relative;
   background: linear-gradient(
     90deg,
     rgba(255, 180, 84, 0.95),
@@ -2159,6 +2173,21 @@ h2 {
   );
   width: 0;
   transition: width 2.35s cubic-bezier(0.16, 0.84, 0.24, 1);
+}
+
+.metric-bar span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 6px;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow:
+    0 0 0 3px rgba(79, 215, 255, 0.14),
+    0 0 12px rgba(255, 90, 95, 0.35);
 }
 
 .metric-row--security .metric-label {
@@ -2769,12 +2798,12 @@ h2 {
     flex-wrap: wrap;
     width: min(calc(100% - 1rem), calc(var(--max-width) - 1rem));
     margin-top: 0.7rem;
-    padding: 0.78rem 0.9rem;
+    padding: 0.62rem 0.75rem;
     border-radius: 20px;
   }
 
   .topbar::after {
-    inset: auto 0.9rem 0.75rem 0.9rem;
+    inset: auto 0.75rem 0.55rem 0.75rem;
   }
 
   .brand {
