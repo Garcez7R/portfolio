@@ -1,16 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 512">
   <defs>
     <linearGradient id="ocean" x1="0" x2="1" y1="0" y2="0">
-      <stop offset="0" stop-color="#0b1b2b" stop-opacity="1"/>
-      <stop offset="0.45" stop-color="#123048" stop-opacity="0.95"/>
-      <stop offset="1" stop-color="#0b1b2b" stop-opacity="1"/>
+      <stop offset="0" stop-color="#0a1e3a" stop-opacity="1"/>
+      <stop offset="0.5" stop-color="#0f3a66" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#0a1e3a" stop-opacity="1"/>
     </linearGradient>
     <linearGradient id="land" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0" stop-color="#88f3c2" stop-opacity="0.9"/>
-      <stop offset="1" stop-color="#ffd597" stop-opacity="0.7"/>
+      <stop offset="0" stop-color="#6be39d" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#f2d18a" stop-opacity="0.75"/>
+    </linearGradient>
+    <linearGradient id="ice" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#e8f6ff" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#e8f6ff" stop-opacity="0.2"/>
     </linearGradient>
   </defs>
   <rect width="1024" height="512" fill="url(#ocean)"/>
+  <rect y="0" width="1024" height="42" fill="url(#ice)" opacity="0.45"/>
+  <rect y="470" width="1024" height="42" fill="url(#ice)" opacity="0.35"/>
   <g fill="url(#land)" opacity="0.9">
     <path d="M90 210c40-40 90-60 150-62 46-2 78 10 92 30 14 20-4 40-30 48-34 10-68 6-100 18-30 10-44 34-76 50-26 12-52-4-48-30 4-22 12-34 24-46z"/>
     <path d="M360 150c52-30 120-30 168 6 32 24 28 52-6 66-32 12-70-10-102-4-30 6-48 28-60 50-12 22-16 48-44 56-30 10-52-16-42-40 12-32 40-70 86-134z"/>
