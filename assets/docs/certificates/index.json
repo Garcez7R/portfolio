@@ -172,5 +172,161 @@
     "issuer": "The SecOps Group",
     "category": "Security",
     "file": "The SecOps Group - Certified Network Security Practitioner (CNSP).pdf"
+  },
+  {
+    "title": "Certified Network Security Practitioner (CNSP) (Alt)",
+    "issuer": "The SecOps Group",
+    "category": "Security",
+    "file": "The SecOps Group - Certified Network Security Practitioner (CNSP) (Alt).pdf"
+  },
+  {
+    "title": "CCNA Introduction to Networks",
+    "issuer": "Cisco NetAcad",
+    "category": "Networking",
+    "file": "Cisco NetAcad - CCNA Introduction to Networks.pdf"
+  },
+  {
+    "title": "Data Privacy",
+    "issuer": "Databricks Academy",
+    "category": "Other",
+    "file": "Databricks Academy - Data Privacy.pdf"
+  },
+  {
+    "title": "Fundamentals Accreditation",
+    "issuer": "Databricks Academy",
+    "category": "Other",
+    "file": "Databricks Academy - Fundamentals Accreditation.pdf"
+  },
+  {
+    "title": "Generative AI Fundamentals",
+    "issuer": "Databricks Academy",
+    "category": "Other",
+    "file": "Databricks Academy - Generative AI Fundamentals.pdf"
+  },
+  {
+    "title": "Certified Ransomware Protection Officer (CRPO)",
+    "issuer": "EU Cyber Academy",
+    "category": "Security",
+    "file": "EU Cyber Academy - Certified Ransomware Protection Officer (CRPO).pdf"
+  },
+  {
+    "title": "Certified SME Cyber Security Officer (CSCSO)",
+    "issuer": "EU Cyber Academy",
+    "category": "Security",
+    "file": "EU Cyber Academy - Certified SME Cyber Security Officer (CSCSO).pdf"
+  },
+  {
+    "title": "Identificacao de Riscos Ciberneticos",
+    "issuer": "FGV",
+    "category": "Security",
+    "file": "FGV - Identificacao de Riscos Ciberneticos.pdf"
+  },
+  {
+    "title": "Administrador de Banco de Dados",
+    "issuer": "IFRS",
+    "category": "Other",
+    "file": "IFRS - Administrador de Banco de Dados.pdf"
+  },
+  {
+    "title": "Understanding the OWASP Top 10 Security Threats (SKF100)",
+    "issuer": "Linux Foundation",
+    "category": "Security",
+    "file": "Linux Foundation - Understanding the OWASP Top 10 Security Threats (SKF100).pdf"
+  },
+  {
+    "title": "Assembly Language x86x64",
+    "issuer": "Red Team Leaders",
+    "category": "Security",
+    "file": "Red Team Leaders - Assembly Language x86x64.pdf"
+  },
+  {
+    "title": "Certified Red Team Operations Management (CRTOM)",
+    "issuer": "Red Team Leaders",
+    "category": "Security",
+    "file": "Red Team Leaders - Certified Red Team Operations Management (CRTOM).pdf"
+  },
+  {
+    "title": "Certified Threat Intelligence & Governance Analyst (CTIGA)",
+    "issuer": "Red Team Leaders",
+    "category": "Security",
+    "file": "Red Team Leaders - Certified Threat Intelligence & Governance Analyst (CTIGA).pdf"
+  },
+  {
+    "title": "Cyber Security Architecture v1",
+    "issuer": "Red Team Leaders",
+    "category": "Security",
+    "file": "Red Team Leaders - Cyber Security Architecture v1.pdf"
+  },
+  {
+    "title": "Data Science for Cybersecurity",
+    "issuer": "Red Team Leaders",
+    "category": "Security",
+    "file": "Red Team Leaders - Data Science for Cybersecurity.pdf"
+  },
+  {
+    "title": "Foundations of Log Analysis for Cyber Defense",
+    "issuer": "Red Team Leaders",
+    "category": "Security",
+    "file": "Red Team Leaders - Foundations of Log Analysis for Cyber Defense.pdf"
+  },
+  {
+    "title": "Intelligence and Counterintelligence Introductions",
+    "issuer": "Red Team Leaders",
+    "category": "Security",
+    "file": "Red Team Leaders - Intelligence and Counterintelligence Introductions.pdf"
+  },
+  {
+    "title": "Build Your Identity Security Team",
+    "issuer": "SailPoint Identity University",
+    "category": "Security",
+    "file": "SailPoint Identity University - Build Your Identity Security Team.pdf"
+  },
+  {
+    "title": "Chart a Successful Implementation Journey",
+    "issuer": "SailPoint Identity University",
+    "category": "Security",
+    "file": "SailPoint Identity University - Chart a Successful Implementation Journey.pdf"
+  },
+  {
+    "title": "Discover Identity Security",
+    "issuer": "SailPoint Identity University",
+    "category": "Security",
+    "file": "SailPoint Identity University - Discover Identity Security.pdf"
+  },
+  {
+    "title": "Explore the Evolution of Identity Security",
+    "issuer": "SailPoint Identity University",
+    "category": "Security",
+    "file": "SailPoint Identity University - Explore the Evolution of Identity Security.pdf"
+  },
+  {
+    "title": "Launch Your Identity Security Career",
+    "issuer": "SailPoint Identity University",
+    "category": "Security",
+    "file": "SailPoint Identity University - Launch Your Identity Security Career.pdf"
+  },
+  {
+    "title": "Manage Your Implementation Projects",
+    "issuer": "SailPoint Identity University",
+    "category": "Security",
+    "file": "SailPoint Identity University - Manage Your Implementation Projects.pdf"
+  },
+  {
+    "title": "Plan Your Identity Security Strategy",
+    "issuer": "SailPoint Identity University",
+    "category": "Security",
+    "file": "SailPoint Identity University - Plan Your Identity Security Strategy.pdf"
+  },
+  {
+    "title": "Break Into GRC Mindset Methods Skills",
+    "issuer": "SimplyCyber Academy",
+    "category": "Security",
+    "file": "SimplyCyber Academy - Break Into GRC Mindset Methods Skills.pdf"
+  },
+  {
+    "title": "Airtable Admin",
+    "issuer": "Airtable",
+    "category": "Other",
+    "file": "Certification Airtable Admin - Airtable.pdf"
   }
 ]
