@@ -610,7 +610,7 @@ const maybeHideSplash = () => {
   window.setTimeout(() => {
     ui.splash.classList.add("is-hidden");
     sessionStorage.setItem(STORAGE_KEYS.splashSeen, "true");
-  }, 2100);
+  }, 8400);
 };
 
 const setLanguage = async (language) => {
