@@ -58,6 +58,8 @@ const normalizeCategory = (value) => {
   return map[value.trim().toLowerCase()] || value.trim();
 };
 
+const getCategoryLabel = (category) => currentLocale.categories?.[category] || category;
+
 const buildCertificateUrl = (filePath) => {
   if (!filePath) return "";
   if (/^https?:\/\//i.test(filePath)) return filePath;
@@ -268,7 +270,7 @@ const buildFilters = () => {
     .map(
       (category, index) => `
         <button type="button" data-filter="${category}" class="${category === selectedBadgeFilter || (index === 0 && !selectedBadgeFilter) ? "is-active" : ""}">
-          ${category === "All" ? currentLocale.credentials.filters.all : category}
+          ${category === "All" ? currentLocale.credentials.filters.all : getCategoryLabel(category)}
         </button>
       `,
     )
@@ -321,7 +323,7 @@ const renderBadges = () => {
         <article class="core-badge-card">
           ${createBadgeVisual(badge, "core-badge-card__visual")}
           <div class="core-badge-card__body">
-            <p class="core-badge-card__category">${badge.category}</p>
+            <p class="core-badge-card__category">${getCategoryLabel(badge.category)}</p>
             <h3>${badge.name}</h3>
             <a href="${badge.certificateUrl}" target="_blank" rel="noreferrer">${currentLocale.shared.verify}</a>
           </div>
@@ -337,7 +339,7 @@ const renderBadges = () => {
           ${createBadgeVisual(badge, "badge-card__visual")}
           <div class="badge-card__body">
             <h3>${badge.name}</h3>
-            <p class="badge-card__category">${badge.category}</p>
+            <p class="badge-card__category">${getCategoryLabel(badge.category)}</p>
           </div>
           <div class="badge-meta">
             <a href="${badge.certificateUrl}" target="_blank" rel="noreferrer">${currentLocale.shared.verify}</a>
@@ -372,9 +374,9 @@ const renderVault = () => {
     const category = record.category;
 
     if (issuer) {
-      return `${issuer} · ${category}`;
+      return `${issuer} · ${getCategoryLabel(category)}`;
     }
-    return category;
+    return getCategoryLabel(category);
   };
 
   const groupedEntries = filtered.reduce((acc, badge) => {
@@ -421,7 +423,7 @@ const renderVault = () => {
       return `
         <section class="vault-group">
           <div class="vault-group__header">
-            <h3>${category}</h3>
+            <h3>${getCategoryLabel(category)}</h3>
             <span>${items.length}</span>
           </div>
           <div class="vault-list">
@@ -502,9 +504,10 @@ const createMetricRows = (entriesObject) => {
     .map(
       ([label, value]) => {
         const slug = label.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+        const displayLabel = getCategoryLabel(label);
         return `
         <div class="metric-row metric-row--${slug}">
-          <div class="metric-label"><span>${label}</span><span>${value}</span></div>
+          <div class="metric-label"><span>${displayLabel}</span><span>${value}</span></div>
           <div class="metric-bar"><span data-width="${(value / max) * 100}%"></span></div>
         </div>
       `;

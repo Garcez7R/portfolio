@@ -2194,9 +2194,7 @@ h2 {
   color: var(--silver-strong);
 }
 
-.metric-row--security .metric-bar span {
-  background: inherit;
-}
+/* keep security bar aligned with the global gradient */
 
 .metric-note {
   margin: 1rem 0 0;

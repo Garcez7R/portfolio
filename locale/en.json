@@ -208,6 +208,15 @@
     "skillsChart": "Skills by domain",
     "securityFocusNote": "Current security focus: {percent}% of the certification track."
   },
+  "categories": {
+    "Cloud": "Cloud",
+    "Security": "Security",
+    "Infrastructure": "Infrastructure",
+    "DevOps": "DevOps",
+    "Networking": "Networking",
+    "Linux": "Linux",
+    "Other": "Other"
+  },
   "contact": {
     "eyebrow": "Contact",
     "title": "Let’s connect",

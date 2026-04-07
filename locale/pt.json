@@ -208,6 +208,15 @@
     "skillsChart": "Competências por domínio",
     "securityFocusNote": "Foco atual em segurança: {percent}% da trilha de certificações."
   },
+  "categories": {
+    "Cloud": "Nuvem",
+    "Security": "Segurança",
+    "Infrastructure": "Infraestrutura",
+    "DevOps": "DevOps",
+    "Networking": "Redes",
+    "Linux": "Linux",
+    "Other": "Outros"
+  },
   "contact": {
     "eyebrow": "Contato",
     "title": "Vamos conversar",
