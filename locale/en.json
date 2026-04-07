@@ -22,6 +22,7 @@
   },
   "hero": {
     "eyebrow": "Cloud | Security | Infrastructure",
+    "ticker": "STATUS: ACTIVE · FOCUS: CLOUD SECURITY · MODE: BLUE TEAM · SIGNAL: STABLE",
     "name": "Rafael Garcez",
     "title": "Cloud Security | Cybersecurity | Secure Infrastructure and Operations",
     "description": "Infrastructure and security specialist with 15+ years in critical operations and NOC/SOC contexts. I combine operational depth in Linux and networking with a sustained focus on Cloud Security, Blue Team practice and hardening of critical environments.",
