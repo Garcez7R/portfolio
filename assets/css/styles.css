@@ -2505,8 +2505,21 @@ h2 {
   background:
     radial-gradient(circle at 50% 40%, rgba(79, 215, 255, 0.12), transparent 45%),
     radial-gradient(circle at 52% 58%, rgba(255, 180, 84, 0.1), transparent 42%);
-  opacity: 0.35;
-  animation: splashGlow 2.4s ease-in-out infinite;
+  opacity: 0.45;
+  filter: blur(6px);
+  animation: splashGlow 2.2s ease-in-out infinite;
+}
+
+.splash::after {
+  content: "";
+  position: absolute;
+  inset: -15%;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 90, 95, 0.28), transparent 60%);
+  opacity: 0.2;
+  filter: blur(10px);
+  animation: splashPulse 3.2s ease-in-out infinite;
 }
 
 .splash.is-hidden {
@@ -2557,16 +2570,31 @@ h2 {
 
 @keyframes splashGlow {
   0% {
-    opacity: 0.1;
-    transform: scale(0.98);
+    opacity: 0.18;
+    transform: scale(0.96);
   }
   45% {
-    opacity: 0.45;
-    transform: scale(1.02);
+    opacity: 0.7;
+    transform: scale(1.05);
   }
   100% {
-    opacity: 0.18;
-    transform: scale(1);
+    opacity: 0.25;
+    transform: scale(0.99);
+  }
+}
+
+@keyframes splashPulse {
+  0% {
+    opacity: 0.05;
+    transform: scale(0.92);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(1.08);
+  }
+  100% {
+    opacity: 0.08;
+    transform: scale(0.96);
   }
 }
 
