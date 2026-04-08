@@ -87,6 +87,11 @@ GitHub · LinkedIn · Email
 Este repositório hospeda o meu portfólio técnico.  
 Ele utiliza `badges.md` como fonte principal de credenciais e um vault de PDFs em `assets/docs/certificates/`.
 
+## 🔐 Nota de segurança
+
+Este repositório é público. Evite incluir dados sensíveis em PDFs, imagens ou arquivos de configuração.  
+Recomenda-se revisar periodicamente badges, certificados e metadados para garantir que não haja informações privadas expostas.
+
 ### Preview local
 
 ```bash
