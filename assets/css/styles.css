@@ -3163,19 +3163,19 @@ h2 {
   }
 
   .hero__content {
-    padding: 0.85rem 0.15rem 0.25rem;
+    padding: 0.95rem 0.2rem 0.4rem;
   }
 
   .hero__ticker {
-    font-size: 0.6rem;
-    letter-spacing: 0.12em;
+    font-size: 0.58rem;
+    letter-spacing: 0.14em;
   }
 
   .hero__globe {
-    width: min(420px, 90%);
-    top: -0.6rem;
-    right: -0.1rem;
-    opacity: 0.4;
+    width: min(360px, 88%);
+    top: -0.2rem;
+    right: -0.2rem;
+    opacity: 0.32;
   }
 
   .hero__content::after {
@@ -3183,9 +3183,23 @@ h2 {
   }
 
   .hero__description {
-    font-size: 0.98rem;
+    font-size: 0.96rem;
     line-height: 1.55;
     text-wrap: pretty;
+  }
+
+  .hero__cta-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero__badge {
+    font-size: 0.7rem;
+  }
+
+  .hero__banner {
+    gap: 0.4rem;
+    font-size: 0.64rem;
   }
 
   .hero__actions {
