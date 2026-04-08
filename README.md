@@ -1,54 +1,93 @@
-# Rafael Garcez | Cloud Security & Cybersecurity Portfolio
+# Rafael Garcez
 
-Um portfolio tecnico com identidade de console, foco em Cloud Security, Blue Team e operacoes criticas.  
-Deploy estatico via GitHub Pages, com i18n PT-BR/EN, badges e vault de certificados.
+**Cloud Security | Cybersecurity | Blue Team | Secure Infrastructure**
 
-## Acesso rapido
+[![Portfolio](https://img.shields.io/badge/Portfolio-LIVE-0b0f14?style=for-the-badge&logo=github&logoColor=white&labelColor=0b0f14&color=3fb950)](https://Garcez7R.github.io/portfolio/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-rgarcez7-0b0f14?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0b0f14&color=0a66c2)](https://www.linkedin.com/in/rgarcez7/)
+[![Email](https://img.shields.io/badge/Email-rgs.dba7%40gmail.com-0b0f14?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0b0f14&color=ea4335)](mailto:rgs.dba7@gmail.com)
 
-- Site: https://Garcez7R.github.io/portfolio/
-- Idiomas: PT-BR e EN (detectar automaticamente + toggle manual)
-- Conteudo dinamico: badges, vault e projetos via JSON/Markdown locais
+[![Cloud Security](https://img.shields.io/badge/Cloud%20Security-3fb950?style=flat-square&labelColor=0b0f14)](#foco-profissional)
+[![Blue Team](https://img.shields.io/badge/Blue%20Team-3fb950?style=flat-square&labelColor=0b0f14)](#foco-profissional)
+[![SOC](https://img.shields.io/badge/SOC-3fb950?style=flat-square&labelColor=0b0f14)](#foco-profissional)
+[![IAM](https://img.shields.io/badge/IAM-3fb950?style=flat-square&labelColor=0b0f14)](#foco-profissional)
 
 ---
 
-# Estrutura (PT-BR)
+## 👨‍💻 Sobre mim
 
-```text
-/
-├── index.html
-├── README.md
-├── badges.md
-├── /assets
-│   ├── /css
-│   ├── /js
-│   ├── /img
-│   │   └── badges/
-│   └── /docs
-│       └── certificates/
-└── /locale
-    ├── en.json
-    └── pt.json
-```
+Profissional de TI com 15+ anos em infraestrutura, Linux e operações críticas (NOC/SOC).  
+Conecto base operacional sólida a Cloud Security e Blue Team, com foco em ambientes resilientes, hardening e governança.
 
-## Como funciona
+## 🎯 Foco profissional
 
-- `badges.md` e a fonte principal para credenciais e badges.
-- O vault de certificados le PDFs reais em `assets/docs/certificates/`.
-- O site detecta o idioma do navegador e permite alternancia manual.
-- O splash aparece apenas na primeira visita da sessao.
+- Cloud Security (AWS, OCI, Cloudflare)
+- Blue Team, SOC, SIEM e EDR
+- Infraestrutura segura e alta disponibilidade
+- Automação, observabilidade e operação enxuta
 
-## O que personalizar
+## 🚀 Em desenvolvimento agora
 
-- Substitua as imagens em `assets/img/badges/` pelas badges reais.
-- Adicione seus PDFs em `assets/docs/certificates/`.
-- Atualize os CVs em `assets/docs/cv.pdf` e `assets/docs/cv-en.pdf`.
-- Ajuste textos e labels em `locale/pt.json` e `locale/en.json`.
-- Atualize o `og-cover.svg` caso queira outro visual de preview.
+- AWS e fundamentos de arquitetura em nuvem
+- Cloud Security e hardening
+- SIEM, EDR e mentalidade defensiva
+- Automação e operação cloud
 
-## Preview local
+## 🧰 Stack principal
 
-O site usa `fetch()` para ler `badges.md` e os arquivos de idioma.  
-Use um servidor local em vez de abrir o HTML direto:
+**Core skills**
+
+Linux · Windows Server · Active Directory · Zabbix · pfSense  
+OpenVPN · BorgBackup · Asterisk · Virtualization · SQL
+
+**Domínios**
+
+- Sistemas operacionais: Linux (desktop/server), Windows Server, FreeBSD
+- Redes e segurança: AD/GPO, VPN, certificados, segmentação e hardening
+- Observabilidade: Zabbix, GLPI, monitoramento e auditoria
+- Backup & continuidade: BorgBackup, 3-2-1, deduplicação e restauração
+- Automação: Python, Shell Script, Git, SQL
+- Cloud: AWS, Google Cloud, Oracle Cloud, Cloudflare
+
+## 🏆 Certificações principais
+
+AWS Certified Cloud Practitioner · Cisco CyberOps Associate · Fortinet Certified Associate Cybersecurity · Oracle Cloud Infrastructure Foundations Associate  
+ISO/IEC 27001:2022 Lead Auditor · Google Cybersecurity Professional Certificate · IBM SkillsBuild Cybersecurity Certificate
+
+## 💼 Experiência de impacto
+
+- Administração de servidores Linux/Windows, AD/DC e GPOs
+- Acesso remoto seguro com OpenVPN, certificados e pfSense
+- Monitoramento com Zabbix + GLPI e resposta a falhas
+- Backup 3-2-1 com BorgBackup e deduplicação
+- Mitigação de riscos, auditoria de acessos e segurança perimetral
+
+## 📂 Projetos em destaque
+
+- **TranspSaude** — PWA para operação de transporte em saúde (Cloudflare Pages, Functions, D1)
+- **TEKA** — Marketplace de livros e sebos com OCR, scanner e PWA
+- **Konnektx** — PWA para salões e barbearias com agenda e fidelização
+- **AWS Cloud Security – IAM & Governance** — projeto focado em IAM, least privilege e governança
+
+## 🤝 Experiência e comunidade
+
+Facilitador do Google Cloud Arcade 2026 e voluntariado em iniciativas de comunidade com foco em aprendizagem colaborativa e segurança.
+
+## 📌 Disponibilidade
+
+Remoto prioritário · Aberto a oportunidades presenciais · PCD e aberto a oportunidades inclusivas
+
+## 📫 Contato
+
+GitHub · LinkedIn · Email
+
+---
+
+## ⚙️ Sobre este repositório
+
+Este repositório hospeda o meu portfólio técnico.  
+Ele utiliza `badges.md` como fonte principal de credenciais e um vault de PDFs em `assets/docs/certificates/`.
+
+### Preview local
 
 ```bash
 python3 -m http.server 8000
@@ -60,76 +99,10 @@ ou
 npx serve .
 ```
 
-## Deploy no GitHub Pages
+### Deploy (GitHub Pages)
 
-1. Faça push para o GitHub.
-2. Settings → Pages.
-3. Deploy from a branch.
-4. Branch `main` + `/ (root)`.
-5. Aguarde a publicacao.
+1. Settings → Pages
+2. Deploy from a branch
+3. Branch `main` + `/ (root)`
 
-URL esperada:
-
-```text
-https://Garcez7R.github.io/portfolio/
-```
-
-Se quiser a URL `https://Garcez7R.github.io`, o repo precisa se chamar `Garcez7R.github.io`.
-
----
-
-# Overview (EN)
-
-Technical portfolio with a security-console identity, focused on Cloud Security, Blue Team and critical operations.  
-Static deployment via GitHub Pages, PT-BR/EN i18n, badges and certificate vault.
-
-## Quick access
-
-- Live site: https://Garcez7R.github.io/portfolio/
-- Languages: PT-BR and EN (auto-detect + manual toggle)
-- Dynamic content: badges, vault and projects from local Markdown/JSON
-
-## How it works
-
-- `badges.md` is the single source of truth for credentials.
-- The vault reads PDF files from `assets/docs/certificates/`.
-- The UI detects browser language and allows manual switching.
-- The splash appears only on the first session visit.
-
-## What to personalize
-
-- Replace badge images inside `assets/img/badges/`.
-- Add real PDFs under `assets/docs/certificates/`.
-- Update CV files in `assets/docs/cv.pdf` and `assets/docs/cv-en.pdf`.
-- Edit labels/content in `locale/pt.json` and `locale/en.json`.
-- Replace `og-cover.svg` if you want a different social preview.
-
-## Local preview
-
-Because `fetch()` reads local assets, run a local server:
-
-```bash
-python3 -m http.server 8000
-```
-
-or
-
-```bash
-npx serve .
-```
-
-## Deploy to GitHub Pages
-
-1. Push this repository.
-2. Settings → Pages.
-3. Deploy from a branch.
-4. Branch `main` + `/ (root)`.
-5. Wait for the build to publish.
-
-Expected URL:
-
-```text
-https://Garcez7R.github.io/portfolio/
-```
-
-If you want `https://Garcez7R.github.io`, rename the repo to `Garcez7R.github.io`.
+URL: https://Garcez7R.github.io/portfolio/
