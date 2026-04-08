@@ -893,7 +893,6 @@ h2 {
   border-radius: 50%;
   border: 1px solid rgba(79, 215, 255, 0.26);
   background:
-    url("./assets/img/earth-wire.svg") center/96% no-repeat,
     radial-gradient(circle at 30% 30%, rgba(255, 180, 84, 0.16), transparent 55%),
     radial-gradient(circle at 70% 70%, rgba(79, 215, 255, 0.18), transparent 55%),
     repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.16) 0 1px, transparent 1px 24px),
@@ -905,7 +904,22 @@ h2 {
   pointer-events: none;
   mix-blend-mode: screen;
   z-index: 0;
+  overflow: hidden;
   animation: hero-globe-spin 44s linear infinite;
+}
+
+.hero__globe::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background:
+    url("./assets/img/earth-map.svg") 0% 50% / 200% 100% repeat-x,
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.18), transparent 48%),
+    radial-gradient(circle at 70% 70%, rgba(5, 12, 22, 0.7), transparent 62%);
+  opacity: 0.65;
+  mix-blend-mode: normal;
+  animation: globe-drift 40s linear infinite;
 }
 
 .hero__globe::before {
@@ -962,6 +976,15 @@ h2 {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes globe-drift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: -200% 50%;
   }
 }
 
