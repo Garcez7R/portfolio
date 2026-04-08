@@ -896,8 +896,8 @@ h2 {
     url("./assets/img/earth-wire.svg") center/96% no-repeat,
     radial-gradient(circle at 30% 30%, rgba(255, 180, 84, 0.16), transparent 55%),
     radial-gradient(circle at 70% 70%, rgba(79, 215, 255, 0.18), transparent 55%),
-    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.08) 0 1px, transparent 1px 12px),
-    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.06) 0 1px, transparent 1px 16px);
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.16) 0 1px, transparent 1px 24px),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.12) 0 1px, transparent 1px 32px);
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.03),
     inset 0 0 55px rgba(79, 215, 255, 0.16);
