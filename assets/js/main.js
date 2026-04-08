@@ -302,7 +302,7 @@ const updateBadgeToggle = (totalItems) => {
 
   if (!badgesExpanded) {
     ui.badgeToggle.hidden = false;
-    ui.badgeToggle.textContent = currentLocale.credentials.toggle.open.replace("{count}", String(totalItems));
+    ui.badgeToggle.textContent = currentLocale.credentials.toggle.open;
     return;
   }
 

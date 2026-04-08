@@ -153,8 +153,8 @@
       "all": "All"
     },
     "toggle": {
-      "open": "Open {count} more",
-      "more": "Show {count} more",
+      "open": "Open credentials",
+      "more": "Show credentials",
       "less": "Show less"
     }
   },
@@ -168,7 +168,7 @@
     "noResults": "No certificates found for this search.",
     "toggle": {
       "open": "Open full archive",
-      "more": "Show {count} more",
+      "more": "Show certificates",
       "less": "Show less"
     }
   },
