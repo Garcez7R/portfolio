@@ -1413,6 +1413,29 @@ h2 {
   box-shadow: 0 0 0 3px rgba(79, 215, 255, 0.05);
 }
 
+.button--icon {
+  gap: 0.55rem;
+  justify-content: flex-start;
+  min-width: 148px;
+}
+
+.button--icon::before {
+  content: "";
+  margin-right: 0;
+}
+
+.button__icon {
+  display: inline-flex;
+  width: 1.05rem;
+  height: 1.05rem;
+  color: inherit;
+}
+
+.button__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
 .filters button {
   position: relative;
   overflow: hidden;
