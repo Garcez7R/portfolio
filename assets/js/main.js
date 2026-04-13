@@ -487,8 +487,8 @@ const renderCommunity = () => {
   ui.communityGrid.innerHTML = currentLocale.community.items
     .map(
       (item) => `
-        <article class="community-card">
-          <span class="community-card__tag">${item.tag}</span>
+        <article class="project-card">
+          <p class="project-card__eyebrow">${item.tag}</p>
           <h3>${item.title}</h3>
           <p>${item.description}</p>
         </article>

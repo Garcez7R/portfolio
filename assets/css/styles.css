@@ -1311,13 +1311,37 @@ h2 {
   overflow: hidden;
 }
 
+.section--community .section-shell {
+  display: grid;
+  gap: 1.6rem;
+  padding: 1.9rem 2rem 2rem;
+  border: 1px solid rgba(197, 206, 216, 0.12);
+  border-radius: 28px 42px 32px 26px;
+  background:
+    var(--panel-chrome),
+    var(--panel-overlay),
+    var(--panel-surface);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
 .section--projects .section-shell::before {
   background:
     linear-gradient(180deg, rgba(63, 185, 80, 0.03), transparent 22%),
     var(--panel-accent);
 }
 
+.section--community .section-shell::before {
+  background:
+    linear-gradient(180deg, rgba(63, 185, 80, 0.03), transparent 22%),
+    var(--panel-accent);
+}
+
 .section--projects .section-heading {
+  max-width: 44rem;
+}
+
+.section--community .section-heading {
   max-width: 44rem;
 }
 
@@ -3231,6 +3255,8 @@ h2 {
 
   .section--credentials .section-shell,
   .section--vault .section-shell,
+  .section--projects .section-shell,
+  .section--community .section-shell,
   .section--contact .contact-shell {
     padding: 1.4rem;
     border-radius: 26px;
