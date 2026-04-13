@@ -1502,7 +1502,7 @@ h2 {
 }
 
 .community-grid {
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .community-card {
@@ -3232,6 +3232,10 @@ h2 {
 
   .badge-card {
     width: 100%;
+  }
+
+  .community-grid {
+    grid-template-columns: 1fr;
   }
 
   .project-card:nth-child(2n),
