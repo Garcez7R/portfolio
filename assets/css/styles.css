@@ -1345,6 +1345,15 @@ h2 {
   max-width: 44rem;
 }
 
+.section--community .section-shell {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  align-items: start;
+}
+
+.section--community .community-heading {
+  max-width: none;
+}
+
 .section--projects .project-grid {
   position: relative;
   z-index: 1;
@@ -1502,7 +1511,7 @@ h2 {
 }
 
 .community-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
 }
 
 .community-card {
@@ -3235,6 +3244,10 @@ h2 {
   }
 
   .community-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section--community .section-shell {
     grid-template-columns: 1fr;
   }
 
