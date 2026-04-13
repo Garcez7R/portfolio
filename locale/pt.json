@@ -8,6 +8,7 @@
     "credentials": "Credenciais",
     "vault": "Certificados",
     "projects": "Projetos",
+    "community": "Comunidade",
     "contact": "Contato"
   },
   "sidebar": {
@@ -29,8 +30,8 @@
       "SINAL: ESTÁVEL"
     ],
     "name": "Rafael Garcez",
-    "title": "Cloud Security | Cybersecurity | Infraestrutura e Operações Seguras",
-    "description": "Especialista em infraestrutura e segurança com 15+ anos em operações críticas e contexto NOC/SOC. Uno profundidade operacional em Linux e redes à evolução consistente em Cloud Security, Blue Team e hardening de ambientes críticos.",
+    "title": "Cloud & Cybersecurity | AWS Certified Cloud Practitioner | Foco em Blue Team, SOC e Infraestrutura Segura",
+    "description": "Especialista em infraestrutura e segurança com 15+ anos em operações críticas e contexto NOC/SOC. Uno profundidade operacional em Linux e redes à evolução consistente em Cloud Security, Blue Team, SOC e hardening de ambientes críticos.",
     "cta": "Vamos conversar",
     "openBadge": "Open to Work",
     "banner1": "Cloud Security",
@@ -208,6 +209,23 @@
         "stack": ["AWS IAM", "Least Privilege", "Risk Analysis", "Governance"],
         "github": "https://github.com/Garcez7R/aws-cloud-security-iam-governance",
         "demo": ""
+      }
+    ]
+  },
+  "community": {
+    "eyebrow": "Comunidade",
+    "title": "Experiência e comunidade",
+    "description": "Atuação em iniciativas de aprendizagem colaborativa, programas de laboratório e engajamento técnico em Cloud e Cybersecurity.",
+    "items": [
+      {
+        "title": "Facilitador do Google Cloud Arcade 2026",
+        "description": "Mentoria em laboratórios práticos de Kubernetes, BigQuery, IA/ML e Cloud Security, apoiando a evolução técnica de participantes.",
+        "tag": "Google Cloud Arcade"
+      },
+      {
+        "title": "Voluntariado em comunidade de segurança",
+        "description": "Participação ativa em iniciativas de aprendizagem colaborativa, troca de experiências e suporte técnico com foco em cibersegurança.",
+        "tag": "Comunidade"
       }
     ]
   },

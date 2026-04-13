@@ -33,6 +33,7 @@ const ui = {
   vaultToggle: document.getElementById("vault-toggle"),
   vaultSearch: document.getElementById("vault-search"),
   projectGrid: document.getElementById("project-grid"),
+  communityGrid: document.getElementById("community-grid"),
   certMetrics: document.getElementById("cert-metrics"),
   certMetricsNote: document.getElementById("cert-metrics-note"),
   skillsMetrics: document.getElementById("skills-metrics"),
@@ -480,6 +481,22 @@ const renderProjects = () => {
     .join("");
 };
 
+const renderCommunity = () => {
+  if (!ui.communityGrid || !currentLocale.community) return;
+
+  ui.communityGrid.innerHTML = currentLocale.community.items
+    .map(
+      (item) => `
+        <article class="community-card">
+          <span class="community-card__tag">${item.tag}</span>
+          <h3>${item.title}</h3>
+          <p>${item.description}</p>
+        </article>
+      `,
+    )
+    .join("");
+};
+
 const renderMetrics = () => {
   const badgeCounts = badgeRecords.reduce((acc, badge) => {
     acc[badge.category] = (acc[badge.category] || 0) + 1;
@@ -624,6 +641,7 @@ const setLanguage = async (language) => {
   renderBadges();
   renderVault();
   renderProjects();
+  renderCommunity();
   renderMetrics();
   renderContacts();
   syncCvLinks();
