@@ -192,7 +192,7 @@
         "description": "Plataforma web para gestion de transporte de pacientes, con distribucion de rutas, trazabilidad operativa, auditoria y control de acceso por perfil. Construida con React, Cloudflare Pages Functions y D1 para sostener operacion diaria real con gobernanza y telemetria.",
         "stack": ["React", "Cloudflare Pages", "Functions", "D1"],
         "github": "https://github.com/Garcez7R/transporter",
-        "demo": ""
+        "demo": "https://transporter.pages.dev/"
       },
       {
         "kind": "Marketplace de libros y usados",
@@ -200,7 +200,7 @@
         "description": "Marketplace con catalogo, inventario, roles de usuario, escaneo por ISBN y OCR, pensado para crecer con enfasis en UX, trazabilidad operativa y compliance.",
         "stack": ["Marketplace", "PWA", "OCR", "Compliance"],
         "github": "https://github.com/Garcez7R/mvp-teka",
-        "demo": ""
+        "demo": "https://mvp-teka.pages.dev/"
       },
       {
         "kind": "PWA para profesionales de belleza",
@@ -208,7 +208,15 @@
         "description": "Base lista para serverless para pequenos negocios con pagina publica, agenda y fidelizacion, preparada para evolucionar con Cloudflare Worker y pensada alrededor de aislamiento operativo, privacidad y crecimiento seguro.",
         "stack": ["PWA", "Agenda", "Fidelizacion", "Cloudflare Worker"],
         "github": "https://github.com/Garcez7R/Konnektx",
-        "demo": ""
+        "demo": "https://konnektx.pages.dev/"
+      },
+      {
+        "kind": "Sistema POS | Operacion offline-first",
+        "name": "0PDV",
+        "description": "Sistema de punto de venta, inventario y operacion comercial para pequeno varejo, pensado para mostrador, tablet y movil. Combina PWA, persistencia en IndexedDB, lectura remota por QR y camino Cloudflare para sostener ventas, stock y continuidad operativa con conectividad inestable.",
+        "stack": ["React", "PWA", "IndexedDB", "Cloudflare Workers"],
+        "github": "https://github.com/Garcez7R/nexaPDV",
+        "demo": "https://nexapdv.pages.dev/"
       },
       {
         "kind": "Gobernanza IAM en AWS",

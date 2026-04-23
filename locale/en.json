@@ -192,7 +192,7 @@
         "description": "Web platform for patient transport management with route distribution, operational traceability, audit visibility and role-based access control. Built with React, Cloudflare Pages Functions and D1 to support real daily operations with governance and telemetry.",
         "stack": ["React", "Cloudflare Pages", "Functions", "D1"],
         "github": "https://github.com/Garcez7R/transporter",
-        "demo": ""
+        "demo": "https://transporter.pages.dev/"
       },
       {
         "kind": "Book and used-book marketplace",
@@ -200,7 +200,7 @@
         "description": "Marketplace with catalog, inventory, user roles, ISBN scanning and OCR, designed for growth with emphasis on UX, operational traceability and compliance.",
         "stack": ["Marketplace", "PWA", "OCR", "Compliance"],
         "github": "https://github.com/Garcez7R/mvp-teka",
-        "demo": ""
+        "demo": "https://mvp-teka.pages.dev/"
       },
       {
         "kind": "Beauty professionals PWA",
@@ -208,7 +208,15 @@
         "description": "Serverless-ready base for small businesses with public page, scheduling and loyalty flows, prepared to evolve with Cloudflare Worker and shaped around operational isolation, privacy and secure growth.",
         "stack": ["PWA", "Scheduling", "Loyalty", "Cloudflare Worker"],
         "github": "https://github.com/Garcez7R/Konnektx",
-        "demo": ""
+        "demo": "https://konnektx.pages.dev/"
+      },
+      {
+        "kind": "POS System | Offline-first operations",
+        "name": "0PDV",
+        "description": "Point-of-sale, inventory and retail operations system built for countertop, tablet and mobile workflows. It combines PWA delivery, IndexedDB persistence, QR-based remote scanning and a Cloudflare path to support sales, stock control and operational continuity under unstable connectivity.",
+        "stack": ["React", "PWA", "IndexedDB", "Cloudflare Workers"],
+        "github": "https://github.com/Garcez7R/nexaPDV",
+        "demo": "https://nexapdv.pages.dev/"
       },
       {
         "kind": "AWS IAM governance",
