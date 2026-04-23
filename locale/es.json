@@ -27,11 +27,11 @@
       "ESTADO: ACTIVO",
       "ENFOQUE: CLOUD SECURITY",
       "MODO: BLUE TEAM",
-      "SENAL: ESTABLE"
+      "CASE: HEIMDALL GATEKEEPER"
     ],
     "name": "Rafael Garcez",
     "title": "Cloud & Ciberseguridad | AWS Certified Cloud Practitioner | Enfoque en Blue Team, SOC e Infraestructura Segura",
-    "description": "Especialista en infraestructura y seguridad con mas de 15 anos en operaciones criticas y entornos NOC/SOC. Combino profundidad operativa en Linux y redes con una evolucion constante en Cloud Security, Blue Team, SOC y hardening de ambientes criticos.",
+    "description": "Especialista en infraestructura y seguridad con mas de 15 anos en operaciones criticas y entornos NOC/SOC. Combino profundidad operativa en Linux y redes con una evolucion constante en Cloud Security, Blue Team, SOC y hardening de ambientes criticos, con Heimdall Gatekeeper como case principal de SIEM e ingenieria de deteccion.",
     "cta": "Hablemos",
     "openBadge": "Open to Work",
     "banner1": "Cloud Security",
@@ -179,6 +179,14 @@
     "description": "Casos seleccionados donde arquitectura, ejecucion y seguridad aparecen como capacidad aplicada.",
     "items": [
       {
+        "kind": "Plataforma de Seguridad | SIEM / Detection Engineering",
+        "name": "Heimdall Gatekeeper",
+        "description": "Demo SIEM con dashboard analitico, deteccion en YAML, enriquecimiento con CVE y flujo realista de alertas para contexto SOC. Combina FastAPI, normalizacion de eventos, ciclo de vida de alertas y camino Cloudflare para demostrar ingenieria de deteccion y operacion Blue Team con presentacion de producto.",
+        "stack": ["FastAPI", "Detection Engineering", "Threat Enrichment", "Cloudflare"],
+        "github": "https://github.com/Garcez7R/heimdall-gatekeeper",
+        "demo": ""
+      },
+      {
         "kind": "Plataforma operativa de transporte",
         "name": "Transporter",
         "description": "Plataforma web para gestion de transporte de pacientes, con distribucion de rutas, trazabilidad operativa, auditoria y control de acceso por perfil. Construida con React, Cloudflare Pages Functions y D1 para sostener operacion diaria real con gobernanza y telemetria.",
@@ -208,14 +216,6 @@
         "description": "Proyecto de cloud security enfocado en analisis de riesgo, gobernanza y menor privilegio en AWS IAM. Reune politicas documentadas, estudio de incidentes y decisiones tecnicas estructuradas para fortalecer la postura de seguridad y la alineacion operativa en contextos corporativos.",
         "stack": ["AWS IAM", "Least Privilege", "Risk Analysis", "Governance"],
         "github": "https://github.com/Garcez7R/aws-cloud-security-iam-governance",
-        "demo": ""
-      },
-      {
-        "kind": "Demo SIEM con enfoque SOC",
-        "name": "Heimdall Gatekeeper",
-        "description": "SIEM practico con dashboard pulido, ingesta normalizada de eventos, reglas YAML de deteccion, enriquecimiento con CVE y flujo de alertas con acknowledge y resolve. Combina FastAPI, SQLite y camino Cloudflare para demostrar ingenieria de deteccion y operacion Blue Team con presentacion de producto.",
-        "stack": ["FastAPI", "SQLite", "Detection as Code", "Cloudflare"],
-        "github": "https://github.com/Garcez7R/heimdall-gatekeeper",
         "demo": ""
       }
     ]
