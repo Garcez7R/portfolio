@@ -465,12 +465,22 @@ const renderVault = () => {
 };
 
 const renderProjects = () => {
+  const formatProjectName = (name) => {
+    if (name !== "0PDV") return name;
+
+    return `
+      <span class="brand-0pdv" aria-label="0PDV">
+        <span class="brand-0pdv__zero" aria-hidden="true">0</span><span>PDV</span>
+      </span>
+    `;
+  };
+
   ui.projectGrid.innerHTML = currentLocale.projects.items
     .map(
       (project) => `
         <article class="project-card">
           <p class="project-card__eyebrow">${project.kind}</p>
-          <h3>${project.name}</h3>
+          <h3>${formatProjectName(project.name)}</h3>
           <p>${project.description}</p>
           <div class="project-stack-list">
             ${project.stack.map((item) => `<span class="project-stack-chip">${item}</span>`).join("")}

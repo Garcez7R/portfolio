@@ -2041,6 +2041,33 @@ h2 {
   text-transform: uppercase;
 }
 
+.brand-0pdv {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.08em;
+}
+
+.brand-0pdv__zero {
+  position: relative;
+  display: inline-block;
+  font-size: 1.28em;
+  font-weight: 800;
+  line-height: 0.92;
+}
+
+.brand-0pdv__zero::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0.92em;
+  height: 0.12em;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(79, 215, 255, 0.95), rgba(212, 175, 55, 0.8));
+  transform: translate(-50%, -50%) rotate(-58deg);
+  box-shadow: 0 0 10px rgba(79, 215, 255, 0.18);
+}
+
 .project-stack-list {
   display: flex;
   flex-wrap: wrap;
