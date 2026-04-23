@@ -3,6 +3,7 @@ const STORAGE_KEYS = {
   splashSeen: "portfolio-splash-seen-session",
 };
 
+const LOCALE_VERSION = "20260423-project-sync-fix";
 const DEFAULT_BADGE_IMAGE = "./assets/img/badges/placeholder-badge.svg";
 const CERTIFICATE_INDEX = "./assets/docs/certificates/index.json";
 const CATEGORY_ORDER = ["Cloud", "Security", "Infrastructure", "DevOps", "Networking", "Linux", "Other"];
@@ -129,7 +130,7 @@ const detectLanguage = () => {
 };
 
 const loadLocale = async (language) => {
-  const response = await fetch(`./locale/${language}.json`);
+  const response = await fetch(`./locale/${language}.json?v=${LOCALE_VERSION}`);
 
   if (!response.ok) {
     throw new Error(`Could not load locale ${language}`);
