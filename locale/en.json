@@ -179,11 +179,11 @@
     "description": "Selected cases where architecture, execution and security are visible as applied capability.",
     "items": [
       {
-        "kind": "Healthcare operations PWA",
-        "name": "TranspSaude",
-        "description": "Serverless architecture for healthcare transport, organizing requests, review, operational dispatch and public consultation. Built with Cloudflare Pages, Functions and D1 to support resilience, continuous availability and secure service evolution.",
-        "stack": ["PWA", "Cloudflare Pages", "Functions", "D1"],
-        "github": "https://github.com/Garcez7R/transpsaude",
+        "kind": "Operational transport platform",
+        "name": "Transporter",
+        "description": "Web platform for patient transport management with route distribution, operational traceability, audit visibility and role-based access control. Built with React, Cloudflare Pages Functions and D1 to support real daily operations with governance and telemetry.",
+        "stack": ["React", "Cloudflare Pages", "Functions", "D1"],
+        "github": "https://github.com/Garcez7R/transporter",
         "demo": ""
       },
       {
@@ -208,6 +208,14 @@
         "description": "Cloud security project focused on AWS IAM risk analysis, governance and least-privilege design. It brings together documented policies, incident casework and structured technical decisions to strengthen security posture and operational alignment in corporate-style environments.",
         "stack": ["AWS IAM", "Least Privilege", "Risk Analysis", "Governance"],
         "github": "https://github.com/Garcez7R/aws-cloud-security-iam-governance",
+        "demo": ""
+      },
+      {
+        "kind": "SOC-oriented SIEM demo",
+        "name": "Heimdall Gatekeeper",
+        "description": "Practical SIEM with a polished dashboard, normalized event ingestion, YAML detection rules, CVE-aware enrichment and alert workflows with acknowledge and resolve states. It combines FastAPI, SQLite and a Cloudflare path to demonstrate detection engineering and Blue Team operations with product-level presentation.",
+        "stack": ["FastAPI", "SQLite", "Detection as Code", "Cloudflare"],
+        "github": "https://github.com/Garcez7R/heimdall-gatekeeper",
         "demo": ""
       }
     ]

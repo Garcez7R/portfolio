@@ -179,11 +179,11 @@
     "description": "Casos selecionados em que arquitetura, execução e segurança aparecem como capacidade aplicada.",
     "items": [
       {
-        "kind": "PWA de operação em saúde",
-        "name": "TranspSaude",
-        "description": "Desenvolvimento de arquitetura serverless para transporte em saúde, organizando solicitações, análise, distribuição operacional e consulta pública. Estruturado com Cloudflare Pages, Functions e D1 para sustentar resiliência, disponibilidade contínua e evolução segura do serviço.",
-        "stack": ["PWA", "Cloudflare Pages", "Functions", "D1"],
-        "github": "https://github.com/Garcez7R/transpsaude",
+        "kind": "Plataforma operacional de transporte",
+        "name": "Transporter",
+        "description": "Plataforma web para gestão de transporte de pacientes, com distribuição de rotas, rastreabilidade operacional, auditoria e controle de acesso por perfil. Estruturada com React, Cloudflare Pages Functions e D1 para sustentar operação diária real com governança e telemetria.",
+        "stack": ["React", "Cloudflare Pages", "Functions", "D1"],
+        "github": "https://github.com/Garcez7R/transporter",
         "demo": ""
       },
       {
@@ -208,6 +208,14 @@
         "description": "Projeto de cloud security voltado à análise de risco, governança e menor privilégio em AWS IAM. Reúne políticas documentadas, estudo de incidente e decisões técnicas estruturadas para fortalecer postura de segurança e aderência operacional em contexto corporativo.",
         "stack": ["AWS IAM", "Least Privilege", "Risk Analysis", "Governance"],
         "github": "https://github.com/Garcez7R/aws-cloud-security-iam-governance",
+        "demo": ""
+      },
+      {
+        "kind": "SIEM demo com visão de SOC",
+        "name": "Heimdall Gatekeeper",
+        "description": "SIEM prático com dashboard refinado, ingestão normalizada de eventos, regras YAML de detecção, enriquecimento por CVE e fluxo de alertas com acknowledge e resolve. Une FastAPI, SQLite e caminho Cloudflare para demonstrar engenharia de detecção e operação Blue Team com acabamento de produto.",
+        "stack": ["FastAPI", "SQLite", "Detection as Code", "Cloudflare"],
+        "github": "https://github.com/Garcez7R/heimdall-gatekeeper",
         "demo": ""
       }
     ]
