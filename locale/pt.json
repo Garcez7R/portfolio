@@ -184,7 +184,7 @@
         "description": "SIEM demo com dashboard analítico, detecção em YAML, enriquecimento por CVE e fluxo realista de alertas para contexto SOC. Une FastAPI, normalização de eventos, ciclo de vida de alertas e caminho Cloudflare para demonstrar engenharia de detecção e operação Blue Team com acabamento de produto.",
         "stack": ["FastAPI", "Detection Engineering", "Threat Enrichment", "Cloudflare"],
         "github": "https://github.com/Garcez7R/heimdall-gatekeeper",
-        "demo": ""
+        "demo": "https://heimdall-gatekeeper.pages.dev/"
       },
       {
         "kind": "Plataforma operacional de transporte",
