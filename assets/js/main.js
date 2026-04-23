@@ -118,11 +118,14 @@ const createBadgeVisual = (badge, className) => {
 
 const detectLanguage = () => {
   const saved = localStorage.getItem(STORAGE_KEYS.language);
-  if (saved === "pt" || saved === "en") {
+  if (saved === "pt" || saved === "en" || saved === "es") {
     return saved;
   }
 
-  return navigator.language?.toLowerCase().startsWith("pt") ? "pt" : "en";
+  const browserLanguage = navigator.language?.toLowerCase() || "";
+  if (browserLanguage.startsWith("pt")) return "pt";
+  if (browserLanguage.startsWith("es")) return "es";
+  return "en";
 };
 
 const loadLocale = async (language) => {
@@ -198,7 +201,8 @@ const parseBadgeMarkdown = (markdown) => {
 };
 
 const applyI18n = () => {
-  document.documentElement.lang = currentLanguage === "pt" ? "pt-BR" : "en";
+  document.documentElement.lang =
+    currentLanguage === "pt" ? "pt-BR" : currentLanguage === "es" ? "es-ES" : "en";
   document.querySelectorAll("[data-i18n]").forEach((node) => {
     const path = node.dataset.i18n;
     const value = path.split(".").reduce((acc, part) => acc?.[part], currentLocale);

@@ -1,0 +1,288 @@
+{
+  "seo": {
+    "title": "Rafael Garcez | Cloud, Ciberseguridad e Infraestructura",
+    "description": "Portafolio técnico de Rafael Garcez, con base en infraestructura, Linux, redes, operaciones NOC/SOC y enfoque activo en Cloud Security y ciberseguridad."
+  },
+  "nav": {
+    "skills": "Competencias",
+    "credentials": "Credenciales",
+    "vault": "Certificados",
+    "projects": "Proyectos",
+    "community": "Comunidad",
+    "contact": "Contacto"
+  },
+  "sidebar": {
+    "cv": "Abrir CV",
+    "statusTitle": "Estado",
+    "focusLabel": "Enfoque",
+    "focusValue": "Cloud Security // Blue Team // IAM",
+    "locationLabel": "Ubicacion",
+    "locationValue": "Brasil // Porto Alegre",
+    "availabilityLabel": "Disponibilidad",
+    "availabilityValue": "Prioridad remota // Abierto a hibrido"
+  },
+  "hero": {
+    "eyebrow": "Cloud | Seguridad | Infraestructura",
+    "ticker": [
+      "ESTADO: ACTIVO",
+      "ENFOQUE: CLOUD SECURITY",
+      "MODO: BLUE TEAM",
+      "SENAL: ESTABLE"
+    ],
+    "name": "Rafael Garcez",
+    "title": "Cloud & Ciberseguridad | AWS Certified Cloud Practitioner | Enfoque en Blue Team, SOC e Infraestructura Segura",
+    "description": "Especialista en infraestructura y seguridad con mas de 15 anos en operaciones criticas y entornos NOC/SOC. Combino profundidad operativa en Linux y redes con una evolucion constante en Cloud Security, Blue Team, SOC y hardening de ambientes criticos.",
+    "cta": "Hablemos",
+    "openBadge": "Open to Work",
+    "banner1": "Cloud Security",
+    "banner2": "DevSecOps",
+    "banner3": "Blue Team",
+    "cv": "Descargar CV",
+    "panelTag": "ESTADO",
+    "panelTitle": "Resumen Tecnico",
+    "panelLine1": "Base solida en disponibilidad, soporte y respuesta operativa.",
+    "panelLine2": "Experiencia directa en respuesta y recuperacion de ambientes criticos, con foco en resiliencia operativa.",
+    "panelLine3": "Especialista en arquitecturas de seguridad optimizadas en costo, con defensa perimetral y resiliencia de datos basada en tecnologias open source (pfSense, BorgBackup, Fail2Ban, Linux hardening), entregando proteccion de nivel empresarial con independencia de proveedor y transparencia tecnica.",
+    "pillars": [
+      {
+        "icon": "CL",
+        "title": "Cloud Security",
+        "description": "Planificacion y ejecucion de arquitectura segura en la nube, con IAM y proteccion proactiva."
+      },
+      {
+        "icon": "BT",
+        "title": "Blue Team",
+        "description": "Monitoreo, deteccion y respuesta a incidentes para proteccion continua y resiliencia."
+      },
+      {
+        "icon": "IF",
+        "title": "Infraestructura y Soporte",
+        "description": "Linux, redes y sistemas criticos con foco en alta disponibilidad, soporte operativo y seguridad."
+      },
+      {
+        "icon": "AU",
+        "title": "DevSecOps y Automatizacion",
+        "description": "Scripts, observabilidad, backup y automatizacion operativa con mentalidad orientada a la seguridad."
+      }
+    ],
+    "rail1": "15+ ANOS EN INFRAESTRUCTURA Y OPERACIONES",
+    "rail2": "NOC/SOC | LINUX | REDES",
+    "rail3": "CERTIFICACIONES EN CLOUD Y SEGURIDAD",
+    "rail4": "PT-BR + EN + ES",
+    "stats": {
+      "total": "Certificaciones",
+      "categories": "Dominios",
+      "security": "Enfoque en seguridad"
+    }
+  },
+  "skills": {
+    "eyebrow": "Dominios",
+    "title": "Competencias",
+    "description": "Capacidad tecnica distribuida entre cloud, seguridad, infraestructura y operaciones criticas.",
+    "items": [
+      {
+        "title": "Nube",
+        "description": "Arquitectura, identidad y operaciones de seguridad en la nube con foco en soluciones escalables y resilientes para proteger datos y servicios criticos.",
+        "items": [
+          { "name": "AWS", "icon": "AW", "description": "Fundamentos de AWS con enfasis en seguridad, operaciones y arquitectura base." },
+          { "name": "OCI", "icon": "OC", "description": "Fundamentos de Oracle Cloud Infrastructure y familiaridad consistente con sus servicios esenciales." },
+          { "name": "IAM", "icon": "ID", "description": "Identidad, control de acceso y menor privilegio en nube y ambientes hibridos." },
+          { "name": "Cloudflare", "icon": "CF", "description": "Entrega en edge, flujos de publicacion y base de plataforma detras de proyectos propios." }
+        ]
+      },
+      {
+        "title": "Seguridad",
+        "description": "Defensa estrategica y tactica en identidad, hardening, auditoria y proteccion proactiva de entornos digitales frente a amenazas y riesgos.",
+        "items": [
+          { "name": "Blue Team", "icon": "BT", "description": "Mentalidad defensiva enfocada en monitoreo, respuesta y resiliencia operativa." },
+          { "name": "SOC", "icon": "SC", "description": "Practica y estudio orientados a deteccion, triage y respuesta." },
+          { "name": "SIEM/EDR", "icon": "SE", "description": "Familiaridad conceptual con telemetria, correlacion y defensa guiada por evidencias." },
+          { "name": "Hardening", "icon": "HD", "description": "Mitigacion de riesgos, acceso seguro, proteccion perimetral y reduccion de superficie." }
+        ]
+      },
+      {
+        "title": "Infraestructura",
+        "description": "Experiencia comprobada en sistemas, redes, directorios, monitoreo y soporte para sostener disponibilidad y continuidad en ambientes criticos.",
+        "items": [
+          { "name": "Linux", "icon": "LX", "description": "Administracion de Linux desktop y servidor con mentalidad operacional." },
+          { "name": "Redes", "icon": "NW", "description": "Redes, VPN, troubleshooting de conectividad y fundamentos de infraestructura segura." },
+          { "name": "AD / GPO", "icon": "AD", "description": "Entornos Windows Server, directorio, politicas y administracion corporativa." },
+          { "name": "Zabbix", "icon": "ZB", "description": "Monitoreo, visibilidad operacional y apoyo a ambientes con perfil NOC/SOC." }
+        ]
+      },
+      {
+        "title": "DevOps",
+        "description": "Automatizacion practica, versionado, backup, observabilidad y entrega eficiente con fuerte base operativa.",
+        "items": [
+          { "name": "Git", "icon": "GT", "description": "Control de versiones, higiene de repositorio y base limpia para colaboracion." },
+          { "name": "Shell / Python", "icon": "SP", "description": "Automatizacion por CLI, simplificacion de rutinas y productividad operativa." },
+          { "name": "Backup", "icon": "BK", "description": "BorgBackup, estrategia 3-2-1, deduplicacion y continuidad operativa." },
+          { "name": "Observabilidad", "icon": "OB", "description": "Senales de monitoreo, conciencia operacional y soporte a ambientes confiables." }
+        ]
+      },
+      {
+        "title": "Redes",
+        "description": "Conectividad, VPN, segmentacion, perimetro y fundamentos de redes corporativas seguras.",
+        "items": [
+          { "name": "OpenVPN", "icon": "OV", "description": "Acceso remoto seguro con VPN, certificados y control de acceso." },
+          { "name": "pfSense", "icon": "PF", "description": "Soporte perimetral, reglas, segmentacion e infraestructura practica de seguridad." },
+          { "name": "DNS / Routing", "icon": "DR", "description": "Familiaridad operativa con conectividad, resolucion y flujo de trafico." },
+          { "name": "Certificados", "icon": "CA", "description": "Uso practico de certificados digitales para acceso seguro y servicios." }
+        ]
+      },
+      {
+        "title": "Otros",
+        "description": "Herramientas y experiencias complementarias que amplian el rango tecnico y operativo.",
+        "items": [
+          { "name": "FreeBSD", "icon": "FB", "description": "Experiencia con sistemas tipo Unix mas alla del ecosistema Linux." },
+          { "name": "Asterisk", "icon": "AS", "description": "Proyectos de interfonia digital e integracion de comunicacion VoIP." },
+          { "name": "SQL", "icon": "SQ", "description": "Fundamentos de modelado, consultas y administracion de bases de datos." },
+          { "name": "GLPI", "icon": "GL", "description": "Operaciones de soporte, flujos de inventario y gestion de servicios corporativos." }
+        ]
+      }
+    ]
+  },
+  "credentials": {
+    "eyebrow": "Certificaciones",
+    "title": "Credenciales",
+    "description": "Credenciales seleccionadas para reforzar profundidad practica en cloud, seguridad y operaciones.",
+    "coreTitle": "Credenciales Core",
+    "coreDescription": "Conjunto principal de credenciales con senal inmediata para reclutamiento, liderazgo tecnico y evaluacion.",
+    "morePrompt": "",
+    "coreLabel": "Core",
+    "filters": {
+      "all": "Todas"
+    },
+    "toggle": {
+      "open": "Abrir credenciales",
+      "more": "Mostrar credenciales",
+      "less": "Mostrar menos"
+    }
+  },
+  "vault": {
+    "eyebrow": "Vault de Certificados",
+    "title": "Certificados",
+    "description": "Archivo tecnico con PDFs reales de certificados, organizado por entidad emisora y dominio.",
+    "morePrompt": "",
+    "searchLabel": "Buscar certificado",
+    "searchPlaceholder": "Buscar por nombre o categoria",
+    "noResults": "No se encontraron certificados para esta busqueda.",
+    "toggle": {
+      "open": "Abrir archivo completo",
+      "more": "Mostrar certificados",
+      "less": "Mostrar menos"
+    }
+  },
+  "projects": {
+    "eyebrow": "Casos",
+    "title": "Proyectos",
+    "description": "Casos seleccionados donde arquitectura, ejecucion y seguridad aparecen como capacidad aplicada.",
+    "items": [
+      {
+        "kind": "PWA de operacion en salud",
+        "name": "TranspSaude",
+        "description": "Arquitectura serverless para transporte en salud, organizando solicitudes, analisis, despacho operativo y consulta publica. Construido con Cloudflare Pages, Functions y D1 para sostener resiliencia, disponibilidad continua y evolucion segura del servicio.",
+        "stack": ["PWA", "Cloudflare Pages", "Functions", "D1"],
+        "github": "https://github.com/Garcez7R/transpsaude",
+        "demo": ""
+      },
+      {
+        "kind": "Marketplace de libros y usados",
+        "name": "TEKA",
+        "description": "Marketplace con catalogo, inventario, roles de usuario, escaneo por ISBN y OCR, pensado para crecer con enfasis en UX, trazabilidad operativa y compliance.",
+        "stack": ["Marketplace", "PWA", "OCR", "Compliance"],
+        "github": "https://github.com/Garcez7R/mvp-teka",
+        "demo": ""
+      },
+      {
+        "kind": "PWA para profesionales de belleza",
+        "name": "Konnektx",
+        "description": "Base lista para serverless para pequenos negocios con pagina publica, agenda y fidelizacion, preparada para evolucionar con Cloudflare Worker y pensada alrededor de aislamiento operativo, privacidad y crecimiento seguro.",
+        "stack": ["PWA", "Agenda", "Fidelizacion", "Cloudflare Worker"],
+        "github": "https://github.com/Garcez7R/Konnektx",
+        "demo": ""
+      },
+      {
+        "kind": "Gobernanza IAM en AWS",
+        "name": "AWS Cloud Security – IAM & Governance",
+        "description": "Proyecto de cloud security enfocado en analisis de riesgo, gobernanza y menor privilegio en AWS IAM. Reune politicas documentadas, estudio de incidentes y decisiones tecnicas estructuradas para fortalecer la postura de seguridad y la alineacion operativa en contextos corporativos.",
+        "stack": ["AWS IAM", "Least Privilege", "Risk Analysis", "Governance"],
+        "github": "https://github.com/Garcez7R/aws-cloud-security-iam-governance",
+        "demo": ""
+      }
+    ]
+  },
+  "community": {
+    "eyebrow": "Comunidad",
+    "title": "Experiencia y comunidad",
+    "description": "Participacion en aprendizaje colaborativo, programas de laboratorio y comunidad tecnica en cloud y ciberseguridad.",
+    "items": [
+      {
+        "title": "Facilitador de Google Cloud Arcade 2026",
+        "description": "Mentoria en laboratorios practicos de Kubernetes, BigQuery, IA/ML y Cloud Security, apoyando la evolucion tecnica de los participantes.",
+        "tag": "Google Cloud Arcade"
+      },
+      {
+        "title": "Voluntariado en comunidad de seguridad",
+        "description": "Voluntario y miembro del equipo administrativo de CYBERDIMENSION, apoyando iniciativas de aprendizaje colaborativo, intercambio de experiencias y soporte tecnico con foco en ciberseguridad.",
+        "tag": "CYBERDIMENSION"
+      }
+    ]
+  },
+  "metrics": {
+    "eyebrow": "Metricas",
+    "title": "Panorama",
+    "description": "Lectura rapida de la concentracion actual entre infraestructura, seguridad y cloud.",
+    "certificationsChart": "Certificaciones por categoria",
+    "skillsChart": "Competencias por dominio",
+    "securityFocusNote": "Enfoque actual en seguridad: {percent}% de la ruta de certificaciones."
+  },
+  "categories": {
+    "Cloud": "Nube",
+    "Security": "Seguridad",
+    "Infrastructure": "Infraestructura",
+    "DevOps": "DevOps",
+    "Networking": "Redes",
+    "Linux": "Linux",
+    "Other": "Otros"
+  },
+  "contact": {
+    "eyebrow": "Contacto",
+    "title": "Hablemos",
+    "description": "Disponible para oportunidades remotas o presenciales en equipos que valoran madurez operativa, seguridad y evolucion continua.",
+    "items": [
+      {
+        "label": "GitHub",
+        "value": "github.com/Garcez7R",
+        "href": "https://github.com/Garcez7R"
+      },
+      {
+        "label": "LinkedIn",
+        "value": "linkedin.com/in/rgarcez7",
+        "href": "https://www.linkedin.com/in/rgarcez7/"
+      },
+      {
+        "label": "Credly",
+        "value": "credly.com/users/rafael-garcez",
+        "href": "https://www.credly.com/users/rafael-garcez"
+      },
+      {
+        "label": "Email",
+        "value": "rgs.dba7@gmail.com",
+        "href": "mailto:rgs.dba7@gmail.com"
+      },
+      {
+        "label": "CV",
+        "value": "Abrir PDF",
+        "href": "./assets/docs/cv.pdf"
+      }
+    ]
+  },
+  "shared": {
+    "verify": "Verificar",
+    "demo": "Demo"
+  },
+  "footer": {
+    "copy": "Rafael Garcez | Cloud Security, ciberseguridad e infraestructura segura."
+  }
+}
