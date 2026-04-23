@@ -12,6 +12,9 @@
 | Industrial Cybersecurity Essentials | Security | ./assets/img/badges/official/industrial_cybersecurity_essentials.png | https://www.credly.com/badges/fb6a0123-61d6-47b1-9540-b79490e4496f/public_url |
 | CyberOps Associate | Security | ./assets/img/badges/official/cyberops_associate.png | https://www.credly.com/badges/bed5977b-7b23-4728-bff1-9142793f4043/public_url |
 | AWS re/Start Graduate | Cloud | ./assets/img/badges/official/aws_re_start_graduate.png | https://www.credly.com/badges/fac88f6b-7ef2-41e5-899b-e78d1cee3f4c/public_url |
+| AWS Cloud Fundamentals | Cloud | ./assets/img/badges/official/aws_cloud_fundamentals.svg | https://awstreinabrasil.ontidwit.com/badge?id=80bb33ba-90d2-490b-b586-3a7805b0535b |
+| AWS Generative AI Fundamentals | Other | ./assets/img/badges/official/aws_genai_fundamentals.svg | https://awstreinabrasil.ontidwit.com/badge?id=973a9f24-2abc-4ee5-be86-311962a94d44 |
+| AWS Generative AI Practitioner | Other | ./assets/img/badges/official/aws_genai_practitioner.svg | https://awstreinabrasil.ontidwit.com/badge?id=365a6d2d-3db1-469d-a110-f23a5f39a01c |
 | From Relational Model (SQL) to MongoDB's Document Model | Other | ./assets/img/badges/official/from_relational_model__sql__to_mongodb_s_document_model.png | https://www.credly.com/badges/2ea38825-eb25-427c-90e9-7f6f54298a17/public_url |
 | MongoDB Overview: Core Concepts and Architecture | Other | ./assets/img/badges/official/mongodb_overview__core_concepts_and_architecture.png | https://www.credly.com/badges/52c35549-845d-4b8c-ace8-72f336a18bba/public_url |
 | ISO/IEC 27001:2022 Lead Auditor | Security | ./assets/img/badges/official/iso_iec_27001_2022_lead_auditor.png | https://www.credly.com/badges/3d4e6c88-bb1f-4663-9291-bf8f28690dbe/public_url |
