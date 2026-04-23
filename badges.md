@@ -46,6 +46,7 @@
 | Using Computer and Mobile Devices | Infrastructure | ./assets/img/badges/official/using_computer_and_mobile_devices.png | https://www.credly.com/badges/379bfd68-7714-4fc8-b9a9-f5eb563b5868/public_url |
 | Endpoint Security | Security | ./assets/img/badges/official/endpoint_security.png | https://www.credly.com/badges/98ea49c2-51eb-46a4-a3d9-88ed0d7edaab/public_url |
 | Junior Cybersecurity Analyst Career Path | Security | ./assets/img/badges/official/junior_cybersecurity_analyst_career_path.png | https://www.credly.com/badges/e155799a-4910-4855-8f5c-0f4a533ea5cc/public_url |
+| Cybersecurity Defense Analyst Career Path - Cisco | Security | ./assets/img/badges/official/cybersecurity_defense_analyst_career_path_cisco.png | https://www.credly.com/badges/17734abe-a904-444f-a631-5f1f39caa192/public_url |
 | Network Defense | Networking | ./assets/img/badges/official/network_defense.png | https://www.credly.com/badges/a12784a8-1e81-49a4-85cb-4bb8073584f2/public_url |
 | Networking Devices and Initial Configuration | Networking | ./assets/img/badges/official/networking_devices_and_initial_configuration.png | https://www.credly.com/badges/f8744401-49a3-4b51-9c7a-979646789a46/public_url |
 | Network Technician Career Path | Networking | ./assets/img/badges/official/network_technician_career_path.png | https://www.credly.com/badges/ec5e2707-2bbb-4b22-adb2-5b2beb2a2046/public_url |
