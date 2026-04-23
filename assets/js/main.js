@@ -20,6 +20,7 @@ let vaultSearchTerm = "";
 const ui = {
   splash: document.getElementById("splash"),
   heroPillars: document.getElementById("hero-pillars"),
+  heroFocusGrid: document.getElementById("hero-focus-grid"),
   skillsGrid: document.getElementById("skills-grid"),
   coreBadgeGrid: document.getElementById("core-badge-grid"),
   credentialsMorePrompt: document.querySelector(".credentials-more__prompt"),
@@ -34,10 +35,13 @@ const ui = {
   vaultToggle: document.getElementById("vault-toggle"),
   vaultSearch: document.getElementById("vault-search"),
   projectGrid: document.getElementById("project-grid"),
+  featuredProjectGrid: document.getElementById("featured-project-grid"),
   communityGrid: document.getElementById("community-grid"),
   certMetrics: document.getElementById("cert-metrics"),
   certMetricsNote: document.getElementById("cert-metrics-note"),
   skillsMetrics: document.getElementById("skills-metrics"),
+  portfolioMetrics: document.getElementById("portfolio-metrics"),
+  portfolioMetricsNote: document.getElementById("portfolio-metrics-note"),
   contactGrid: document.getElementById("contact-grid"),
   heroTickerTrack: document.getElementById("hero-ticker-track"),
   heroCvLink: document.getElementById("hero-cv-link"),
@@ -266,6 +270,25 @@ const renderHeroPillars = () => {
     .join("");
 };
 
+const renderHeroFocus = () => {
+  if (!ui.heroFocusGrid || !currentLocale.hero?.focusItems) return;
+
+  ui.heroFocusGrid.innerHTML = currentLocale.hero.focusItems
+    .map((item) => {
+      const tag = item.href ? "a" : "article";
+      const href = item.href ? ` href="${item.href}" target="_blank" rel="noreferrer"` : "";
+      const extraClass = item.href ? " hero-focus-card--link" : "";
+
+      return `
+        <${tag} class="hero-focus-card${extraClass}"${href}>
+          <span class="hero-focus-card__label">${item.label}</span>
+          <strong class="hero-focus-card__value">${item.value}</strong>
+        </${tag}>
+      `;
+    })
+    .join("");
+};
+
 const buildFilters = () => {
   const categories = [
     "All",
@@ -465,24 +488,84 @@ const renderVault = () => {
   ui.vaultToggle.textContent = vaultExpanded ? currentLocale.vault.toggle.less : currentLocale.vault.toggle.open;
 };
 
+const formatProjectName = (name) => {
+  if (name !== "0PDV") return name;
+
+  return `
+    <span class="brand-0pdv" aria-label="0PDV">
+      <span class="brand-0pdv__zero" aria-hidden="true">0</span><span>PDV</span>
+    </span>
+  `;
+};
+
+const createProjectStatus = (project) =>
+  project.demo ? `<span class="project-status project-status--live">${currentLocale.shared.liveBadge}</span>` : "";
+
+const createProjectMeta = (project) => `
+  <div class="project-meta-grid">
+    <div class="project-meta-block">
+      <span>${currentLocale.projects.labels.impact}</span>
+      <p>${project.impact}</p>
+    </div>
+    <div class="project-meta-block">
+      <span>${currentLocale.projects.labels.architecture}</span>
+      <p>${project.architecture}</p>
+    </div>
+  </div>
+`;
+
+const createProjectPreview = (project) => {
+  if (!project.preview?.length) return "";
+
+  return `
+    <div class="project-preview" aria-label="${currentLocale.projects.labels.preview}">
+      ${project.preview.map((item) => `<span>${item}</span>`).join("")}
+    </div>
+  `;
+};
+
 const renderProjects = () => {
-  const formatProjectName = (name) => {
-    if (name !== "0PDV") return name;
+  const projects = currentLocale.projects.items || [];
+  const featuredProjects = projects.slice(0, 2);
+  const regularProjects = projects.slice(2);
 
-    return `
-      <span class="brand-0pdv" aria-label="0PDV">
-        <span class="brand-0pdv__zero" aria-hidden="true">0</span><span>PDV</span>
-      </span>
-    `;
-  };
+  if (ui.featuredProjectGrid) {
+    ui.featuredProjectGrid.innerHTML = featuredProjects
+      .map(
+        (project) => `
+          <article class="featured-project-card">
+            <div class="featured-project-card__head">
+              <p class="project-card__eyebrow">${project.kind}</p>
+              ${createProjectStatus(project)}
+            </div>
+            <h3>${formatProjectName(project.name)}</h3>
+            <p>${project.description}</p>
+            ${createProjectPreview(project)}
+            ${createProjectMeta(project)}
+            <div class="project-stack-list">
+              ${project.stack.map((item) => `<span class="project-stack-chip">${item}</span>`).join("")}
+            </div>
+            <div class="project-links project-links--footer">
+              <a href="${project.github}" target="_blank" rel="noreferrer">GitHub</a>
+              ${project.demo ? `<a href="${project.demo}" target="_blank" rel="noreferrer">${currentLocale.shared.demo}</a>` : ""}
+            </div>
+          </article>
+        `,
+      )
+      .join("");
+  }
 
-  ui.projectGrid.innerHTML = currentLocale.projects.items
+  ui.projectGrid.innerHTML = regularProjects
     .map(
       (project) => `
         <article class="project-card">
-          <p class="project-card__eyebrow">${project.kind}</p>
+          <div class="project-card__head">
+            <p class="project-card__eyebrow">${project.kind}</p>
+            ${createProjectStatus(project)}
+          </div>
           <h3>${formatProjectName(project.name)}</h3>
           <p>${project.description}</p>
+          ${createProjectMeta(project)}
           <div class="project-stack-list">
             ${project.stack.map((item) => `<span class="project-stack-chip">${item}</span>`).join("")}
           </div>
@@ -525,9 +608,20 @@ const renderMetrics = () => {
     return acc;
   }, {});
 
+  const portfolioCounts = {
+    [currentLocale.metrics.portfolioRows.projects]: currentLocale.projects.items.length,
+    [currentLocale.metrics.portfolioRows.live]: currentLocale.projects.items.filter((item) => Boolean(item.demo)).length,
+    [currentLocale.metrics.portfolioRows.languages]: 3,
+    [currentLocale.metrics.portfolioRows.domains]: currentLocale.skills.items.length,
+  };
+
   ui.certMetrics.innerHTML = createMetricRows(badgeCounts);
   ui.certMetricsNote.textContent = currentLocale.metrics.securityFocusNote.replace("{percent}", String(securityPercent));
   ui.skillsMetrics.innerHTML = createMetricRows(skillCounts);
+  ui.portfolioMetrics.innerHTML = createMetricRows(portfolioCounts);
+  ui.portfolioMetricsNote.textContent = currentLocale.metrics.portfolioNote
+    .replace("{live}", String(portfolioCounts[currentLocale.metrics.portfolioRows.live]))
+    .replace("{languages}", String(portfolioCounts[currentLocale.metrics.portfolioRows.languages]));
 };
 
 const renderHeroTicker = () => {
@@ -656,6 +750,7 @@ const setLanguage = async (language) => {
   currentLocale = await loadLocale(language);
   applyI18n();
   renderHeroPillars();
+  renderHeroFocus();
   renderSkills();
   buildFilters();
   renderBadges();

@@ -15,11 +15,11 @@
     "cv": "Abrir CV",
     "statusTitle": "Estado",
     "focusLabel": "Enfoque",
-    "focusValue": "Cloud Security // Blue Team // IAM",
+    "focusValue": "Cloud Security // Detection Engineering // IAM",
     "locationLabel": "Ubicacion",
     "locationValue": "Brasil // Porto Alegre",
     "availabilityLabel": "Disponibilidad",
-    "availabilityValue": "Prioridad remota // Abierto a hibrido"
+    "availabilityValue": "Remoto prioritario // Hibrido selectivo // Infra, Security, Cloud"
   },
   "hero": {
     "eyebrow": "Cloud | Seguridad | Infraestructura",
@@ -31,7 +31,7 @@
     ],
     "name": "Rafael Garcez",
     "title": "Cloud & Ciberseguridad | AWS Certified Cloud Practitioner | Enfoque en Blue Team, SOC e Infraestructura Segura",
-    "description": "Especialista en infraestructura y seguridad con mas de 15 anos en operaciones criticas y entornos NOC/SOC. Combino profundidad operativa en Linux y redes con una evolucion constante en Cloud Security, Blue Team, SOC y hardening de ambientes criticos, con Heimdall Gatekeeper como case principal de SIEM e ingenieria de deteccion.",
+    "description": "Especialista en infraestructura y seguridad con mas de 15 anos en operaciones criticas y entornos NOC/SOC. Combino profundidad operativa en Linux y redes con una evolucion constante en Cloud Security, Blue Team, SOC y hardening de ambientes criticos, convirtiendo proyectos propios en prueba practica de arquitectura, deteccion y operacion real.",
     "cta": "Hablemos",
     "openBadge": "Open to Work",
     "banner1": "Cloud Security",
@@ -43,6 +43,26 @@
     "panelLine1": "Base solida en disponibilidad, soporte y respuesta operativa.",
     "panelLine2": "Experiencia directa en respuesta y recuperacion de ambientes criticos, con foco en resiliencia operativa.",
     "panelLine3": "Especialista en arquitecturas de seguridad optimizadas en costo, con defensa perimetral y resiliencia de datos basada en tecnologias open source (pfSense, BorgBackup, Fail2Ban, Linux hardening), entregando proteccion de nivel empresarial con independencia de proveedor y transparencia tecnica.",
+    "focusTitle": "Actualmente enfocado en",
+    "focusItems": [
+      {
+        "label": "Frentes",
+        "value": "Cloud Security, Detection Engineering y productos operativos sobre Cloudflare"
+      },
+      {
+        "label": "Idiomas",
+        "value": "Portuguese (BR), English y Espanol"
+      },
+      {
+        "label": "Disponibilidad",
+        "value": "Remoto prioritario, hibrido selectivo y equipos de Infra, Security o Cloud"
+      },
+      {
+        "label": "GitHub Profile",
+        "value": "github.com/Garcez7R",
+        "href": "https://github.com/Garcez7R"
+      }
+    ],
     "pillars": [
       {
         "icon": "CL",
@@ -177,11 +197,21 @@
     "eyebrow": "Casos",
     "title": "Proyectos",
     "description": "Casos seleccionados donde arquitectura, ejecucion y seguridad aparecen como capacidad aplicada.",
+    "featuredTitle": "Proyectos destacados",
+    "featuredDescription": "Dos casos con senal inmediata de producto, arquitectura y operacion aplicada.",
+    "labels": {
+      "impact": "Impacto",
+      "architecture": "Arquitectura",
+      "preview": "Mini preview"
+    },
     "items": [
       {
         "kind": "Plataforma de Seguridad | SIEM / Detection Engineering",
         "name": "Heimdall Gatekeeper",
         "description": "Demo SIEM con dashboard analitico, deteccion en YAML, enriquecimiento con CVE y flujo realista de alertas para contexto SOC. Combina FastAPI, normalizacion de eventos, ciclo de vida de alertas y camino Cloudflare para demostrar ingenieria de deteccion y operacion Blue Team con presentacion de producto.",
+        "impact": "Convierte ingesta, deteccion y triage en un flujo visible para contexto SOC, reclutamiento tecnico y posicionamiento de portafolio.",
+        "architecture": "FastAPI modular, reglas YAML, enrichment con CVE, ciclo de vida de alertas, SQLite y camino preparado para Cloudflare.",
+        "preview": ["Ingest", "Rules", "Alerts"],
         "stack": ["FastAPI", "Detection Engineering", "Threat Enrichment", "Cloudflare"],
         "github": "https://github.com/Garcez7R/heimdall-gatekeeper",
         "demo": "https://heimdall-gatekeeper.pages.dev/"
@@ -190,6 +220,9 @@
         "kind": "Plataforma operativa de transporte",
         "name": "Transporter",
         "description": "Plataforma web para gestion de transporte de pacientes, con distribucion de rutas, trazabilidad operativa, auditoria y control de acceso por perfil. Construida con React, Cloudflare Pages Functions y D1 para sostener operacion diaria real con gobernanza y telemetria.",
+        "impact": "Muestra capacidad para disenar flujo operativo real con gobernanza, auditoria y telemetria para ejecucion diaria.",
+        "architecture": "React 19, Pages Functions, D1, sesiones por perfil y backend enfocado en auditoria, rutas y telemetria operacional.",
+        "preview": ["Requests", "Routes", "Ops"],
         "stack": ["React", "Cloudflare Pages", "Functions", "D1"],
         "github": "https://github.com/Garcez7R/transporter",
         "demo": "https://transporter.pages.dev/"
@@ -198,6 +231,9 @@
         "kind": "Marketplace de libros y usados",
         "name": "TEKA",
         "description": "Marketplace con catalogo, inventario, roles de usuario, escaneo por ISBN y OCR, pensado para crecer con enfasis en UX, trazabilidad operativa y compliance.",
+        "impact": "Valida pensamiento de producto alrededor de catalogo complejo, roles de acceso, trazabilidad y crecimiento con compliance.",
+        "architecture": "Marketplace PWA con OCR, escaneo por ISBN, estructura de catalogo y ruta de crecimiento orientada a UX.",
+        "preview": ["Catalog", "Scan", "OCR"],
         "stack": ["Marketplace", "PWA", "OCR", "Compliance"],
         "github": "https://github.com/Garcez7R/mvp-teka",
         "demo": "https://mvp-teka.pages.dev/"
@@ -206,6 +242,9 @@
         "kind": "PWA para profesionales de belleza",
         "name": "Konnektx",
         "description": "Base lista para serverless para pequenos negocios con pagina publica, agenda y fidelizacion, preparada para evolucionar con Cloudflare Worker y pensada alrededor de aislamiento operativo, privacidad y crecimiento seguro.",
+        "impact": "Demuestra como la arquitectura se adapta a pequenos negocios con recurrencia, fidelizacion y privacidad.",
+        "architecture": "PWA lista para serverless con agenda, presencia publica y ruta de evolucion sobre Cloudflare Worker.",
+        "preview": ["Landing", "Schedule", "Loyalty"],
         "stack": ["PWA", "Agenda", "Fidelizacion", "Cloudflare Worker"],
         "github": "https://github.com/Garcez7R/Konnektx",
         "demo": "https://konnektx.pages.dev/"
@@ -214,6 +253,9 @@
         "kind": "Sistema POS | Operacion offline-first",
         "name": "0PDV",
         "description": "Sistema de punto de venta, inventario y operacion comercial para pequeno varejo, pensado para mostrador, tablet y movil. Combina PWA, persistencia en IndexedDB, lectura remota por QR y camino Cloudflare para sostener ventas, stock y continuidad operativa con conectividad inestable.",
+        "impact": "Destaca lectura fuerte de operacion minorista y continuidad de negocio en escenarios con conectividad inestable.",
+        "architecture": "React, PWA, IndexedDB, escaneo remoto por QR y camino Cloudflare para sincronizacion futura.",
+        "preview": ["POS", "Stock", "Offline"],
         "stack": ["React", "PWA", "IndexedDB", "Cloudflare Workers"],
         "github": "https://github.com/Garcez7R/nexaPDV",
         "demo": "https://nexapdv.pages.dev/"
@@ -222,6 +264,9 @@
         "kind": "Gobernanza IAM en AWS",
         "name": "AWS Cloud Security – IAM & Governance",
         "description": "Proyecto de cloud security enfocado en analisis de riesgo, gobernanza y menor privilegio en AWS IAM. Reune politicas documentadas, estudio de incidentes y decisiones tecnicas estructuradas para fortalecer la postura de seguridad y la alineacion operativa en contextos corporativos.",
+        "impact": "Refuerza profundidad en IAM, riesgo y gobernanza con lenguaje alineado a entornos corporativos.",
+        "architecture": "Caso tecnico estructurado con politicas, analisis de incidentes, decisiones de menor privilegio y diseno de gobernanza.",
+        "preview": ["IAM", "Risk", "Governance"],
         "stack": ["AWS IAM", "Least Privilege", "Risk Analysis", "Governance"],
         "github": "https://github.com/Garcez7R/aws-cloud-security-iam-governance",
         "demo": ""
@@ -251,6 +296,14 @@
     "description": "Lectura rapida de la concentracion actual entre infraestructura, seguridad y cloud.",
     "certificationsChart": "Certificaciones por categoria",
     "skillsChart": "Competencias por dominio",
+    "portfolioChart": "Senales del portafolio",
+    "portfolioNote": "Portafolio con {live} proyectos online y {languages} idiomas activos.",
+    "portfolioRows": {
+      "projects": "Proyectos",
+      "live": "Deploys online",
+      "languages": "Idiomas",
+      "domains": "Dominios"
+    },
     "securityFocusNote": "Enfoque actual en seguridad: {percent}% de la ruta de certificaciones."
   },
   "categories": {
@@ -296,7 +349,8 @@
   },
   "shared": {
     "verify": "Verificar",
-    "demo": "Demo"
+    "demo": "Demo",
+    "liveBadge": "Online"
   },
   "footer": {
     "copy": "Rafael Garcez | Cloud Security, ciberseguridad e infraestructura segura."
