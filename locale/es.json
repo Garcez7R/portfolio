@@ -43,26 +43,6 @@
     "panelLine1": "Base solida en disponibilidad, soporte y respuesta operativa.",
     "panelLine2": "Experiencia directa en respuesta y recuperacion de ambientes criticos, con foco en resiliencia operativa.",
     "panelLine3": "Especialista en arquitecturas de seguridad optimizadas en costo, con defensa perimetral y resiliencia de datos basada en tecnologias open source (pfSense, BorgBackup, Fail2Ban, Linux hardening), entregando proteccion de nivel empresarial con independencia de proveedor y transparencia tecnica.",
-    "focusTitle": "Actualmente enfocado en",
-    "focusItems": [
-      {
-        "label": "Frentes",
-        "value": "Cloud Security, Detection Engineering y productos operativos sobre Cloudflare"
-      },
-      {
-        "label": "Idiomas",
-        "value": "Portuguese (BR), English y Espanol"
-      },
-      {
-        "label": "Disponibilidad",
-        "value": "Remoto prioritario, hibrido selectivo y equipos de Infra, Security o Cloud"
-      },
-      {
-        "label": "GitHub Profile",
-        "value": "github.com/Garcez7R",
-        "href": "https://github.com/Garcez7R"
-      }
-    ],
     "pillars": [
       {
         "icon": "CL",

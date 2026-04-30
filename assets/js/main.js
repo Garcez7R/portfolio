@@ -3,7 +3,7 @@ const STORAGE_KEYS = {
   splashSeen: "portfolio-splash-seen-session",
 };
 
-const LOCALE_VERSION = "20260423-project-sync-fix";
+const LOCALE_VERSION = "20260429-portfolio-layout";
 const DEFAULT_BADGE_IMAGE = "./assets/img/badges/placeholder-badge.svg";
 const CERTIFICATE_INDEX = "./assets/docs/certificates/index.json";
 const CATEGORY_ORDER = ["Cloud", "Security", "Infrastructure", "DevOps", "Networking", "Linux", "Other"];
@@ -20,7 +20,6 @@ let vaultSearchTerm = "";
 const ui = {
   splash: document.getElementById("splash"),
   heroPillars: document.getElementById("hero-pillars"),
-  heroFocusGrid: document.getElementById("hero-focus-grid"),
   skillsGrid: document.getElementById("skills-grid"),
   coreBadgeGrid: document.getElementById("core-badge-grid"),
   credentialsMorePrompt: document.querySelector(".credentials-more__prompt"),
@@ -155,7 +154,7 @@ const loadBadges = async () => {
 };
 
 const loadCertificates = async () => {
-  const response = await fetch(`${CERTIFICATE_INDEX}?v=20260406`);
+  const response = await fetch(`${CERTIFICATE_INDEX}?v=20260429`);
 
   if (!response.ok) {
     return [];
@@ -267,25 +266,6 @@ const renderHeroPillars = () => {
         </article>
       `,
     )
-    .join("");
-};
-
-const renderHeroFocus = () => {
-  if (!ui.heroFocusGrid || !currentLocale.hero?.focusItems) return;
-
-  ui.heroFocusGrid.innerHTML = currentLocale.hero.focusItems
-    .map((item) => {
-      const tag = item.href ? "a" : "article";
-      const href = item.href ? ` href="${item.href}" target="_blank" rel="noreferrer"` : "";
-      const extraClass = item.href ? " hero-focus-card--link" : "";
-
-      return `
-        <${tag} class="hero-focus-card${extraClass}"${href}>
-          <span class="hero-focus-card__label">${item.label}</span>
-          <strong class="hero-focus-card__value">${item.value}</strong>
-        </${tag}>
-      `;
-    })
     .join("");
 };
 
@@ -750,7 +730,6 @@ const setLanguage = async (language) => {
   currentLocale = await loadLocale(language);
   applyI18n();
   renderHeroPillars();
-  renderHeroFocus();
   renderSkills();
   buildFilters();
   renderBadges();
