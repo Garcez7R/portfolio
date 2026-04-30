@@ -15,9 +15,6 @@
 | AWS Cloud Fundamentals | Cloud | ./assets/img/badges/official/aws_cloud_fundamentals.svg | https://awstreinabrasil.ontidwit.com/badge?id=80bb33ba-90d2-490b-b586-3a7805b0535b |
 | AWS Generative AI Fundamentals | Other | ./assets/img/badges/official/aws_genai_fundamentals.svg | https://awstreinabrasil.ontidwit.com/badge?id=973a9f24-2abc-4ee5-be86-311962a94d44 |
 | AWS Generative AI Practitioner | Other | ./assets/img/badges/official/aws_genai_practitioner.svg | https://awstreinabrasil.ontidwit.com/badge?id=365a6d2d-3db1-469d-a110-f23a5f39a01c |
-| SkillFront Certified Insurance Industry Fundamentals | Other | ./assets/img/badges/official/skillfront_certified_insurance_industry_fundamentals.png | ./assets/docs/certificates/SkillFront%20-%20Certified%20Insurance%20Industry%20Fundamentals.pdf |
-| SkillFront IEC 20000 IT Service Management Associate | Infrastructure |  | ./assets/docs/certificates/SkillFront%20-%20IEC%2020000%20IT%20Service%20Management%20Associate.png |
-| SkillFront IEC 27001 Information Security Associate | Security | ./assets/img/badges/official/skillfront_iec_27001_information_security_associate.png | ./assets/docs/certificates/SkillFront%20-%20IEC%2027001%20Information%20Security%20Associate.png |
 | From Relational Model (SQL) to MongoDB's Document Model | Other | ./assets/img/badges/official/from_relational_model__sql__to_mongodb_s_document_model.png | https://www.credly.com/badges/2ea38825-eb25-427c-90e9-7f6f54298a17/public_url |
 | MongoDB Overview: Core Concepts and Architecture | Other | ./assets/img/badges/official/mongodb_overview__core_concepts_and_architecture.png | https://www.credly.com/badges/52c35549-845d-4b8c-ace8-72f336a18bba/public_url |
 | ISO/IEC 27001:2022 Lead Auditor | Security | ./assets/img/badges/official/iso_iec_27001_2022_lead_auditor.png | https://www.credly.com/badges/3d4e6c88-bb1f-4663-9291-bf8f28690dbe/public_url |

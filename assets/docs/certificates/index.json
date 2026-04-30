@@ -150,26 +150,6 @@
     "file": "Management and Strategy Institute - AI Prompting Essentials.pdf"
   },
   {
-    "title": "Certified Insurance Industry Fundamentals",
-    "issuer": "SkillFront",
-    "category": "Other",
-    "file": "SkillFront - Certified Insurance Industry Fundamentals.pdf",
-    "badgeUrl": "./assets/img/badges/official/skillfront_certified_insurance_industry_fundamentals.png"
-  },
-  {
-    "title": "IEC 20000 IT Service Management Associate",
-    "issuer": "SkillFront",
-    "category": "Infrastructure",
-    "file": "SkillFront - IEC 20000 IT Service Management Associate.png"
-  },
-  {
-    "title": "IEC 27001 Information Security Associate",
-    "issuer": "SkillFront",
-    "category": "Security",
-    "file": "SkillFront - IEC 27001 Information Security Associate.png",
-    "badgeUrl": "./assets/img/badges/official/skillfront_iec_27001_information_security_associate.png"
-  },
-  {
     "title": "ISO IEC 27001 2022 Lead Auditor",
     "issuer": "Mastermind",
     "category": "Security",
